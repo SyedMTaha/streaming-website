@@ -1,7 +1,11 @@
 import SignupForm from "../../../../components/signupForm";
+import Navbar from "../../../../components/navbar";
+
 
 export default function SignupPage() {
   return (
+    <>
+    <Navbar/>
     <div
       className="h-[110vh] px-12 flex items-center"
       style={{
@@ -14,5 +18,6 @@ export default function SignupPage() {
     >
       <SignupForm />
     </div>
+    </>
   );
 }

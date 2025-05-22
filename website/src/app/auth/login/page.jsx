@@ -1,7 +1,10 @@
 import LoginForm from "../../../../components/loginForm";
+import Navbar from "../../../../components/navbar";
 
 export default function LoginPage() {
   return (
+    <>
+    <Navbar/>
     <div
       className="h-[90vh] px-12 flex items-center"
       style={{
@@ -12,7 +15,9 @@ export default function LoginPage() {
         backgroundBlend: "overlay",
       }}
     >
+      {/* <Navbar /> */}
       <LoginForm />
     </div>
+    </>
   );
 }

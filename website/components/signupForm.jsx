@@ -6,7 +6,7 @@ import { doc, setDoc } from 'firebase/firestore';
 import React, { useState } from "react";
 import { useRouter } from 'next/router';
 import Link from "next/link";
-import background from "../public/assets/images/background/signup.png";
+
 
 export default function SignupForm() {
   const [name, setName] = useState("");
@@ -14,26 +14,37 @@ export default function SignupForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [termCondition, setTermCodition] = useState(false);
+  
+ 
   // const router = useRouter();
  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validate terms and conditions FIRST
+    if (!termCondition) {
+      setError("Please accept the terms and conditions to continue");
+      return;
+    }
+    
     try {
       // Create user in Firebase Auth
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
+  
       // Store additional user data in Firestore
       await setDoc(doc(db, "users", user.uid), {
         name,
         email,
         createdAt: new Date().toISOString()
       });
-
+  
       // Redirect to home page or dashboard
       router.push('/dashboard');
-    } catch (error) {
+    } 
+    catch (error) 
+    {
       setError(error.message);
       console.error("Error during signup:", error);
     }
@@ -102,18 +113,32 @@ export default function SignupForm() {
                 />
               </div>
 
+              <div className="space-y-2">
               <div className="flex items-center">
                 <input
                   type="checkbox"
                   id="terms"
                   checked={termCondition}
-                  onChange={(e) => setTermCodition(e.target.checked)}
-                  className="rounded border-gray-400"
-                />
+                  onChange={(e) => {
+                    setTermCodition(e.target.checked);
+                    // Clear error when user checks the box
+                    if (errors.terms) {
+                      setErrors(prev => ({
+                        ...prev,
+                        terms: ""
+                      }));
+                    }
+                  }}
+                  className={`rounded border-gray-400 ${error.terms ? 'ring-2 ring-red-500' : ''}`}
+                  />
                 <label htmlFor="terms" className="ml-2 text-sm font-medium text-gray-300">
                   I agree to terms & conditions
                 </label>
-              </div>
+                </div>
+              {error.terms && (
+                <p className="text-red-400 text-xs mt-1 ml-6">{errors.terms}</p>
+              )}
+             </div>
               
               <div className="pt-2">
                 <button 

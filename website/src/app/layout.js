@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
 import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -33,7 +34,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className={poppins.className}>
 
       <body>
-      <Navbar/>
+      {/* <Navbar/> */}
+      <Footer/>
       {children}
       </body>
     </html>
