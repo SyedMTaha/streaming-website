@@ -16,7 +16,7 @@ export default function LoginForm() {
 
   return (
      
-    <div className="bg-[#191C33] ml-4 rounded-[10px] p-6 flex items-center justify-start" style={{ width: '500px', height: '465px' }}>
+    <div className="bg-[#191C33] ml-4 rounded-[10px] p-6 flex items-center justify-start shadow-2xl" style={{ width: '500px', height: '465px' }}>
     <div className="bg-navy-800/90 p-8 rounded-lg shadow-xl w-full max-w-md">
       <h1 className="text-white text-3xl font-bold text-center mb-2">Login</h1>
       <p className="text-gray-300 text-center mb-8">Enter you credentials to access your account</p>
@@ -33,7 +33,7 @@ export default function LoginForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full bg-[#A1AABF] border-0 text-black placeholder:text-gray-200 h-12 rounded px-3"
+              className="w-full bg-gradient-to-r from-[#A1AABF] to-[#B5BED0] border-0 text-gray-800 placeholder:text-gray-500 h-12 rounded-lg px-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300 shadow-inner"
               placeholder="Enter your email" style={{borderRadius: "8px"}}
             />
           </div>
@@ -48,7 +48,7 @@ export default function LoginForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full bg-[#A1AABF] border-0 text-black placeholder:text-gray-200 h-12 rounded px-3"
+              className="w-full bg-gradient-to-r from-[#A1AABF] to-[#B5BED0] border-0 text-gray-800 placeholder:text-gray-500 h-12 rounded-lg px-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300 shadow-inner"
               placeholder="Enter your password" style={{borderRadius: "8px"}}
             />
           </div>
@@ -68,14 +68,14 @@ export default function LoginForm() {
 
           <button 
             type="submit" 
-            className="w-full bg-[#1D50A3] text-white h-12 font-medium rounded hover:bg-blue-900"  style={{borderRadius: "8px"}}
+            className="w-full bg-[#1D50A3] text-white h-12 font-semibold rounded hover:bg-blue-900  transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"  style={{borderRadius: "8px"}}
           > 
             Login
           </button>
 
           <div className="text-center text-gray-300 text-sm">
             Not a member?{" "}
-            <Link href="/auth/signup" className="text-[#1D50A3] hover:underline">
+            <Link href="/auth/signup" className="text-[#1D50A3] hover:underline transition-colors duration-200">
               Create an account
             </Link>
           </div>

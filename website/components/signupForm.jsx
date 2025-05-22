@@ -13,6 +13,7 @@ export default function SignupForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [termCondition, setTermCodition] = useState(false);
   // const router = useRouter();
  
 
@@ -39,80 +40,102 @@ export default function SignupForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center" style={{       
-      backgroundColor: "#020D1E",
-      backgroundImage: "url('/assets/images/background/signup.png')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundBlend: "overlay"
-     }}>
-      <div className="bg-[#191C33] ml-10 rounded-[10px] p-8 flex items-center justify-center" style={{ width: '600px', height: '550px' }} >
-      <div className="bg-navy-800/90 p-10 rounded-lg shadow-xl w-full max-w-md ">
-        <h1 className="text-white text-3xl font-bold text-center mb-2">Sign Up</h1>
-        <p className="text-gray-300 text-center mb-8">Create your account to get started</p>
-
-        <form onSubmit={handleSubmit}>
-          <div className="space-y-6">
-            <div className="space-y-2">
-            <label htmlFor="name" className="text-white block">
-                Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                className="w-full bg-[#A1AABF] border-0 text-black placeholder:text-gray-200 h-12 rounded px-3"
-                placeholder="Enter your name"
-                style={{borderRadius: "8px"}}
-              />
-              <label htmlFor="email" className="text-white block">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full bg-[#A1AABF] border-0 text-black placeholder:text-gray-200 h-12 rounded px-3 `"
-                placeholder="Enter your email" style={{borderRadius: "8px"}}
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="password" className="text-white block">
-                Password
-              </label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                className="w-full bg-[#A1AABF] border-0 text-black placeholder:text-gray-200 h-12 rounded px-3" 
-                placeholder="Enter your password" style={{borderRadius: "8px"}}
-              />
-            </div>
-
-
-            <button 
-              type="submit" 
-              className="w-full bg-[#1D50A3]  hover:bg-blue-900 text-white h-12 font-medium " style={{borderRadius: "8px"}}
-            >
+    <div 
+      className="min-h-screen flex items-start pt-2 pr-4" >
+      <div className="bg-[#191C33] ml-4 rounded-[10px] p-8 flex items-center justify-start shadow-2xl " style={{ width: '500px', height: '540px' }}>
+        <div className=" p-8 rounded-xl  w-full">
+          <div className="text-center mb-6">
+            <h1 className="text-white text-3xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text ">
               Sign Up
-            </button>
-
-            <div className="text-center text-gray-300 text-sm">
-              Already have an account?{" "}
-              <Link href="/auth/login" className="text-[#1d50a3] hover:underline">
-                Login here
-              </Link>
-            </div>
+            </h1>
+            <p className="text-gray-300 text-m leading-relaxed">
+              Create your account to get started
+            </p>
           </div>
-        </form>
-      </div>
+  
+          <form onSubmit={handleSubmit}>
+            <div className="space-y-5">
+              <div className="space-y-3">
+                <div>
+                  <label htmlFor="name" className="text-white block text-sm font-medium mb-2">
+                    Full Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    className="w-full bg-gradient-to-r from-[#A1AABF] to-[#B5BED0] border-0 text-gray-800 placeholder:text-gray-500 h-12 rounded-lg px-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300 shadow-inner"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="text-white block text-sm font-medium mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full bg-gradient-to-r from-[#A1AABF] to-[#B5BED0] border-0 text-gray-800 placeholder:text-gray-500 h-12 rounded-lg px-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300 shadow-inner"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+              </div>
+  
+              <div>
+                <label htmlFor="password" className="text-white block text-sm font-medium mb-2">
+                  Password
+                </label>
+                <input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  className="w-full bg-gradient-to-r from-[#A1AABF] to-[#B5BED0] border-0 text-gray-800 placeholder:text-gray-500 h-12 rounded-lg px-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300 shadow-inner"
+                  placeholder="Create a strong password"
+                />
+              </div>
+
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  checked={termCondition}
+                  onChange={(e) => setTermCodition(e.target.checked)}
+                  className="rounded border-gray-400"
+                />
+                <label htmlFor="terms" className="ml-2 text-sm font-medium text-gray-300">
+                  I agree to terms & conditions
+                </label>
+              </div>
+              
+              <div className="pt-2">
+                <button 
+                  type="submit" 
+                  className="w-full bg-[#1D50A3] text-white  hover:bg-blue-900 h-12 font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                >
+                  Create Account
+                </button>
+              </div>
+  
+              <div className="text-center text-gray-300 text-sm pt-2">
+                Already have an account?{" "}
+                <Link 
+                  href="/auth/login" 
+                  className="text-[#1D50A3]   font-medium hover:underline transition-colors duration-200"
+                >
+                  Login
+                </Link>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

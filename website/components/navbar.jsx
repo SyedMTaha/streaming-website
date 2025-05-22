@@ -52,7 +52,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            <button className="bg-[#A2ABC0] text-[#183056] hover:bg-gray-300 text-navy-900 font-semibold p-2 ml-2 rounded-lg flex items-center"> <User className="h-5 w-5 mr-"/>Watch Now</button>
+            <button className="bg-[#A2ABC0] text-[#183056] hover:bg-gray-300 text-navy-900 font-semibold p-2 ml-2 rounded-lg flex items-center"> <User className="h-5 w-5 mr-1"/>Watch Now</button>
 
             <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
