@@ -16,12 +16,12 @@ function FooterLink(props) {
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 bg-gradient-to-t from-[#07295B] to-[#020D1F] text-white ">
-      <div className="container mx-auto px-2 py-12 ">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
+    <footer className="relative z-10 bg-gradient-to-t from-[#07295B] to-[#020D1F] text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-35">
           {/* Logo and Social Media */}
-          <div className="flex flex-col items-center md:items-start ">
-            <div className="mb-6 -ml-16">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="mb-6">
               <Image
                 src={logo2}
                 alt="INBV TV"
@@ -30,9 +30,9 @@ export default function Footer() {
                 
               />
             </div>
-            <div className="mb-4 -ml-15">
+            <div className="mb-4">
               <p className="text-sm text-gray-300 mb-2">Connect with us</p>
-              <div className="flex space-x-4 ">
+              <div className="flex space-x-4">
                 <Link
                   href="https://facebook.com"
                   className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity"
@@ -56,9 +56,9 @@ export default function Footer() {
           </div>
 
           {/* Must Watch Movies */}
-          <div className="space-x-3 ">
-            <h3 className="text-lg font-medium mb-6">Must Watch Movies</h3>
-            <ul className="space-y-4 ">
+          <div className="px-1">
+            <h3 className="text-lg font-medium mb-4">Must Watch Movies</h3>
+            <ul className="space-y-2">
               <FooterLink href="/movies/dj-thillu">DJ Thillu</FooterLink>
               <FooterLink href="/movies/the-great-empire">The Great Empire</FooterLink>
               <FooterLink href="/movies/love-story">Love Story</FooterLink>
@@ -68,9 +68,9 @@ export default function Footer() {
           </div>
 
           {/* Genres */}
-          <div className="space-x-3 ml-8">
-            <h3 className="text-lg font-medium mb-6">Genres</h3>
-            <ul className="space-y-4">
+          <div className="px-4">
+            <h3 className="text-lg font-medium mb-4">Genres</h3>
+            <ul className="space-y-2">
               <FooterLink href="/genres/romance">Romance</FooterLink>
               <FooterLink href="/genres/drama">Drama</FooterLink>
               <FooterLink href="/genres/family">Family</FooterLink>
@@ -81,9 +81,9 @@ export default function Footer() {
           </div>
 
           {/* Help */}
-          <div>
-            <h3 className="text-lg font-medium mb-8  ">Help</h3>
-            <ul className="space-y-4">
+          <div className="px-4">
+            <h3 className="text-lg font-medium mb-4">Help</h3>
+            <ul className="space-y-2">
               <FooterLink href="/account">My Account</FooterLink>
               <FooterLink href="/support">Customer Support</FooterLink>
               <FooterLink href="/contact">Contact Us</FooterLink>
@@ -96,9 +96,9 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="bg-[#020D1E] py-4">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        <div className="container mx-16  flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">Copyright © 2025. All rights reserved.</p>
-          <div className="flex space-x-6 mt-2 md:mt-0">
+          <div className="flex space-x-6 mt-2  md:mt-0">
             <Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
               Privacy Policy
             </Link>
@@ -109,5 +109,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
