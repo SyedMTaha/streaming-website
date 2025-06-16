@@ -120,7 +120,7 @@
       {
         "id": "a10",
         "title": "State Secret",
-        "image": "/assets/images/movies/action/.jpeg",
+        "image": "/assets/images/movies/action/action10.jpeg",
         "innerImage": "/assets/images/movies/action/landscape/action10_inner.jpg",
         "slug": "state-secret",
         "year": "2023",
@@ -133,7 +133,7 @@
       {
         "id": "a11",
         "title": "Atomic Submarine",
-        "image": "/assets/images/movies/action/.jpeg",
+        "image": "/assets/images/movies/action/action11.jpg",
         "innerImage": "/assets/images/movies/action/landscape/action4_inner.jpg",
         "slug": "atomic-submarine",
         "year": "2023",
