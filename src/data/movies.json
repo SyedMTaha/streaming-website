@@ -285,9 +285,9 @@
   "cartoon": [
     {
       "id": "c1",
-      "title": "Funny Farm",
-      "image": "/assets/images/movies/cartoon1.jpg",
-      "slug": "funny-farm",
+      "title": "Atom Ant",
+      "image": "/assets/images/cartoons/cartoon1.jpg",
+      "slug": "atom-ant",
       "year": "2024",
       "duration": "1h 30m",
       "rating": "8.8",
@@ -295,9 +295,9 @@
     },
     {
       "id": "c2",
-      "title": "Space Pals",
-      "image": "/assets/images/movies/cartoon2.jpg",
-      "slug": "space-pals",
+      "title": "Tom and Jerry Comedy Show",
+      "image": "/assets/images/cartoons/cartoon2.jpeg",
+      "slug": "tom-and-jerry-comedy-show",
       "year": "2023",
       "duration": "1h 25m",
       "rating": "8.6",
@@ -305,9 +305,9 @@
     },
     {
       "id": "c3",
-      "title": "Jungle Friends",
-      "image": "/assets/images/movies/cartoon3.jpg",
-      "slug": "jungle-friends",
+      "title": "Top Cat",
+      "image": "/assets/images/cartoons/cartoon3.jpg",
+      "slug": "top-cat",
       "year": "2024",
       "duration": "1h 35m",
       "rating": "8.7",
@@ -315,9 +315,128 @@
     },
     {
       "id": "c4",
-      "title": "Magic School",
-      "image": "/assets/images/movies/cartoon4.jpg",
-      "slug": "magic-school",
+      "title": "High Lander",
+      "image": "/assets/images/cartoons/cartoon4.jpeg",
+      "slug": "high-lander",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c5",
+      "title": "Hong Kong Phoey",
+      "image": "/assets/images/cartoons/cartoon5.jpg",
+      "slug": "hong-kong-phoey",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c6",
+      "title": "Jeannie",
+      "image": "/assets/images/cartoons/cartoon6.jpg",
+      "slug": "jeannie",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c7",
+      "title": "Jetsons",
+      "image": "/assets/images/cartoons/cartoon7.jpg",
+      "slug": "jetsons",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c8",
+      "title": "Lippy the Lion Hardy Har Har",
+      "image": "/assets/images/cartoons/cartoon8.jpg",
+      "slug": "lippy-the-lion-hardy-har-har",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c9",
+      "title": "Precious Pupp",
+      "image": "/assets/images/cartoons/cartoon9.jpeg",
+      "slug": "precious-pupp",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c10",
+      "title": "Quick Draw Mcgraw",
+      "image": "/assets/images/cartoons/cartoon10.jpeg",
+      "slug": "quick-draw-mcgraw",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c11",
+      "title": "Sealab",
+      "image": "/assets/images/cartoons/cartoon11.jpg",
+      "slug": "high-lander",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c12",
+      "title": "Superman",
+      "image": "/assets/images/cartoons/cartoon12.jpg",
+      "slug": "superman",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c13",
+      "title": "The Great Grape Ape Show",
+      "image": "/assets/images/cartoons/cartoon13.jpg",
+      "slug": "the-great-grape-ape-show",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c14",
+      "title": "The New Fantastic Four",
+      "image": "/assets/images/cartoons/cartoon14.jpg",
+      "slug": "the-new-fantastic-four",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c15",
+      "title": "Yogi Bear",
+      "image": "/assets/images/cartoons/cartoon15.jpg",
+      "slug": "yogi-bear",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },{
+      "id": "c16",
+      "title": "Young Samsons Goliath",
+      "image": "/assets/images/cartoons/cartoon16.jpg",
+      "slug": "young-samsons-goliath",
       "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",
@@ -327,43 +446,55 @@
   "comedy": [
     {
       "id": "com1",
-      "title": "Laugh Factory",
-      "image": "/assets/images/movies/comedy1.jpg",
+      "title": "Check and Double Check",
+      "image": "/assets/images/movies/comedy/comedy1.jpg",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy1_inner.jpg",
       "slug": "laugh-factory",
       "year": "2024",
       "duration": "1h 45m",
       "rating": "8.4",
-      "genre": "comedy"
+      "genre": "comedy",
+      "description": "",
+      "videoUrl": "https://player.vimeo.com/video/1093482479?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "com2",
-      "title": "Office Chaos",
-      "image": "/assets/images/movies/comedy2.jpg",
-      "slug": "office-chaos",
+      "title": "Brideless Groom",
+      "image": "/assets/images/movies/comedy/comedy4.jpeg",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy4_inner.jpeg",
+      "slug": "brideless-groom",
       "year": "2023",
       "duration": "1h 50m",
       "rating": "8.2",
-      "genre": "comedy"
+      "genre": "comedy",
+      "description": "",
+      "videoUrl": "https://player.vimeo.com/video/1093482525?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "com3",
-      "title": "Family Fun",
-      "image": "/assets/images/movies/comedy3.jpg",
-      "slug": "family-fun",
+      "title": "My Man Godfrey",
+      "image": "/assets/images/movies/comedy/comedy3.jpg",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy3_inner.jpeg",
+      "slug": "my-man-godfrey",
       "year": "2024",
       "duration": "1h 40m",
       "rating": "8.5",
-      "genre": "comedy"
+      "genre": "comedy",
+      "description": "",
+      "videoUrl": "https://player.vimeo.com/video/1093479472?h=ca83101b04&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "com4",
-      "title": "Wedding Disaster",
-      "image": "/assets/images/movies/comedy4.jpg",
-      "slug": "wedding-disaster",
+      "title": "His Girl Friday",
+      "image": "/assets/images/movies/comedy/comedy2.jpeg",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy2_inner.jpeg",
+      "slug": "his-girl-friday",
       "year": "2023",
       "duration": "1h 55m",
       "rating": "8.3",
-      "genre": "comedy"
+      "genre": "comedy",
+      "description": "",
+      "videoUrl": "https://player.vimeo.com/video/1093479479?h=9ba908d931&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "crime": [
@@ -456,66 +587,66 @@
       "id": "dr1",
       "title": "Broken Strings",
       "image": "/assets/images/movies/drama/drama1.jpeg",
-      "innerImage": "/assets/images/movies/action1_inner.jpeg",
+      "innerImage": "/assets/images/movies/drama/landscape/drama1_inner.jpg",
       "slug": "broken-strings",
       "year": "2024",
       "duration": "2h 10m",
       "rating": "8.8",
       "genre": "drama",
       "description": "",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093482323?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "dr2",
       "title": "Key Largo",
       "image": "/assets/images/movies/drama/drama2.jpeg",
-      "innerImage": "/assets/images/movies/action1_inner.jpeg",
+      "innerImage": "/assets/images/movies/drama/landscape/drama2_inner.jpg",
       "slug": "key-largo",
       "year": "2024",
       "duration": "2h 10m",
       "rating": "8.8",
       "genre": "drama",
       "description": "",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093479334?h=49698c7c14&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "dr3",
       "title": "Salt of the Earth",
       "image": "/assets/images/movies/drama/drama3.jpeg",
-      "innerImage": "/assets/images/movies/action1_inner.jpeg",
+      "innerImage": "/assets/images/movies/drama/landscape/drama3_inner.jpg",
       "slug": "salt-of-the-earth",
       "year": "2024",
       "duration": "2h 10m",
       "rating": "8.8",
       "genre": "drama",
       "description": "",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093479462?h=0d5a0e1c41&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "dr4",
       "title": "Suddenly",
       "image": "/assets/images/movies/drama/drama4.jpg",
-      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/drama/landscape/drama4_inner.jpg",
       "slug": "suddenly",
       "year": "2024",
       "duration": "2h 10m",
       "rating": "8.8",
       "genre": "drama",
       "description": "",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093479367?h=0ad70bae61&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
         "id": "dr5",
         "title": "The Stranger",
         "image": "/assets/images/movies/drama/drama5.jpg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "innerImage": "/assets/images/movies/drama/landscape/drama5_inner.jpg",
         "slug": "the-stranger",
         "year": "2024",
         "duration": "2h 10m",
         "rating": "8.8",
         "genre": "drama",
         "description": "",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479489?h=59042a3a41&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "dr6",
@@ -584,10 +715,10 @@
       },
       {
         "id": "dr11",
-        "title": "The Outlaw",
+        "title": "Outlaw",
         "image": "/assets/images/movies/drama/drama11.jpeg",
         "innerImage": "/assets/images/movies/western/landscape/western2_inner.jpeg",
-        "slug": "the-outlaw",
+        "slug": "outlaw",
         "year": "2024",
         "duration": "2h 10m",
         "rating": "8.8",
@@ -1006,92 +1137,92 @@
       "id": "sf1",
       "title": "Assignment Outer Space",
       "image": "/assets/images/movies/sci-fi/scifi1.jpeg",
-      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi1_inner.jpeg",
       "slug": "assignment-outer-space",
       "year": "2024",
       "duration": "2h 15m",
       "rating": "8.8",
       "genre": "sci-fi",
       "description": "",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093479385?h=fff860a5a6&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "sf2",
       "title": "First Spaceship on Venus",
       "image": "/assets/images/movies/sci-fi/scifi2.jpeg",
-      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi2_inner.jpeg",
       "slug": "first-spaceship-on-venus",
       "year": "2023",
       "duration": "2h 10m",
       "rating": "8.6",
       "genre": "sci-fi",
       "description": "",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093479351?h=6a4e2a3de8&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "sf3",
       "title": "Incredible Shrinking Man",
       "image": "/assets/images/movies/sci-fi/scifi3.jpeg",
-      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi3_inner.jpeg",
       "slug": "incredible-shrinking-man",
       "year": "2024",
       "duration": "2h 20m",
       "rating": "8.7",
       "genre": "sci-fi",
       "description": "",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093479379?h=97a71fce63&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "sf4",
       "title": "Last Woman on Earth",
       "image": "/assets/images/movies/sci-fi/scifi4.jpg",
-      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi4_inner.jpg",
       "slug": "last-woman-on-earth",
       "year": "2023",
       "duration": "2h 5m",
       "rating": "8.5",
       "genre": "sci-fi",
       "description": "",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093479405?h=d385bbfea0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
         "id": "sf5",
         "title": "The Day the Earth Stood Still",
         "image": "/assets/images/movies/sci-fi/scifi5.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi5_inner.jpeg",
         "slug": "the-day-the-earth-stood-still",
         "year": "2023",
         "duration": "2h 5m",
         "rating": "8.5",
         "genre": "sci-fi",
         "description": "",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479341?h=041f053444&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "sf6",
         "title": "The Incredible Petrified World",
         "image": "/assets/images/movies/sci-fi/scifi6.jpg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi6_inner.jpg",
         "slug": "the-incredible-petrified-world",
         "year": "2023",
         "duration": "2h 5m",
         "rating": "8.5",
         "genre": "sci-fi",
         "description": "",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479376?h=c397333dab&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "sf7",
         "title": "The Lost World",
         "image": "/assets/images/movies/sci-fi/scifi7.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi7_inner.jpeg",
         "slug": "the-lost-world",
         "year": "2023",
         "duration": "2h 5m",
         "rating": "8.5",
         "genre": "sci-fi",
         "description": "",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479411?h=54f010a737&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       }
   ],
 

@@ -147,10 +147,10 @@ export default function DashboardPage() {
         <MovieRow>
           <MovieCard image={HisFriday}  title="His Girl Friday"  />
           <MovieCard image={Suddenly} title="Suddenly" />
-          <MovieCard image={Stranger} title="The Stranger 1946" />
-          <MovieCard image={Outlaw} title="The Outlaw 1943" />
-          <MovieCard image={Lost} title="The Lost World 1925" />
-          <MovieCard image={Last} title="Last Woman on Earth 1960" />
+          <MovieCard image={Stranger} title="The Stranger" />
+          <MovieCard image={Outlaw} title="Outlaw" />
+          <MovieCard image={Lost} title="The Lost World" />
+          <MovieCard image={Last} title="Last Woman on Earth" />
 
         </MovieRow>
       </ContentSection>
@@ -158,19 +158,28 @@ export default function DashboardPage() {
 
       {/* Recommended TV Shows  */}
       <ContentSection title="Recommended TV Shows">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           <LargeCard
             image={ series04}
-            title="Top 10 Reasons to Watch Hocus Pocus 2"
+            title="Iron Side"
           />
           <LargeCard
             image={ series06}
-            title="New Avatar 2 Cast Share First Impressions"
+            title="The Andy Griffith Show"
           />
           <LargeCard
             image={ series05}
-            title="Camila Mendes and Maya Hawke Answer Burning Questions"
+            title="Mister ED"
           />
+          <LargeCard
+            image={ series03}
+            title="Hill Street Blues"
+          />
+          <LargeCard
+            image={ series02}
+            title="Dragnet 1967"
+          />
+          
         </div>
       </ContentSection>
 
@@ -410,14 +419,14 @@ function TVShowCard({ image, title }) {
 
 function LargeCard({ image, title, description }) {
   return (
-    <div className="group cursor-pointer">
-      <div className="relative overflow-hidden rounded-lg mb-4">
+    <div className="group cursor-pointer w-[200px] ">
+      <div className="relative overflow-hidden rounded-lg mb-4 w-full gap-5">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
-          width={400}
+          width={600}
           height={300}
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
       <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors">{title}</h3>
