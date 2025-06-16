@@ -1,5 +1,5 @@
 {
-  "dragenet 1967": {
+  "dragnet": {
     "episodes": [
       {
         "id": "tf-1",
@@ -49,6 +49,212 @@
         "duration": "22:20",
         "previousEpisode": "tj-1",
         "nextEpisode": "tj-3"
+      }
+    ]
+  },
+
+  "the-beverly-hill-billies": {
+    "id": "the-beverly-hill-billies",
+    "title": "The Beverly Hill Billies",
+    "slug": "the-beverly-hill-billies",
+    "description": "Beverly Hill Billies is a radio and television crime drama about the cases of a dedicated Los Angeles police detective, Sergeant Joe Friday, and his partners.",
+    "thumbnail": "/assets/images/series/series1.jpeg",
+    "videoUrl": "",
+    "duration": "30 min",
+    "rating": "TV-PG",
+    "episodes": [
+      {
+        "id": "the-beverly-hill-billies-1",
+        "title": "Episode 01",
+        "slug": "episode-1",
+        "description": "Friday and Smith investigate a case where a man threatens to detonate a bomb unless his demands are met.",
+        "thumbnail": "/assets/images/series/series1.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1093555593?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "the-beverly-hill-billies-2",
+        "title": "Episode 02",
+        "slug": "episode-2",
+        "description": "A series of phone booth robberies leads Friday and Smith to a dangerous criminal ring.",
+        "thumbnail": "/assets/images/series/series1.jpeg",
+        "videoUrl": "https://www.youtube.com/embed/example2",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "the-beverly-hill-billies-3",
+        "title": "Episode 03",
+        "slug": "episode-3",
+        "description": "Friday and Smith investigate a case involving stolen fishing equipment and a mysterious boat.",
+        "thumbnail": "/assets/images/series/series1.jpeg",
+        "videoUrl": "https://www.youtube.com/embed/example3",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "the-beverly-hill-billies-4",
+        "title": "Episode 04",
+        "slug": "episode-4",
+        "description": "A stolen religious statue leads to a deeper investigation of a local crime ring.",
+        "thumbnail": "/assets/images/series/series1.jpeg",
+        "videoUrl": "https://www.youtube.com/embed/example4",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "the-beverly-hill-billies-5",
+        "title": "Episode 05",
+        "slug": "episode-5",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series1.jpeg",
+        "videoUrl": "https://www.youtube.com/embed/example5",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-4",
+        "nextEpisode": null
+      }
+    ]
+  },
+
+  "mister-ed": {
+    "id": "mister-ed",
+    "title": "Mister ED",
+    "slug": "mister-ed",
+    "description": "Mister ED is a radio and television crime drama about the cases of a dedicated Los Angeles police detective, Sergeant Joe Friday, and his partners.",
+    "thumbnail": "/assets/images/series/series5.jpg",
+    "videoUrl": "",
+    "duration": "30 min",
+    "rating": "TV-PG",
+    "episodes": [
+      {
+        "id": "mister-ed-1",
+        "title": "Episode 01",
+        "slug": "episode-1",
+        "description": "Friday and Smith investigate a case where a man threatens to detonate a bomb unless his demands are met.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093550180?h=5e973386ea&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "mister-ed-2",
+        "title": "Episode 02",
+        "slug": "episode-2",
+        "description": "A series of phone booth robberies leads Friday and Smith to a dangerous criminal ring.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093550442?h=a0e645b0eb&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "mister-ed-3",
+        "title": "Episode 03",
+        "slug": "episode-3",
+        "description": "Friday and Smith investigate a case involving stolen fishing equipment and a mysterious boat.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093550717?h=3ebd096ddf&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "mister-ed-4",
+        "title": "Episode 04",
+        "slug": "episode-4",
+        "description": "A stolen religious statue leads to a deeper investigation of a local crime ring.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093550934?h=3450a7b933&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "mister-ed-5",
+        "title": "Episode 05",
+        "slug": "episode-5",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093551251?h=71f614ab6e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-4",
+        "nextEpisode": null
+      },
+      {
+        "id": "mister-ed-6",
+        "title": "Episode 06",
+        "slug": "episode-6",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093551505?h=5319de411e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-5",
+        "nextEpisode": "episode-7"
+      },
+      {
+        "id": "mister-ed-7",
+        "title": "Episode 07",
+        "slug": "episode-7",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093551782?h=1487753d96&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-6",
+        "nextEpisode": "episode-8"
+      },
+      {
+        "id": "mister-ed-8",
+        "title": "Episode 08",
+        "slug": "episode-8",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093552083?h=7b34b6763c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-7",
+        "nextEpisode": "episode-9"
+      },
+      {
+        "id": "mister-ed-9",
+        "title": "Episode 09",
+        "slug": "episode-9",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093552371?h=fd10f5a2b4&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-8",
+        "nextEpisode": "episode-10"
+      },
+      {
+        "id": "mister-ed-10",
+        "title": "Episode 10",
+        "slug": "episode-10",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series5.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093552693?h=17398604e6&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-9",
+        "nextEpisode": null
       }
     ]
   }

@@ -8,9 +8,9 @@ import { Play, ArrowLeft } from 'lucide-react';
 import Navbar from '../../../../../../components/navbarSearch';
 import Footer from '../../../../../../components/footer';
 import moviesData from '../../../../../data/movies.json';
-import tvEpisodesData from '../../../../../data/tvEpisodes.json';
+import episodesData from '../../../../../data/tvEpisodes.json';
 
-export default function TVEpisodePage() {
+export default function EpisodePage() {
   const params = useParams();
   const { slug, episodeSlug } = params;
   const [series, setSeries] = useState(null);
@@ -22,9 +22,9 @@ export default function TVEpisodePage() {
     const foundSeries = moviesData['tv-series']?.find(s => s.slug === slug);
     setSeries(foundSeries);
 
-    // Get episode data from tvEpisodes.json
-    if (foundSeries && tvEpisodesData[slug]) {
-      const foundEpisode = tvEpisodesData[slug].episodes.find(ep => ep.slug === episodeSlug);
+    // Get episode data from episodes.json
+    if (foundSeries && episodesData[slug]) {
+      const foundEpisode = episodesData[slug].episodes.find(ep => ep.slug === episodeSlug);
       setEpisode(foundEpisode);
     }
   }, [slug, episodeSlug]);
@@ -83,7 +83,7 @@ export default function TVEpisodePage() {
             />
           ) : (
             <Image
-              src={episode.thumbnail}
+              src={episode.thumbnail || series.image}
               alt={episode.title}
               width={1920}
               height={1080}

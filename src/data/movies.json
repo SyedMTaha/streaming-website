@@ -1378,5 +1378,75 @@
       "rating": "8.4",
       "genre": "western"
     }
+  ],
+
+  "tv-series": [
+    {
+      "id": "tv1",
+      "title": "Dragnet 1951",
+      "image": "/assets/images/series/series2.jpg",
+      "slug": "dragnet",
+      "year": "1951",
+      "duration": "30 min",
+      "rating": "TV-PG",
+      "genre": "crime",
+      "description": "Dragnet is a radio and television crime drama about the cases of a dedicated Los Angeles police detective, Sergeant Joe Friday, and his partners."
+    },
+    {
+      "id": "tv2",
+      "title": "HillStreet Blues",
+      "image": "/assets/images/series/series3.jpg",
+      "slug": "hillstreet-blues",
+      "year": "1962",
+      "duration": "22 min",
+      "rating": "TV-G",
+      "genre": "animation",
+      "description": "The Jetsons is a futuristic animated sitcom about a family living in the year 2062, featuring flying cars, robot maids, and other technological innovations."
+    },
+    {
+      "id": "tv3",
+      "title": "The Beverly Hill Billies",
+      "image": "/assets/images/series/series1.jpeg",
+      "slug": "the-beverly-hill-billies",
+      "year": "1960",
+      "duration": "22 min",
+      "rating": "TV-G",
+      "genre": "animation",
+      "description": "The Flintstones is an animated sitcom about a working-class Stone Age man's life with his family and his next-door neighbor and best friend."
+    },
+    {
+      "id": "tv4",
+      "title": "The Ironside",
+      "image": "/assets/images/series/series4.jpg",
+      "slug": "the-ironside",
+      "year": "1960",
+      "duration": "22 min",
+      "rating": "TV-G",
+      "genre": "animation",
+      "description": "The Flintstones is an animated sitcom about a working-class Stone Age man's life with his family and his next-door neighbor and best friend."
+    },
+    {
+      "id": "tv5",
+      "title": "Mister ED",
+      "image": "/assets/images/series/series5.jpg",
+      "slug": "mister-ed",
+      "year": "1960",
+      "duration": "22 min",
+      "rating": "TV-G",
+      "genre": "animation",
+      "description": "The Flintstones is an animated sitcom about a working-class Stone Age man's life with his family and his next-door neighbor and best friend."
+    },
+    {
+      "id": "tv6",
+      "title": "The Andy Griffiths Show",
+      "image": "/assets/images/series/series6.jpg",
+      "slug": "andy-griffiths",
+      "year": "1960",
+      "duration": "22 min",
+      "rating": "TV-G",
+      "genre": "animation",
+      "description": "The Flintstones is an animated sitcom about a working-class Stone Age man's life with his family and his next-door neighbor and best friend."
+    }
+    
   ]
 } 
