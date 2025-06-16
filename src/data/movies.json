@@ -4,20 +4,20 @@
       "id": "a1",
       "title": "Angel and the Badman",
       "image": "/assets/images/movies/action/action1.jpg",
-      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action1_inner.jpg",
       "slug": "angel-and-the-badman",
       "year": "2024",
       "duration": "2h 15m",
       "rating": "8.5",
       "genre": "action",
       "description": "A thrilling action movie about redemption and justice.",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093479397?h=6539bc8d1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "a2",
       "title": "Asphalt Jungle",
       "image": "/assets/images/movies/action/action2.jpg",
-      "innerImage": "/assets/images/movies/action2_inner.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action2_inner.jpg",
       "slug": "asphalt-jungle",
       "year": "2023",
       "duration": "1h 55m",
@@ -30,7 +30,7 @@
       "id": "a3",
       "title": "Bad and the Beautiful",
       "image": "/assets/images/movies/action/action3.jpg",
-      "innerImage": "/assets/images/movies/action3_inner.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action3_inner.jpg",
       "slug": "bad-and-the-beautiful",
       "year": "2024",
       "duration": "2h 5m",
@@ -43,79 +43,105 @@
       "id": "a4",
       "title": "Deadline",
       "image": "/assets/images/movies/action/action4.jpeg",
-      "innerImage": "/assets/images/movies/action4_inner.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action5_inner.jpg",
       "slug": "deadline",
       "year": "2023",
       "duration": "1h 50m",
       "rating": "8.0",
       "genre": "action",
       "description": "An action-packed movie about street justice.",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1093481981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
         "id": "a5",
         "title": "Detour",
         "image": "/assets/images/movies/action/action5.jpg",
-        "innerImage": "/assets/images/movies/action4_inner.jpg",
+        "innerImage": "/assets/images/movies/action/landscape/action6_inner.jpg",
         "slug": "detour",
         "year": "2023",
         "duration": "1h 50m",
         "rating": "8.0",
         "genre": "action",
         "description": "An action-packed movie about street justice.",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479498?h=6726407aa3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "a6",
         "title": "Outlaw",
         "image": "/assets/images/movies/action/action6.jpg",
-        "innerImage": "/assets/images/movies/action4_inner.jpg",
+        "innerImage": "/assets/images/movies/action/landscape/action7_inner.jpg",
         "slug": "outlaw",
         "year": "2023",
         "duration": "1h 50m",
         "rating": "8.0",
         "genre": "action",
         "description": "An action-packed movie about street justice.",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479427?h=411e2db833&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "a7",
         "title": "Pursued",
         "image": "/assets/images/movies/action/action7.jpg",
-        "innerImage": "/assets/images/movies/action4_inner.jpg",
+        "innerImage": "/assets/images/movies/action/landscape/action_inner.jpg",
         "slug": "pursued",
         "year": "2023",
         "duration": "1h 50m",
         "rating": "8.0",
         "genre": "action",
         "description": "An action-packed movie about street justice.",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1092935963?h=5742e343fb&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "a8",
         "title": "Stage Coach",
         "image": "/assets/images/movies/action/action8.jpeg",
-        "innerImage": "/assets/images/movies/action4_inner.jpeg",
+        "innerImage": "/assets/images/movies/action/landscape/action9_inner.jpg",
         "slug": "stage-coach",
         "year": "2023",
         "duration": "1h 50m",
         "rating": "8.0",
         "genre": "action",
         "description": "An action-packed movie about street justice.",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1092562326?h=b32d27474f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "a9",
         "title": "Train",
         "image": "/assets/images/movies/action/action9.jpeg",
-        "innerImage": "/assets/images/movies/action4_inner.jpeg",
+        "innerImage": "/assets/images/movies/action/landscape/action11_inner.jpg",
         "slug": "train",
         "year": "2023",
         "duration": "1h 50m",
         "rating": "8.0",
         "genre": "action",
         "description": "An action-packed movie about street justice.",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093478686?h=607746602b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      },
+      {
+        "id": "a10",
+        "title": "State Secret",
+        "image": "/assets/images/movies/action/.jpeg",
+        "innerImage": "/assets/images/movies/action/landscape/action10_inner.jpg",
+        "slug": "state-secret",
+        "year": "2023",
+        "duration": "1h 50m",
+        "rating": "8.0",
+        "genre": "action",
+        "description": "An action-packed movie about street justice.",
+        "videoUrl": "https://player.vimeo.com/video/1092933232?h=d997dfd2ca&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      },
+      {
+        "id": "a11",
+        "title": "Atomic Submarine",
+        "image": "/assets/images/movies/action/.jpeg",
+        "innerImage": "/assets/images/movies/action/landscape/action4_inner.jpg",
+        "slug": "atomic-submarine",
+        "year": "2023",
+        "duration": "1h 50m",
+        "rating": "8.0",
+        "genre": "action",
+        "description": "An action-packed movie about street justice.",
+        "videoUrl": "https://player.vimeo.com/video/1092936389?h=1e0be4f157&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       }
   ],
   "adventure": [
@@ -508,14 +534,14 @@
         "id": "dr7",
         "title": "Hitch Hiker",
         "image": "/assets/images/movies/drama/drama7.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "innerImage": "/assets/images/movies/thriller/landscape/action1_inner.jpg",
         "slug": "hitch-hiker",
         "year": "2024",
         "duration": "2h 10m",
         "rating": "8.8",
         "genre": "drama",
         "description": "",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479358?h=9bd4698cc0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "dr8",
@@ -547,27 +573,27 @@
         "id": "dr10",
         "title": "The Kennel Murder Case",
         "image": "/assets/images/movies/drama/drama10.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "innerImage": "/assets/images/movies/mystery/landscape/mystery2_inner.jpeg",
         "slug": "the-kennel-murder-case",
         "year": "2024",
         "duration": "2h 10m",
         "rating": "8.8",
         "genre": "drama",
         "description": "",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479418?h=632e31d8da&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
       },
       {
         "id": "dr11",
         "title": "The Outlaw",
         "image": "/assets/images/movies/drama/drama11.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "innerImage": "/assets/images/movies/western/landscape/western2_inner.jpeg",
         "slug": "the-outlaw",
         "year": "2024",
         "duration": "2h 10m",
         "rating": "8.8",
         "genre": "drama",
         "description": "",
-        "videoUrl": ""
+        "videoUrl": "https://player.vimeo.com/video/1093479431?h=61ae066f7f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       },
       {
         "id": "dr12",
@@ -852,43 +878,42 @@
   "mystery": [
     {
       "id": "my1",
-      "title": "The Puzzle",
-      "image": "/assets/images/movies/mystery1.jpg",
-      "slug": "the-puzzle",
+      "title": "Texas Terror",
+      "image": "/assets/images/movies/mystery/mystery1.jpg",
+      "innerImage": "/assets/images/movies/mystery/landscape/mystery1_inner.jpg",
+      "slug": "texas-terror",
       "year": "2024",
       "duration": "2h 10m",
       "rating": "8.8",
-      "genre": "mystery"
+      "genre": "mystery",
+      "description": "",
+      "videoUrl": "https://player.vimeo.com/video/1093479452?h=bc0361fc9e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  
     },
     {
       "id": "my2",
-      "title": "Hidden Truth",
-      "image": "/assets/images/movies/mystery2.jpg",
-      "slug": "hidden-truth",
+      "title": "Sabotage",
+      "image": "/assets/images/movies/mystery/mystery3.jpeg",
+      "innerImage": "/assets/images/movies/mystery/landscape/mystery3_inner.jpeg",
+      "slug": "sabotage",
       "year": "2023",
       "duration": "2h 5m",
       "rating": "8.6",
-      "genre": "mystery"
+      "genre": "mystery",
+      "description": "",
+      "videoUrl": "https://player.vimeo.com/video/1093479446?h=261f067fae&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
     },
     {
       "id": "my3",
-      "title": "The Secret",
-      "image": "/assets/images/movies/mystery3.jpg",
-      "slug": "the-secret",
+      "title": "The Kennel Murder Case",
+      "image": "/assets/images/movies/mystery/mystery2.jpeg",
+      "innerImage": "/assets/images/movies/mystery/landscape/mystery2_inner.jpeg",
+      "slug": "the-kennel-murder-case",
       "year": "2024",
       "duration": "2h 15m",
       "rating": "8.7",
-      "genre": "mystery"
-    },
-    {
-      "id": "my4",
-      "title": "Dark Clues",
-      "image": "/assets/images/movies/mystery4.jpg",
-      "slug": "dark-clues",
-      "year": "2023",
-      "duration": "2h 20m",
-      "rating": "8.5",
-      "genre": "mystery"
+      "genre": "mystery",
+      "description": "",
+      "videoUrl": "https://player.vimeo.com/video/1093479418?h=632e31d8da&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
     }
   ],
   "news": [
@@ -1118,40 +1143,40 @@
       "id": "t1",
       "title": "Hitch Hiker",
       "image": "/assets/images/movies/thriller/thriller1.jpeg",
-      "innerImage": "/assets/images/movies/thriller/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/thriller/landscape/action1_inner.jpg",
       "slug": "hitch-hiker",
       "year": "2024",
       "duration": "2h 10m",
       "rating": "8.6",
       "genre": "thriller",
       "description": "",
-      "videoUrl": ""        
+      "videoUrl": "https://player.vimeo.com/video/1093479358?h=9bd4698cc0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"        
     },
     {
       "id": "t2",
       "title": "Million Dollar Weekend",
       "image": "/assets/images/movies/thriller/thriller2.jpeg",
-      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/thriller/landscape/action2_inner.jpg",
       "slug": "million-dollar-weekend",
       "year": "2023",
       "duration": "2h 5m",
       "rating": "8.4",
       "genre": "thriller",
       "description": "",
-      "videoUrl": "" 
+      "videoUrl": "https://player.vimeo.com/video/1093479435?h=427d9b7865&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
     },
     {
       "id": "t3",
       "title": "Scarlet Street",
       "image": "/assets/images/movies/thriller/thriller3.jpg",
-      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/thriller/landscape/action3_inner.jpg",
       "slug": "scarlet-street",
       "year": "2024",
       "duration": "2h 15m",
       "rating": "8.5",
       "genre": "thriller",
       "description": "",
-      "videoUrl": "" 
+      "videoUrl": "https://player.vimeo.com/video/1093479465?h=f233e35dfe&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
     }
   ],
   "war": [
@@ -1202,20 +1227,20 @@
       "id": "we1",
       "title": "One Eyed Jacks",
       "image": "/assets/images/movies/western/western1.jpg",
-      "innerImage": "/assets/images/movies/thriller/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/western/landscape/western1_inner.jpg",
       "slug": "one-eyed-jacks",
       "year": "2024",
       "duration": "2h 15m",
       "rating": "8.6",
       "genre": "western",
       "description": "",
-      "videoUrl": "" 
+      "videoUrl": "https://player.vimeo.com/video/1093479458?h=cf8ec93268&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
     },
     {
       "id": "we2",
       "title": "The Outlaw",
       "image": "/assets/images/movies/western/western2.jpeg",
-      "innerImage": "/assets/images/movies/thriller/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/western/landscape/western2_inner.jpeg",
       "slug": "the-outlaw",
       "year": "2023",
       "duration": "2h 10m",
