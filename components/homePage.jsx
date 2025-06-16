@@ -159,11 +159,12 @@ export default function DashboardPage() {
       {/* Recommended TV Shows  */}
       <ContentSection title="Recommended TV Shows" onScroll={handleScroll}>
     
-          <LargeCard image={ series04} title="Iron Side" />
-          <LargeCard image={ series06} title="The Andy Griffith Show"/>
+          <LargeCard image={ series04} title="The IronSide" />
+          <LargeCard image={ series06} title="Andy Griffiths"/>
           <LargeCard image={ series05} title="Mister ED" />
-          <LargeCard image={ series03} title="Hill Street Blues" />
-          <LargeCard image={ series02} title="Dragnet 1967" />    
+          <LargeCard image={ series03} title="HillStreet Blues" />
+          <LargeCard image={ series02} title="Dragnet" />   
+          <LargeCard image={ series01} title="The Beverly Hill Billies" />   
        
       </ContentSection>
 
@@ -248,14 +249,14 @@ export default function DashboardPage() {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4" id="tv-series-grid">
-            <TVShowCard image={series01} title="Beverly Bill Billies" />
-            <TVShowCard image={series02} title="Dragnet 1967" />
-            <TVShowCard image={series03} title="Hill Street Blues" />
-            <TVShowCard image={series04} title="Iron Side" />
+            <TVShowCard image={series01} title="The Beverly Hill Billies" />
+            <TVShowCard image={series02} title="Dragnet" />
+            <TVShowCard image={series03} title="HillStreet Blues" />
+            <TVShowCard image={series04} title="The IronSide" />
             <TVShowCard image={series05} title="Mister ED" />
-            <TVShowCard image={series06} title="The Andy Griffth Show" />
-            <TVShowCard image={series01} title="Beverly Bill Billies" />
-            <TVShowCard image={series02} title="Dragnet 1967" />
+            <TVShowCard image={series06} title="Andy Griffiths" />
+            <TVShowCard image={series01} title="The Beverly Hill Billies" />
+            <TVShowCard image={series02} title="Dragnet" />
           </div>
         </div>
       </section>
@@ -385,7 +386,10 @@ function MovieCard({ image, title }) {
 }
 
 function TVShowCard({ image, title }) {
+  // Convert title to URL-friendly slug
+  const slug = title.toLowerCase().replace(/\s+/g, '-');
   return (
+    <Link href={`/tv-series/${slug}`}> 
     <div className="group cursor-pointer">
       <div className="relative overflow-hidden rounded-lg mb-2">
         <Image
@@ -398,11 +402,15 @@ function TVShowCard({ image, title }) {
       </div>
       <h3 className="text-sm font-medium group-hover:text-blue-400 transition-colors">{title}</h3>
     </div>
+    </Link>
   )
 }
 
 function LargeCard({ image, title, description }) {
+  // Convert title to URL-friendly slug
+  const slug = title.toLowerCase().replace(/\s+/g, '-');
   return (
+    <Link href={`/tv-series/${slug}`}> 
     <div className="group cursor-pointer flex-shrink-0 w-70">
       <div className="relative overflow-hidden rounded-lg mb-2">
         <Image
@@ -417,6 +425,7 @@ function LargeCard({ image, title, description }) {
       <h3 className="text-sm font-medium text-center group-hover:text-blue-400 transition-colors">{title}</h3>
       <p className="text-gray-400 text-sm leading-relaxed text-center">{description}</p>
     </div>
+    </Link>
   )
 }
 
