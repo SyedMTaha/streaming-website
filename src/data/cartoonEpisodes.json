@@ -1,0 +1,368 @@
+{
+  "atom-ant": {
+    "episodes": [
+      {
+        "id": "atom-ant-ep1",
+        "title": "The Atom Ant Show",
+        "slug": "episode-1",
+        "description": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066572?h=0e1494be48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "22:30",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "atom-ant-ep2",
+        "title": "The Great Escape",
+        "slug": "episode-2",
+        "description": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066618?h=ac6c451564&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "21:45",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "atom-ant-ep3",
+        "title": "The Bank Robbery",
+        "slug": "episode-3",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066684?h=b200867349&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "atom-ant-ep4",
+        "title": "The Bank Robbery",
+        "slug": "episode-4",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066740?h=41530e2370&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "atom-ant-ep5",
+        "title": "The Bank Robbery",
+        "slug": "episode-5",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example3",
+        "duration": "23:15",
+        "previousEpisode": "episode-4",
+        "nextEpisode": "episode-6"
+      },
+      {
+        "id": "atom-ant-ep6",
+        "title": "The Bank Robbery",
+        "slug": "episode-6",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066831?h=47ec1677b4&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-5",
+        "nextEpisode": "episode-7"
+      },
+      {
+        "id": "atom-ant-ep7",
+        "title": "The Bank Robbery",
+        "slug": "episode-7",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example3",
+        "duration": "23:15",
+        "previousEpisode": "episode-6",
+        "nextEpisode": "episode-8"
+      },
+      {
+        "id": "atom-ant-ep8",
+        "title": "The Bank Robbery",
+        "slug": "episode-8",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example3",
+        "duration": "23:15",
+        "previousEpisode": "episode-7",
+        "nextEpisode": "episode-9"
+      },
+      {
+        "id": "atom-ant-ep9",
+        "title": "The Bank Robbery",
+        "slug": "episode-9",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example3",
+        "duration": "23:15",
+        "previousEpisode": "episode-8",
+        "nextEpisode": "episode-10"
+      },
+      {
+        "id": "atom-ant-ep10",
+        "title": "The Bank Robbery",
+        "slug": "episode-10",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example3",
+        "duration": "23:15",
+        "previousEpisode": "episode-9",
+        "nextEpisode": "episode-11"
+      },
+      {
+        "id": "atom-ant-ep11",
+        "title": "The Bank Robbery",
+        "slug": "episode-11",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093067057?h=9262cdd1ab&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-10",
+        "nextEpisode": "episode-12"
+      },
+      {
+        "id": "atom-ant-ep12",
+        "title": "The Bank Robbery",
+        "slug": "episode-12",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093067107?h=b604a5f234&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-11",
+        "nextEpisode": "episode-13"
+      },
+      {
+        "id": "atom-ant-ep13",
+        "title": "The Bank Robbery",
+        "slug": "episode-13",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093067162?h=0dbc27594c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-12",
+        "nextEpisode": "episode-14"
+      },
+      {
+        "id": "atom-ant-ep14",
+        "title": "The Bank Robbery",
+        "slug": "episode-14",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093067205?h=58de6fe99b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-13",
+        "nextEpisode": "episode-15"
+      },
+      {
+        "id": "atom-ant-ep15",
+        "title": "The Bank Robbery",
+        "slug": "episode-15",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093067256?h=f49397cb80&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-14",
+        "nextEpisode": "episode-16"
+      },
+      {
+        "id": "atom-ant-ep16",
+        "title": "The Bank Robbery",
+        "slug": "episode-16",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093067312?h=273f543f8c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-15",
+        "nextEpisode": "episode-17"
+      },
+      {
+        "id": "atom-ant-ep17",
+        "title": "The Bank Robbery",
+        "slug": "episode-17",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093067409?h=9a4a65657b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-16",
+        "nextEpisode": "episode-18"
+      },
+      {
+        "id": "atom-ant-ep18",
+        "title": "The Bank Robbery",
+        "slug": "episode-18",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093067481?h=9bcde39f81&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-17",
+        "nextEpisode": "episode-19"
+      },
+      {
+        "id": "atom-ant-ep19",
+        "title": "The Bank Robbery",
+        "slug": "episode-19",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example3",
+        "duration": "23:15",
+        "previousEpisode": "episode-18",
+        "nextEpisode": "episode-20"
+      },
+      {
+        "id": "atom-ant-ep20",
+        "title": "The Bank Robbery",
+        "slug": "episode-20",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066097?h=3045ca406f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-19",
+        "nextEpisode": "episode-21"
+      },
+      {
+        "id": "atom-ant-ep21",
+        "title": "The Bank Robbery",
+        "slug": "episode-21",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066148?h=f9f900b6a0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-20",
+        "nextEpisode": "episode-22"
+      },
+      {
+        "id": "atom-ant-ep22",
+        "title": "The Bank Robbery",
+        "slug": "episode-22",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066218?h=1cc845a6e2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-21",
+        "nextEpisode": "episode-23"
+      },
+      {
+        "id": "atom-ant-ep23",
+        "title": "The Bank Robbery",
+        "slug": "episode-23",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066298?h=acfc4f7a3d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-22",
+        "nextEpisode": "episode-24"
+      },
+      {
+        "id": "atom-ant-ep24",
+        "title": "The Bank Robbery",
+        "slug": "episode-24",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066357?h=7fd79ee49a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-23",
+        "nextEpisode": "episode-25"
+      },
+      {
+        "id": "atom-ant-ep25",
+        "title": "The Bank Robbery",
+        "slug": "episode-25",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066434?h=dc3ba6d2ff&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-24",
+        "nextEpisode": "episode-26"
+      },
+      {
+        "id": "atom-ant-ep26",
+        "title": "The Bank Robbery",
+        "slug": "episode-26",
+        "description": "Atom Ant foils a bank robbery and teaches the criminals a lesson about justice.",
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093066492?h=a5b50df6da&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-25",
+        "nextEpisode": null
+      }
+    ]
+  },
+
+  "popeye": {
+    "episodes": [
+      {
+        "id": "popeye-ep1",
+        "title": "Popeye the Sailor",
+        "slug": "episode-1",
+        "description": "Popeye's first adventure where he meets Olive Oyl and battles Bluto.",
+        "thumbnail": "/images/cartoons/popeye/ep1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example4",
+        "duration": "20:45",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "popeye-ep2",
+        "title": "The Spinach Challenge",
+        "slug": "episode-2",
+        "description": "Popeye must win a strength competition against Bluto to save Olive Oyl.",
+        "thumbnail": "/images/cartoons/popeye/ep2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example5",
+        "duration": "22:00",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "popeye-ep3",
+        "title": "The Treasure Hunt",
+        "slug": "episode-3",
+        "description": "Popeye and his friends go on a treasure hunt, but Bluto has other plans.",
+        "thumbnail": "/images/cartoons/popeye/ep3.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example6",
+        "duration": "21:30",
+        "previousEpisode": "episode-2",
+        "nextEpisode": null
+      }
+    ]
+  },
+
+  "tom-and-jerry": {
+    "episodes": [
+      {
+        "id": "tom-jerry-ep1",
+        "title": "The First Chase",
+        "slug": "episode-1",
+        "description": "Tom and Jerry's first encounter leads to a wild chase through the house.",
+        "thumbnail": "/images/cartoons/tom-jerry/ep1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example7",
+        "duration": "19:45",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "tom-jerry-ep2",
+        "title": "The Mouse Trap",
+        "slug": "episode-2",
+        "description": "Tom sets up an elaborate trap for Jerry, but things don't go as planned.",
+        "thumbnail": "/images/cartoons/tom-jerry/ep2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example8",
+        "duration": "20:15",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "tom-jerry-ep3",
+        "title": "The Dog's Revenge",
+        "slug": "episode-3",
+        "description": "Spike the dog gets involved in Tom and Jerry's antics.",
+        "thumbnail": "/images/cartoons/tom-jerry/ep3.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example9",
+        "duration": "21:00",
+        "previousEpisode": "episode-2",
+        "nextEpisode": null
+      }
+    ]
+  }
+} 

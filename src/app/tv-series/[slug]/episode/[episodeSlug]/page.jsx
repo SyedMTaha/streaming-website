@@ -8,28 +8,28 @@ import { Play, ArrowLeft } from 'lucide-react';
 import Navbar from '../../../../../../components/navbarSearch';
 import Footer from '../../../../../../components/footer';
 import moviesData from '../../../../../data/movies.json';
-import episodesData from '../../../../../data/cartoonEpisodes.json';
+import tvEpisodesData from '../../../../../data/tvEpisodes.json';
 
-export default function EpisodePage() {
+export default function TVEpisodePage() {
   const params = useParams();
   const { slug, episodeSlug } = params;
-  const [cartoon, setCartoon] = useState(null);
+  const [series, setSeries] = useState(null);
   const [episode, setEpisode] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    // Find the cartoon by slug
-    const foundCartoon = moviesData['cartoon']?.find(c => c.slug === slug);
-    setCartoon(foundCartoon);
+    // Find the series by slug
+    const foundSeries = moviesData['tv-series']?.find(s => s.slug === slug);
+    setSeries(foundSeries);
 
-    // Get episode data from episodes.json
-    if (foundCartoon && episodesData[slug]) {
-      const foundEpisode = episodesData[slug].episodes.find(ep => ep.slug === episodeSlug);
+    // Get episode data from tvEpisodes.json
+    if (foundSeries && tvEpisodesData[slug]) {
+      const foundEpisode = tvEpisodesData[slug].episodes.find(ep => ep.slug === episodeSlug);
       setEpisode(foundEpisode);
     }
   }, [slug, episodeSlug]);
 
-  if (!cartoon || !episode) {
+  if (!series || !episode) {
     return (
       <div className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
         <div className="text-center">
@@ -46,7 +46,7 @@ export default function EpisodePage() {
       <div className="max-w-7xl mx-auto py-8 px-4">
         {/* Back Button */}
         <Link 
-          href={`/cartoon/${slug}`}
+          href={`/tv-series/${slug}`}
           className="inline-flex items-center text-gray-300 hover:text-white mb-6"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
@@ -55,7 +55,7 @@ export default function EpisodePage() {
 
         {/* Episode Title */}
         <h1 className="text-3xl font-bold mb-4">
-          {cartoon.title} - {episode.title}
+          {series.title} - {episode.title}
         </h1>
 
         {/* Video Player Section */}
@@ -83,7 +83,7 @@ export default function EpisodePage() {
             />
           ) : (
             <Image
-              src={episode.thumbnail || cartoon.image}
+              src={episode.thumbnail}
               alt={episode.title}
               width={1920}
               height={1080}
@@ -105,7 +105,7 @@ export default function EpisodePage() {
         <div className="flex justify-between items-center">
           {episode.previousEpisode && (
             <Link
-              href={`/cartoon/${slug}/episode/${episode.previousEpisode}`}
+              href={`/tv-series/${slug}/episode/${episode.previousEpisode}`}
               className="bg-[#1D50A3] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transition-colors"
             >
               Previous Episode
@@ -113,7 +113,7 @@ export default function EpisodePage() {
           )}
           {episode.nextEpisode && (
             <Link
-              href={`/cartoon/${slug}/episode/${episode.nextEpisode}`}
+              href={`/tv-series/${slug}/episode/${episode.nextEpisode}`}
               className="bg-[#1D50A3] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transition-colors"
             >
               Next Episode

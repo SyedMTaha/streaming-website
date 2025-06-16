@@ -8,7 +8,7 @@ import { Bookmark, Share, Star, Check } from 'lucide-react';
 import Navbar from '../../../../components/navbarSearch';
 import Footer from '../../../../components/footer';
 import moviesData from '../../../data/movies.json';
-import episodesData from '../../../data/episodes.json';
+import episodesData from '../../../data/cartoonEpisodes.json';
 import { auth } from '../../../../firebase';
 import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
 

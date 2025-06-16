@@ -1,0 +1,55 @@
+{
+  "dragenet 1967": {
+    "episodes": [
+      {
+        "id": "tf-1",
+        "title": "The Flintstone Flyer",
+        "slug": "the-flintstone-flyer",
+        "description": "Fred and Barney build a flying machine to compete in a race.",
+        "thumbnail": "/images/tv/flintstones/episode1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example1",
+        "duration": "22:30",
+        "previousEpisode": null,
+        "nextEpisode": "tf-2"
+      },
+      {
+        "id": "tf-2",
+        "title": "Hot Lips Hannigan",
+        "slug": "hot-lips-hannigan",
+        "description": "Wilma and Betty join a women's club, causing trouble for Fred and Barney.",
+        "thumbnail": "/images/tv/flintstones/episode2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example2",
+        "duration": "22:15",
+        "previousEpisode": "tf-1",
+        "nextEpisode": "tf-3"
+      }
+    ]
+  },
+  
+  "the-jetsons": {
+    "episodes": [
+      {
+        "id": "tj-1",
+        "title": "Rosey the Robot",
+        "slug": "rosey-the-robot",
+        "description": "The Jetsons get a new robot maid named Rosey.",
+        "thumbnail": "/images/tv/jetsons/episode1.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example3",
+        "duration": "22:45",
+        "previousEpisode": null,
+        "nextEpisode": "tj-2"
+      },
+      {
+        "id": "tj-2",
+        "title": "A Date with Jet Screamer",
+        "slug": "a-date-with-jet-screamer",
+        "description": "Judy gets to meet her favorite pop star, Jet Screamer.",
+        "thumbnail": "/images/tv/jetsons/episode2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/example4",
+        "duration": "22:20",
+        "previousEpisode": "tj-1",
+        "nextEpisode": "tj-3"
+      }
+    ]
+  }
+} 
