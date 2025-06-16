@@ -257,5 +257,139 @@
         "nextEpisode": null
       }
     ]
+  },
+
+  "andy-griffiths": {
+    "id": "andy-griffiths",
+    "title": "The Andy Griffiths Show",
+    "slug": "andy-griffiths",
+    "description": "Andy Griffith Show is a radio and television crime drama about the cases of a dedicated Los Angeles police detective, Sergeant Joe Friday, and his partners.",
+    "thumbnail": "/assets/images/series/series6.jpg",
+    "videoUrl": "",
+    "duration": "30 min",
+    "rating": "TV-PG",
+    "episodes": [
+      {
+        "id": "andy-griffiths-1",
+        "title": "Episode 01",
+        "slug": "episode-1",
+        "description": "Friday and Smith investigate a case where a man threatens to detonate a bomb unless his demands are met.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093545308?h=acbbaf8ddf&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "andy-griffiths-2",
+        "title": "Episode 02",
+        "slug": "episode-2",
+        "description": "A series of phone booth robberies leads Friday and Smith to a dangerous criminal ring.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093545580?h=307b7e58f3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "andy-griffiths-3",
+        "title": "Episode 03",
+        "slug": "episode-3",
+        "description": "Friday and Smith investigate a case involving stolen fishing equipment and a mysterious boat.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093543560?h=9a3acaa0ac&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "andy-griffiths-4",
+        "title": "Episode 04",
+        "slug": "episode-4",
+        "description": "A stolen religious statue leads to a deeper investigation of a local crime ring.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093544069?h=d63ee95d0c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "andy-griffiths-5",
+        "title": "Episode 05",
+        "slug": "episode-5",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093543545?h=95814db77c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-4",
+        "nextEpisode": null
+      },
+      {
+        "id": "andy-griffiths-6",
+        "title": "Episode 06",
+        "slug": "episode-6",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093544273?h=0603b87279&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-5",
+        "nextEpisode": "episode-7"
+      },
+      {
+        "id": "andy-griffiths-7",
+        "title": "Episode 07",
+        "slug": "episode-7",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093544456?h=579cc96b8d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-6",
+        "nextEpisode": "episode-8"
+      },
+      {
+        "id": "andy-griffiths-8",
+        "title": "Episode 08",
+        "slug": "episode-8",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093544719?h=d068cce138&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-7",
+        "nextEpisode": "episode-9"
+      },
+      {
+        "id": "andy-griffiths-9",
+        "title": "Episode 09",
+        "slug": "episode-9",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093552371?h=fd10f5a2b4&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-8",
+        "nextEpisode": "episode-10"
+      },
+      {
+        "id": "andy-griffiths-10",
+        "title": "Episode 10",
+        "slug": "episode-10",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series6.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1093545267?h=344f28e012&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-9",
+        "nextEpisode": null
+      }
+    ]
   }
+
 } 
