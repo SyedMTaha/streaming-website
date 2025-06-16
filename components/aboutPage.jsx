@@ -1,13 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Check, Shield, Star, Users, Clock, Award, Globe, Heart } from "lucide-react"
-import about01 from './../public/assets/images/about/about01.png';
-import about02 from './../public/assets/images/about/about02.png';
+
 import about03 from './../public/assets/images/about/about03.png';
-import about04 from './../public/assets/images/about/about04.png';
-import about05 from './../public/assets/images/about/about05.png';
-import about06 from './../public/assets/images/about/about06.png';
-import about07 from './../public/assets/images/about/about07.png';
 import about08 from './../public/assets/images/about/about08.png';
 import about09 from './../public/assets/images/about/about09.png';
 import about10 from './../public/assets/images/about/about10.png';
@@ -16,6 +11,7 @@ import about12 from './../public/assets/images/about/about12.png';
 import about13 from './../public/assets/images/about/about13.png';
 import about14 from './../public/assets/images/about/about14.jpg';
 import about15 from './../public/assets/images/about/about15.jpg';
+import home01 from '../public/assets/images/background/homePage05.jpg';
 
 
 export default function AboutPage() {
@@ -146,7 +142,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 opacity-40">
         <div className="absolute inset-0 bg-gradient-to-r from-[#1E4D9B] to-transparent z-10"></div>
           <Image
-            src={about03}
+            src={home01}
             alt="Movie posters background"
             fill
             className="object-cover"

@@ -20,20 +20,20 @@ const faqData = [
     answer: "The acronym stands for Internet Best Videos. We are an innovative media company whose mission is to present the world's best content providers and creators."
   },
   {
-    question: "How Much Does INBV Services Cost?",
-    answer: "Services vary. Most movies and videos only require registration."
+    question: "Do I Need to Pay to Watch on INBV TV?",
+    answer: "No, INBV TV is currently 100% free. You can stream all available content without a subscription or payment."
   },
   {
-    question: "Where Can I Watch?",
-    answer: "This may vary also. Please check for current platform availability. "
+    question: "What Kind of Movies and Shows Are Available?",
+    answer: "INBV TV offers a variety of genres including action, drama, comedy, kids’ cartoons, and a unique collection of classic movies from the mid-90s."
   },
   {
-    question: "How Do I Cancel?",
-    answer: "Most platforms are available free to the public. Cancelling registration can be achieved at the same area where registration is done."
+    question: "Is INBV TV Available on Mobile Devices?",
+    answer: "Yes, INBV TV works on most modern web browsers across desktops, tablets, and smartphones. A mobile app is in the works!"
   },
   {
-    question: "What can I watch on INBV?",
-    answer: "Genre types may vary. Please check for availability."
+    question: "Are New Titles Added Regularly?",
+    answer: "Yes, we regularly update our library with both modern content and timeless classics. Keep checking back or subscribe to our newsletter for updates."
   }
 ];
 

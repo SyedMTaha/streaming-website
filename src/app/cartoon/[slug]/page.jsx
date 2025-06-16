@@ -1,13 +1,14 @@
 "use client"
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Play, Bookmark, ThumbsUp, Share, Star, Check } from 'lucide-react';
+import { Bookmark, Share, Star, Check } from 'lucide-react';
 import Navbar from '../../../../components/navbarSearch';
 import Footer from '../../../../components/footer';
 import moviesData from '../../../data/movies.json';
+import episodesData from '../../../data/episodes.json';
 import { auth } from '../../../../firebase';
 import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
 
@@ -15,8 +16,8 @@ export default function CartoonDetailPage() {
   const params = useParams();
   const { slug } = params;
   const [cartoon, setCartoon] = useState(null);
+  const [episodes, setEpisodes] = useState([]);
   const [recommendedCartoons, setRecommendedCartoons] = useState([]);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isInWishlist, setIsInWishlist] = useState(false);
   const [wishlistLoading, setWishlistLoading] = useState(false);
   const [showShareSuccess, setShowShareSuccess] = useState(false);
@@ -27,7 +28,11 @@ export default function CartoonDetailPage() {
     const foundCartoon = moviesData['cartoon']?.find(c => c.slug === slug);
     setCartoon(foundCartoon);
 
+    // Get episodes for this cartoon
     if (foundCartoon) {
+      const cartoonEpisodes = episodesData[slug]?.episodes || [];
+      setEpisodes(cartoonEpisodes);
+
       // Get recommended cartoons from the cartoon genre, excluding the current cartoon
       const cartoonMovies = moviesData['cartoon'] || [];
       const filteredCartoons = cartoonMovies.filter(c => c.slug !== slug);
@@ -110,103 +115,133 @@ export default function CartoonDetailPage() {
   return (
     <div className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]">
       <Navbar />
-      <section className="max-w-7xl mx-auto py-8 px-4 flex flex-col lg:flex-row gap-8">
-        {/* Left Column: Cartoon Details */}
-        <div className="lg:w-1/3 bg-[#012256] rounded-lg p-6 shadow-xl py-4 backdrop-blur-sm flex-shrink-0 h-fit">
-          <div className="relative mb-6 rounded-lg overflow-hidden">
-            <Image
-              src={cartoon.innerImage || cartoon.image}
-              alt={`${cartoon.title} thumbnail`}
-              width={600}
-              height={338}
-              className="w-full h-auto object-cover aspect-video"
-            />
-          </div>
-          <h1 className="text-4xl font-bold mb-2">{cartoon.title}</h1>
-          <div className="flex items-center space-x-4 mb-4 text-sm">
-            <span className="bg-red-600 px-2 py-1 rounded">{cartoon.rating}</span>
-            <span>{cartoon.year}</span>
-            <span>{cartoon.duration}</span>
-            <div className="flex items-center">
-              <Star className="h-4 w-4 text-yellow-500 mr-1" />
-              <span>{cartoon.score}</span>
+      <section className="max-w-7xl mx-auto py-8 px-4">
+        {/* Series Header */}
+        <div className="flex flex-col lg:flex-row gap-8 mb-12">
+          <div className="lg:w-1/3 bg-[#012256] rounded-lg p-6 shadow-xl py-4 backdrop-blur-sm flex-shrink-0 h-fit">
+            <div className="relative mb-6 rounded-lg overflow-hidden">
+              <Image
+                src={cartoon.innerImage || cartoon.image}
+                alt={`${cartoon.title} thumbnail`}
+                width={600}
+                height={338}
+                className="w-full h-auto object-cover aspect-video"
+              />
             </div>
-          </div>
-          <p className="text-md text-gray-300 mb-6">{cartoon.description}</p>
-          
-          <div className="text-sm text-gray-400 mb-6">
-            <p className="mb-1"><span className="font-semibold text-white">Genre:</span> Cartoon</p>
-          </div>
+            <h1 className="text-4xl font-bold mb-2">{cartoon.title}</h1>
+            <div className="flex items-center space-x-4 mb-4 text-sm">
+              <span className="bg-red-600 px-2 py-1 rounded">{cartoon.rating}</span>
+              <span>{cartoon.year}</span>
+              <span>{cartoon.duration}</span>
+              <div className="flex items-center">
+                <Star className="h-4 w-4 text-yellow-500 mr-1" />
+                <span>{cartoon.score}</span>
+              </div>
+            </div>
+            <p className="text-md text-gray-300 mb-6">{cartoon.description}</p>
+            
+            <div className="text-sm text-gray-400 mb-6">
+              <p className="mb-1"><span className="font-semibold text-white">Genre:</span> Cartoon</p>
+            </div>
 
-          <div className="flex space-x-4">
-            <button 
-              onClick={toggleWishlist}
-              disabled={wishlistLoading}
-              className={`${
-                isInWishlist ? 'bg-[#1D50A3]' : 'bg-gray-600/80'
-              } text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group`}
-            >
-              <Bookmark className={`h-5 w-5 ${isInWishlist ? 'fill-current' : ''}`} />
-              <span>{isInWishlist ? 'Added to Wishlist' : 'Add to Wishlist'}</span>
-            </button>
-            <button 
-              onClick={handleShare}
-              disabled={shareLoading}
-              className="bg-gray-600/80 text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group"
-            >
-              {showShareSuccess ? (
-                <>
-                  <Check className="h-5 w-5 text-green-400" />
-                  <span>Copied!</span>
-                </>
-              ) : (
-                <>
-                  <Share className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                  <span>Share</span>
-                </>
-              )}
-              {showShareSuccess && (
-                <div className="absolute inset-0 bg-[#1D50A3] animate-pulse" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Right Column: Media Player */}
-        <div className="lg:w-2/3 relative aspect-video rounded-lg overflow-hidden">
-          {!isPlaying && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
-              <button
-                onClick={() => setIsPlaying(true)}
-                className="bg-[#1D50A3] text-white px-6 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors"
+            <div className="flex space-x-4">
+              <button 
+                onClick={toggleWishlist}
+                disabled={wishlistLoading}
+                className={`${
+                  isInWishlist ? 'bg-[#1D50A3]' : 'bg-gray-600/80'
+                } text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group`}
               >
-                <Play className="h-5 w-5" />
-                <span>Play</span>
+                <Bookmark className={`h-5 w-5 ${isInWishlist ? 'fill-current' : ''}`} />
+                <span>{isInWishlist ? 'Added to Wishlist' : 'Add to Wishlist'}</span>
+              </button>
+              <button 
+                onClick={handleShare}
+                disabled={shareLoading}
+                className="bg-gray-600/80 text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group"
+              >
+                {showShareSuccess ? (
+                  <>
+                    <Check className="h-5 w-5 text-green-400" />
+                    <span>Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Share className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                    <span>Share</span>
+                  </>
+                )}
+                {showShareSuccess && (
+                  <div className="absolute inset-0 bg-[#1D50A3] animate-pulse" />
+                )}
               </button>
             </div>
-          )}
-          {isPlaying && cartoon.videoUrl ? (
-            <iframe
-              src={cartoon.videoUrl}
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
-          ) : (
-            <Image
-              src={cartoon.innerImage || cartoon.image}
-              alt={`${cartoon.title} thumbnail`}
-              fill
-              className="object-cover"
-            />
-          )}
+          </div>
+
+          {/* Episodes Grid */}
+          <div className="lg:w-2/3">
+            <h2 className="text-2xl font-bold mb-6">Episodes</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {episodes.map((episode) => (
+                <Link
+                  key={episode.id}
+                  href={`/cartoon/${slug}/episode/${episode.slug}`}
+                  className="bg-[#012256] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300"
+                >
+                  <div className="relative aspect-video">
+                    <Image
+                      src={episode.thumbnail || cartoon.image}
+                      alt={episode.title}
+                      width={400}
+                      height={225}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                      <span className="bg-[#1D50A3] text-white px-4 py-2 rounded-lg font-semibold">
+                        Watch Now
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-semibold mb-2">{episode.title}</h3>
+                    <p className="text-sm text-gray-400">{episode.description}</p>
+                    <p className="text-sm text-gray-500 mt-2">{episode.duration}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Recommended Cartoons */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-6">Recommended Cartoons</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {recommendedCartoons.map((cartoon) => (
+              <Link
+                key={cartoon.id}
+                href={`/cartoon/${cartoon.slug}`}
+                className="bg-[#012256] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform duration-300"
+              >
+                <div className="relative aspect-video">
+                  <Image
+                    src={cartoon.image}
+                    alt={cartoon.title}
+                    width={400}
+                    height={225}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold mb-2">{cartoon.title}</h3>
+                  <p className="text-sm text-gray-400">{cartoon.year}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
-      
-      <Footer/>    
+      <Footer />
     </div>
   );
 } 

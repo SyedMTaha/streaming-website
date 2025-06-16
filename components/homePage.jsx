@@ -157,30 +157,14 @@ export default function DashboardPage() {
 
 
       {/* Recommended TV Shows  */}
-      <ContentSection title="Recommended TV Shows">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          <LargeCard
-            image={ series04}
-            title="Iron Side"
-          />
-          <LargeCard
-            image={ series06}
-            title="The Andy Griffith Show"
-          />
-          <LargeCard
-            image={ series05}
-            title="Mister ED"
-          />
-          <LargeCard
-            image={ series03}
-            title="Hill Street Blues"
-          />
-          <LargeCard
-            image={ series02}
-            title="Dragnet 1967"
-          />
-          
-        </div>
+      <ContentSection title="Recommended TV Shows" onScroll={handleScroll}>
+    
+          <LargeCard image={ series04} title="Iron Side" />
+          <LargeCard image={ series06} title="The Andy Griffith Show"/>
+          <LargeCard image={ series05} title="Mister ED" />
+          <LargeCard image={ series03} title="Hill Street Blues" />
+          <LargeCard image={ series02} title="Dragnet 1967" />    
+       
       </ContentSection>
 
       {/* New Release */}
@@ -419,18 +403,19 @@ function TVShowCard({ image, title }) {
 
 function LargeCard({ image, title, description }) {
   return (
-    <div className="group cursor-pointer w-[200px] ">
-      <div className="relative overflow-hidden rounded-lg mb-4 w-full gap-5">
+    <div className="group cursor-pointer flex-shrink-0 w-70">
+      <div className="relative overflow-hidden rounded-lg mb-2">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
-          width={600}
+          width={400}
           height={300}
-          className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-84 object-cover group-hover:scale-105 transition-transform duration-300"
         />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
       </div>
-      <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors">{title}</h3>
-      <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
+      <h3 className="text-sm font-medium text-center group-hover:text-blue-400 transition-colors">{title}</h3>
+      <p className="text-gray-400 text-sm leading-relaxed text-center">{description}</p>
     </div>
   )
 }
