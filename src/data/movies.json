@@ -1,0 +1,1226 @@
+{
+  "action": [
+    {
+      "id": "a1",
+      "title": "Angel and the Badman",
+      "image": "/assets/images/movies/action/action1.jpg",
+      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "slug": "angel-and-the-badman",
+      "year": "2024",
+      "duration": "2h 15m",
+      "rating": "8.5",
+      "genre": "action",
+      "description": "A thrilling action movie about redemption and justice.",
+      "videoUrl": ""
+    },
+    {
+      "id": "a2",
+      "title": "Asphalt Jungle",
+      "image": "/assets/images/movies/action/action2.jpg",
+      "innerImage": "/assets/images/movies/action2_inner.jpg",
+      "slug": "asphalt-jungle",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.2",
+      "genre": "action",
+      "description": "A fast-paced action movie about two friends on a mission.",
+      "videoUrl": ""
+    },
+    {
+      "id": "a3",
+      "title": "Bad and the Beautiful",
+      "image": "/assets/images/movies/action/action3.jpg",
+      "innerImage": "/assets/images/movies/action3_inner.jpg",
+      "slug": "bad-and-the-beautiful",
+      "year": "2024",
+      "duration": "2h 5m",
+      "rating": "8.7",
+      "genre": "action",
+      "description": "A high-stakes action movie about a covert operation.",
+      "videoUrl": "https://player.vimeo.com/video/1092936264?h=6e7d41ff20&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a4",
+      "title": "Deadline",
+      "image": "/assets/images/movies/action/action4.jpeg",
+      "innerImage": "/assets/images/movies/action4_inner.jpg",
+      "slug": "deadline",
+      "year": "2023",
+      "duration": "1h 50m",
+      "rating": "8.0",
+      "genre": "action",
+      "description": "An action-packed movie about street justice.",
+      "videoUrl": ""
+    },
+    {
+        "id": "a5",
+        "title": "Detour",
+        "image": "/assets/images/movies/action/action5.jpg",
+        "innerImage": "/assets/images/movies/action4_inner.jpg",
+        "slug": "detour",
+        "year": "2023",
+        "duration": "1h 50m",
+        "rating": "8.0",
+        "genre": "action",
+        "description": "An action-packed movie about street justice.",
+        "videoUrl": ""
+      },
+      {
+        "id": "a6",
+        "title": "Outlaw",
+        "image": "/assets/images/movies/action/action6.jpg",
+        "innerImage": "/assets/images/movies/action4_inner.jpg",
+        "slug": "outlaw",
+        "year": "2023",
+        "duration": "1h 50m",
+        "rating": "8.0",
+        "genre": "action",
+        "description": "An action-packed movie about street justice.",
+        "videoUrl": ""
+      },
+      {
+        "id": "a7",
+        "title": "Pursued",
+        "image": "/assets/images/movies/action/action7.jpg",
+        "innerImage": "/assets/images/movies/action4_inner.jpg",
+        "slug": "pursued",
+        "year": "2023",
+        "duration": "1h 50m",
+        "rating": "8.0",
+        "genre": "action",
+        "description": "An action-packed movie about street justice.",
+        "videoUrl": ""
+      },
+      {
+        "id": "a8",
+        "title": "Stage Coach",
+        "image": "/assets/images/movies/action/action8.jpeg",
+        "innerImage": "/assets/images/movies/action4_inner.jpeg",
+        "slug": "stage-coach",
+        "year": "2023",
+        "duration": "1h 50m",
+        "rating": "8.0",
+        "genre": "action",
+        "description": "An action-packed movie about street justice.",
+        "videoUrl": ""
+      },
+      {
+        "id": "a9",
+        "title": "Train",
+        "image": "/assets/images/movies/action/action9.jpeg",
+        "innerImage": "/assets/images/movies/action4_inner.jpeg",
+        "slug": "train",
+        "year": "2023",
+        "duration": "1h 50m",
+        "rating": "8.0",
+        "genre": "action",
+        "description": "An action-packed movie about street justice.",
+        "videoUrl": ""
+      }
+  ],
+  "adventure": [
+    {
+      "id": "adv1",
+      "title": "Lost Treasure",
+      "image": "/assets/images/movies/adventure1.jpg",
+      "innerImage": "/assets/images/movies/adventure1_inner.jpg",
+      "slug": "lost-treasure",
+      "year": "2024",
+      "duration": "2h 20m",
+      "rating": "8.8",
+      "genre": "adventure",
+      "description": "An adventurous journey to find a hidden treasure.",
+      "videoUrl": ""
+    },
+    {
+      "id": "adv2",
+      "title": "Mystic Journey",
+      "image": "/assets/images/movies/adventure2.jpg",
+      "innerImage": "/assets/images/movies/adventure2_inner.jpg",
+      "slug": "mystic-journey",
+      "year": "2023",
+      "duration": "2h 10m",
+      "rating": "8.4",
+      "genre": "adventure",
+      "description": "A mystical adventure through ancient lands.",
+      "videoUrl": ""
+    },
+    {
+      "id": "adv3",
+      "title": "Ancient Quest",
+      "image": "/assets/images/movies/adventure3.jpg",
+      "innerImage": "/assets/images/movies/adventure3_inner.jpg",
+      "slug": "ancient-quest",
+      "year": "2024",
+      "duration": "2h 15m",
+      "rating": "8.6",
+      "genre": "adventure",
+      "description": "A quest to uncover ancient secrets.",
+      "videoUrl": ""
+    },
+    {
+      "id": "adv4",
+      "title": "Hidden Valley",
+      "image": "/assets/images/movies/adventure4.jpg",
+      "innerImage": "/assets/images/movies/adventure4_inner.jpg",
+      "slug": "hidden-valley",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.3",
+      "genre": "adventure",
+      "description": "An adventure to discover a hidden valley.",
+      "videoUrl": ""
+    }
+  ],
+  "animation": [
+    {
+      "id": "an1",
+      "title": "Dream World",
+      "image": "/assets/images/movies/animation1.jpg",
+      "slug": "dream-world",
+      "year": "2024",
+      "duration": "1h 45m",
+      "rating": "9.0",
+      "genre": "animation"
+    },
+    {
+      "id": "an2",
+      "title": "Pixel Heroes",
+      "image": "/assets/images/movies/animation2.jpg",
+      "slug": "pixel-heroes",
+      "year": "2023",
+      "duration": "1h 50m",
+      "rating": "8.7",
+      "genre": "animation"
+    },
+    {
+      "id": "an3",
+      "title": "Magic Forest",
+      "image": "/assets/images/movies/animation3.jpg",
+      "slug": "magic-forest",
+      "year": "2024",
+      "duration": "1h 40m",
+      "rating": "8.9",
+      "genre": "animation"
+    },
+    {
+      "id": "an4",
+      "title": "Robot Friends",
+      "image": "/assets/images/movies/animation4.jpg",
+      "slug": "robot-friends",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.5",
+      "genre": "animation"
+    }
+  ],
+  "biographical": [
+    {
+      "id": "b1",
+      "title": "The Inventor's Tale",
+      "image": "/assets/images/movies/bio1.jpg",
+      "slug": "the-inventors-tale",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.6",
+      "genre": "biographical"
+    },
+    {
+      "id": "b2",
+      "title": "Champion's Journey",
+      "image": "/assets/images/movies/bio2.jpg",
+      "slug": "champions-journey",
+      "year": "2023",
+      "duration": "2h 5m",
+      "rating": "8.4",
+      "genre": "biographical"
+    },
+    {
+      "id": "b3",
+      "title": "Artistic Soul",
+      "image": "/assets/images/movies/bio3.jpg",
+      "slug": "artistic-soul",
+      "year": "2024",
+      "duration": "2h 15m",
+      "rating": "8.7",
+      "genre": "biographical"
+    },
+    {
+      "id": "b4",
+      "title": "The Visionary",
+      "image": "/assets/images/movies/bio4.jpg",
+      "slug": "the-visionary",
+      "year": "2023",
+      "duration": "2h 20m",
+      "rating": "8.5",
+      "genre": "biographical"
+    }
+  ],
+  "cartoon": [
+    {
+      "id": "c1",
+      "title": "Funny Farm",
+      "image": "/assets/images/movies/cartoon1.jpg",
+      "slug": "funny-farm",
+      "year": "2024",
+      "duration": "1h 30m",
+      "rating": "8.8",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c2",
+      "title": "Space Pals",
+      "image": "/assets/images/movies/cartoon2.jpg",
+      "slug": "space-pals",
+      "year": "2023",
+      "duration": "1h 25m",
+      "rating": "8.6",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c3",
+      "title": "Jungle Friends",
+      "image": "/assets/images/movies/cartoon3.jpg",
+      "slug": "jungle-friends",
+      "year": "2024",
+      "duration": "1h 35m",
+      "rating": "8.7",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c4",
+      "title": "Magic School",
+      "image": "/assets/images/movies/cartoon4.jpg",
+      "slug": "magic-school",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    }
+  ],
+  "comedy": [
+    {
+      "id": "com1",
+      "title": "Laugh Factory",
+      "image": "/assets/images/movies/comedy1.jpg",
+      "slug": "laugh-factory",
+      "year": "2024",
+      "duration": "1h 45m",
+      "rating": "8.4",
+      "genre": "comedy"
+    },
+    {
+      "id": "com2",
+      "title": "Office Chaos",
+      "image": "/assets/images/movies/comedy2.jpg",
+      "slug": "office-chaos",
+      "year": "2023",
+      "duration": "1h 50m",
+      "rating": "8.2",
+      "genre": "comedy"
+    },
+    {
+      "id": "com3",
+      "title": "Family Fun",
+      "image": "/assets/images/movies/comedy3.jpg",
+      "slug": "family-fun",
+      "year": "2024",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "comedy"
+    },
+    {
+      "id": "com4",
+      "title": "Wedding Disaster",
+      "image": "/assets/images/movies/comedy4.jpg",
+      "slug": "wedding-disaster",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.3",
+      "genre": "comedy"
+    }
+  ],
+  "crime": [
+    {
+      "id": "cr1",
+      "title": "City Shadows",
+      "image": "/assets/images/movies/crime1.jpg",
+      "slug": "city-shadows",
+      "year": "2024",
+      "duration": "2h 15m",
+      "rating": "8.7",
+      "genre": "crime"
+    },
+    {
+      "id": "cr2",
+      "title": "Undercover",
+      "image": "/assets/images/movies/crime2.jpg",
+      "slug": "undercover",
+      "year": "2023",
+      "duration": "2h 5m",
+      "rating": "8.5",
+      "genre": "crime"
+    },
+    {
+      "id": "cr3",
+      "title": "The Heist",
+      "image": "/assets/images/movies/crime3.jpg",
+      "slug": "the-heist",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.6",
+      "genre": "crime"
+    },
+    {
+      "id": "cr4",
+      "title": "Street Justice",
+      "image": "/assets/images/movies/crime4.jpg",
+      "slug": "street-justice",
+      "year": "2023",
+      "duration": "2h 20m",
+      "rating": "8.4",
+      "genre": "crime"
+    }
+  ],
+  "documentary": [
+    {
+      "id": "d1",
+      "title": "Ocean Secrets",
+      "image": "/assets/images/movies/doc1.jpg",
+      "slug": "ocean-secrets",
+      "year": "2024",
+      "duration": "1h 50m",
+      "rating": "9.0",
+      "genre": "documentary"
+    },
+    {
+      "id": "d2",
+      "title": "Wild Africa",
+      "image": "/assets/images/movies/doc2.jpg",
+      "slug": "wild-africa",
+      "year": "2023",
+      "duration": "1h 45m",
+      "rating": "8.8",
+      "genre": "documentary"
+    },
+    {
+      "id": "d3",
+      "title": "Space Journey",
+      "image": "/assets/images/movies/doc3.jpg",
+      "slug": "space-journey",
+      "year": "2024",
+      "duration": "2h 0m",
+      "rating": "8.9",
+      "genre": "documentary"
+    },
+    {
+      "id": "d4",
+      "title": "Ancient Civilizations",
+      "image": "/assets/images/movies/doc4.jpg",
+      "slug": "ancient-civilizations",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.7",
+      "genre": "documentary"
+    }
+  ],
+
+  "drama": [
+    {
+      "id": "dr1",
+      "title": "Broken Strings",
+      "image": "/assets/images/movies/drama/drama1.jpeg",
+      "innerImage": "/assets/images/movies/action1_inner.jpeg",
+      "slug": "broken-strings",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.8",
+      "genre": "drama",
+      "description": "",
+      "videoUrl": ""
+    },
+    {
+      "id": "dr2",
+      "title": "Key Largo",
+      "image": "/assets/images/movies/drama/drama2.jpeg",
+      "innerImage": "/assets/images/movies/action1_inner.jpeg",
+      "slug": "key-largo",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.8",
+      "genre": "drama",
+      "description": "",
+      "videoUrl": ""
+    },
+    {
+      "id": "dr3",
+      "title": "Salt of the Earth",
+      "image": "/assets/images/movies/drama/drama3.jpeg",
+      "innerImage": "/assets/images/movies/action1_inner.jpeg",
+      "slug": "salt-of-the-earth",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.8",
+      "genre": "drama",
+      "description": "",
+      "videoUrl": ""
+    },
+    {
+      "id": "dr4",
+      "title": "Suddenly",
+      "image": "/assets/images/movies/drama/drama4.jpg",
+      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "slug": "suddenly",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.8",
+      "genre": "drama",
+      "description": "",
+      "videoUrl": ""
+    },
+    {
+        "id": "dr5",
+        "title": "The Stranger",
+        "image": "/assets/images/movies/drama/drama5.jpg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "the-stranger",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "dr6",
+        "title": "His Girl Friday",
+        "image": "/assets/images/movies/drama/drama6.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "his-girl-friday",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "dr7",
+        "title": "Hitch Hiker",
+        "image": "/assets/images/movies/drama/drama7.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "hitch-hiker",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "dr8",
+        "title": "My Man Godfrey",
+        "image": "/assets/images/movies/drama/drama8.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "my-man-godfrey",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "dr9",
+        "title": "The Empror Jones",
+        "image": "/assets/images/movies/drama/drama9.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "the-empror-jones",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "dr10",
+        "title": "The Kennel Murder Case",
+        "image": "/assets/images/movies/drama/drama10.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "the-kennel-murder-case",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "dr11",
+        "title": "The Outlaw",
+        "image": "/assets/images/movies/drama/drama11.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "the-outlaw",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "dr12",
+        "title": "The Scarlet Street",
+        "image": "/assets/images/movies/drama/drama12.jpg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "the-scarlet-street",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "dr13",
+        "title": "A Star is Born",
+        "image": "/assets/images/movies/drama/drama13.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpeg",
+        "slug": "a-star-is-born",
+        "year": "2024",
+        "duration": "2h 10m",
+        "rating": "8.8",
+        "genre": "drama",
+        "description": "",
+        "videoUrl": ""
+      }
+  ],
+  
+  "family": [
+    {
+      "id": "f1",
+      "title": "Home Sweet Home",
+      "image": "/assets/images/movies/family1.jpg",
+      "slug": "home-sweet-home",
+      "year": "2024",
+      "duration": "1h 45m",
+      "rating": "8.9",
+      "genre": "family"
+    },
+    {
+      "id": "f2",
+      "title": "Summer Vacation",
+      "image": "/assets/images/movies/family2.jpg",
+      "slug": "summer-vacation",
+      "year": "2023",
+      "duration": "1h 50m",
+      "rating": "8.7",
+      "genre": "family"
+    },
+    {
+      "id": "f3",
+      "title": "Family Reunion",
+      "image": "/assets/images/movies/family3.jpg",
+      "slug": "family-reunion",
+      "year": "2024",
+      "duration": "1h 40m",
+      "rating": "8.8",
+      "genre": "family"
+    },
+    {
+      "id": "f4",
+      "title": "Holiday Magic",
+      "image": "/assets/images/movies/family4.jpg",
+      "slug": "holiday-magic",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.6",
+      "genre": "family"
+    }
+  ],
+  "historical": [
+    {
+      "id": "h1",
+      "title": "Ancient Times",
+      "image": "/assets/images/movies/historical1.jpg",
+      "slug": "ancient-times",
+      "year": "2024",
+      "duration": "2h 30m",
+      "rating": "8.7",
+      "genre": "historical"
+    },
+    {
+      "id": "h2",
+      "title": "The Revolution",
+      "image": "/assets/images/movies/historical2.jpg",
+      "slug": "the-revolution",
+      "year": "2023",
+      "duration": "2h 25m",
+      "rating": "8.5",
+      "genre": "historical"
+    },
+    {
+      "id": "h3",
+      "title": "Royal Court",
+      "image": "/assets/images/movies/historical3.jpg",
+      "slug": "royal-court",
+      "year": "2024",
+      "duration": "2h 20m",
+      "rating": "8.6",
+      "genre": "historical"
+    },
+    {
+      "id": "h4",
+      "title": "The Dynasty",
+      "image": "/assets/images/movies/historical4.jpg",
+      "slug": "the-dynasty",
+      "year": "2023",
+      "duration": "2h 35m",
+      "rating": "8.4",
+      "genre": "historical"
+    }
+  ],
+  "horror": [
+    {
+      "id": "hor1",
+      "title": "Dark Night",
+      "image": "/assets/images/movies/horror1.jpg",
+      "slug": "dark-night",
+      "year": "2024",
+      "duration": "1h 55m",
+      "rating": "8.3",
+      "genre": "horror"
+    },
+    {
+      "id": "hor2",
+      "title": "The Haunting",
+      "image": "/assets/images/movies/horror2.jpg",
+      "slug": "the-haunting",
+      "year": "2023",
+      "duration": "2h 0m",
+      "rating": "8.1",
+      "genre": "horror"
+    },
+    {
+      "id": "hor3",
+      "title": "Midnight Shadows",
+      "image": "/assets/images/movies/horror3.jpg",
+      "slug": "midnight-shadows",
+      "year": "2024",
+      "duration": "1h 50m",
+      "rating": "8.4",
+      "genre": "horror"
+    },
+    {
+      "id": "hor4",
+      "title": "The Curse",
+      "image": "/assets/images/movies/horror4.jpg",
+      "slug": "the-curse",
+      "year": "2023",
+      "duration": "2h 5m",
+      "rating": "8.2",
+      "genre": "horror"
+    }
+  ],
+  "inspiration": [
+    {
+      "id": "i1",
+      "title": "Rise Above",
+      "image": "/assets/images/movies/inspiration1.jpg",
+      "slug": "rise-above",
+      "year": "2024",
+      "duration": "2h 0m",
+      "rating": "8.9",
+      "genre": "inspiration"
+    },
+    {
+      "id": "i2",
+      "title": "The Journey",
+      "image": "/assets/images/movies/inspiration2.jpg",
+      "slug": "the-journey",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.7",
+      "genre": "inspiration"
+    },
+    {
+      "id": "i3",
+      "title": "Breaking Barriers",
+      "image": "/assets/images/movies/inspiration3.jpg",
+      "slug": "breaking-barriers",
+      "year": "2024",
+      "duration": "2h 5m",
+      "rating": "8.8",
+      "genre": "inspiration"
+    },
+    {
+      "id": "i4",
+      "title": "Dream Chasers",
+      "image": "/assets/images/movies/inspiration4.jpg",
+      "slug": "dream-chasers",
+      "year": "2023",
+      "duration": "2h 10m",
+      "rating": "8.6",
+      "genre": "inspiration"
+    }
+  ],
+  "martial-arts": [
+    {
+      "id": "ma1",
+      "title": "Dragon's Path",
+      "image": "/assets/images/movies/martial1.jpg",
+      "slug": "dragons-path",
+      "year": "2024",
+      "duration": "2h 5m",
+      "rating": "8.6",
+      "genre": "martial-arts"
+    },
+    {
+      "id": "ma2",
+      "title": "Warrior's Code",
+      "image": "/assets/images/movies/martial2.jpg",
+      "slug": "warriors-code",
+      "year": "2023",
+      "duration": "2h 0m",
+      "rating": "8.4",
+      "genre": "martial-arts"
+    },
+    {
+      "id": "ma3",
+      "title": "The Master",
+      "image": "/assets/images/movies/martial3.jpg",
+      "slug": "the-master",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.5",
+      "genre": "martial-arts"
+    },
+    {
+      "id": "ma4",
+      "title": "Fighting Spirit",
+      "image": "/assets/images/movies/martial4.jpg",
+      "slug": "fighting-spirit",
+      "year": "2023",
+      "duration": "2h 15m",
+      "rating": "8.3",
+      "genre": "martial-arts"
+    }
+  ],
+  "musical": [
+    {
+      "id": "m1",
+      "title": "Rhythm of Life",
+      "image": "/assets/images/movies/musical1.jpg",
+      "slug": "rhythm-of-life",
+      "year": "2024",
+      "duration": "2h 0m",
+      "rating": "8.7",
+      "genre": "musical"
+    },
+    {
+      "id": "m2",
+      "title": "Dance Dreams",
+      "image": "/assets/images/movies/musical2.jpg",
+      "slug": "dance-dreams",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.5",
+      "genre": "musical"
+    },
+    {
+      "id": "m3",
+      "title": "Melody of Love",
+      "image": "/assets/images/movies/musical3.jpg",
+      "slug": "melody-of-love",
+      "year": "2024",
+      "duration": "2h 5m",
+      "rating": "8.6",
+      "genre": "musical"
+    },
+    {
+      "id": "m4",
+      "title": "Stage Lights",
+      "image": "/assets/images/movies/musical4.jpg",
+      "slug": "stage-lights",
+      "year": "2023",
+      "duration": "2h 10m",
+      "rating": "8.4",
+      "genre": "musical"
+    }
+  ],
+  "mystery": [
+    {
+      "id": "my1",
+      "title": "The Puzzle",
+      "image": "/assets/images/movies/mystery1.jpg",
+      "slug": "the-puzzle",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.8",
+      "genre": "mystery"
+    },
+    {
+      "id": "my2",
+      "title": "Hidden Truth",
+      "image": "/assets/images/movies/mystery2.jpg",
+      "slug": "hidden-truth",
+      "year": "2023",
+      "duration": "2h 5m",
+      "rating": "8.6",
+      "genre": "mystery"
+    },
+    {
+      "id": "my3",
+      "title": "The Secret",
+      "image": "/assets/images/movies/mystery3.jpg",
+      "slug": "the-secret",
+      "year": "2024",
+      "duration": "2h 15m",
+      "rating": "8.7",
+      "genre": "mystery"
+    },
+    {
+      "id": "my4",
+      "title": "Dark Clues",
+      "image": "/assets/images/movies/mystery4.jpg",
+      "slug": "dark-clues",
+      "year": "2023",
+      "duration": "2h 20m",
+      "rating": "8.5",
+      "genre": "mystery"
+    }
+  ],
+  "news": [
+    {
+      "id": "n1",
+      "title": "Breaking News",
+      "image": "/assets/images/movies/news1.jpg",
+      "slug": "breaking-news",
+      "year": "2024",
+      "duration": "1h 30m",
+      "rating": "8.5",
+      "genre": "news"
+    },
+    {
+      "id": "n2",
+      "title": "Global Report",
+      "image": "/assets/images/movies/news2.jpg",
+      "slug": "global-report",
+      "year": "2023",
+      "duration": "1h 25m",
+      "rating": "8.3",
+      "genre": "news"
+    },
+    {
+      "id": "n3",
+      "title": "World Today",
+      "image": "/assets/images/movies/news3.jpg",
+      "slug": "world-today",
+      "year": "2024",
+      "duration": "1h 35m",
+      "rating": "8.4",
+      "genre": "news"
+    },
+    {
+      "id": "n4",
+      "title": "Current Affairs",
+      "image": "/assets/images/movies/news4.jpg",
+      "slug": "current-affairs",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.2",
+      "genre": "news"
+    }
+  ],
+  "romance": [
+    {
+      "id": "r1",
+      "title": "Love Story",
+      "image": "/assets/images/movies/romance1.jpg",
+      "slug": "love-story",
+      "year": "2024",
+      "duration": "2h 0m",
+      "rating": "8.7",
+      "genre": "romance"
+    },
+    {
+      "id": "r2",
+      "title": "Heart Strings",
+      "image": "/assets/images/movies/romance2.jpg",
+      "slug": "heart-strings",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.5",
+      "genre": "romance"
+    },
+    {
+      "id": "r3",
+      "title": "Forever Yours",
+      "image": "/assets/images/movies/romance3.jpg",
+      "slug": "forever-yours",
+      "year": "2024",
+      "duration": "2h 5m",
+      "rating": "8.6",
+      "genre": "romance"
+    },
+    {
+      "id": "r4",
+      "title": "Love Letters",
+      "image": "/assets/images/movies/romance4.jpg",
+      "slug": "love-letters",
+      "year": "2023",
+      "duration": "2h 10m",
+      "rating": "8.4",
+      "genre": "romance"
+    }
+  ],
+
+  "sci-fi": [
+    {
+      "id": "sf1",
+      "title": "Assignment Outer Space",
+      "image": "/assets/images/movies/sci-fi/scifi1.jpeg",
+      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "slug": "assignment-outer-space",
+      "year": "2024",
+      "duration": "2h 15m",
+      "rating": "8.8",
+      "genre": "sci-fi",
+      "description": "",
+      "videoUrl": ""
+    },
+    {
+      "id": "sf2",
+      "title": "First Spaceship on Venus",
+      "image": "/assets/images/movies/sci-fi/scifi2.jpeg",
+      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "slug": "first-spaceship-on-venus",
+      "year": "2023",
+      "duration": "2h 10m",
+      "rating": "8.6",
+      "genre": "sci-fi",
+      "description": "",
+      "videoUrl": ""
+    },
+    {
+      "id": "sf3",
+      "title": "Incredible Shrinking Man",
+      "image": "/assets/images/movies/sci-fi/scifi3.jpeg",
+      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "slug": "incredible-shrinking-man",
+      "year": "2024",
+      "duration": "2h 20m",
+      "rating": "8.7",
+      "genre": "sci-fi",
+      "description": "",
+      "videoUrl": ""
+    },
+    {
+      "id": "sf4",
+      "title": "Last Woman on Earth",
+      "image": "/assets/images/movies/sci-fi/scifi4.jpg",
+      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "slug": "last-woman-on-earth",
+      "year": "2023",
+      "duration": "2h 5m",
+      "rating": "8.5",
+      "genre": "sci-fi",
+      "description": "",
+      "videoUrl": ""
+    },
+    {
+        "id": "sf5",
+        "title": "The Day the Earth Stood Still",
+        "image": "/assets/images/movies/sci-fi/scifi5.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "the-day-the-earth-stood-still",
+        "year": "2023",
+        "duration": "2h 5m",
+        "rating": "8.5",
+        "genre": "sci-fi",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "sf6",
+        "title": "The Incredible Petrified World",
+        "image": "/assets/images/movies/sci-fi/scifi6.jpg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "the-incredible-petrified-world",
+        "year": "2023",
+        "duration": "2h 5m",
+        "rating": "8.5",
+        "genre": "sci-fi",
+        "description": "",
+        "videoUrl": ""
+      },
+      {
+        "id": "sf7",
+        "title": "The Lost World",
+        "image": "/assets/images/movies/sci-fi/scifi7.jpeg",
+        "innerImage": "/assets/images/movies/action1_inner.jpg",
+        "slug": "the-lost-world",
+        "year": "2023",
+        "duration": "2h 5m",
+        "rating": "8.5",
+        "genre": "sci-fi",
+        "description": "",
+        "videoUrl": ""
+      }
+  ],
+
+  "sport": [
+    {
+      "id": "s1",
+      "title": "Champion's Heart",
+      "image": "/assets/images/movies/sport1.jpg",
+      "slug": "champions-heart",
+      "year": "2024",
+      "duration": "2h 0m",
+      "rating": "8.7",
+      "genre": "sport"
+    },
+    {
+      "id": "s2",
+      "title": "The Final Game",
+      "image": "/assets/images/movies/sport2.jpg",
+      "slug": "the-final-game",
+      "year": "2023",
+      "duration": "1h 55m",
+      "rating": "8.5",
+      "genre": "sport"
+    },
+    {
+      "id": "s3",
+      "title": "Team Spirit",
+      "image": "/assets/images/movies/sport3.jpg",
+      "slug": "team-spirit",
+      "year": "2024",
+      "duration": "2h 5m",
+      "rating": "8.6",
+      "genre": "sport"
+    },
+    {
+      "id": "s4",
+      "title": "Victory Lane",
+      "image": "/assets/images/movies/sport4.jpg",
+      "slug": "victory-lane",
+      "year": "2023",
+      "duration": "2h 10m",
+      "rating": "8.4",
+      "genre": "sport"
+    }
+  ],
+
+  "thriller": [
+    {
+      "id": "t1",
+      "title": "Hitch Hiker",
+      "image": "/assets/images/movies/thriller/thriller1.jpeg",
+      "innerImage": "/assets/images/movies/thriller/action1_inner.jpg",
+      "slug": "hitch-hiker",
+      "year": "2024",
+      "duration": "2h 10m",
+      "rating": "8.6",
+      "genre": "thriller",
+      "description": "",
+      "videoUrl": ""        
+    },
+    {
+      "id": "t2",
+      "title": "Million Dollar Weekend",
+      "image": "/assets/images/movies/thriller/thriller2.jpeg",
+      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "slug": "million-dollar-weekend",
+      "year": "2023",
+      "duration": "2h 5m",
+      "rating": "8.4",
+      "genre": "thriller",
+      "description": "",
+      "videoUrl": "" 
+    },
+    {
+      "id": "t3",
+      "title": "Scarlet Street",
+      "image": "/assets/images/movies/thriller/thriller3.jpg",
+      "innerImage": "/assets/images/movies/action1_inner.jpg",
+      "slug": "scarlet-street",
+      "year": "2024",
+      "duration": "2h 15m",
+      "rating": "8.5",
+      "genre": "thriller",
+      "description": "",
+      "videoUrl": "" 
+    }
+  ],
+  "war": [
+    {
+      "id": "w1",
+      "title": "Battle Lines",
+      "image": "/assets/images/movies/war1.jpg",
+      "slug": "battle-lines",
+      "year": "2024",
+      "duration": "2h 30m",
+      "rating": "8.7",
+      "genre": "war"
+    },
+    {
+      "id": "w2",
+      "title": "The Front",
+      "image": "/assets/images/movies/war2.jpg",
+      "slug": "the-front",
+      "year": "2023",
+      "duration": "2h 25m",
+      "rating": "8.5",
+      "genre": "war"
+    },
+    {
+      "id": "w3",
+      "title": "War Heroes",
+      "image": "/assets/images/movies/war3.jpg",
+      "slug": "war-heroes",
+      "year": "2024",
+      "duration": "2h 20m",
+      "rating": "8.6",
+      "genre": "war"
+    },
+    {
+      "id": "w4",
+      "title": "The Battle",
+      "image": "/assets/images/movies/war4.jpg",
+      "slug": "the-battle",
+      "year": "2023",
+      "duration": "2h 35m",
+      "rating": "8.4",
+      "genre": "war"
+    }
+  ],
+
+  "western": [
+    {
+      "id": "we1",
+      "title": "One Eyed Jacks",
+      "image": "/assets/images/movies/western/western1.jpg",
+      "innerImage": "/assets/images/movies/thriller/action1_inner.jpg",
+      "slug": "one-eyed-jacks",
+      "year": "2024",
+      "duration": "2h 15m",
+      "rating": "8.6",
+      "genre": "western",
+      "description": "",
+      "videoUrl": "" 
+    },
+    {
+      "id": "we2",
+      "title": "The Outlaw",
+      "image": "/assets/images/movies/western/western2.jpeg",
+      "innerImage": "/assets/images/movies/thriller/action1_inner.jpg",
+      "slug": "the-outlaw",
+      "year": "2023",
+      "duration": "2h 10m",
+      "rating": "8.4",
+      "genre": "western"
+    }
+  ]
+} 
