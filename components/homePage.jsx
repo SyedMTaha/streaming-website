@@ -34,6 +34,7 @@ import drama1 from '../public/assets/images/movies/drama/drama1.jpeg';
 import drama2 from '../public/assets/images/movies/drama/drama2.jpeg';
 import mystery1 from '../public/assets/images/movies/mystery/mystery1.jpg';
 import { Facebook, Twitter, Youtube, X, Instagram } from "lucide-react"
+import { upcomingMovies } from '../src/data/movies.json';
 
 export default function DashboardPage() {
 
@@ -195,14 +196,16 @@ export default function DashboardPage() {
       </ContentSection>
 
       {/* New Release */}
-      <ContentSection title="New Release"   onScroll={handleScroll}>
+      <ContentSection title="New Release" onScroll={handleScroll}>
         <MovieRow>
-          <MovieCard image={comingsoon}  title="Don't Hang Up"  />
-          <MovieCard image={comingsoon} title="Film Lovers" />
-          <MovieCard image={comingsoon} title="Absolute Dominion" />
-          <MovieCard image={comingsoon} title="Hot Biskits" />
-          <MovieCard image={comingsoon} title="Notice to Quit" />
-          <MovieCard image={comingsoon} title="A River of Skulls" />
+          {upcomingMovies.map(movie => (
+            <MovieCard
+              key={movie.slug}
+              image={movie.image}
+              title={movie.title}
+              href={`/upcoming-movie/${movie.slug}`}
+            />
+          ))}
         </MovieRow>
       </ContentSection>
 
@@ -248,7 +251,15 @@ export default function DashboardPage() {
       {/* TV Series */}
       <section className="py-8 px-4">
         <div className="container mx-auto">
-          <h2 className="text-2xl font-bold mb-6">TV Series</h2>
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold">TV Series</h2>
+            <Link
+              href="/tv-series"
+              className="w-full sm:w-auto whitespace-nowrap bg-[#1D50A3]/90 text-white px-4 py-1 rounded-sm font-medium hover:bg-blue-900/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+            >
+              View All
+            </Link>
+          </div>
           <RankedTVShowRow
             shows={[
               { image: series01, title: "The Beverly Hill Billies" },
@@ -369,12 +380,12 @@ function MovieRow({ children }) {
   return children;
 }
 
-function MovieCard({ image, title }) {
+function MovieCard({ image, title, href }) {
   // Convert title to URL-friendly slug
   const slug = title.toLowerCase().replace(/\s+/g, '-');
   
   return (
-    <Link href={`/movie/${slug}`} className="flex-shrink-0 w-70 group cursor-pointer">
+    <Link href={href || `/movie/${slug}`} className="flex-shrink-0 w-70 group cursor-pointer">
       <div className="relative overflow-hidden rounded-lg mb-2">
         <Image
           src={image || "/placeholder.svg"}

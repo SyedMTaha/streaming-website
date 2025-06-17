@@ -1391,6 +1391,40 @@
     }
   ],
 
+"upcomingMovies" :
+ [
+    { 
+      "slug": "dont-hang-up",
+      "title": "Don't Hang Up", 
+      "image": "/assets/images/background/coming-soon.jpg" 
+    },
+    { 
+      "slug": "film-lovers", 
+      "title": "Film Lovers", 
+      "image": "/assets/images/background/coming-soon.jpg"
+    },
+    {
+       "slug": "absolute-dominion",
+       "title": "Absolute Dominion", 
+       "image": "/assets/images/background/coming-soon.jpg"
+    },
+    { 
+      "slug": "hot-biskits",
+      "title": "Hot Biskits",
+      "image": "/assets/images/background/coming-soon.jpg"
+    },
+    { 
+      "slug": "notice-to-quit",
+      "title": "Notice to Quit", 
+      "image": "/assets/images/background/coming-soon.jpg"
+    },
+    { 
+      "slug": "a-river-of-skulls", 
+      "title": "A River of Skulls", 
+      "image": "/assets/images/background/coming-soon.jpg"
+    }
+  ],
+
   "tv-series": [
     {
       "id": "tv1",
