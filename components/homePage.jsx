@@ -10,17 +10,16 @@ import news1 from './../public/assets/images/home/news1.jpg';
 import news2 from './../public/assets/images/home/news2.jpg';
 import news3 from './../public/assets/images/home/news3.jpg';
 import homePage from './../public/assets/images/home/homePage02.jpg';
+import homegif from './../public/assets/images/home/homegif.gif';
 import home45 from './../public/assets/images/home/home45.jpg';
-import home46 from './../public/assets/images/home/home46.png';
-import home47 from './../public/assets/images/home/home47.jpg';
 import home48 from './../public/assets/images/home/home48.png';
 import home49 from './../public/assets/images/home/home49.jpeg';
-import series01 from './../public/assets/images/series/series1.jpeg';
-import series02 from './../public/assets/images/series/series2.jpg';
-import series03 from './../public/assets/images/series/series3.jpg';
-import series04 from './../public/assets/images/series/series4.jpg';
-import series05 from './../public/assets/images/series/series5.jpg';
-import series06 from './../public/assets/images/series/series6.jpg';
+import series01 from './../public/assets/images/series/series01.jpg';
+import series02 from './../public/assets/images/series/series02.jpg';
+import series03 from './../public/assets/images/series/series03.jpg';
+import series04 from './../public/assets/images/series/series04.jpg';
+import series05 from './../public/assets/images/series/series05.jpg';
+import series06 from './../public/assets/images/series/series06.jpg';
 import HisFriday from './../public/assets/images/movies/drama/drama6.jpeg';
 import Suddenly from './../public/assets/images/movies/drama/drama4.jpg';
 import Stranger from './../public/assets/images/movies/drama/drama5.jpg';
@@ -29,6 +28,11 @@ import Lost from './../public/assets/images/movies/sci-fi/scifi7.jpeg';
 import Last from './../public/assets/images/movies/sci-fi/scifi4.jpg';
 import Pursued from '../public/assets/images/movies/action/action7.jpg';
 import Bad from '../public/assets/images/movies/action/action3.jpg';
+import comedy1 from '../public/assets/images/movies/comedy/comedy1.jpg';
+import comedy2 from '../public/assets/images/movies/comedy/comedy2.jpeg';
+import drama1 from '../public/assets/images/movies/drama/drama1.jpeg';
+import drama2 from '../public/assets/images/movies/drama/drama2.jpeg';
+import mystery1 from '../public/assets/images/movies/mystery/mystery1.jpg';
 import { Facebook, Twitter, Youtube, X, Instagram } from "lucide-react"
 
 export default function DashboardPage() {
@@ -49,13 +53,30 @@ export default function DashboardPage() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#020b1f] via-[#0a2151] to-[#020b1f] text-white">
+    <div className="min-h-screen bg-[#020b1f] text-white relative">
+      {/* Mesh Gradient Overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-30 z-0"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 15% 10%, rgba(15,46,97,0.45) 80%, transparent 70%),
+            radial-gradient(circle at 85% 25%, rgba(15,46,97,0.35) 30%, transparent 70%),
+            radial-gradient(circle at 20% 40%, rgba(15,46,97,0.35) 30%, transparent 70%),
+            radial-gradient(circle at 80% 55%, rgba(15,46,97,0.35) 30%, transparent 70%),
+            radial-gradient(circle at 25% 75%, rgba(15,46,97,0.35) 30%, transparent 70%),
+            radial-gradient(circle at 75% 90%, rgba(15,46,97,0.35) 30%, transparent 70%)
+          `,
+          zIndex: 0,
+          mixBlendMode: 'overlay'
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
-            src={homePage}
+            src={homegif}
             alt="The White House movie"
             fill
             className="object-cover"
@@ -139,6 +160,11 @@ export default function DashboardPage() {
           <MovieCard image={home48} title="Stage Coach" />
           <MovieCard image={home49} title="State Secret" />
           <MovieCard image={Bad} title="Bad and the Beautiful" />
+          <MovieCard image={comedy1}  title="Check and Double Check"  />
+          <MovieCard image={comedy2} title="His Girl Friday" />
+          <MovieCard image={drama1} title="Broken Strings" />
+          <MovieCard image={drama2} title="Key Largo" />
+          <MovieCard image={mystery1} title="Texas Terror" />
         </MovieRow>
       </ContentSection>
 
@@ -171,12 +197,12 @@ export default function DashboardPage() {
       {/* New Release */}
       <ContentSection title="New Release"   onScroll={handleScroll}>
         <MovieRow>
-          <MovieCard image={comingsoon}  title="His Girl Friday"  />
-          <MovieCard image={comingsoon} title="Suddenly" />
-          <MovieCard image={comingsoon} title="The Stranger 1946" />
-          <MovieCard image={comingsoon} title="The Outlaw 1943" />
-          <MovieCard image={comingsoon} title="The Lost World 1925" />
-          <MovieCard image={comingsoon} title="Last Woman on Earth 1960" />
+          <MovieCard image={comingsoon}  title="Don't Hang Up"  />
+          <MovieCard image={comingsoon} title="Film Lovers" />
+          <MovieCard image={comingsoon} title="Absolute Dominion" />
+          <MovieCard image={comingsoon} title="Hot Biskits" />
+          <MovieCard image={comingsoon} title="Notice to Quit" />
+          <MovieCard image={comingsoon} title="A River of Skulls" />
         </MovieRow>
       </ContentSection>
 
@@ -222,47 +248,24 @@ export default function DashboardPage() {
       {/* TV Series */}
       <section className="py-8 px-4">
         <div className="container mx-auto">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold">TV Series</h2>
-            <div className="flex items-center gap-4">
-              <div className="flex gap-2">
-                <button
-                  onClick={() => handleScroll('left', 'tv-series-grid')}
-                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <button
-                  onClick={() => handleScroll('right', 'tv-series-grid')}
-                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-              <Link href="/tv-series" className="text-white-400 font-medium hover:text-blue-300 text-sm">
-                View All
-              </Link>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4" id="tv-series-grid">
-            <TVShowCard image={series01} title="The Beverly Hill Billies" />
-            <TVShowCard image={series02} title="Dragnet" />
-            <TVShowCard image={series03} title="HillStreet Blues" />
-            <TVShowCard image={series04} title="The IronSide" />
-            <TVShowCard image={series05} title="Mister ED" />
-            <TVShowCard image={series06} title="Andy Griffiths" />
-            <TVShowCard image={series01} title="The Beverly Hill Billies" />
-            <TVShowCard image={series02} title="Dragnet" />
-          </div>
+          <h2 className="text-2xl font-bold mb-6">TV Series</h2>
+          <RankedTVShowRow
+            shows={[
+              { image: series01, title: "The Beverly Hill Billies" },
+              { image: series02, title: "Dragnet" },
+              { image: series03, title: "HillStreet Blues" },
+              { image: series04, title: "The IronSide" },
+              { image: series05, title: "Mister ED" },
+              { image: series06, title: "Andy Griffiths" }
+            ]}
+            sectionId="tv-series-ranked-row"
+            onScroll={handleScroll}
+          />
         </div>
       </section>
 
 
-      {/* House of the Dragon Banner */}
+      {/* Banner */}
       <section className="py-8 px-4">
         <div className="container mx-auto">
           <div className="relative rounded-lg overflow-hidden h-64 md:h-50 bg-gradient-to-r from-blue-900 to-blue-600">
@@ -320,39 +323,41 @@ function ContentSection({ title, viewAllLink, children, onScroll }) {
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold">{title}</h2>
-          <div className="flex items-center gap-4">
-            <div className="flex gap-2">
-              <button
-                onClick={() => onScroll('left', `${sectionId}-container`)}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={() => onScroll('right', `${sectionId}-container`)}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-            {viewAllLink && (
-              <Link href={viewAllLink} className="text-white-400 font-medium hover:text-blue-300 text-sm">
-                View All
-              </Link>
-            )}
-          </div>
+          {viewAllLink && (
+            <Link href={viewAllLink} className="text-white-400 font-medium hover:text-blue-300 text-sm">
+              View All
+            </Link>
+          )}
         </div>
-        <div className="overflow-hidden">
-          <div 
-            id={`${sectionId}-container`}
-            className="flex space-x-3 overflow-x-auto pb-4 scrollbar-hide"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        <div className="relative">
+          {/* Left Arrow */}
+          <button
+            onClick={() => onScroll('left', `${sectionId}-container`)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-6 h-20 flex items-center justify-center rounded-full bg-blue-900 hover:bg-white/60  transition-colors hover:text-black group"
           >
-            {children}
+            <svg className="w-6 h-6 text-white group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => onScroll('right', `${sectionId}-container`)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-6 h-20 flex items-center justify-center rounded-full bg-blue-900 hover:bg-white/60 transition-colors group"
+          >
+            <svg className="w-6 h-6 text-white group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <div className="overflow-hidden">
+            <div 
+              id={`${sectionId}-container`}
+              className="flex space-x-3 overflow-x-auto pb-4 scrollbar-hide px-8"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {children}
+            </div>
           </div>
         </div>
       </div>
@@ -397,7 +402,7 @@ function TVShowCard({ image, title }) {
           alt={title}
           width={300}
           height={200}
-          className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300 opacity-50 group-hover:opacity-100 transition-all"
+          className="w-full h-48 object-cover opacity-50 group-hover:opacity-100 transition-all rounded-lg mb-2"
         />
       </div>
       <h3 className="text-sm font-medium group-hover:text-blue-400 transition-colors">{title}</h3>
@@ -450,4 +455,71 @@ function NewsCard({ image, title, date, category }) {
       <h3 className="text-lg font-semibold group-hover:text-blue-400 transition-colors">{title}</h3>
     </div>
   )
+}
+
+function RankedTVShowCard({ image, title }) {
+  // Convert title to URL-friendly slug
+  const slug = title.toLowerCase().replace(/\s+/g, '-');
+  return (
+    <Link href={`/tv-series/${slug}`} className="flex-shrink-0 w-56 group cursor-pointer">
+      <div className="relative overflow-hidden rounded-lg mb-2">
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={title}
+          width={300}
+          height={288}
+          className="w-full h-72 object-cover rounded-lg"
+        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+      </div>
+      <h3 className="text-sm font-medium text-center group-hover:text-blue-400 transition-colors">{title}</h3>
+    </Link>
+  )
+}
+
+function RankedTVShowRow({ shows, sectionId, onScroll }) {
+  return (
+    <div className="relative">
+      {/* Left Arrow */}
+      <button
+        onClick={() => onScroll('left', sectionId)}
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-6 h-20 flex items-center justify-center rounded-full bg-blue-900 hover:bg-white/60 transition-colors group"
+      >
+        <svg className="w-6 h-6 text-white group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      {/* Right Arrow */}
+      <button
+        onClick={() => onScroll('right', sectionId)}
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-6 h-20 flex items-center justify-center rounded-full bg-blue-900 hover:bg-white/60 transition-colors group"
+      >
+        <svg className="w-6 h-6 text-white group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      <div className="overflow-hidden">
+        <div
+          id={sectionId}
+          className="flex space-x-15 overflow-x-auto pb-4 scrollbar-hide px-8"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {shows.map((show, idx) => (
+            <div key={idx} className="relative w-46 flex-shrink-0">
+              {/* Large number on the left, over the image */}
+              <span
+                className="absolute right-25 top-1/2 -translate-y-1/2 text-[12rem] font-extrabold text-white/30 select-none pointer-events-none z-20 mt-13"
+                style={{ WebkitTextStroke: '2.5px #fff', textStroke: '2.5px #fff', lineHeight: 1 }}
+              >
+                {idx + 1}
+              </span>
+              <div className="relative z-1">
+                <RankedTVShowCard image={show.image} title={show.title} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -294,26 +294,6 @@
       "genre": "cartoon"
     },
     {
-      "id": "c2",
-      "title": "Tom and Jerry Comedy Show",
-      "image": "/assets/images/cartoons/cartoon2.jpeg",
-      "slug": "tom-and-jerry-comedy-show",
-      "year": "2023",
-      "duration": "1h 25m",
-      "rating": "8.6",
-      "genre": "cartoon"
-    },
-    {
-      "id": "c3",
-      "title": "Top Cat",
-      "image": "/assets/images/cartoons/cartoon3.jpg",
-      "slug": "top-cat",
-      "year": "2024",
-      "duration": "1h 35m",
-      "rating": "8.7",
-      "genre": "cartoon"
-    },
-    {
       "id": "c4",
       "title": "High Lander",
       "image": "/assets/images/cartoons/cartoon4.jpeg",
@@ -331,6 +311,56 @@
       "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c16",
+      "title": "Young Samsons Goliath",
+      "image": "/assets/images/cartoons/cartoon16.jpg",
+      "slug": "young-samsons-goliath",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c17",
+      "title": "Barney Bear",
+      "image": "/assets/images/cartoons/cartoon.jpeg",
+      "slug": "barney-bear",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c12",
+      "title": "Superman",
+      "image": "/assets/images/cartoons/cartoon12.jpg",
+      "slug": "superman",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c2",
+      "title": "Tom and Jerry Comedy Show",
+      "image": "/assets/images/cartoons/cartoon2.jpeg",
+      "slug": "tom-and-jerry-comedy-show",
+      "year": "2023",
+      "duration": "1h 25m",
+      "rating": "8.6",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c3",
+      "title": "Top Cat",
+      "image": "/assets/images/cartoons/cartoon3.jpg",
+      "slug": "top-cat",
+      "year": "2024",
+      "duration": "1h 35m",
+      "rating": "8.7",
       "genre": "cartoon"
     },
     {
@@ -394,16 +424,6 @@
       "genre": "cartoon"
     },
     {
-      "id": "c12",
-      "title": "Superman",
-      "image": "/assets/images/cartoons/cartoon12.jpg",
-      "slug": "superman",
-      "year": "2023",
-      "duration": "1h 40m",
-      "rating": "8.5",
-      "genre": "cartoon"
-    },
-    {
       "id": "c13",
       "title": "The Great Grape Ape Show",
       "image": "/assets/images/cartoons/cartoon13.jpg",
@@ -432,15 +452,6 @@
       "duration": "1h 40m",
       "rating": "8.5",
       "genre": "cartoon"
-    },{
-      "id": "c16",
-      "title": "Young Samsons Goliath",
-      "image": "/assets/images/cartoons/cartoon16.jpg",
-      "slug": "young-samsons-goliath",
-      "year": "2023",
-      "duration": "1h 40m",
-      "rating": "8.5",
-      "genre": "cartoon"
     }
   ],
   "comedy": [
@@ -449,7 +460,7 @@
       "title": "Check and Double Check",
       "image": "/assets/images/movies/comedy/comedy1.jpg",
       "innerImage": "/assets/images/movies/comedy/landscape/comedy1_inner.jpg",
-      "slug": "laugh-factory",
+      "slug": "check-and-double-check",
       "year": "2024",
       "duration": "1h 45m",
       "rating": "8.4",
