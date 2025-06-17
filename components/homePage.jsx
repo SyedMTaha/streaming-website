@@ -14,12 +14,12 @@ import homegif from './../public/assets/images/home/homegif.gif';
 import home45 from './../public/assets/images/home/home45.jpg';
 import home48 from './../public/assets/images/home/home48.png';
 import home49 from './../public/assets/images/home/home49.jpeg';
-import series01 from './../public/assets/images/series/series01.jpg';
-import series02 from './../public/assets/images/series/series02.jpg';
-import series03 from './../public/assets/images/series/series03.jpg';
-import series04 from './../public/assets/images/series/series04.jpg';
-import series05 from './../public/assets/images/series/series05.jpg';
-import series06 from './../public/assets/images/series/series06.jpg';
+import series01 from './../public/assets/images/series/series1.jpg';
+import series02 from './../public/assets/images/series/series2.jpg';
+import series03 from './../public/assets/images/series/series3.jpg';
+import series04 from './../public/assets/images/series/series4.jpg';
+import series05 from './../public/assets/images/series/series5.jpg';
+import series06 from './../public/assets/images/series/series6.jpg';
 import HisFriday from './../public/assets/images/movies/drama/drama6.jpeg';
 import Suddenly from './../public/assets/images/movies/drama/drama4.jpg';
 import Stranger from './../public/assets/images/movies/drama/drama5.jpg';
@@ -501,7 +501,7 @@ function RankedTVShowRow({ shows, sectionId, onScroll }) {
       <div className="overflow-hidden">
         <div
           id={sectionId}
-          className="flex space-x-15 overflow-x-auto pb-4 scrollbar-hide px-8"
+          className="flex space-x-15 overflow-x-auto ml-8 pb-4 scrollbar-hide px-8"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {shows.map((show, idx) => (

@@ -1395,7 +1395,7 @@
     {
       "id": "tv1",
       "title": "Dragnet 1951",
-      "image": "/assets/images/series/series2.jpg",
+      "image": "/assets/images/series/landscape/series2.jpg",
       "slug": "dragnet",
       "year": "1951",
       "duration": "30 min",
@@ -1406,7 +1406,7 @@
     {
       "id": "tv2",
       "title": "HillStreet Blues",
-      "image": "/assets/images/series/series3.jpg",
+      "image": "/assets/images/series/landscape/series3.jpg",
       "slug": "hillstreet-blues",
       "year": "1962",
       "duration": "22 min",
@@ -1417,7 +1417,7 @@
     {
       "id": "tv3",
       "title": "The Beverly Hill Billies",
-      "image": "/assets/images/series/series1.jpeg",
+      "image": "/assets/images/series/landscape/series1.jpg",
       "slug": "the-beverly-hill-billies",
       "year": "1960",
       "duration": "22 min",
@@ -1428,7 +1428,7 @@
     {
       "id": "tv4",
       "title": "The Ironside",
-      "image": "/assets/images/series/series4.jpg",
+      "image": "/assets/images/series/landscape/series4.jpg",
       "slug": "the-ironside",
       "year": "1960",
       "duration": "22 min",
@@ -1439,7 +1439,7 @@
     {
       "id": "tv5",
       "title": "Mister ED",
-      "image": "/assets/images/series/series5.jpg",
+      "image": "/assets/images/series/landscape/series5.jpg",
       "slug": "mister-ed",
       "year": "1960",
       "duration": "22 min",
@@ -1450,7 +1450,7 @@
     {
       "id": "tv6",
       "title": "The Andy Griffiths Show",
-      "image": "/assets/images/series/series6.jpg",
+      "image": "/assets/images/series/landscape/series6.jpg",
       "slug": "andy-griffiths",
       "year": "1960",
       "duration": "22 min",
