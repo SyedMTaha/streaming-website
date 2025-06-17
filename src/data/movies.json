@@ -64,20 +64,7 @@
         "genre": "action",
         "description": "An action-packed movie about street justice.",
         "videoUrl": "https://player.vimeo.com/video/1093479498?h=6726407aa3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "a6",
-        "title": "Outlaw",
-        "image": "/assets/images/movies/action/action6.jpg",
-        "innerImage": "/assets/images/movies/action/landscape/action7_inner.jpg",
-        "slug": "outlaw",
-        "year": "2023",
-        "duration": "1h 50m",
-        "rating": "8.0",
-        "genre": "action",
-        "description": "An action-packed movie about street justice.",
-        "videoUrl": "https://player.vimeo.com/video/1093479427?h=411e2db833&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
+      }, 
       {
         "id": "a7",
         "title": "Pursued",
@@ -287,6 +274,7 @@
       "id": "c1",
       "title": "Atom Ant",
       "image": "/assets/images/cartoons/cartoon1.jpg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon1_inner.jpg",
       "slug": "atom-ant",
       "year": "2024",
       "duration": "1h 30m",
@@ -297,6 +285,7 @@
       "id": "c4",
       "title": "High Lander",
       "image": "/assets/images/cartoons/cartoon4.jpeg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon3_inner.jpg",
       "slug": "high-lander",
       "year": "2023",
       "duration": "1h 40m",
@@ -307,6 +296,7 @@
       "id": "c5",
       "title": "Hong Kong Phoey",
       "image": "/assets/images/cartoons/cartoon5.jpg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon4_inner.jpg",
       "slug": "hong-kong-phoey",
       "year": "2023",
       "duration": "1h 40m",
@@ -317,6 +307,7 @@
       "id": "c16",
       "title": "Young Samsons Goliath",
       "image": "/assets/images/cartoons/cartoon16.jpg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon5_inner.jpg",
       "slug": "young-samsons-goliath",
       "year": "2023",
       "duration": "1h 40m",
@@ -326,7 +317,8 @@
     {
       "id": "c17",
       "title": "Barney Bear",
-      "image": "/assets/images/cartoons/cartoon.jpeg",
+      "image": "/assets/images/cartoons/cartoon17.jpg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon2_inner.jpg",
       "slug": "barney-bear",
       "year": "2023",
       "duration": "1h 40m",
@@ -658,110 +650,6 @@
         "genre": "drama",
         "description": "",
         "videoUrl": "https://player.vimeo.com/video/1093479489?h=59042a3a41&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "dr6",
-        "title": "His Girl Friday",
-        "image": "/assets/images/movies/drama/drama6.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
-        "slug": "his-girl-friday",
-        "year": "2024",
-        "duration": "2h 10m",
-        "rating": "8.8",
-        "genre": "drama",
-        "description": "",
-        "videoUrl": ""
-      },
-      {
-        "id": "dr7",
-        "title": "Hitch Hiker",
-        "image": "/assets/images/movies/drama/drama7.jpeg",
-        "innerImage": "/assets/images/movies/thriller/landscape/action1_inner.jpg",
-        "slug": "hitch-hiker",
-        "year": "2024",
-        "duration": "2h 10m",
-        "rating": "8.8",
-        "genre": "drama",
-        "description": "",
-        "videoUrl": "https://player.vimeo.com/video/1093479358?h=9bd4698cc0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "dr8",
-        "title": "My Man Godfrey",
-        "image": "/assets/images/movies/drama/drama8.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
-        "slug": "my-man-godfrey",
-        "year": "2024",
-        "duration": "2h 10m",
-        "rating": "8.8",
-        "genre": "drama",
-        "description": "",
-        "videoUrl": ""
-      },
-      {
-        "id": "dr9",
-        "title": "The Empror Jones",
-        "image": "/assets/images/movies/drama/drama9.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
-        "slug": "the-empror-jones",
-        "year": "2024",
-        "duration": "2h 10m",
-        "rating": "8.8",
-        "genre": "drama",
-        "description": "",
-        "videoUrl": ""
-      },
-      {
-        "id": "dr10",
-        "title": "The Kennel Murder Case",
-        "image": "/assets/images/movies/drama/drama10.jpeg",
-        "innerImage": "/assets/images/movies/mystery/landscape/mystery2_inner.jpeg",
-        "slug": "the-kennel-murder-case",
-        "year": "2024",
-        "duration": "2h 10m",
-        "rating": "8.8",
-        "genre": "drama",
-        "description": "",
-        "videoUrl": "https://player.vimeo.com/video/1093479418?h=632e31d8da&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-      },
-      {
-        "id": "dr11",
-        "title": "Outlaw",
-        "image": "/assets/images/movies/drama/drama11.jpeg",
-        "innerImage": "/assets/images/movies/western/landscape/western2_inner.jpeg",
-        "slug": "outlaw",
-        "year": "2024",
-        "duration": "2h 10m",
-        "rating": "8.8",
-        "genre": "drama",
-        "description": "",
-        "videoUrl": "https://player.vimeo.com/video/1093479431?h=61ae066f7f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "dr12",
-        "title": "The Scarlet Street",
-        "image": "/assets/images/movies/drama/drama12.jpg",
-        "innerImage": "/assets/images/movies/action1_inner.jpg",
-        "slug": "the-scarlet-street",
-        "year": "2024",
-        "duration": "2h 10m",
-        "rating": "8.8",
-        "genre": "drama",
-        "description": "",
-        "videoUrl": ""
-      },
-      {
-        "id": "dr13",
-        "title": "A Star is Born",
-        "image": "/assets/images/movies/drama/drama13.jpeg",
-        "innerImage": "/assets/images/movies/action1_inner.jpeg",
-        "slug": "a-star-is-born",
-        "year": "2024",
-        "duration": "2h 10m",
-        "rating": "8.8",
-        "genre": "drama",
-        "description": "",
-        "videoUrl": ""
       }
   ],
   
@@ -1379,16 +1267,18 @@
       "videoUrl": "https://player.vimeo.com/video/1093479458?h=cf8ec93268&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
     },
     {
-      "id": "we2",
-      "title": "The Outlaw",
-      "image": "/assets/images/movies/western/western2.jpeg",
-      "innerImage": "/assets/images/movies/western/landscape/western2_inner.jpeg",
-      "slug": "the-outlaw",
-      "year": "2023",
-      "duration": "2h 10m",
-      "rating": "8.4",
-      "genre": "western"
-    }
+        "id": "we2",
+        "title": "Outlaw",
+        "image": "/assets/images/movies/western/western2.jpeg",
+        "innerImage": "/assets/images/movies/western/landscape/western2_inner.jpeg",
+        "slug": "the-outlaw",
+        "year": "2023",
+        "duration": "1h 50m",
+        "rating": "8.0",
+        "genre": "action",
+        "description": "An action-packed movie about street justice.",
+        "videoUrl": "https://player.vimeo.com/video/1093479427?h=411e2db833&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      }
   ],
 
 "upcomingMovies" :

@@ -110,21 +110,6 @@ export default function GenrePage() {
             <span className="text-gray-400">({movies.length} {genreSlug === 'cartoon' ? 'cartoons' : 'movies'})</span>
           </div>
           
-          <div className="flex space-x-2 ml-105">
-            <button
-              onClick={scrollLeft}
-              className="bg-gray-700/50 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={scrollRight}
-              className="bg-gray-700/50 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-
           <div className="flex items-center">
             <select 
               value={sortBy}
@@ -146,10 +131,7 @@ export default function GenrePage() {
             <p className="text-gray-500">This genre is currently under development. Please check back later!</p>
           </div>
         ) : (
-          <div 
-            ref={scrollContainerRef} 
-            className="flex space-x-4 overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {movies.map((movie) => (
               <div 
                 key={movie.id}

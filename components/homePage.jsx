@@ -54,7 +54,7 @@ export default function DashboardPage() {
 
 
   return (
-    <div className="min-h-screen bg-[#020b1f] text-white relative">
+    <div className="min-h-screen bg-[#020b1f] text-white relative scroll-behaviour: smooth">
       {/* Mesh Gradient Overlay */}
       <div
         className="absolute inset-0 pointer-events-none opacity-30 z-0"
@@ -77,7 +77,7 @@ export default function DashboardPage() {
         {/* Background Image */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
-            src={homegif}
+            src={homePage}
             alt="The White House movie"
             fill
             className="object-cover"
@@ -255,7 +255,7 @@ export default function DashboardPage() {
             <h2 className="text-2xl font-bold">TV Series</h2>
             <Link
               href="/tv-series"
-              className="w-full sm:w-auto whitespace-nowrap bg-[#1D50A3]/90 text-white px-4 py-1 rounded-sm font-medium hover:bg-blue-900/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+              className="w-full sm:w-auto whitespace-nowrap bg-[#1D50A3]/90 text-white px-4 py-1 rounded-md font-medium hover:bg-blue-900/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
             >
               View All
             </Link>

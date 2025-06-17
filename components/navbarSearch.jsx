@@ -47,6 +47,7 @@ export default function Navbar() {
     { name: "Sci-Fi", href: "/genre/sci-fi" },
     { name: "Sport", href: "/genre/sport" },
     { name: "Thriller", href: "/genre/thriller" },
+    { name: "Tv-Series", href: "/tv-series" },
     { name: "War", href: "/genre/war" },
     { name: "Western", href: "/genre/western" },
   ]
