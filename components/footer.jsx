@@ -49,18 +49,18 @@ export default function Footer() {
 
   return (
     <footer className="relative z-10 bg-gradient-to-t from-[#07295B] to-[#020D1F] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="w-full flex flex-col md:flex-row md:items-stretch">
+      <div className="w-full max-w-screen-2xl mx-auto px-8 py-12">
+        <div className="w-full flex flex-col md:flex-row md:items-start justify-center">
           {/* Logo and Slogan */}
-          <div className="flex flex-col items-center justify-center py-6 md:py-0 md:pr-10 w-full md:w-auto">
+          <div className="flex flex-col items-center justify-center md:pr-10 w-full md:w-auto">
             <Image src={logo2 || "/placeholder.svg"} alt="INBV TV" width={150} height={150} className="object-contain mb-4" />
             <span className="text-base font-medium text-center md:text-left whitespace-nowrap">Premiums Quality Movies & Series</span>
           </div>
 
           {/* Genres Columns (with smaller gap between them) */}
           <div className="flex flex-row w-full md:w-auto">
-            <div className="flex flex-col items-center md:items-start justify-center py-4 md:py-0 md:pr-4 w-1/2 md:w-auto">
-              <h3 className="text-lg font-medium mb-6 mt-2 tracking-wide text-white">Genres</h3>
+            <div className="flex flex-col items-center md:items-start justify-center md:pr-4 w-1/2 md:w-auto">
+              <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white">Genres</h3>
               <ul className="space-y-2">
                 <FooterLink href="/genre/action">Action</FooterLink>
                 <FooterLink href="/genre/drama">Drama</FooterLink>
@@ -69,8 +69,8 @@ export default function Footer() {
                 <FooterLink href="/genre/thriller">Thriller</FooterLink>
               </ul>
             </div>
-            <div className="flex flex-col items-center md:items-start justify-center py-4 md:py-0 md:pl-4 w-1/2 md:w-auto">
-              <h3 className="text-lg font-medium mb-6 mt-2 tracking-wide text-white invisible">Genres</h3>
+            <div className="flex flex-col items-center md:items-start justify-center md:pl-4 w-1/2 md:w-auto">
+              <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white invisible">Genres</h3>
               <ul className="space-y-2">
                 <FooterLink href="/genre/adventure">Adventure</FooterLink>
                 <FooterLink href="/genre/mystery">Mystery</FooterLink>
@@ -82,13 +82,13 @@ export default function Footer() {
           </div>
 
           {/* Divider after genres */}
-          <div className="hidden md:flex md:flex-col md:justify-center md:mx-4 pl-2">
-            <div className="h-full w-px bg-white" />
+          <div className="hidden md:flex md:flex-col md:justify-center md:mx-4">
+            <div className="h-52 w-0.5 bg-white" />
           </div>
 
           {/* Help */}
-          <div className="flex flex-col items-center md:items-start justify-center py-4 md:py-0 w-full md:w-auto md:pr-8 md:pl-3">
-            <h3 className="text-lg font-medium mb-6 mt-2 tracking-wide text-white">Help</h3>
+          <div className="flex flex-col items-center md:items-start justify-center w-full md:w-auto md:pr-8 md:pl-3">
+            <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white">Help</h3>
             <ul className="space-y-2 mb-8">
               <li className="text-sm text-gray-300">My Account ({userEmail ? userEmail : 'Not signed in'})</li>
               <li className="text-sm text-gray-300">Customer Support (inbvtv@gmail.com)</li>
@@ -98,12 +98,12 @@ export default function Footer() {
 
           {/* Divider after help */}
           <div className="hidden md:flex md:flex-col md:justify-center md:mx-4">
-            <div className="h-full w-px bg-white" />
+            <div className="h-52 w-0.5 bg-white" />
           </div>
 
           {/* Connect with us (Social Icons) */}
-          <div className="flex flex-col items-center justify-center py-4 md:py-0 w-full md:w-auto">
-            <h3 className="text-lg font-medium mb-6 mt-2 tracking-wide text-white">Connect with us</h3>
+          <div className="flex flex-col items-center justify-center w-full md:w-auto">
+            <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white">Connect with us</h3>
             <div className="flex flex-row space-x-3 mt-2 mb-8">
               <Link href="https://www.facebook.com/share/1P7zFL7e2z/?mibextid=wwXIfr" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
                 <Facebook className="h-5 w-5 text-[#0a2151]" />
@@ -127,9 +127,9 @@ export default function Footer() {
       
       {/* Copyright */}
       <div className="bg-[#020D1E] py-4">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        <div className="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row md:justify-between md:items-center items-center gap-2 md:gap-0">
           <p className="text-sm text-gray-400 text-center md:text-left">Copyright © 2025. All rights reserved.</p>
-          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 mt-2 md:mt-0">
+          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 mt-2 md:mt-0 items-center">
             <Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors text-center">
               Privacy Policy
             </Link>
