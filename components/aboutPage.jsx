@@ -30,13 +30,13 @@ export default function AboutPage() {
         <div className="relative z-10 container mx-auto">
           <h1 className="text-4xl md:text-4xl font-bold mb-6">About Us</h1>
           <p className="text-lg md:text-md text-gray-300 max-w-3xl mx-auto mb-8">
-          This comedy feature follows two best friends in their final year of college while they transition into adulthood. One embraces her sexuality and…
+          INBV TV is a platform for content providers dedicated to innovation in media, Independent  (indie) film makers, studio productions, old, new, and in between. So, enjoy their work
           </p>
           <Link
-            href="/explore"
+            href="/home"
             className="bg-[#1D50A3]  text-white px-8 py-3 rounded-lg font-medium  inline-block hover:bg-blue-900  transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
           >
-            Explore Now
+            Watch Now
           </Link>
         </div>
       </section>
