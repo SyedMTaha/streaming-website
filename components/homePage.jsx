@@ -142,6 +142,12 @@ export default function DashboardPage() {
           </div>
           
           {/* YouTube */}
+          <a 
+            href="https://www.youtube.com/@edwardredd-h1w" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-icon-container group"
+          >
           <div className="social-icon-container group">
             <div 
               className="-ml-1 w-12 h-12 bg-blue-900 group-hover:bg-white flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden"
@@ -150,6 +156,7 @@ export default function DashboardPage() {
               <Youtube className="ml-2 w-5 h-5 text-white group-hover:text-blue-900 transition-colors duration-300" />
             </div>
           </div>
+          </a>
         </div>
       </section>
 

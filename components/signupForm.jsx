@@ -236,7 +236,7 @@ const SignupForm = () => {
                       className={`rounded border-gray-400 ${!termCondition ? "ring-2 ring-red-500" : ""}`}
                     />
                     <label htmlFor="terms" className="ml-2 text-sm font-medium text-gray-300">
-                      I agree to terms & conditions
+                      I agree to <a href="/terms" className='text-blue-600 underline hover:text-blue-400'> Terms & Conditions </a> 
                     </label>
                   </div>
                   {!termCondition && (

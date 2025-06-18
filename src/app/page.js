@@ -4,9 +4,8 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Tv, Download, Dribbble, Smile, Plus, Menu, X } from "lucide-react"
-import Footer from "../../components/footer";
+import Footer from "../../components/footerLand";
 import home01 from '../../public/assets/images/background/homePage05.jpg';
-
 import logo from './../../public/assets/images/logo/logo.png';
 import home45 from '../../public/assets/images/home/home45.jpg';
 import home46 from '../../public/assets/images/home/home46.png';
@@ -299,7 +298,7 @@ export default function HomePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4  w-full">
+        <section className="py-28 px-4  w-full">
           <div className="container mx-auto max-w-8xl">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-8">Frequently Asked Questions</h2>
             <div className="space-y-4">

@@ -7,9 +7,9 @@ import blog03 from './../public/assets/images/blog/blog03.png';
 import blog04 from './../public/assets/images/blog/blog04.png';
 import blog05 from './../public/assets/images/blog/blog05.png';
 import blog06 from './../public/assets/images/blog/blog06.png';
-import blog07 from './../public/assets/images/blog/blog7.jpg';
+import blog07 from './../public/assets/images/blog/blog11.jpg';
 import blog08 from './../public/assets/images/blog/blog8.jpg';
-import blog09 from './../public/assets/images/blog/blog9.jpg';
+import blog09 from './../public/assets/images/blog/blog10.jpg';
 
 export default function BlogPage() {
   return (

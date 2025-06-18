@@ -149,6 +149,7 @@ export default function MovieDetailPage() {
               <Bookmark className={`h-5 w-5 ${isInWishlist ? 'fill-current' : ''}`} />
               <span>{isInWishlist ? 'Added to Wishlist' : 'Add to Wishlist'}</span>
             </button>
+            
             <button 
               onClick={handleShare}
               disabled={shareLoading}

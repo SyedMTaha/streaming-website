@@ -34,11 +34,11 @@ export default function LiveTVPage() {
   }
 
   const channels = [
-    { id: 1, name: "SCREAM BOX", logo: "/assets/images/channels/channel01.png", isActive: false },
-    { id: 2, name: "CRIME HUNTERS", logo:"/assets/images/channels/channel05.png"  , isActive: false },
-    { id: 3, name: "THRILLER TV", logo: "/assets/images/channels/channel04.png", isActive: true },
-    { id: 4, name: "ACTION ZONE", logo: "/assets/images/channels/channel03.png", isActive: false },
-    { id: 5, name: "MYSTERY CHANNEL", logo: "/assets/images/channels/channel02.png", isActive: false },
+    { id: 1, name: "SCREAM BOX", logo: "/assets/images/channels/channel1.jpg", isActive: false },
+    { id: 2, name: "CRIME HUNTERS", logo:"/assets/images/channels/channel5.jpg"  , isActive: false },
+    { id: 3, name: "THRILLER TV", logo: "/assets/images/channels/channel4.jpg", isActive: true },
+    { id: 4, name: "ACTION ZONE", logo: "/assets/images/channels/channel3.jpg", isActive: false },
+    { id: 5, name: "MYSTERY CHANNEL", logo: "/assets/images/channels/channel2.jpg", isActive: false },
   ]
 
   const schedule = [
