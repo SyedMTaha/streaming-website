@@ -47,6 +47,12 @@ export default function CartoonDetailPage() {
     }
   }, [slug]);
 
+  useEffect(() => {
+    if (cartoon && auth.currentUser) {
+      checkWishlistStatus();
+    }
+  }, [cartoon, auth.currentUser]);
+
   const checkWishlistStatus = async () => {
     if (!cartoon || !auth.currentUser) return;
 
@@ -74,7 +80,6 @@ export default function CartoonDetailPage() {
     try {
       if (isInWishlist) {
         await deleteDoc(wishlistRef);
-        setIsInWishlist(false);
       } else {
         await setDoc(wishlistRef, {
           id: cartoon.id,
@@ -83,8 +88,8 @@ export default function CartoonDetailPage() {
           year: cartoon.year,
           addedAt: new Date().toISOString()
         });
-        setIsInWishlist(true);
       }
+      await checkWishlistStatus();
     } catch (error) {
       console.error('Error updating wishlist:', error);
     } finally {

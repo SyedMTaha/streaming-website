@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { auth } from '../firebase';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 
 const groupByType = (items) => {
   return items.reduce((acc, item) => {
@@ -19,7 +19,7 @@ const fetchWishlistSection = async (db, userId, section) => {
   return snapshot.docs.map(doc => ({
     ...doc.data(),
     id: doc.id,
-    type: section.slice(0, -1) // e.g., 'movies' -> 'movie'
+    type: section === 'tv-series' ? 'tv-series' : section.slice(0, -1)
   }));
 };
 
@@ -58,6 +58,15 @@ const wishlistPage = () => {
 
   const grouped = groupByType(wishlist);
 
+  const handleRemove = async (item) => {
+    const db = getFirestore();
+    const userId = auth.currentUser.uid;
+    const section = item.type === 'movie' ? 'movies' : item.type === 'cartoon' ? 'cartoons' : 'tv-series';
+    const itemRef = doc(db, 'wishlists', userId, section, item.id);
+    await deleteDoc(itemRef);
+    setWishlist((prev) => prev.filter((w) => !(w.id === item.id && w.type === item.type)));
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] text-white px-4 py-8">
       <button
@@ -82,6 +91,12 @@ const wishlistPage = () => {
                     <div key={item.id} className="bg-[#1a2236] rounded-lg p-4 flex flex-col items-center">
                       <img src={item.thumbnail || item.image} alt={item.title} className="w-32 h-44 object-cover rounded mb-2" />
                       <span className="font-medium">{item.title}</span>
+                      <button
+                        onClick={() => handleRemove(item)}
+                        className="mt-2 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 text-xs"
+                      >
+                        Remove from Wishlist
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -96,6 +111,12 @@ const wishlistPage = () => {
                     <div key={item.id} className="bg-[#1a2236] rounded-lg p-4 flex flex-col items-center">
                       <img src={item.thumbnail || item.image} alt={item.title} className="w-32 h-44 object-cover rounded mb-2" />
                       <span className="font-medium">{item.title}</span>
+                      <button
+                        onClick={() => handleRemove(item)}
+                        className="mt-2 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 text-xs"
+                      >
+                        Remove from Wishlist
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -110,6 +131,12 @@ const wishlistPage = () => {
                     <div key={item.id} className="bg-[#1a2236] rounded-lg p-4 flex flex-col items-center">
                       <img src={item.thumbnail || item.image} alt={item.title} className="w-32 h-44 object-cover rounded mb-2" />
                       <span className="font-medium">{item.title}</span>
+                      <button
+                        onClick={() => handleRemove(item)}
+                        className="mt-2 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 text-xs"
+                      >
+                        Remove from Wishlist
+                      </button>
                     </div>
                   ))}
                 </div>

@@ -45,7 +45,20 @@ export default function TVSeriesDetailPage() {
     if (auth.currentUser) {
       checkWishlistStatus();
     }
+
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user && series) {
+        checkWishlistStatus();
+      }
+    });
+    return () => unsubscribe();
   }, [slug]);
+
+  useEffect(() => {
+    if (series && auth.currentUser) {
+      checkWishlistStatus();
+    }
+  }, [series, auth.currentUser]);
 
   const checkWishlistStatus = async () => {
     if (!series || !auth.currentUser) return;
@@ -73,9 +86,10 @@ export default function TVSeriesDetailPage() {
 
     try {
       if (isInWishlist) {
+        console.log('Removing from wishlist:', wishlistRef.path);
         await deleteDoc(wishlistRef);
-        setIsInWishlist(false);
       } else {
+        console.log('Adding to wishlist:', wishlistRef.path, series);
         await setDoc(wishlistRef, {
           id: series.id,
           title: series.title,
@@ -83,8 +97,8 @@ export default function TVSeriesDetailPage() {
           year: series.year,
           addedAt: new Date().toISOString()
         });
-        setIsInWishlist(true);
       }
+      await checkWishlistStatus();
     } catch (error) {
       console.error('Error updating wishlist:', error);
     } finally {
@@ -147,9 +161,9 @@ export default function TVSeriesDetailPage() {
             <div className="flex space-x-4">
               <button 
                 onClick={toggleWishlist}
-                disabled={wishlistLoading}
+                disabled={isInWishlist || wishlistLoading}
                 className={`${
-                  isInWishlist ? 'bg-[#1D50A3]' : 'bg-gray-600/80'
+                  isInWishlist ? 'bg-[#1D50A3] cursor-not-allowed' : 'bg-gray-600/80'
                 } text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group`}
               >
                 <Bookmark className={`h-5 w-5 ${isInWishlist ? 'fill-current' : ''}`} />

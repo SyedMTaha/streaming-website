@@ -42,6 +42,15 @@ export default function MovieDetailPage() {
     }
   }, [slug]);
 
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user && movie) {
+        checkWishlistStatus();
+      }
+    });
+    return () => unsubscribe();
+  }, [movie]);
+
   const checkWishlistStatus = async () => {
     if (!movie || !auth.currentUser) return;
 
@@ -69,7 +78,6 @@ export default function MovieDetailPage() {
     try {
       if (isInWishlist) {
         await deleteDoc(wishlistRef);
-        setIsInWishlist(false);
       } else {
         await setDoc(wishlistRef, {
           id: movie.id,
@@ -78,8 +86,8 @@ export default function MovieDetailPage() {
           year: movie.year,
           addedAt: new Date().toISOString()
         });
-        setIsInWishlist(true);
       }
+      await checkWishlistStatus();
     } catch (error) {
       console.error('Error updating wishlist:', error);
     } finally {
@@ -141,9 +149,9 @@ export default function MovieDetailPage() {
           <div className="flex space-x-4">
             <button 
               onClick={toggleWishlist}
-              disabled={wishlistLoading}
+              disabled={isInWishlist || wishlistLoading}
               className={`${
-                isInWishlist ? 'bg-[#1D50A3]' : 'bg-gray-600/80'
+                isInWishlist ? 'bg-[#1D50A3] cursor-not-allowed' : 'bg-gray-600/80'
               } text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group`}
             >
               <Bookmark className={`h-5 w-5 ${isInWishlist ? 'fill-current' : ''}`} />

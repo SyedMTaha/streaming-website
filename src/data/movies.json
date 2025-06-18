@@ -338,7 +338,8 @@
     {
       "id": "c2",
       "title": "Tom and Jerry Comedy Show",
-      "image": "/assets/images/cartoons/cartoon2.jpeg",
+      "image": "/assets/images/cartoons/cartoon2.jpg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon6_inner.jpg",
       "slug": "tom-and-jerry-comedy-show",
       "year": "2023",
       "duration": "1h 25m",
@@ -349,10 +350,22 @@
       "id": "c3",
       "title": "Top Cat",
       "image": "/assets/images/cartoons/cartoon3.jpg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon7_inner.jpg",
       "slug": "top-cat",
       "year": "2024",
       "duration": "1h 35m",
       "rating": "8.7",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c15",
+      "title": "Yogi Bear",
+      "image": "/assets/images/cartoons/cartoon15.jpg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon8_inner.jpg",
+      "slug": "yogi-bear",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
       "genre": "cartoon"
     },
     {
@@ -430,16 +443,6 @@
       "title": "The New Fantastic Four",
       "image": "/assets/images/cartoons/cartoon14.jpg",
       "slug": "the-new-fantastic-four",
-      "year": "2023",
-      "duration": "1h 40m",
-      "rating": "8.5",
-      "genre": "cartoon"
-    },
-    {
-      "id": "c15",
-      "title": "Yogi Bear",
-      "image": "/assets/images/cartoons/cartoon15.jpg",
-      "slug": "yogi-bear",
       "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",
