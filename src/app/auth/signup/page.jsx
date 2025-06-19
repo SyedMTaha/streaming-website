@@ -1,7 +1,7 @@
 "use client"
 
 import SignupForm from "../../../../components/signupForm";
-import Navbar from "../../../../components/navbarLogo";
+
 
 export default function SignupPage() {
   return (

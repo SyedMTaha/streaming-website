@@ -60,12 +60,8 @@ export default function DashboardPage() {
         className="absolute inset-0 pointer-events-none opacity-30 z-0"
         style={{
           backgroundImage: `
-            radial-gradient(circle at 15% 10%, rgba(15,46,97,0.45) 80%, transparent 70%),
-            radial-gradient(circle at 85% 25%, rgba(15,46,97,0.35) 30%, transparent 70%),
-            radial-gradient(circle at 20% 40%, rgba(15,46,97,0.35) 30%, transparent 70%),
-            radial-gradient(circle at 80% 55%, rgba(15,46,97,0.35) 30%, transparent 70%),
-            radial-gradient(circle at 25% 75%, rgba(15,46,97,0.35) 30%, transparent 70%),
-            radial-gradient(circle at 75% 90%, rgba(15,46,97,0.35) 30%, transparent 70%)
+            linear-gradient(to right, #12346C 0%, transparent 30%),
+            linear-gradient(to top, #02091D 0%, transparent 60%)
           `,
           zIndex: 0,
           mixBlendMode: 'overlay'
@@ -76,6 +72,13 @@ export default function DashboardPage() {
       <section className="relative h-[70vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 pointer-events-none">
+          {/* Gradient Overlay */}
+          <div
+            className="absolute inset-0 z-10"
+            style={{
+              background: "linear-gradient(to right, #12346C 0%, transparent 50%)"
+            }}
+          />
           <Image
             src={homePage}
             alt="The White House movie"
@@ -160,144 +163,186 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Streaming Now */}
-      <ContentSection title="Streaming Now" onScroll={handleScroll}>
-        <MovieRow>
-          <MovieCard image={home45}  title="Atomic Submarine"  />
-          <MovieCard image={Pursued} title="Pursued" />
-          <MovieCard image={home48} title="Stage Coach" />
-          <MovieCard image={home49} title="State Secret" />
-          <MovieCard image={Bad} title="Bad and the Beautiful" />
-          <MovieCard image={comedy1}  title="Check and Double Check"  />
-          <MovieCard image={comedy2} title="His Girl Friday" />
-          <MovieCard image={drama1} title="Broken Strings" />
-          <MovieCard image={drama2} title="Key Largo" />
-          <MovieCard image={mystery1} title="Texas Terror" />
-        </MovieRow>
-      </ContentSection>
+      {/* Streaming Now + Recommended Movies Section with Gradient */}
+      <section className="relative py-8 px-4">
+        {/* X-axis Gradient Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(to left, #12346C 0%, transparent 30%),
+              linear-gradient(to top, #02091D 0%, transparent 100%)
+            `
+          }}
+        />
+        <div className="relative z-10">
+          <ContentSection title="Streaming Now" onScroll={handleScroll}>
+            <MovieRow>
+              <MovieCard image={home45}  title="Atomic Submarine"  />
+              <MovieCard image={Pursued} title="Pursued" />
+              <MovieCard image={home48} title="Stage Coach" />
+              <MovieCard image={home49} title="State Secret" />
+              <MovieCard image={Bad} title="Bad and the Beautiful" />
+              <MovieCard image={comedy1}  title="Check and Double Check"  />
+              <MovieCard image={comedy2} title="His Girl Friday" />
+              <MovieCard image={drama1} title="Broken Strings" />
+              <MovieCard image={drama2} title="Key Largo" />
+              <MovieCard image={mystery1} title="Texas Terror" />
+            </MovieRow>
+          </ContentSection>
 
-      {/* Recommended Movies */}
-      <ContentSection title="Recommended Movies" onScroll={handleScroll}>
-        <MovieRow>
-          <MovieCard image={HisFriday}  title="His Girl Friday"  />
-          <MovieCard image={Suddenly} title="Suddenly" />
-          <MovieCard image={Stranger} title="The Stranger" />
-          <MovieCard image={Outlaw} title="Outlaw" />
-          <MovieCard image={Lost} title="The Lost World" />
-          <MovieCard image={Last} title="Last Woman on Earth" />
+          <ContentSection title="Recommended Movies" onScroll={handleScroll}>
+            <MovieRow>
+              <MovieCard image={HisFriday}  title="His Girl Friday"  />
+              <MovieCard image={Suddenly} title="Suddenly" />
+              <MovieCard image={Stranger} title="The Stranger" />
+              <MovieCard image={Outlaw} title="Outlaw" />
+              <MovieCard image={Lost} title="The Lost World" />
+              <MovieCard image={Last} title="Last Woman on Earth" />
+            </MovieRow>
+          </ContentSection>
+        </div>
+      </section>
 
-        </MovieRow>
-      </ContentSection>
+      {/* Recommended TV Shows + New Release Section with Gradient */}
+      <section className="relative py-8 px-4">
+        {/* X-axis Gradient Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: "linear-gradient(to right, #12346C 0%, transparent 30%)",
+          }}
+        />
+        <div className="relative z-10">
+          <ContentSection title="Recommended TV Shows" onScroll={handleScroll}>
+            <LargeCard image={ series04} title="The IronSide" />
+            <LargeCard image={ series06} title="Andy Griffiths"/>
+            <LargeCard image={ series05} title="Mister ED" />
+            <LargeCard image={ series03} title="HillStreet Blues" />
+            <LargeCard image={ series02} title="Dragnet" />   
+            <LargeCard image={ series01} title="The Beverly Hill Billies" />   
+          </ContentSection>
 
+          <ContentSection title="New Release" onScroll={handleScroll}>
+            <MovieRow>
+              {upcomingMovies.map(movie => (
+                <MovieCard
+                  key={movie.slug}
+                  image={movie.image}
+                  title={movie.title}
+                  href={`/upcoming-movie/${movie.slug}`}
+                />
+              ))}
+            </MovieRow>
+          </ContentSection>
+        </div>
+      </section>
 
-      {/* Recommended TV Shows  */}
-      <ContentSection title="Recommended TV Shows" onScroll={handleScroll}>
-    
-          <LargeCard image={ series04} title="The IronSide" />
-          <LargeCard image={ series06} title="Andy Griffiths"/>
-          <LargeCard image={ series05} title="Mister ED" />
-          <LargeCard image={ series03} title="HillStreet Blues" />
-          <LargeCard image={ series02} title="Dragnet" />   
-          <LargeCard image={ series01} title="The Beverly Hill Billies" />   
-       
-      </ContentSection>
+      {/* Cartoon Series + Deal of the Week Section with Gradient */}
+      <section className="relative py-8 px-4">
+        {/* X-axis Gradient Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: "linear-gradient(to left, #12346C 0%, transparent 30%)"
+          }}
+        />
+        <div className="relative z-10">
+          {/* Cartoon Series */}
+          <section className="py-8 px-4">
+            <div className="container mx-auto">
+              <div className="relative rounded-lg overflow-hidden h-64 md:h-80">
+                <Image src={home03} alt="Cartoon Series" fill className="object-cover w-full"  priority/>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent flex items-center">
+                  <div className="px-8">
+                    <h2 className="text-4xl font-bold mb-2">Cartoon Series</h2>
+                    <p className="text-gray-300 mb-4 max-w-md">
+                    A hilarious and heartwarming cartoon series that follows quirky characters on wild adventures in a world where the unexpected is just part of everyday life.
 
-      {/* New Release */}
-      <ContentSection title="New Release" onScroll={handleScroll}>
-        <MovieRow>
-          {upcomingMovies.map(movie => (
-            <MovieCard
-              key={movie.slug}
-              image={movie.image}
-              title={movie.title}
-              href={`/upcoming-movie/${movie.slug}`}
-            />
-          ))}
-        </MovieRow>
-      </ContentSection>
+                    </p>
+                    <Link href="/genre/cartoon" >
+                    <button className="  bg-[#1D50A3]  text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900  transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50 flex items-center gap-2 ">
+                      Watch Now
+                      <Play className="h-5 w-5 fill-current" />
+                    </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-      {/* Cartoon Series */}
-      <section className="py-8 px-4">
-        <div className="container mx-auto">
-          <div className="relative rounded-lg overflow-hidden h-64 md:h-80">
-            <Image src={home03} alt="Cartoon Series" fill className="object-cover w-full"  priority/>
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent flex items-center">
-              <div className="px-8">
-                <h2 className="text-4xl font-bold mb-2">Cartoon Series</h2>
-                <p className="text-gray-300 mb-4 max-w-md">
-                A hilarious and heartwarming cartoon series that follows quirky characters on wild adventures in a world where the unexpected is just part of everyday life.
+          {/* Deal of the Week */}
+          <ContentSection title="Deal of the Week" onScroll={handleScroll}>
+            <MovieRow>
+              <MovieCard image={HisFriday}  title="His Girl Friday"  />
+              <MovieCard image={Suddenly} title="Suddenly" />
+              <MovieCard image={Stranger} title="The Stranger 1946" />
+              <MovieCard image={Outlaw} title="The Outlaw 1943" />
+              <MovieCard image={Lost} title="The Lost World 1925" />
+              <MovieCard image={Last} title="Last Woman on Earth 1960" />
+              <MovieCard image={HisFriday}  title="His Girl Friday"  />
+              <MovieCard image={Suddenly} title="Suddenly" />
+              <MovieCard image={Stranger} title="The Stranger 1946" />
+            </MovieRow>
+          </ContentSection>
+        </div>
+      </section>
 
-                </p>
-                <Link href="/genre/cartoon" >
-                <button className="  bg-[#1D50A3]  text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900  transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50 flex items-center gap-2 ">
-                  Watch Now
-                  <Play className="h-5 w-5 fill-current" />
-                </button>
+      {/* TV Series + Banner Section with Gradient */}
+      <section className="relative py-8 px-4">
+        {/* X-axis Gradient Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: "linear-gradient(to right, #12346C 0%, transparent 30%)"
+          }}
+        />
+        <div className="relative z-10">
+          {/* TV Series */}
+          <section className="py-8 px-4">
+            <div className="container mx-auto">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold">TV Series</h2>
+                <Link
+                  href="/tv-series"
+                  className="w-full sm:w-auto whitespace-nowrap bg-[#1D50A3]/90 text-white px-4 py-1 rounded-md font-medium hover:bg-blue-900/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                >
+                  View All
                 </Link>
               </div>
+              <RankedTVShowRow
+                shows={[
+                  { image: series01, title: "The Beverly Hill Billies" },
+                  { image: series02, title: "Dragnet" },
+                  { image: series03, title: "HillStreet Blues" },
+                  { image: series04, title: "The IronSide" },
+                  { image: series05, title: "Mister ED" },
+                  { image: series06, title: "Andy Griffiths" }
+                ]}
+                sectionId="tv-series-ranked-row"
+                onScroll={handleScroll}
+              />
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Deal of the Week */}
-      <ContentSection title="Deal of the Week" onScroll={handleScroll}>
-        <MovieRow>
-          <MovieCard image={HisFriday}  title="His Girl Friday"  />
-          <MovieCard image={Suddenly} title="Suddenly" />
-          <MovieCard image={Stranger} title="The Stranger 1946" />
-          <MovieCard image={Outlaw} title="The Outlaw 1943" />
-          <MovieCard image={Lost} title="The Lost World 1925" />
-          <MovieCard image={Last} title="Last Woman on Earth 1960" />
-          <MovieCard image={HisFriday}  title="His Girl Friday"  />
-          <MovieCard image={Suddenly} title="Suddenly" />
-          <MovieCard image={Stranger} title="The Stranger 1946" />
-        </MovieRow>
-      </ContentSection>
-
-      {/* TV Series */}
-      <section className="py-8 px-4">
-        <div className="container mx-auto">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold">TV Series</h2>
-            <Link
-              href="/tv-series"
-              className="w-full sm:w-auto whitespace-nowrap bg-[#1D50A3]/90 text-white px-4 py-1 rounded-md font-medium hover:bg-blue-900/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-            >
-              View All
-            </Link>
-          </div>
-          <RankedTVShowRow
-            shows={[
-              { image: series01, title: "The Beverly Hill Billies" },
-              { image: series02, title: "Dragnet" },
-              { image: series03, title: "HillStreet Blues" },
-              { image: series04, title: "The IronSide" },
-              { image: series05, title: "Mister ED" },
-              { image: series06, title: "Andy Griffiths" }
-            ]}
-            sectionId="tv-series-ranked-row"
-            onScroll={handleScroll}
-          />
-        </div>
-      </section>
-
-
-      {/* Banner */}
-      <section className="py-8 px-4">
-        <div className="container mx-auto">
-          <div className="relative rounded-lg overflow-hidden h-64 md:h-50 bg-gradient-to-r from-blue-900 to-blue-600">
-            <div className="absolute inset-0 flex items-center justify-between px-8">
-              <div>
-                <h2 className="text-5xl font-bold mb-2"></h2>
-                <p className="text-xl mb-4"></p>
-              </div>
-              <div className="hidden md:flex items-center justify-center flex-1">
-                <Image src={logo5} alt="House of the Dragon" width={150} height={150} className="rounded-full" />
-                <p className="font-bold text-lg ml-3">Providing you Premium Quality Movies & TV Series</p>
+          {/* Banner */}
+          <section className="py-8 px-4">
+            <div className="container mx-auto">
+              <div className="relative rounded-lg overflow-hidden h-64 md:h-50 bg-gradient-to-r from-blue-900 to-blue-600">
+                <div className="absolute inset-0 flex items-center justify-between px-8">
+                  <div>
+                    <h2 className="text-5xl font-bold mb-2"></h2>
+                    <p className="text-xl mb-4"></p>
+                  </div>
+                  <div className="hidden md:flex items-center justify-center flex-1">
+                    <Image src={logo5} alt="House of the Dragon" width={150} height={150} className="rounded-full" />
+                    <p className="font-bold text-lg ml-3">Providing you Premium Quality Movies & TV Series</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </section>
 

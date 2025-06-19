@@ -1,7 +1,7 @@
 "use client"
 
 import LoginForm from "../../../../components/loginForm";
-import NavbarLogo from "../../../../components/navbarLogo";
+
 
 export default function LoginPage() {
   return (
