@@ -1,8 +1,6 @@
 "use client"
 
 import { useEffect, useRef } from "react";
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
 import Home from "../../../components/homePage";
 import NavbarTwo from "../../../components/navbarSearch";
 import Footer from "../../../components/footer";
@@ -11,14 +9,20 @@ export default function HomePage() {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      lerp: 0.04,
+    let scroll;
+    import("locomotive-scroll").then((LocomotiveScroll) => {
+      scroll = new LocomotiveScroll.default({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.04,
+      });
     });
-    return () => scroll.destroy();
+    import("locomotive-scroll/dist/locomotive-scroll.css");
+    return () => {
+      if (scroll) scroll.destroy();
+    };
   }, []);
-
+  
   return (
     <div
       ref={scrollRef}
