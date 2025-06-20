@@ -11,6 +11,7 @@ import moviesData from '../../../data/movies.json';
 import episodesData from '../../../data/cartoonEpisodes.json';
 import { auth } from '../../../../firebase';
 import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
+import { useRef } from "react";
 
 export default function CartoonDetailPage() {
   const params = useParams();
@@ -22,6 +23,23 @@ export default function CartoonDetailPage() {
   const [wishlistLoading, setWishlistLoading] = useState(false);
   const [showShareSuccess, setShowShareSuccess] = useState(false);
   const [shareLoading, setShareLoading] = useState(false);
+
+  const scrollRef = React.useRef(null);
+
+  useEffect(() => {
+    let scroll;
+    import('locomotive-scroll').then((LocomotiveScroll) => {
+      scroll = new LocomotiveScroll.default({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.08,
+      });
+    });
+    import('locomotive-scroll/dist/locomotive-scroll.css');
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
 
   useEffect(() => {
     // Find the cartoon by slug from the cartoon genre
@@ -118,7 +136,12 @@ export default function CartoonDetailPage() {
   }
 
   return (
-    <div className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]">
+    <div
+      ref={scrollRef}
+      data-scroll-container
+      className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]"
+      style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)" }}
+    >
       <Navbar />
       <section className="max-w-7xl mx-auto py-8 px-4">
         {/* Series Header */}

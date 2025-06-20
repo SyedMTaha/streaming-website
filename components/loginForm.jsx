@@ -114,10 +114,10 @@ export default function LoginForm() {
       </div>
 
       {/* Form Container */}
-      <div className="flex items-center justify-center min-h-screen pt-32 relative z-10">
+      <div className="flex items-center justify-center min-h-screen pt-6 relative z-10">
         <div
-          className="bg-[#191C33] rounded-[10px] p-4 sm:p-8 flex items-center justify-start shadow-2xl w-full max-w-[600px]"
-          style={{ height: "670px", minHeight: "500px", width: '500px' }}
+          className="bg-[#191C33] rounded-[10px] p-4 sm:p-8 flex flex-col items-center justify-center shadow-2xl w-full max-w-md sm:max-w-lg"
+          style={{ minHeight: "400px" }}
         >
           <div className="p-4 sm:p-8 rounded-xl w-full">
             <div className="text-center mb-6">

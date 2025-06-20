@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,6 +16,7 @@ export default function EpisodePage() {
   const [cartoon, setCartoon] = useState(null);
   const [episode, setEpisode] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     // Find the cartoon by slug
@@ -29,6 +30,21 @@ export default function EpisodePage() {
     }
   }, [slug, episodeSlug]);
 
+  useEffect(() => {
+    let scroll;
+    import('locomotive-scroll').then((LocomotiveScroll) => {
+      scroll = new LocomotiveScroll.default({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.08,
+      });
+    });
+    import('locomotive-scroll/dist/locomotive-scroll.css');
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
+
   if (!cartoon || !episode) {
     return (
       <div className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
@@ -41,7 +57,12 @@ export default function EpisodePage() {
   }
 
   return (
-    <div className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]">
+    <div
+      ref={scrollRef}
+      data-scroll-container
+      className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]"
+      style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)" }}
+    >
       <Navbar />
       <div className="max-w-7xl mx-auto py-8 px-4">
         {/* Back Button */}

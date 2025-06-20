@@ -37,7 +37,7 @@ export default function TVSeriesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#020b1f] via-[#0a2151] to-[#020b1f] text-white">
+    <div className="min-h-screen text-white" style={{background: "linear-gradient(to bottom, #02122C 0%, #091F4E 50%, #020E21 70%)"}}>
       <Navbar />
       
       {/* Hero Section */}
@@ -68,23 +68,6 @@ export default function TVSeriesPage() {
             <h3 className="text-xl font-bold">All TV Series</h3>
             <span className="text-gray-400">({series.length} series)</span>
           </div>
-          
-          {/*
-          <div className="flex space-x-2 ml-105">
-            <button
-              onClick={scrollLeft}
-              className="bg-gray-700/50 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={scrollRight}
-              className="bg-gray-700/50 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-          */}
         </div>
           
 

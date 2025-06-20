@@ -21,6 +21,22 @@ export default function GenrePage() {
   const movies = moviesData[genreSlug] || [];
   const [loading, setLoading] = useState(false);
 
+  // Locomotive Scroll setup
+  useEffect(() => {
+    let scroll;
+    import('locomotive-scroll').then((LocomotiveScroll) => {
+      scroll = new LocomotiveScroll.default({
+        el: scrollContainerRef.current,
+        smooth: true,
+        lerp: 0.08,
+      });
+    });
+    import('locomotive-scroll/dist/locomotive-scroll.css');
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
+
   // Check if the current genre is disabled
   const isGenreDisabled = DISABLED_GENRES.includes(genreSlug);
 
@@ -71,7 +87,12 @@ export default function GenrePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#020b1f] via-[#0a2151] to-[#020b1f] text-white">
+    <div
+      ref={scrollContainerRef}
+      data-scroll-container
+      className="min-h-screen bg-gradient-to-b from-[#020b1f] via-[#0a2151] to-[#020b1f] text-white"
+      style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)" }}
+    >
       <Navbar />
       
       {/* Hero Section */}

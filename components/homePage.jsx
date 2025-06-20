@@ -54,31 +54,14 @@ export default function DashboardPage() {
 
 
   return (
-    <div className="min-h-screen bg-[#020b1f] text-white relative scroll-behaviour: smooth">
-      {/* Mesh Gradient Overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-30 z-0"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, #12346C 0%, transparent 30%),
-            linear-gradient(to top, #02091D 0%, transparent 60%)
-          `,
-          zIndex: 0,
-          mixBlendMode: 'overlay'
-        }}
-      />
-
+    <div className="min-h-screen bg-[#020b1f] text-white relative scroll-behaviour: smooth" style={{background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)",}}>
+      {/* Top-to-bottom Gradient Overlay */}
+     
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Gradient Overlay */}
-          <div
-            className="absolute inset-0 z-10"
-            style={{
-              background: "linear-gradient(to right, #12346C 0%, transparent 50%)"
-            }}
-          />
           <Image
             src={homePage}
             alt="The White House movie"
@@ -89,7 +72,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Social Media Icons */}
-        <div className="absolute bottom-2 right-0 z-50 flex gap-2">
+        <div className="absolute bottom-2 right-0 z-20 flex flex-row md:flex-row gap-2 md:gap-3 px-2 md:px-0">
           
           {/* TikTok */}
           <a 
@@ -99,7 +82,7 @@ export default function DashboardPage() {
             className="social-icon-container group"
           >
           <div className="social-icon-container group">
-            <div className="w-12 h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
               <svg 
                 className="w-5 h-5 text-white group-hover:text-blue-900 transform -skew-x-12 transition-colors duration-300" 
                 viewBox="0 0 24 24" 
@@ -118,7 +101,7 @@ export default function DashboardPage() {
             rel="noopener noreferrer"
             className="social-icon-container group"
           >
-            <div className="w-12 h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
               <Facebook className="w-5 h-5 text-white group-hover:text-blue-900 transform -skew-x-12 transition-colors duration-300" />
             </div>
           </a>
@@ -131,7 +114,7 @@ export default function DashboardPage() {
             className="social-icon-container group"
           >
           <div className="social-icon-container group">
-            <div className="w-12 h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
               <Instagram className="w-5 h-5 text-white group-hover:text-blue-900 transform -skew-x-12 transition-colors duration-300" />
             </div>
           </div>
@@ -139,7 +122,7 @@ export default function DashboardPage() {
           
           {/* X (Twitter) */}
           <div className="social-icon-container group">
-            <div className="w-12 h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
               <XIcon className="w-5 h-5 text-white group-hover:text-blue-900 transform -skew-x-12 transition-colors duration-300" />
             </div>
           </div>
@@ -153,7 +136,7 @@ export default function DashboardPage() {
           >
           <div className="social-icon-container group">
             <div 
-              className="-ml-1 w-12 h-12 bg-blue-900 group-hover:bg-white flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden"
+              className="-ml-1 w-10 h-10 md:w-12 md:h-12 bg-blue-900 group-hover:bg-white flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden"
               style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%)'}}
             >
               <Youtube className="ml-2 w-5 h-5 text-white group-hover:text-blue-900 transition-colors duration-300" />
@@ -163,18 +146,8 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Streaming Now + Recommended Movies Section with Gradient */}
+      {/* Streaming Now + Recommended Movies Section */}
       <section className="relative py-8 px-4">
-        {/* X-axis Gradient Overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(to left, #12346C 0%, transparent 30%),
-              linear-gradient(to top, #02091D 0%, transparent 100%)
-            `
-          }}
-        />
         <div className="relative z-10">
           <ContentSection title="Streaming Now" onScroll={handleScroll}>
             <MovieRow>
@@ -204,15 +177,8 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Recommended TV Shows + New Release Section with Gradient */}
+      {/* Recommended TV Shows + New Release Section */}
       <section className="relative py-8 px-4">
-        {/* X-axis Gradient Overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: "linear-gradient(to right, #12346C 0%, transparent 30%)",
-          }}
-        />
         <div className="relative z-10">
           <ContentSection title="Recommended TV Shows" onScroll={handleScroll}>
             <LargeCard image={ series04} title="The IronSide" />
@@ -238,15 +204,8 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Cartoon Series + Deal of the Week Section with Gradient */}
+      {/* Cartoon Series + Deal of the Week Section */}
       <section className="relative py-8 px-4">
-        {/* X-axis Gradient Overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: "linear-gradient(to left, #12346C 0%, transparent 30%)"
-          }}
-        />
         <div className="relative z-10">
           {/* Cartoon Series */}
           <section className="py-8 px-4">
@@ -289,15 +248,8 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* TV Series + Banner Section with Gradient */}
+      {/* TV Series + Banner Section */}
       <section className="relative py-8 px-4">
-        {/* X-axis Gradient Overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: "linear-gradient(to right, #12346C 0%, transparent 30%)"
-          }}
-        />
         <div className="relative z-10">
           {/* TV Series */}
           <section className="py-8 px-4">
@@ -331,13 +283,10 @@ export default function DashboardPage() {
             <div className="container mx-auto">
               <div className="relative rounded-lg overflow-hidden h-64 md:h-50 bg-gradient-to-r from-blue-900 to-blue-600">
                 <div className="absolute inset-0 flex items-center justify-between px-8">
-                  <div>
-                    <h2 className="text-5xl font-bold mb-2"></h2>
-                    <p className="text-xl mb-4"></p>
-                  </div>
-                  <div className="hidden md:flex items-center justify-center flex-1">
-                    <Image src={logo5} alt="House of the Dragon" width={150} height={150} className="rounded-full" />
-                    <p className="font-bold text-lg ml-3">Providing you Premium Quality Movies & TV Series</p>
+                  <div className="flex items-center justify-center w-full">
+                    {/* Show only logo on mobile, logo and text on md+ */}
+                    <Image src={logo5} alt="House of the Dragon" width={100} height={100} className="rounded-full" />
+                    <p className="font-bold text-lg ml-3 hidden md:block">Providing you Premium Quality Movies & TV Series</p>
                   </div>
                 </div>
               </div>

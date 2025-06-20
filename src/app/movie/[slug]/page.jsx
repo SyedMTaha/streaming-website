@@ -21,6 +21,22 @@ export default function MovieDetailPage() {
   const [wishlistLoading, setWishlistLoading] = useState(false);
   const [showShareSuccess, setShowShareSuccess] = useState(false);
   const [shareLoading, setShareLoading] = useState(false);
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    let scroll;
+    import('locomotive-scroll').then((LocomotiveScroll) => {
+      scroll = new LocomotiveScroll.default({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.08,
+      });
+    });
+    import('locomotive-scroll/dist/locomotive-scroll.css');
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
 
   useEffect(() => {
     // Find the movie by slug
@@ -116,7 +132,12 @@ export default function MovieDetailPage() {
   }
 
   return (
-    <div className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]">
+    <div
+      ref={scrollRef}
+      data-scroll-container
+      className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]"
+      style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)" }}
+    >
       <Navbar />
       <section className="max-w-7xl mx-auto py-8 px-4 flex flex-col lg:flex-row gap-8">
         {/* Left Column: Movie Details */}

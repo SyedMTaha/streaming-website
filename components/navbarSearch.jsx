@@ -302,7 +302,7 @@ export default function Navbar() {
                 )}
               </div>
 
-              <MobileNavItem href="/live-tv" label="Live TV" onClick={closeMobileMenu} />
+              <MobileNavItem href="/live" label="Live TV" onClick={closeMobileMenu} />
               <MobileNavItem href="/blog" label="Blog" onClick={closeMobileMenu} />
               <MobileNavItem href="/about" label="About Us" onClick={closeMobileMenu} />
 
