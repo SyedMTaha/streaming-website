@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Check, Shield, Star, Users, Clock, Award, Globe, Heart } from "lucide-react"
