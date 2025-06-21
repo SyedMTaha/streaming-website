@@ -54,13 +54,13 @@ export default function Footer() {
           {/* Logo and Slogan */}
           <div className="flex flex-col items-center justify-center md:pr-10 w-full md:w-auto">
             <Image src={logo2 || "/placeholder.svg"} alt="INBV TV" width={150} height={150} className="object-contain mb-4" />
-            <span className="text-base font-medium text-center md:text-left whitespace-nowrap">Premiums Quality Movies & Series</span>
+            <span className="text-base font-medium text-center md:text-left whitespace-nowrap">Premium Quality Movies & Series</span>
           </div>
 
           {/* Genres Columns (with smaller gap between them) */}
-          <div className="flex flex-row w-full md:w-auto">
-            <div className="flex flex-col items-center md:items-start justify-center md:pr-4 w-1/2 md:w-auto">
-              <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white text-center md:text-center">Genres</h3>
+          <div className="flex flex-row w-full md:w-auto mt-4">
+            <div className="flex flex-col justify-center md:items-start md:pr-4 w-1/2 md:w-auto ">
+              <h3 className="text-lg font-medium mb-2 pt-2 tracking-wide text-white text-left md:text-center ">Genres</h3>
               <ul className="space-y-2">
                 <FooterLink href="/genre/action">Action</FooterLink>
                 <FooterLink href="/genre/drama">Drama</FooterLink>
@@ -69,9 +69,9 @@ export default function Footer() {
                 <FooterLink href="/genre/thriller">Thriller</FooterLink>
               </ul>
             </div>
-            <div className="flex flex-col items-center md:items-start justify-center md:pl-4 w-1/2 md:w-auto">
+            <div className="flex flex-col items-center md:items-start md:pr-4 w-1/2 md:w-auto">
               {/* <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white text-center md:text-left invisible">Genres</h3> */}
-              <ul className="space-y-2 mt-15">
+              <ul className="space-y-2 mt-11">
                 <FooterLink href="/genre/adventure">Adventure</FooterLink>
                 <FooterLink href="/genre/mystery">Mystery</FooterLink>
                 <FooterLink href="/genre/comedy">Comedy</FooterLink>
@@ -87,8 +87,8 @@ export default function Footer() {
           </div>
 
           {/* Help */}
-          <div className="flex flex-col items-center md:items-start justify-center w-full md:w-auto md:pr-8 md:pl-3">
-            <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white  text-center md:text-left  ">Help</h3>
+          <div className="flex flex-col justify-center md:items-start w-full md:w-auto md:pr-8 md:pl-3 mt-4">
+            <h3 className="text-lg font-medium mb-3 pt-2 tracking-wide text-white text-left">Help</h3>
             <ul className="space-y-2 mb-8">
               <li className="text-sm text-gray-300">My Account ({userEmail ? userEmail : 'Not signed in'})</li>
               <li className="text-sm text-gray-300">Customer Support (inbvtv@gmail.com)</li>
@@ -102,8 +102,8 @@ export default function Footer() {
           </div>
 
           {/* Connect with us (Social Icons) */}
-          <div className="flex flex-col items-center justify-center w-full md:w-auto">
-            <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white">Connect with us</h3>
+          <div className="flex flex-col justify-center w-full md:w-auto sm:mt-4 ">
+            <h3 className="text-lg font-medium mb-6 pt-2 tracking-wide text-white text-left">Connect with us</h3>
             <div className="flex flex-row space-x-3 mt-2 mb-8">
               <Link href="https://www.facebook.com/share/1P7zFL7e2z/?mibextid=wwXIfr" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
                 <Facebook className="h-5 w-5 text-[#0a2151]" />

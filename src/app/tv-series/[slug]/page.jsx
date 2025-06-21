@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import React, { useEffect, useState, useRef } from 'react';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Bookmark, Share, Star, Check } from 'lucide-react';
@@ -14,6 +14,8 @@ import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore
 
 export default function TVSeriesDetailPage() {
   const params = useParams();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const { slug } = params;
   const [series, setSeries] = useState(null);
   const [episodes, setEpisodes] = useState([]);
@@ -22,6 +24,49 @@ export default function TVSeriesDetailPage() {
   const [wishlistLoading, setWishlistLoading] = useState(false);
   const [showShareSuccess, setShowShareSuccess] = useState(false);
   const [shareLoading, setShareLoading] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const scrollRef = useRef(null);
+  const locomotiveScroll = useRef(null);
+
+  useEffect(() => {
+    if (!isLoading && isAuthenticated && scrollRef.current) {
+      import('locomotive-scroll').then((locomotiveScrollModule) => {
+        locomotiveScroll.current = new locomotiveScrollModule.default({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.08,
+        });
+      });
+      import('locomotive-scroll/dist/locomotive-scroll.css');
+    }
+    return () => {
+      if (locomotiveScroll.current) {
+        locomotiveScroll.current.destroy();
+        locomotiveScroll.current = null;
+      }
+    };
+  }, [isLoading, isAuthenticated]);
+
+  // Check authentication status
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsAuthenticated(true);
+        if (series) {
+          checkWishlistStatus();
+        }
+      } else {
+        setIsAuthenticated(false);
+        // Redirect to login if not authenticated
+        const redirectUrl = searchParams.get('redirect') || `/tv-series/${slug}`;
+        router.push(`/auth/login?redirect=${encodeURIComponent(redirectUrl)}`);
+      }
+      setIsLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, [series, slug, router, searchParams]);
 
   useEffect(() => {
     // Find the series by slug from the tv-series genre
@@ -40,25 +85,7 @@ export default function TVSeriesDetailPage() {
       const shuffled = [...filteredSeries].sort(() => 0.5 - Math.random()).slice(0, 5);
       setRecommendedSeries(shuffled);
     }
-
-    // Check wishlist status if user is logged in
-    if (auth.currentUser) {
-      checkWishlistStatus();
-    }
-
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user && series) {
-        checkWishlistStatus();
-      }
-    });
-    return () => unsubscribe();
   }, [slug]);
-
-  useEffect(() => {
-    if (series && auth.currentUser) {
-      checkWishlistStatus();
-    }
-  }, [series, auth.currentUser]);
 
   const checkWishlistStatus = async () => {
     if (!series || !auth.currentUser) return;
@@ -122,8 +149,26 @@ export default function TVSeriesDetailPage() {
     }
   };
 
+  // Show loading state while checking authentication
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  // Don't render the page if not authenticated (will redirect to login)
+  if (!isAuthenticated) {
+    return null;
+  }
+
   if (!series) {
-    return <div>Loading...</div>;
+    return (
+      <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
+        <div className="text-white text-xl">Series not found</div>
+      </div>
+    );
   }
 
   return (

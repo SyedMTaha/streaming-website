@@ -124,11 +124,12 @@ export default function Navbar() {
        </div>
         {/* </Link> */}
 
-        <NavItem href="/home" label="Home" />
+        {/* Remove Home from desktop navigation */}
+        {/* <NavItem href="/home" label="Home" /> */}
        {/* Desktop Navigation */}
        <div className="hidden md:flex space-x-6">
               
-
+       <NavItem href="/home" label="Home" />
               {/* Genre Dropdown */}
               <div
                 className="relative"
@@ -270,7 +271,7 @@ export default function Navbar() {
          {isMobileMenuOpen && (
           <div className="md:hidden fixed inset-x-0 top-16 bg-[#1a1a3a]/95 border-t border-blue-900/30 z-50 max-h-[80vh] overflow-y-auto">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <MobileNavItem href="/" label="Home" onClick={closeMobileMenu} />
+              <MobileNavItem href="/home" label="Home" onClick={closeMobileMenu} />
 
               {/* Mobile Genre Dropdown */}
               <div className="w-full">
@@ -288,14 +289,16 @@ export default function Navbar() {
                   <div className="bg-[#1a1a3a] border border-blue-900/30 rounded-lg shadow-xl py-2 mx-2 mt-1 ">
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-2">
                     {genres.map((genre) => (
-                      <Link
+                      <button
                         key={genre.name}
-                        href={genre.href}
-                        className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-blue-600/20 rounded transition-colors duration-150"
-                        onClick={closeMobileMenu}
+                        className="block w-full text-left px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-blue-600/20 rounded transition-colors duration-150"
+                        onClick={() => {
+                          closeMobileMenu();
+                          router.push(genre.href);
+                        }}
                       >
                         {genre.name}
-                      </Link>
+                      </button>
                     ))}
                     </div>
                   </div>

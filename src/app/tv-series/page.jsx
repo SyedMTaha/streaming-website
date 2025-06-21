@@ -54,7 +54,7 @@ export default function TVSeriesPage() {
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-4 mb-30">
-            <span className="text-[#ffffff] font-bold text-3xl md:text-4xl lg:text-4xl uppercase tracking-wider">
+            <span className="text-[#ffffff] font-bold text-2xl md:text-4xl lg:text-4xl uppercase tracking-wider text-center md:text-left pt-18 md:pt-0">
               TV Series
             </span>
           </div>

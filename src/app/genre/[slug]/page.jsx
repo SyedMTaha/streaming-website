@@ -1,41 +1,66 @@
 "use client"
 
 import React, { useEffect, useState, useRef } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, Play, Bookmark, ThumbsUp, Share, Star, Lock } from "lucide-react";
 import Navbar from '../../../../components/navbarSearch';
 import home02 from '../../../../public/assets/images/background/homePage05.jpg';
 import moviesData from '../../../../src/data/movies.json';
+import { auth } from '../../../../firebase';
 
 // Add disabled genres here
-const DISABLED_GENRES = ['adventure', 'animation', 'biographical', 'crime', 'documentary','family', 'historical', 'horror', 'inspiration', 'martial-arts', 'musical', 'news', 'romance', 'sport', 'war'];
+const DISABLED_GENRES = ['adventure', 'animation', 'biographical', 'crime', 'documentary','family', 'historical', 'horror', 'inspiration', 'martial-arts', 'musical', 'news', 'romance', 'sport', 'war']; 
 
 export default function GenrePage() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const scrollContainerRef = useRef(null);
+  const locomotiveScroll = useRef(null);
   const [sortBy, setSortBy] = useState('newest');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const genreSlug = params.slug;
   const movies = moviesData[genreSlug] || [];
   const [loading, setLoading] = useState(false);
 
-  // Locomotive Scroll setup
   useEffect(() => {
-    let scroll;
-    import('locomotive-scroll').then((LocomotiveScroll) => {
-      scroll = new LocomotiveScroll.default({
-        el: scrollContainerRef.current,
-        smooth: true,
-        lerp: 0.08,
+    if (!isLoading && isAuthenticated && scrollContainerRef.current) {
+      import('locomotive-scroll').then((locomotiveScrollModule) => {
+        locomotiveScroll.current = new locomotiveScrollModule.default({
+          el: scrollContainerRef.current,
+          smooth: true,
+          lerp: 0.08,
+        });
       });
-    });
-    import('locomotive-scroll/dist/locomotive-scroll.css');
+      import('locomotive-scroll/dist/locomotive-scroll.css');
+    }
     return () => {
-      if (scroll) scroll.destroy();
+      if (locomotiveScroll.current) {
+        locomotiveScroll.current.destroy();
+        locomotiveScroll.current = null;
+      }
     };
-  }, []);
+  }, [isLoading, isAuthenticated]);
+
+  // Check authentication status
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
+        // Redirect to login if not authenticated
+        const redirectUrl = searchParams.get('redirect') || `/genre/${genreSlug}`;
+        router.push(`/auth/login?redirect=${encodeURIComponent(redirectUrl)}`);
+      }
+      setIsLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, [genreSlug, router, searchParams]);
 
   // Check if the current genre is disabled
   const isGenreDisabled = DISABLED_GENRES.includes(genreSlug);
@@ -78,6 +103,20 @@ export default function GenrePage() {
     }
   };
 
+  // Show loading state while checking authentication
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-[#020b1f] via-[#0a2151] to-[#020b1f] text-white flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  // Don't render the page if not authenticated (will redirect to login)
+  if (!isAuthenticated) {
+    return null;
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-[#020b1f] via-[#0a2151] to-[#020b1f] text-white flex items-center justify-center">
@@ -96,7 +135,7 @@ export default function GenrePage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[65vh] flex items-center justify-center">
+      <section className="relative h-[40vh] sm:h-[55vh] md:h-[65vh] flex items-center justify-center px-2 sm:px-0">
         <div className="absolute inset-0">
           <Image
             src={home02 || "/placeholder.svg"}
@@ -107,35 +146,34 @@ export default function GenrePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#132036] to-transparent" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center space-x-4 mb-30">
-            <span className="text-[#ffffff] font-bold text-3xl md:text-4xl lg:text-4xl uppercase tracking-wider">
+        <div className="relative z-10 container mx-auto px-2 sm:px-4 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8">
+            <span className="text-[#ffffff] font-bold text-xl sm:text-2xl md:text-4xl uppercase tracking-wider">
               Genre
             </span>
-            <span className="text-[#ffffff] font-bold text-3xl md:text-4xl lg:text-4xl">/</span>
-            <span className="text-[#ffffff] font-bold text-3xl md:text-4xl lg:text-4xl uppercase tracking-wider">
+            <span className="text-[#ffffff] font-bold text-xl sm:text-2xl md:text-4xl">/</span>
+            <span className="text-[#ffffff] font-bold text-xl sm:text-2xl md:text-4xl uppercase tracking-wider">
               {genreName}
             </span>
             {isGenreDisabled && (
-              <span className="text-red-500 text-sm ml-2">(Coming Soon)</span>
+              <span className="text-red-500 text-xs sm:text-sm ml-2">(Coming Soon)</span>
             )}
           </div>
         </div>
       </section>
 
       {/* Movies Section */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-4 py-8">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-4">
-            <h3 className="text-xl font-bold">Showing all {genreSlug === 'cartoon' ? 'cartoons' : 'movies'}</h3>
-            <span className="text-gray-400">({movies.length} {genreSlug === 'cartoon' ? 'cartoons' : 'movies'})</span>
+      <div className="container mx-auto px-2 sm:px-4 md:px-8 lg:px-4 py-6 sm:py-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+            <h3 className="text-lg sm:text-xl font-bold">Showing all {genreSlug === 'cartoon' ? 'cartoons' : 'movies'}</h3>
+            <span className="text-gray-400 text-sm">({movies.length} {genreSlug === 'cartoon' ? 'cartoons' : 'movies'})</span>
           </div>
-          
           <div className="flex items-center">
             <select 
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="bg-transparent text-gray-300 text-sm border border-gray-700 px-3 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#1D50A3] cursor-pointer hover:border-gray-600 transition-colors"
+              className="bg-transparent text-gray-300 text-xs sm:text-sm border border-gray-700 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#1D50A3] cursor-pointer hover:border-gray-600 transition-colors"
             >
               <option value="newest" className="bg-[#191C33]">Sort by: Newest</option>
               <option value="oldest" className="bg-[#191C33]">Sort by: Oldest</option>
@@ -152,14 +190,14 @@ export default function GenrePage() {
             <p className="text-gray-500">This genre is currently under development. Please check back later!</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {movies.map((movie) => (
               <div 
                 key={movie.id}
-                className="flex-shrink-0 w-48 cursor-pointer group"
+                className="flex-shrink-0 w-40 sm:w-44 md:w-44 lg:w-48 cursor-pointer group mx-auto"
                 onClick={() => handleMovieClick(movie)}
               >
-                <div className="relative aspect-[2/3] rounded-lg overflow-hidden mb-2">
+                <div className="relative aspect-[9/14] rounded-lg overflow-hidden mb-2">
                   <Image
                     src={movie.image || "/placeholder.svg"}
                     alt={movie.title}
@@ -178,17 +216,17 @@ export default function GenrePage() {
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm font-medium text-white group-hover:text-[#1D50A3] transition-colors">
+                  <p className="text-xs sm:text-sm font-medium text-white group-hover:text-[#1D50A3] transition-colors line-clamp-2">
                     {movie.title}
                   </p>
-                  <div className="flex items-center space-x-2 text-xs text-gray-400">
+                  <div className="flex items-center space-x-2 text-[10px] sm:text-xs text-gray-400">
                     <span>{movie.year}</span>
                     <span>•</span>
                     <span>{movie.duration}</span>
                   </div>
                   <div className="flex items-center space-x-1">
                     <Star className="h-3 w-3 text-yellow-500 fill-yellow-500" />
-                    <span className="text-xs text-gray-400">{movie.rating}</span>
+                    <span className="text-[10px] sm:text-xs text-gray-400">{movie.rating}</span>
                   </div>
                 </div>
               </div>

@@ -25,9 +25,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 .scroll-snap-container {
   scroll-snap-type: y mandatory;
@@ -44,7 +44,7 @@ html {
 }
 
 /* Custom Scrollbar Styles */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 12px;
   background: #091F4E;
 }
@@ -57,10 +57,10 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #12346C;
-}
+} */
 
 /* For Firefox */
-* {
+/* * {
   scrollbar-width: thin;
   scrollbar-color: #1D50A3 #091F4E;
-}
+} */

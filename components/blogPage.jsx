@@ -26,30 +26,30 @@ export default function BlogPage() {
                   alt="Cozy movie watching scene"
                   width={600}
                   height={400}
-                  className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 sm:h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-[#1D50A3] text-white px-3 py-1 rounded text-sm font-medium">ENTERTAINMENT</span>
+                  <span className="bg-[#1D50A3] text-white px-3 py-1 rounded text-xs sm:text-sm font-medium">ENTERTAINMENT</span>
                 </div>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 group-hover:text-blue-400 transition-colors">
                 Movies That Will Make Your Holidays The Best
               </h2>
               {/* <p className="text-gray-300 mb-4 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
               </p> */}
-              <div className="flex items-center space-x-4 text-sm text-gray-400">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-xs sm:text-sm text-gray-400 space-y-2 sm:space-y-0 mb-2">
                 <div className="flex items-center space-x-1">
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>April 26, 2023</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <User className="h-4 w-4" />
+                  <User className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>Jane Doe</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Tag className="h-4 w-4" />
+                  <Tag className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>Entertainment</span>
                 </div>
               </div>
@@ -63,30 +63,30 @@ export default function BlogPage() {
                   alt="Thriller movie poster"
                   width={600}
                   height={400}
-                  className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 sm:h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-[#1D50A3] text-white px-3 py-1 rounded text-sm font-medium">MOVIES NEWS</span>
+                  <span className="bg-[#1D50A3] text-white px-3 py-1 rounded text-xs sm:text-sm font-medium">MOVIES NEWS</span>
                 </div>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 group-hover:text-blue-400 transition-colors">
                 Thriller Movies That You Should Not Miss
               </h2>
               {/* <p className="text-gray-300 mb-4 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
               </p> */}
-              <div className="flex items-center space-x-4 text-sm text-gray-400">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-xs sm:text-sm text-gray-400 space-y-2 sm:space-y-0 mb-2">
                 <div className="flex items-center space-x-1">
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>April 26, 2023</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <User className="h-4 w-4" />
+                  <User className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>Jane Doe</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Tag className="h-4 w-4" />
+                  <Tag className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>Entertainment</span>
                 </div>
               </div>
@@ -100,30 +100,30 @@ export default function BlogPage() {
                   alt="Film making behind the scenes"
                   width={600}
                   height={400}
-                  className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 sm:h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-[#1D50A3] text-white px-3 py-1 rounded text-sm font-medium">MOVIES NEWS</span>
+                  <span className="bg-[#1D50A3] text-white px-3 py-1 rounded text-xs sm:text-sm font-medium">MOVIES NEWS</span>
                 </div>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 group-hover:text-blue-400 transition-colors">
                 Film Making Can Give You Everything
               </h2>
               {/* <p className="text-gray-300 mb-4 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
               </p> */}
-              <div className="flex items-center space-x-4 text-sm text-gray-400">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-xs sm:text-sm text-gray-400 space-y-2 sm:space-y-0 mb-2">
                 <div className="flex items-center space-x-1">
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>April 26, 2023</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <User className="h-4 w-4" />
+                  <User className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>Jane Doe</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Tag className="h-4 w-4" />
+                  <Tag className="h-4 w-4 sm:h-4 sm:w-4" />
                   <span>Entertainment</span>
                 </div>
               </div>

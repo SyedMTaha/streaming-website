@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import React, { useEffect, useState, useRef } from 'react';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Bookmark, Share, Star, Check } from 'lucide-react';
@@ -11,10 +11,11 @@ import moviesData from '../../../data/movies.json';
 import episodesData from '../../../data/cartoonEpisodes.json';
 import { auth } from '../../../../firebase';
 import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
-import { useRef } from "react";
 
 export default function CartoonDetailPage() {
   const params = useParams();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const { slug } = params;
   const [cartoon, setCartoon] = useState(null);
   const [episodes, setEpisodes] = useState([]);
@@ -23,23 +24,50 @@ export default function CartoonDetailPage() {
   const [wishlistLoading, setWishlistLoading] = useState(false);
   const [showShareSuccess, setShowShareSuccess] = useState(false);
   const [shareLoading, setShareLoading] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const scrollRef = React.useRef(null);
+  const locomotiveScroll = useRef(null);
 
   useEffect(() => {
-    let scroll;
-    import('locomotive-scroll').then((LocomotiveScroll) => {
-      scroll = new LocomotiveScroll.default({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.08,
+    if (!isLoading && isAuthenticated && scrollRef.current) {
+      import('locomotive-scroll').then((locomotiveScrollModule) => {
+        locomotiveScroll.current = new locomotiveScrollModule.default({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.08,
+        });
       });
-    });
-    import('locomotive-scroll/dist/locomotive-scroll.css');
+      import('locomotive-scroll/dist/locomotive-scroll.css');
+    }
     return () => {
-      if (scroll) scroll.destroy();
+      if (locomotiveScroll.current) {
+        locomotiveScroll.current.destroy();
+        locomotiveScroll.current = null;
+      }
     };
-  }, []);
+  }, [isLoading, isAuthenticated]);
+
+  // Check authentication status
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsAuthenticated(true);
+        if (cartoon) {
+          checkWishlistStatus();
+        }
+      } else {
+        setIsAuthenticated(false);
+        // Redirect to login if not authenticated
+        const redirectUrl = searchParams.get('redirect') || `/cartoon/${slug}`;
+        router.push(`/auth/login?redirect=${encodeURIComponent(redirectUrl)}`);
+      }
+      setIsLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, [cartoon, slug, router, searchParams]);
 
   useEffect(() => {
     // Find the cartoon by slug from the cartoon genre
@@ -58,18 +86,7 @@ export default function CartoonDetailPage() {
       const shuffled = [...filteredCartoons].sort(() => 0.5 - Math.random()).slice(0, 5);
       setRecommendedCartoons(shuffled);
     }
-
-    // Check wishlist status if user is logged in
-    if (auth.currentUser) {
-      checkWishlistStatus();
-    }
   }, [slug]);
-
-  useEffect(() => {
-    if (cartoon && auth.currentUser) {
-      checkWishlistStatus();
-    }
-  }, [cartoon, auth.currentUser]);
 
   const checkWishlistStatus = async () => {
     if (!cartoon || !auth.currentUser) return;
@@ -131,8 +148,26 @@ export default function CartoonDetailPage() {
     }
   };
 
+  // Show loading state while checking authentication
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  // Don't render the page if not authenticated (will redirect to login)
+  if (!isAuthenticated) {
+    return null;
+  }
+
   if (!cartoon) {
-    return <div>Loading...</div>;
+    return (
+      <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
+        <div className="text-white text-xl">Cartoon not found</div>
+      </div>
+    );
   }
 
   return (

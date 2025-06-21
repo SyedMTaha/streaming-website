@@ -169,7 +169,7 @@ export default function DashboardPage() {
               <MovieCard image={HisFriday}  title="His Girl Friday"  />
               <MovieCard image={Suddenly} title="Suddenly" />
               <MovieCard image={Stranger} title="The Stranger" />
-              <MovieCard image={Outlaw} title="Outlaw" />
+              <MovieCard image={Outlaw} title="The Outlaw" />
               <MovieCard image={Lost} title="The Lost World" />
               <MovieCard image={Last} title="Last Woman on Earth" />
             </MovieRow>
@@ -208,22 +208,21 @@ export default function DashboardPage() {
       <section className="relative py-8 px-4">
         <div className="relative z-10">
           {/* Cartoon Series */}
-          <section className="py-8 px-4">
+          <section className="py-8 px-2 sm:px-4">
             <div className="container mx-auto">
-              <div className="relative rounded-lg overflow-hidden h-64 md:h-80">
-                <Image src={home03} alt="Cartoon Series" fill className="object-cover w-full"  priority/>
+              <div className="relative rounded-lg overflow-hidden h-56 sm:h-64 md:h-80">
+                <Image src={home03} alt="Cartoon Series" fill className="object-cover w-full" priority />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent flex items-center">
-                  <div className="px-8">
-                    <h2 className="text-4xl font-bold mb-2">Cartoon Series</h2>
-                    <p className="text-gray-300 mb-4 max-w-md">
-                    A hilarious and heartwarming cartoon series that follows quirky characters on wild adventures in a world where the unexpected is just part of everyday life.
-
+                  <div className="px-4 sm:px-8 w-full">
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-2">Cartoon Series</h2>
+                    <p className="text-gray-300 mb-4 max-w-full sm:max-w-md text-sm sm:text-base">
+                      A hilarious and heartwarming cartoon series that follows quirky characters on wild adventures in a world where the unexpected is just part of everyday life.
                     </p>
-                    <Link href="/genre/cartoon" >
-                    <button className="  bg-[#1D50A3]  text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900  transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50 flex items-center gap-2 ">
-                      Watch Now
-                      <Play className="h-5 w-5 fill-current" />
-                    </button>
+                    <Link href="/genre/cartoon" className="block w-full sm:w-auto">
+                      <button className="w-full sm:w-auto bg-[#1D50A3] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-blue-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50 flex items-center justify-center gap-2 text-base sm:text-lg">
+                        Watch Now
+                        <Play className="h-5 w-5 fill-current" />
+                      </button>
                     </Link>
                   </div>
                 </div>
@@ -252,13 +251,14 @@ export default function DashboardPage() {
       <section className="relative py-8 px-4">
         <div className="relative z-10">
           {/* TV Series */}
-          <section className="py-8 px-4">
+          <section className="py-8 px-2 sm:px-4">
             <div className="container mx-auto">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">TV Series</h2>
+              <div className="flex flex-row justify-between items-center mb-6 gap-2">
+                <h2 className="text-2xl font-bold text-left">TV Series</h2>
                 <Link
                   href="/tv-series"
-                  className="w-full sm:w-auto whitespace-nowrap bg-[#1D50A3]/90 text-white px-4 py-1 rounded-md font-medium hover:bg-blue-900/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                  className="whitespace-nowrap bg-[#1D50A3]/90 text-white px-3 py-1.5 rounded-md font-medium hover:bg-blue-900/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-sm"
+                  style={{ minWidth: 'auto' }}
                 >
                   View All
                 </Link>
@@ -334,7 +334,7 @@ function ContentSection({ title, viewAllLink, children, onScroll }) {
     <section className="py-8 px-4">
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">{title}</h2>
+          <h2 className="text-2xl font-bold ">{title}</h2>
           {viewAllLink && (
             <Link href={viewAllLink} className="text-white-400 font-medium hover:text-blue-300 text-sm">
               View All

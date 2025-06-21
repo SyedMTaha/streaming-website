@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { useEffect, useRef } from "react";
 import Image from "next/image"
 import Link from "next/link"
 import { Tv, Download, Dribbble, Smile, Plus, Menu, X } from "lucide-react"
@@ -28,7 +29,7 @@ const faqData = [
   },
   {
     question: "What Kind of Movies and Shows Are Available?",
-    answer: "INBV TV offers a variety of genres including action, drama, comedy, kids’ cartoons, and a unique collection of classic movies from the mid-90s."
+    answer: "INBV TV offers a variety of genres including action, drama, comedy, kids' cartoons, and a unique collection of classic movies from the mid-90s."
   },
   {
     question: "Is INBV TV Available on Mobile Devices?",
@@ -74,6 +75,14 @@ const NetflixStyleMovieCard = ({ image, title, href, number }) => {
               </span>
             </div>
           </div>
+          
+          {/* Login overlay on hover */}
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="text-center text-white">
+              <div className="text-sm font-medium mb-2">Login Required</div>
+              <div className="text-xs text-gray-300">Sign in to watch this movie</div>
+            </div>
+          </div>
         </div>
         
         <h3 className="mt-2 text-sm font-medium text-white group-hover:text-red-400 transition-colors">
@@ -109,35 +118,8 @@ function Navbar() {
                   <span className="sm:hidden">Watch</span>
                 </button>
               </Link>
-
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-white hover:text-blue-400 transition-colors md:hidden"
-              >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
             </div>
           </div>
-
-          {/* Mobile menu */}
-          {isMobileMenuOpen && (
-            <div className="md:hidden absolute inset-x-0 top-16 bg-[#1a1a3a]/95 border-t border-blue-900/30 z-50 max-h-[80vh] overflow-y-auto">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                <Link href="/" className="block px-3 py-2 text-white hover:text-blue-400 hover:bg-blue-600/10 rounded transition-colors duration-200">
-                  Home
-                </Link>
-                <Link href="/live-tv" className="block px-3 py-2 text-white hover:text-blue-400 hover:bg-blue-600/10 rounded transition-colors duration-200">
-                  Live TV
-                </Link>
-                <Link href="/blog" className="block px-3 py-2 text-white hover:text-blue-400 hover:bg-blue-600/10 rounded transition-colors duration-200">
-                  Blog
-                </Link>
-                <Link href="/about" className="block px-3 py-2 text-white hover:text-blue-400 hover:bg-blue-600/10 rounded transition-colors duration-200">
-                  About Us
-                </Link>
-              </div>
-            </div>
-          )}
         </div>
       </nav>
     </div>
@@ -145,9 +127,34 @@ function Navbar() {
 }
 
 export default function HomePage() {
+
+  const scrollRef = useRef(null);
+  const locomotiveScroll = useRef(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      import("locomotive-scroll").then((locomotiveScrollModule) => {
+        locomotiveScroll.current = new locomotiveScrollModule.default({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.04,
+        });
+      });
+    }
+    import("locomotive-scroll/dist/locomotive-scroll.css");
+    return () => {
+      if (locomotiveScroll.current) {
+        locomotiveScroll.current.destroy();
+        locomotiveScroll.current = null;
+      }
+    };
+  }, []);
+
+
   return (
     <>
-    <div className="w-full overflow-x-hidden bg-[#091E49]">
+    <div ref={scrollRef}
+      data-scroll-container className="w-full overflow-x-hidden bg-[#091E49]">
       <Navbar />
       <div className="min-h-screen text-white w-full">
         {/* Hero Section */}
@@ -191,7 +198,8 @@ export default function HomePage() {
         <section className="py-16 px-4 w-full">
         <div className="container mx-auto">
           <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-12">Watch Free Movies</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Watch Free Movies</h2>
+            <p className="text-gray-300 text-sm mb-8">Sign in to your account to access all movies and TV shows</p>
           </div>
           
           {/* Movie Cards Container with Side Arrows */}

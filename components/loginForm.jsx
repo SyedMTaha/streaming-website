@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendEmailVerification } from 'firebase/auth';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Eye, EyeOff, Menu, X } from 'lucide-react';
 import Image from "next/image";
 import logo from "../public/assets/images/logo/logo.png";
@@ -18,6 +18,7 @@ export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleResendVerification = async () => {
     try {
@@ -57,7 +58,14 @@ export default function LoginForm() {
         }
         // Successful login
         console.log("Login successful");
-        router.push('/home');
+        
+        // Check for redirect parameter
+        const redirectUrl = searchParams.get('redirect');
+        if (redirectUrl) {
+          router.push(redirectUrl);
+        } else {
+          router.push('/home');
+        }
       }
     } catch (error) {
       // Handle specific error cases
@@ -89,7 +97,13 @@ export default function LoginForm() {
       const user = result.user;
       
       if (user) {
-        router.push('/home');
+        // Check for redirect parameter
+        const redirectUrl = searchParams.get('redirect');
+        if (redirectUrl) {
+          router.push(redirectUrl);
+        } else {
+          router.push('/home');
+        }
       }
     } catch (error) {
       setError('Failed to sign in with Google. Please try again.');
