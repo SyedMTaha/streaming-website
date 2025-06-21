@@ -1,52 +1,16 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import Wishlist from "../../../components/wishlistPage";
-import { auth } from '../../../firebase';
+import dynamic from 'next/dynamic';
 
-const page = () => {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+const WishlistPage = dynamic(() => import('../../../components/wishlistPage'), {
+  loading: () => <div className="min-h-screen w-full flex items-center justify-center"><p className="text-white">Loading Wishlist...</p></div>,
+  ssr: false
+});
 
-  // Check authentication status
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setIsAuthenticated(true);
-      } else {
-        setIsAuthenticated(false);
-        // Redirect to login if not authenticated
-        const redirectUrl = searchParams.get('redirect') || '/wishlist';
-        router.push(`/auth/login?redirect=${encodeURIComponent(redirectUrl)}`);
-      }
-      setIsLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, [router, searchParams]);
-
-  // Show loading state while checking authentication
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
-        <div className="text-white text-xl">Loading...</div>
-      </div>
-    );
-  }
-
-  // Don't render the page if not authenticated (will redirect to login)
-  if (!isAuthenticated) {
-    return null;
-  }
-
+export default function Page() {
   return (
     <div>
-      <Wishlist/>
+      <WishlistPage />
     </div>
-  )
+  );
 }
-
-export default page

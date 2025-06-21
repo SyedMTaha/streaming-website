@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { auth } from '../firebase';
 import { getFirestore, collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 
@@ -23,38 +23,40 @@ const fetchWishlistSection = async (db, userId, section) => {
   }));
 };
 
-const wishlistPage = () => {
+const WishlistPage = () => {
   const [wishlist, setWishlist] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    const fetchWishlist = async () => {
-      setLoading(true);
-      if (!auth.currentUser) {
-        setWishlist([]);
-        setLoading(false);
-        return;
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsAuthenticated(true);
+        fetchWishlist(user.uid);
+      } else {
+        setIsAuthenticated(false);
+        const redirectUrl = searchParams.get('redirect') || '/wishlist';
+        router.push(`/auth/login?redirect=${encodeURIComponent(redirectUrl)}`);
       }
-      const db = getFirestore();
-      const userId = auth.currentUser.uid;
-      const sections = ['movies', 'cartoons', 'tv-series'];
-      let allItems = [];
-      for (const section of sections) {
-        const items = await fetchWishlistSection(db, userId, section);
-        allItems = allItems.concat(items);
-      }
-      setWishlist(allItems);
-      setLoading(false);
-    };
-
-    // Wait for auth to be ready
-    const unsubscribe = auth.onAuthStateChanged(() => {
-      fetchWishlist();
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [router, searchParams]);
+  
+  const fetchWishlist = async (userId) => {
+    setLoading(true);
+    const db = getFirestore();
+    const sections = ['movies', 'cartoons', 'tv-series'];
+    let allItems = [];
+    for (const section of sections) {
+      const items = await fetchWishlistSection(db, userId, section);
+      allItems = allItems.concat(items);
+    }
+    setWishlist(allItems);
+    setLoading(false);
+  };
 
   const grouped = groupByType(wishlist);
 
@@ -67,6 +69,10 @@ const wishlistPage = () => {
     setWishlist((prev) => prev.filter((w) => !(w.id === item.id && w.type === item.type)));
   };
 
+  if (!isAuthenticated) {
+    return <div className="min-h-screen w-full flex items-center justify-center"><p className="text-white">Redirecting to login...</p></div>;
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] text-white px-4 py-8">
       <button
@@ -78,7 +84,7 @@ const wishlistPage = () => {
       <h1 className="text-3xl font-bold mb-8 text-center">My Wishlist</h1>
       <div className="max-w-4xl mx-auto">
         {loading ? (
-          <p className="text-center text-gray-400">Loading...</p>
+          <p className="text-center text-gray-400">Loading wishlist...</p>
         ) : Object.keys(grouped).length === 0 ? (
           <p className="text-center text-gray-400">Your wishlist is empty.</p>
         ) : (
@@ -149,4 +155,4 @@ const wishlistPage = () => {
   );
 };
 
-export default wishlistPage;
+export default WishlistPage;
