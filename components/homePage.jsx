@@ -34,7 +34,10 @@ import drama1 from '../public/assets/images/movies/drama/drama1.jpeg';
 import drama2 from '../public/assets/images/movies/drama/drama2.jpeg';
 import mystery1 from '../public/assets/images/movies/mystery/mystery1.jpg';
 import { Facebook, Twitter, Youtube, X, Instagram } from "lucide-react"
-import { upcomingMovies } from '../src/data/movies.json';
+import Footer from "./footer";
+import moviesData from '../src/data/movies.json';
+
+const { upcomingMovies } = moviesData;
 
 export default function DashboardPage() {
 

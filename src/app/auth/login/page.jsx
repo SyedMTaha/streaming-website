@@ -1,7 +1,11 @@
 "use client"
 
-import LoginForm from "../../../../components/loginForm";
+import dynamic from 'next/dynamic'
 
+const LoginForm = dynamic(() => import('../../../../components/loginForm'), { 
+  loading: () => <div className="min-h-screen w-full flex items-center justify-center"><p className="text-white">Loading form...</p></div>,
+  ssr: false 
+});
 
 export default function LoginPage() {
   return (
