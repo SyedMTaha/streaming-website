@@ -1,17 +1,54 @@
 "use client"
 
+import dynamic from 'next/dynamic';
+import React, { useRef, useEffect } from 'react';
 import SignupForm from "../../../../components/signupForm";
 
-
 export default function SignupPage() {
+  const scrollRef = useRef(null);
+  const locomotiveScroll = useRef(null);
+ 
+  useEffect(() => {
+    if (scrollRef.current) {
+      import('locomotive-scroll').then((locomotiveScrollModule) => {
+        locomotiveScroll.current = new locomotiveScrollModule.default({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.08,
+        });
+      });
+      import('locomotive-scroll/dist/locomotive-scroll.css');
+    }
+    return () => {
+      if (locomotiveScroll.current) {
+        locomotiveScroll.current.destroy();
+        locomotiveScroll.current = null;
+      }
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex flex-col sm:flex-row items-center sm:items-start px-2 sm:px-12 py-8">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#020D1E] via-[#020D1E]/70 to-transparent z-0" />
-      {/* Content with higher z-index */}
-      <div className="relative z-10 w-full max-w-md sm:max-w-lg sm:ml-0 sm:mr-auto">
+    <>
+      {/* Background Image with Gradient */}
+      <div
+        className="fixed inset-0 w-full h-full"
+        style={{
+          backgroundImage: "url('/assets/images/background/login3.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#020D1E] via-[#020D1E]/70 to-transparent" />
+      </div>
+
+      <div
+        ref={scrollRef}
+        data-scroll-container
+        className="min-h-screen w-full relative"
+        style={{ background: 'transparent' }}
+      >
         <SignupForm />
       </div>
-    </div>
+    </>
   );
 }

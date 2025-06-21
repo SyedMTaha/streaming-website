@@ -48,7 +48,7 @@ export default function Footer() {
   );
 
   return (
-    <footer className="relative z-10 bg-gradient-to-t from-[#07295B] to-[#020D1F] text-white">
+    <footer className="relative z-10 bg-gradient-to-t from-[#07295B] to-[#020D1F] text-white mt-20 ">
       <div className="container mx-auto px-4 py-2 flex flex-col items-center justify-center">
         <div className="relative flex flex-col items-center w-full">
           {/* Floating Logo */}

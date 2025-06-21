@@ -5,7 +5,8 @@ import { useEffect, useRef } from "react";
 import Image from "next/image"
 import Link from "next/link"
 import { Tv, Download, Dribbble, Smile, Plus, Menu, X } from "lucide-react"
-import Footer from "../../components/footerLand";
+import Footer from "../../components/footerLanding";
+import LandingNavbar from "../../components/navbarLanding";
 import home01 from '../../public/assets/images/background/homePage05.jpg';
 import logo from './../../public/assets/images/logo/logo.png';
 import home45 from '../../public/assets/images/home/home45.jpg';
@@ -75,14 +76,6 @@ const NetflixStyleMovieCard = ({ image, title, href, number }) => {
               </span>
             </div>
           </div>
-          
-          {/* Login overlay on hover */}
-          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <div className="text-center text-white">
-              <div className="text-sm font-medium mb-2">Login Required</div>
-              <div className="text-xs text-gray-300">Sign in to watch this movie</div>
-            </div>
-          </div>
         </div>
         
         <h3 className="mt-2 text-sm font-medium text-white group-hover:text-red-400 transition-colors">
@@ -92,39 +85,6 @@ const NetflixStyleMovieCard = ({ image, title, href, number }) => {
     </div>
   );
 };
-
-// Navbar Component
-function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
-  return (
-    <div className="absolute top-0 left-0 right-0 z-50">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent"></div>
-      <nav className="relative py-4 w-full">
-        <div className="container mx-auto px-4 sm:px-8 lg:px-16">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-4 sm:space-x-8">
-              <Link href="/" className="flex items-center">
-                <div className="relative flex items-center justify-center h-10 w-24">
-                  <Image src={logo || "/placeholder.svg"} alt="INBV Logo" width={100} height={40} priority />
-                </div>
-              </Link>
-            </div>
-
-            <div className="flex items-center space-x-2 sm:space-x-0">
-              <Link href="/auth/login">
-                <button className="bg-[#1D50A3] text-white hover:bg-blue-300 font-semibold px-4 py-2.5 rounded-lg flex items-center text-md shadow-md hover:bg-blue-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50">
-                  <span className="hidden sm:inline">Watch Now</span>
-                  <span className="sm:hidden">Watch</span>
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  );
-}
 
 export default function HomePage() {
 
@@ -155,7 +115,7 @@ export default function HomePage() {
     <>
     <div ref={scrollRef}
       data-scroll-container className="w-full overflow-x-hidden bg-[#091E49]">
-      <Navbar />
+      <LandingNavbar />
       <div className="min-h-screen text-white w-full">
         {/* Hero Section */}
         <section className="relative py-20 px-4 text-center min-h-[100vh] flex items-center w-full">
@@ -199,7 +159,6 @@ export default function HomePage() {
         <div className="container mx-auto">
           <div className="mb-8">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Watch Free Movies</h2>
-            <p className="text-gray-300 text-sm mb-8">Sign in to your account to access all movies and TV shows</p>
           </div>
           
           {/* Movie Cards Container with Side Arrows */}

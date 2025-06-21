@@ -4,18 +4,64 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Play, Bookmark, ThumbsUp, Share, Star, Check } from 'lucide-react';
+import { Play, Bookmark, ThumbsUp, Share, Star, Check, User } from 'lucide-react';
 import Navbar from '../../../../components/navbarSearch';
 import Footer from '../../../../components/footer';
+import FooterLand from '../../../../components/footerLanding';
+import LandingNavbar from '../../../../components/navbarLanding';
 import moviesData from '../../../data/movies.json';
 import { auth } from '../../../../firebase';
 import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
+import logo from '../../../../public/assets/images/logo/logo.png';
+
+// Define the slugs of the 9 free-to-watch movies from the landing page
+const freeMovieSlugs = [
+  'atomic-submarine',
+  'pursued',
+  'bad-and-the-beautiful',
+  'stage-coach',
+  'state-secret',
+  'check-and-double-check',
+  'his-girl-friday',
+  'the-lost-world',
+  'the-outlaw'
+];
+
+// Simplified navbar for free movies
+const FreeMovieNavbar = () => (
+  <div className="absolute top-0 left-0 right-0 z-50">
+    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent"></div>
+    <nav className="relative py-4 w-full">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16">
+        <div className="flex justify-between items-center">
+          <Link href="/" className="flex items-center">
+            <div className="relative flex items-center justify-center h-10 w-24">
+              <Image src={logo || "/placeholder.svg"} alt="INBV Logo" width={100} height={40} priority />
+            </div>
+          </Link>
+          <Link href="/auth/login" className="text-white hover:text-blue-300 transition-colors">
+            <User className="h-7 w-7" />
+          </Link>
+        </div>
+      </div>
+    </nav>
+  </div>
+);
 
 export default function MovieDetailPage() {
   const params = useParams();
   const router = useRouter();
   const searchParams = useSearchParams();
   const { slug } = params;
+  const isFreeMovie = freeMovieSlugs.includes(slug);
+  
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // This determines if the simplified "free" layout should be shown.
+  // It's true only if the movie is free AND the user is not logged in.
+  const shouldShowFreeLayout = isFreeMovie && !isAuthenticated;
+
   const [movie, setMovie] = useState(null);
   const [recommendedMovies, setRecommendedMovies] = useState([]);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -23,13 +69,11 @@ export default function MovieDetailPage() {
   const [wishlistLoading, setWishlistLoading] = useState(false);
   const [showShareSuccess, setShowShareSuccess] = useState(false);
   const [shareLoading, setShareLoading] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const scrollRef = useRef(null);
   const locomotiveScroll = useRef(null);
 
   useEffect(() => {
-    if (!isLoading && isAuthenticated && scrollRef.current) {
+    if (scrollRef.current) {
       import('locomotive-scroll').then((locomotiveScrollModule) => {
         locomotiveScroll.current = new locomotiveScrollModule.default({
           el: scrollRef.current,
@@ -45,27 +89,25 @@ export default function MovieDetailPage() {
         locomotiveScroll.current = null;
       }
     };
-  }, [isLoading, isAuthenticated]);
+  }, []);
 
-  // Check authentication status
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setIsAuthenticated(true);
-        if (movie) {
-          checkWishlistStatus();
-        }
       } else {
         setIsAuthenticated(false);
-        // Redirect to login if not authenticated
-        const redirectUrl = searchParams.get('redirect') || `/movie/${slug}`;
-        router.push(`/auth/login?redirect=${encodeURIComponent(redirectUrl)}`);
+        // Only redirect if the movie is NOT free
+        if (!isFreeMovie) {
+          const redirectUrl = searchParams.get('redirect') || `/movie/${slug}`;
+          router.push(`/auth/login?redirect=${encodeURIComponent(redirectUrl)}`);
+        }
       }
       setIsLoading(false);
     });
 
     return () => unsubscribe();
-  }, [movie, slug, router, searchParams]);
+  }, [slug, isFreeMovie, router, searchParams]);
 
   useEffect(() => {
     // Find the movie by slug
@@ -80,7 +122,22 @@ export default function MovieDetailPage() {
       const shuffled = [...filteredMovies].sort(() => 0.5 - Math.random()).slice(0, 5);
       setRecommendedMovies(shuffled);
     }
-  }, [slug]);
+
+    if (isAuthenticated) {
+      checkWishlistStatus();
+    }
+  }, [slug, isFreeMovie, movie, isAuthenticated]);
+
+  useEffect(() => {
+    // This effect runs whenever the 'movie' object changes.
+    // It tells Locomotive Scroll to update its dimensions after the content has rendered.
+    if (movie && locomotiveScroll.current) {
+      // A small timeout ensures the DOM has fully updated before recalculating.
+      setTimeout(() => {
+        locomotiveScroll.current.update();
+      }, 500);
+    }
+  }, [movie]);
 
   const checkWishlistStatus = async () => {
     if (!movie || !auth.currentUser) return;
@@ -97,8 +154,8 @@ export default function MovieDetailPage() {
   };
 
   const toggleWishlist = async () => {
+    // This button is not rendered on the free layout, so no extra check is needed here.
     if (!movie || !auth.currentUser) {
-      // Redirect to login or show login prompt
       return;
     }
 
@@ -142,18 +199,13 @@ export default function MovieDetailPage() {
     }
   };
 
-  // Show loading state while checking authentication
+  // Don't render the page if it's still loading or if auth status is not determined yet.
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
         <div className="text-white text-xl">Loading...</div>
       </div>
     );
-  }
-
-  // Don't render the page if not authenticated (will redirect to login)
-  if (!isAuthenticated) {
-    return null;
   }
 
   if (!movie) {
@@ -171,8 +223,10 @@ export default function MovieDetailPage() {
       className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]"
       style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)" }}
     >
-      <Navbar />
-      <section className="max-w-7xl mx-auto py-8 px-4 flex flex-col lg:flex-row gap-8">
+      {shouldShowFreeLayout ? <LandingNavbar /> : <Navbar />}
+
+      {/* Main Content */}
+      <section className="max-w-7xl mx-auto py-8 px-4 flex flex-col lg:flex-row gap-8 pt-24">
         {/* Left Column: Movie Details */}
         <div className="lg:w-1/3 bg-[#012256] rounded-lg p-6 shadow-xl py-4 backdrop-blur-sm flex-shrink-0 h-fit">
           <div className="relative mb-6 rounded-lg overflow-hidden">
@@ -200,42 +254,44 @@ export default function MovieDetailPage() {
             <p className="mb-1"><span className="font-semibold text-white">Genre:</span> {movie.genre}</p>
           </div>
 
-          <div className="flex space-x-4">
-            <button 
-              onClick={toggleWishlist}
-              disabled={isInWishlist || wishlistLoading}
-              className={`${
-                isInWishlist ? 'bg-[#1D50A3] cursor-not-allowed' : 'bg-gray-600/80'
-              } text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group`}
-            >
-              <Bookmark className={`h-5 w-5 ${isInWishlist ? 'fill-current' : ''}`} />
-              <span>{isInWishlist ? 'Added to Wishlist' : 'Add to Wishlist'}</span>
-            </button>
-            
-            <button 
-              onClick={handleShare}
-              disabled={shareLoading}
-              className="bg-gray-600/80 text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group"
-            >
-              {showShareSuccess ? (
-                <>
-                  <Check className="h-5 w-5 text-green-400" />
-                  <span>Copied!</span>
-                </>
-              ) : (
-                <>
-                  <Share className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                  <span>Share</span>
-                </>
-              )}
-              {showShareSuccess && (
-                <div className="absolute inset-0 bg-[#1D50A3] animate-pulse" />
-              )}
-            </button>
-          </div>
+          {!shouldShowFreeLayout && (
+            <div className="flex space-x-4">
+              <button 
+                onClick={toggleWishlist}
+                disabled={isInWishlist || wishlistLoading}
+                className={`${
+                  isInWishlist ? 'bg-[#1D50A3] cursor-not-allowed' : 'bg-gray-600/80'
+                } text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group`}
+              >
+                <Bookmark className={`h-5 w-5 ${isInWishlist ? 'fill-current' : ''}`} />
+                <span>{isInWishlist ? 'Added to Wishlist' : 'Add to Wishlist'}</span>
+              </button>
+              
+              <button 
+                onClick={handleShare}
+                disabled={shareLoading}
+                className="bg-gray-600/80 text-white px-4 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-900 transition-colors relative overflow-hidden group"
+              >
+                {showShareSuccess ? (
+                  <>
+                    <Check className="h-5 w-5 text-green-400" />
+                    <span>Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Share className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                    <span>Share</span>
+                  </>
+                )}
+                {showShareSuccess && (
+                  <div className="absolute inset-0 bg-[#1D50A3] animate-pulse" />
+                )}
+              </button>
+            </div>
+          )}
         </div>
 
-        {/* Right Column: Media Player */}
+        {/* Right Column: Video Player or Thumbnail */}
         <div className="lg:w-2/3 relative aspect-video rounded-lg overflow-hidden">
           {!isPlaying && (
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
@@ -268,10 +324,10 @@ export default function MovieDetailPage() {
           )}
         </div>
       </section>
-
-      {/* Recommended Movies Section */}
       
-      <Footer/>    
+      
+
+      {shouldShowFreeLayout ? <FooterLand /> : <Footer />}
     </div>
   );
 } 
