@@ -22,26 +22,6 @@ export default function EpisodePage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const scrollRef = useRef(null);
-  const locomotiveScroll = useRef(null);
-
-  useEffect(() => {
-    if (!isLoading && isAuthenticated && scrollRef.current) {
-      import('locomotive-scroll').then((locomotiveScrollModule) => {
-        locomotiveScroll.current = new locomotiveScrollModule.default({
-          el: scrollRef.current,
-          smooth: true,
-          lerp: 0.08,
-        });
-      });
-      import('locomotive-scroll/dist/locomotive-scroll.css');
-    }
-    return () => {
-      if (locomotiveScroll.current) {
-        locomotiveScroll.current.destroy();
-        locomotiveScroll.current = null;
-      }
-    };
-  }, [isLoading, isAuthenticated]);
 
   // Check authentication status
   useEffect(() => {
@@ -99,10 +79,8 @@ export default function EpisodePage() {
 
   return (
     <div
-      ref={scrollRef}
-      data-scroll-container
       className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]"
-      style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)" }}
+      style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)", scrollBehavior: 'smooth' }}
     >
       <Navbar />
       <div className="max-w-7xl mx-auto py-8 px-4">

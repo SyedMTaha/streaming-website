@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, Play, Bookmark } from 'lucide-react';
@@ -12,7 +12,27 @@ import moviesData from '../../data/movies.json';
 export default function TVSeriesPage() {
   const router = useRouter();
   const scrollContainerRef = useRef(null);
+  const locomotiveScroll = useRef(null);
   const series = moviesData['tv-series'] || [];
+
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      import('locomotive-scroll').then((locomotiveScrollModule) => {
+        locomotiveScroll.current = new locomotiveScrollModule.default({
+          el: scrollContainerRef.current,
+          smooth: true,
+          lerp: 0.06,
+        });
+      });
+      import('locomotive-scroll/dist/locomotive-scroll.css');
+    }
+    return () => {
+      if (locomotiveScroll.current) {
+        locomotiveScroll.current.destroy();
+        locomotiveScroll.current = null;
+      }
+    };
+  }, []);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -37,7 +57,12 @@ export default function TVSeriesPage() {
   };
 
   return (
-    <div className="min-h-screen text-white" style={{background: "linear-gradient(to bottom, #02122C 0%, #091F4E 50%, #020E21 70%)"}}>
+    <div
+      ref={scrollContainerRef}
+      data-scroll-container
+      className="min-h-screen text-white"
+      style={{background: "linear-gradient(to bottom, #02122C 0%, #091F4E 50%, #020E21 70%)"}}
+    >
       <Navbar />
       
       {/* Hero Section */}

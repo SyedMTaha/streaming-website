@@ -77,7 +77,10 @@ export default function EpisodePage() {
   }
 
   return (
-    <div className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]">
+    <div
+      className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]"
+      style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)", scrollBehavior: 'smooth' }}
+    >
       <Navbar />
       <div className="max-w-7xl mx-auto py-8 px-4">
         {/* Back Button */}

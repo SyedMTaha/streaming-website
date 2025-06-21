@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Logo and Slogan */}
           <div className="flex flex-col items-center justify-center md:pr-10 w-full md:w-auto">
             <Image src={logo2 || "/placeholder.svg"} alt="INBV TV" width={150} height={150} className="object-contain mb-4" />
-            <span className="text-base font-medium text-center md:text-left whitespace-nowrap">Premium Quality Movies & Series</span>
+            <span className="text-base font-medium text-center md:text-left whitespace-nowrap">Premium Movies & Series</span>
           </div>
 
           {/* Genres Columns (with smaller gap between them) */}

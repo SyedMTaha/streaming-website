@@ -172,7 +172,11 @@ export default function TVSeriesDetailPage() {
   }
 
   return (
-    <div className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]">
+    <div
+      ref={scrollRef}
+      data-scroll-container
+      className="min-h-screen text-white bg-gradient-to-t from-[#020d1f] to-[#012256]"
+    >
       <Navbar />
       <section className="max-w-7xl mx-auto py-8 px-4">
         {/* Series Header */}
