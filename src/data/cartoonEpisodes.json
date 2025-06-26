@@ -1373,6 +1373,752 @@
         "nextEpisode": null
       }
     ]
+  },
+
+  "lippy-the-lion-hardy-har-har": {
+    "episodes": [
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep1",
+        "title": "Episode 1",
+        "slug": "episode-1",
+        "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652796?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "22:30",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep2",
+        "title": "Episode 2",
+        "slug": "episode-2",
+        "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652934?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "21:45",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep3",
+        "title": "Episode 3",
+        "slug": "episode-3",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652593?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep4",
+        "title": "Episode 4",
+        "slug": "episode-4",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652984?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep5",
+        "title": "Episode 5",
+        "slug": "episode-5",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652695?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-4",
+        "nextEpisode": "episode-6"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep6",
+        "title": "Episode 6",
+        "slug": "episode-6",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096653004?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-5",
+        "nextEpisode": "episode-7"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep7",
+        "title": "Episode 7",
+        "slug": "episode-7",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096653043?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-6",
+        "nextEpisode": "episode-8"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep8",
+        "title": "Episode 8",
+        "slug": "episode-8",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652867?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-7",
+        "nextEpisode": "episode-9"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep9",
+        "title": "Episode 9",
+        "slug": "episode-9",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652643?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-8",
+        "nextEpisode": "episode-10"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep10",
+        "title": "Episode 10",
+        "slug": "episode-10",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652959?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-9",
+        "nextEpisode": "episode-11"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep11",
+        "title": "Episode 11",
+        "slug": "episode-11",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652842?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-10",
+        "nextEpisode": "episode-12"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep12",
+        "title": "Episode 12",
+        "slug": "episode-12",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652823?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-11",
+        "nextEpisode": "episode-13"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep13",
+        "title": "Episode 13",
+        "slug": "episode-13",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652568?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-12",
+        "nextEpisode": "episode-14"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep14",
+        "title": "Episode 14",
+        "slug": "episode-14",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652902?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-13",
+        "nextEpisode": "episode-15"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep15",
+        "title": "Episode 15",
+        "slug": "episode-15",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652552?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-14",
+        "nextEpisode": "episode-16"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep16",
+        "title": "Episode 16",
+        "slug": "episode-16",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652621?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-15",
+        "nextEpisode": "episode-17"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep17",
+        "title": "Episode 17",
+        "slug": "episode-17",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652514?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-16",
+        "nextEpisode": "episode-18"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep18",
+        "title": "Episode 18",
+        "slug": "episode-18",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096652489?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-17",
+        "nextEpisode": "episode-19"
+      },
+      {
+        "id": "lippy-the-lion-hardy-har-har-ep19",
+        "title": "Episode 19",
+        "slug": "episode-19",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096653072?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-18",
+        "nextEpisode": null
+      }
+    ]
+  },
+
+  "precious-pupp": {
+    "episodes": [
+      {
+        "id": "precious-pupp-ep1",
+        "title": "Episode 1",
+        "slug": "episode-1",
+        "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652212?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "22:30",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "precious-pupp-ep2",
+        "title": "Episode 2",
+        "slug": "episode-2",
+        "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652366?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "21:45",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "precious-pupp-ep3",
+        "title": "Episode 3",
+        "slug": "episode-3",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652236?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "precious-pupp-ep4",
+        "title": "Episode 4",
+        "slug": "episode-4",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652435?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "precious-pupp-ep5",
+        "title": "Episode 5",
+        "slug": "episode-5",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652391?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-4",
+        "nextEpisode": "episode-6"
+      },
+      {
+        "id": "precious-pupp-ep6",
+        "title": "Episode 6",
+        "slug": "episode-6",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652166?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-5",
+        "nextEpisode": "episode-7"
+      },
+      {
+        "id": "precious-pupp-ep7",
+        "title": "Episode 7",
+        "slug": "episode-7",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652344?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-6",
+        "nextEpisode": "episode-8"
+      },
+      {
+        "id": "precious-pupp-ep8",
+        "title": "Episode 8",
+        "slug": "episode-8",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652412?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-7",
+        "nextEpisode": "episode-9"
+      },
+      {
+        "id": "precious-pupp-ep9",
+        "title": "Episode 9",
+        "slug": "episode-9",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652290?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-8",
+        "nextEpisode": "episode-10"
+      },
+      {
+        "id": "precious-pupp-ep10",
+        "title": "Episode 10",
+        "slug": "episode-10",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652124?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-9",
+        "nextEpisode": "episode-11"
+      },
+      {
+        "id": "precious-pupp-ep11",
+        "title": "Episode 11",
+        "slug": "episode-11",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652464?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-10",
+        "nextEpisode": "episode-12"
+      },
+      {
+        "id": "precious-pupp-ep12",
+        "title": "Episode 12",
+        "slug": "episode-12",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652194?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-11",
+        "nextEpisode": "episode-13"
+      },
+      {
+        "id": "precious-pupp-ep13",
+        "title": "Episode 13",
+        "slug": "episode-13",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652097?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-12",
+        "nextEpisode": "episode-14"
+      },
+      {
+        "id": "precious-pupp-ep14",
+        "title": "Episode 14",
+        "slug": "episode-14",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096652315?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-13",
+        "nextEpisode": null
+      }
+    ]
+  },
+
+  "sealab": {
+    "episodes": [
+      {
+        "id": "sealab-ep1",
+        "title": "Episode 1",
+        "slug": "episode-1",
+        "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651217?h=b94f6fdb99&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "22:30",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "sealab-ep2",
+        "title": "Episode 2",
+        "slug": "episode-2",
+        "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651329?h=c7d97d904d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "21:45",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "sealab-ep3",
+        "title": "Episode 3",
+        "slug": "episode-3",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651430?h=6b1b0c85c3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "sealab-ep4",
+        "title": "Episode 4",
+        "slug": "episode-4",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651188?h=873f9e0da9&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "sealab-ep5",
+        "title": "Episode 5",
+        "slug": "episode-5",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651140?h=503fc80953&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-4",
+        "nextEpisode": "episode-6"
+      },
+      {
+        "id": "sealab-ep6",
+        "title": "Episode 6",
+        "slug": "episode-6",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651609?h=61d4a58cd8&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-5",
+        "nextEpisode": "episode-7"
+      },
+      {
+        "id": "sealab-ep7",
+        "title": "Episode 7",
+        "slug": "episode-7",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651366?h=c766ada08d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-6",
+        "nextEpisode": "episode-8"
+      },
+      {
+        "id": "sealab-ep8",
+        "title": "Episode 8",
+        "slug": "episode-8",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651104?h=27658d481a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-7",
+        "nextEpisode": "episode-9"
+      },
+      {
+        "id": "sealab-ep9",
+        "title": "Episode 9",
+        "slug": "episode-9",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651636?h=cdb50cfeae&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-8",
+        "nextEpisode": "episode-10"
+      },
+      {
+        "id": "sealab-ep10",
+        "title": "Episode 10",
+        "slug": "episode-10",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651671?h=57adde57ca&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-9",
+        "nextEpisode": "episode-11"
+      },
+      {
+        "id": "sealab-ep11",
+        "title": "Episode 11",
+        "slug": "episode-11",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651558?h=ebfbf7a3e5&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-10",
+        "nextEpisode": "episode-12"
+      },
+      {
+        "id": "sealab-ep12",
+        "title": "Episode 12",
+        "slug": "episode-12",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651395?h=26a5dc49e2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-11",
+        "nextEpisode": "episode-13"
+      },
+      {
+        "id": "sealab-ep13",
+        "title": "Episode 13",
+        "slug": "episode-13",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1096651700?h=96d9fb939f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-12",
+        "nextEpisode": null
+      }
+    ]
+  },
+
+  "quick-draw": {
+    "episodes": [
+      {
+        "id": "quick-draw-ep1",
+        "title": "Episode 1",
+        "slug": "episode-1",
+        "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653802?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "22:30",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "quick-draw-ep2",
+        "title": "Episode 2",
+        "slug": "episode-2",
+        "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653148?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "21:45",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "quick-draw-ep3",
+        "title": "Episode 3",
+        "slug": "episode-3",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653397?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "quick-draw-ep4",
+        "title": "Episode 4",
+        "slug": "episode-4",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653619?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "quick-draw-ep5",
+        "title": "Episode 5",
+        "slug": "episode-5",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653494?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-4",
+        "nextEpisode": "episode-6"
+      },
+      {
+        "id": "quick-draw-ep6",
+        "title": "Episode 6",
+        "slug": "episode-6",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653742?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-5",
+        "nextEpisode": "episode-7"
+      },
+      {
+        "id": "quick-draw-ep7",
+        "title": "Episode 7",
+        "slug": "episode-7",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653263?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-6",
+        "nextEpisode": "episode-8"
+      },
+      {
+        "id": "quick-draw-ep8",
+        "title": "Episode 8",
+        "slug": "episode-8",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653104?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-7",
+        "nextEpisode": "episode-9"
+      },
+      {
+        "id": "quick-draw-ep9",
+        "title": "Episode 9",
+        "slug": "episode-9",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653706?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-8",
+        "nextEpisode": "episode-10"
+      },
+      {
+        "id": "quick-draw-ep10",
+        "title": "Episode 10",
+        "slug": "episode-10",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653549?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-9",
+        "nextEpisode": "episode-11"
+      },
+      {
+        "id": "quick-draw-ep11",
+        "title": "Episode 11",
+        "slug": "episode-11",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653520?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-10",
+        "nextEpisode": "episode-12"
+      },
+      {
+        "id": "quick-draw-ep12",
+        "title": "Episode 12",
+        "slug": "episode-12",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653829?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-11",
+        "nextEpisode": "episode-13"
+      },
+      {
+        "id": "quick-draw-ep13",
+        "title": "Episode 13",
+        "slug": "episode-13",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653596?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-12",
+        "nextEpisode": "episode-14"
+      },
+      {
+        "id": "quick-draw-ep14",
+        "title": "Episode 14",
+        "slug": "episode-14",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653301?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-13",
+        "nextEpisode": "episode-15"
+      },
+      {
+        "id": "quick-draw-ep15",
+        "title": "Episode 15",
+        "slug": "episode-15",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653230?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-14",
+        "nextEpisode": "episode-16"
+      },
+      {
+        "id": "quick-draw-ep16",
+        "title": "Episode 16",
+        "slug": "episode-16",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653352?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-15",
+        "nextEpisode": "episode-17"
+      },
+      {
+        "id": "quick-draw-ep17",
+        "title": "Episode 17",
+        "slug": "episode-17",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653211?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-16",
+        "nextEpisode": "episode-18"
+      },
+      {
+        "id": "quick-draw-ep18",
+        "title": "Episode 18",
+        "slug": "episode-18",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653180?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-17",
+        "nextEpisode": "episode-19"
+      },
+      {
+        "id": "quick-draw-ep19",
+        "title": "Episode 19",
+        "slug": "episode-19",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653327?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-18",
+        "nextEpisode": "episode-20"
+      },
+      {
+        "id": "quick-draw-ep20",
+        "title": "Episode 20",
+        "slug": "episode-20",
+        "": " ",
+        "thumbnail": "/assets/images/cartoons/cartoon10.jpeg",
+        "videoUrl": "https://player.vimeo.com/video/1096653769?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "23:15",
+        "previousEpisode": "episode-19",
+        "nextEpisode": null
+      }
+    ]
   }
 
 

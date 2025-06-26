@@ -377,26 +377,6 @@
       "description":"Yogi, the “smarter than the average bear” from Jellystone Park, constantly schemes to steal picnic baskets—ending up in mischief with Ranger Smith."
     },
     {
-      "id": "c6",
-      "title": "Jeannie",
-      "image": "/assets/images/cartoons/cartoon6.jpg",
-      "slug": "jeannie",
-      "year": "2023",
-      "duration": "1h 40m",
-      "rating": "8.5",
-      "genre": "cartoon"
-    },
-    {
-      "id": "c7",
-      "title": "Jetsons",
-      "image": "/assets/images/cartoons/cartoon7.jpg",
-      "slug": "jetsons",
-      "year": "2023",
-      "duration": "1h 40m",
-      "rating": "8.5",
-      "genre": "cartoon"
-    },
-    {
       "id": "c8",
       "title": "Lippy the Lion Hardy Har Har",
       "image": "/assets/images/cartoons/cartoon8.jpg",
@@ -420,7 +400,7 @@
       "id": "c10",
       "title": "Quick Draw Mcgraw",
       "image": "/assets/images/cartoons/cartoon10.jpeg",
-      "slug": "quick-draw-mcgraw",
+      "slug": "quick-draw",
       "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",
@@ -430,7 +410,27 @@
       "id": "c11",
       "title": "Sealab",
       "image": "/assets/images/cartoons/cartoon11.jpg",
-      "slug": "high-lander",
+      "slug": "sealab",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c6",
+      "title": "Jeannie",
+      "image": "/assets/images/cartoons/cartoon6.jpg",
+      "slug": "jeannie",
+      "year": "2023",
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon"
+    },
+    {
+      "id": "c7",
+      "title": "Jetsons",
+      "image": "/assets/images/cartoons/cartoon7.jpg",
+      "slug": "jetsons",
       "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",

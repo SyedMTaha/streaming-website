@@ -14,7 +14,7 @@ import home46 from '../../public/assets/images/home/home46.png';
 import home47 from '../../public/assets/images/home/home47.jpg';
 import home48 from '../../public/assets/images/home/home48.png';
 import home49 from '../../public/assets/images/home/home49.jpeg';
-import home50 from '../../public/assets/images/movies/comedy/comedy1.jpg';
+import home50 from '../../public/assets/images/movies/action/action4.jpeg';
 import home51 from '../../public/assets/images/movies/comedy/comedy2.jpeg';
 import home52 from '../../public/assets/images/movies/sci-fi/scifi7.jpeg';
 import home53 from '../../public/assets/images/movies/western/western2.jpeg';
@@ -221,7 +221,7 @@ export default function HomePage() {
                   <NetflixStyleMovieCard image={home49} title="State Secret" href="/movie/state-secret" number="5" />
                 </div>
                 <div className="flex-shrink-0 w-40 sm:w-48 md:w-72">
-                  <NetflixStyleMovieCard image={home50} title="Check and Double Check" href="/movie/check-and-double-check" number="6" />
+                  <NetflixStyleMovieCard image={home50} title="Deadline USA" href="/movie/deadline" number="6" />
                 </div>
                 <div className="flex-shrink-0 w-40 sm:w-48 md:w-72">
                   <NetflixStyleMovieCard image={home51} title="His Girl Friday" href="/movie/his-girl-friday" number="7" />
