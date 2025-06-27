@@ -417,20 +417,20 @@
       "genre": "cartoon"
     },
     {
-      "id": "c6",
-      "title": "Jeannie",
-      "image": "/assets/images/cartoons/cartoon6.jpg",
-      "slug": "jeannie",
+      "id": "c7",
+      "title": "Jetsons",
+      "image": "/assets/images/cartoons/cartoon7.jpg",
+      "slug": "jetsons",
       "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",
       "genre": "cartoon"
     },
     {
-      "id": "c7",
-      "title": "Jetsons",
-      "image": "/assets/images/cartoons/cartoon7.jpg",
-      "slug": "jetsons",
+      "id": "c6",
+      "title": "Jeannie",
+      "image": "/assets/images/cartoons/cartoon6.jpg",
+      "slug": "jeannie",
       "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",
