@@ -30,7 +30,7 @@ const faqData = [
   },
   {
     question: "What Kind of Movies and Shows Are Available?",
-    answer: "INBV TV offers a variety of genres including action, drama, comedy, kids' cartoons, and a unique collection of classic movies from the mid-90s."
+    answer: "Unique collection of classic movies from the mid-40s on."
   },
   {
     question: "Is INBV TV Available on Mobile Devices?",
