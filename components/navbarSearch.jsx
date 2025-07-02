@@ -37,7 +37,7 @@ export default function Navbar() {
     { name: "Drama", href: "/genre/drama" },
     { name: "Family", href: "/genre/family" },
     { name: "Historical", href: "/genre/historical" },
-    { name: "Horror", href: "/genre/horror" },
+    { name: "Independent", href: "/genre/independent" },
     { name: "Inspiration", href: "/genre/inspiration" },
     { name: "Martial Arts", href: "/genre/martial-arts" },
     { name: "Musical", href: "/genre/musical" },
