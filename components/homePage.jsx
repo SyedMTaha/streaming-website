@@ -133,7 +133,7 @@ export default function DashboardPage() {
           
           {/* YouTube */}
           <a 
-            href="https://www.youtube.com/@edwardredd-h1w" 
+            href="https://m.youtube.com/@inbvtv" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-icon-container group"
