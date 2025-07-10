@@ -125,11 +125,18 @@ export default function DashboardPage() {
           </a>
           
           {/* X (Twitter) */}
+          <a 
+            href="https://x.com/inbv_tv?s=21" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="social-icon-container group"
+          >
           <div className="social-icon-container group">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-900 group-hover:bg-white transform skew-x-12 flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden">
               <XIcon className="w-5 h-5 text-white group-hover:text-blue-900 transform -skew-x-12 transition-colors duration-300" />
             </div>
           </div>
+          </a>
           
           {/* YouTube */}
           <a 
