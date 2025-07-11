@@ -267,7 +267,7 @@ export default function TVSeriesDetailPage() {
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold mb-2">{episode.title}</h3>
-                    <p className="text-sm text-gray-400">{episode.description}</p>
+                    {/* <p className="text-sm text-gray-400">{episode.description}</p> */}
                     <p className="text-sm text-gray-500 mt-2">{episode.duration}</p>
                   </div>
                 </Link>

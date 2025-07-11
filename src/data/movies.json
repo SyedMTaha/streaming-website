@@ -464,19 +464,6 @@
   ],
   "comedy": [
     {
-      "id": "com1",
-      "title": "Check and Double Check",
-      "image": "/assets/images/movies/comedy/comedy1.jpg",
-      "innerImage": "/assets/images/movies/comedy/landscape/comedy1_inner.jpg",
-      "slug": "check-and-double-check",
-      "year": "1930",
-      "duration": "1h 45m",
-      "rating": "5.9",
-      "genre": "comedy",
-      "description": "Amos and Andy get involved in a love triangle and a mistaken identity case.",
-      "videoUrl": "https://player.vimeo.com/video/1093482479?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
       "id": "com2",
       "title": "Brideless Groom",
       "image": "/assets/images/movies/comedy/comedy4.jpeg",
@@ -840,45 +827,85 @@
   "martial-arts": [
     {
       "id": "ma1",
-      "title": "Dragon's Path",
-      "image": "/assets/images/movies/martial1.jpg",
-      "slug": "dragons-path",
-      "year": "2024",
-      "duration": "2h 5m",
-      "rating": "8.6",
-      "genre": "martial-arts"
+      "title": "Return of the Street Fighter",
+      "image": "/assets/images/movies/martial/martial1.jpg",
+      "innerImage": "/assets/images/movies/martial/landscape/martial1_inner.jpeg",
+      "slug": "return-of-the-street-fighter",
+      "year": "1974",
+      "duration": "2h 10m",
+      "rating": "7.0",
+      "genre": "Martial Arts",
+      "description": "Sonny Chiba’s tough-as-nails assassin takes on a deadly crime syndicate.",
+      "videoUrl": "" 
     },
     {
       "id": "ma2",
-      "title": "Warrior's Code",
-      "image": "/assets/images/movies/martial2.jpg",
-      "slug": "warriors-code",
-      "year": "2023",
-      "duration": "2h 0m",
-      "rating": "8.4",
-      "genre": "martial-arts"
+      "title": "Ninja Death 1",
+      "image": "/assets/images/movies/martial/martial2.jpg",
+      "innerImage": "/assets/images/movies/martial/landscape/martial2_inner.png",
+      "slug": "ninja-death-1",
+      "year": "1987",
+      "duration": "2h 10m",
+      "rating": "7.5",
+      "genre": "Martial Arts",
+      "description": "A young fighter uncovers his mysterious past while battling deadly ninjas and ruthless enemies.",
+      "videoUrl": "" 
     },
     {
       "id": "ma3",
-      "title": "The Master",
-      "image": "/assets/images/movies/martial3.jpg",
-      "slug": "the-master",
-      "year": "2024",
+      "title": "Ninja Death 2",
+      "image": "/assets/images/movies/martial/martial3.jpeg",
+      "innerImage": "/assets/images/movies/martial/landscape/martial3_inner.png",
+      "slug": "ninja-death-2",
+      "year": "1987",
       "duration": "2h 10m",
-      "rating": "8.5",
-      "genre": "martial-arts"
+      "rating": "7.8",
+      "genre": "Martial Arts",
+      "description": "The hero’s journey as he faces deadlier ninjas and uncovers darker secrets about his origins.",
+      "videoUrl": "" 
     },
     {
       "id": "ma4",
-      "title": "Fighting Spirit",
-      "image": "/assets/images/movies/martial4.jpg",
-      "slug": "fighting-spirit",
-      "year": "2023",
-      "duration": "2h 15m",
-      "rating": "8.3",
-      "genre": "martial-arts"
+      "title": "Lady Whirlwind",
+      "image": "/assets/images/movies/martial/martial4.jpeg",
+      "innerImage": "/assets/images/movies/martial/landscape/martial4_inner.jpeg",
+      "slug": "lady-whirlwind",
+      "year": "1972",
+      "duration": "2h 10m",
+      "rating": "7.3",
+      "genre": "Martial Arts",
+      "description": "Angela Mao plays a fierce woman seeking vengeance against the man who wronged her sister.",
+      "videoUrl": "" 
+    },
+    {
+      "id": "ma5",
+      "title": "Black Belt Jones",
+      "image": "/assets/images/movies/martial/martial5.jpg",
+      "innerImage": "/assets/images/movies/martial/landscape/martial5_inner.jpg",
+      "slug": "black-belt-jones",
+      "year": "1974",
+      "duration": "2h 10m",
+      "rating": "7.8",
+      "genre": "Martial Arts",
+      "description": "A martial arts expert battles mobsters to save a karate school from being taken over.",
+      "videoUrl": "" 
+    },
+    {
+      "id": "ma6",
+      "title": "Sister Street Fighter",
+      "image": "/assets/images/movies/martial/martial6.jpg",
+      "innerImage": "/assets/images/movies/martial/landscape/martial6_inner.jpg",
+      "slug": "sister-street-fighter",
+      "year": "1974",
+      "duration": "2h 10m",
+      "rating": "7.7",
+      "genre": "Martial Arts",
+      "description": "A fearless woman fights her way through a criminal underworld to rescue her kidnapped brother.",
+      "videoUrl": "" 
     }
+    
   ],
+
   "musical": [
     {
       "id": "m1",
@@ -1138,6 +1165,32 @@
         "genre": "sci-fi",
         "description": "An expedition to a South American plateau finds living dinosaurs.",
         "videoUrl": "https://player.vimeo.com/video/1093479411?h=54f010a737&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      },
+      {
+        "id": "sf8",
+        "title": "Star Odyssey",
+        "image": "/assets/images/movies/sci-fi/scifi8.jpg",
+        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi8_inner.jpg",
+        "slug": "star-odyssey",
+        "year": "1979",
+        "duration": "2h 5m",
+        "rating": "8.0",
+        "genre": "sci-fi",
+        "description": "Earth’s heroes battle a powerful alien robot army threatening to enslave humanity.",
+        "videoUrl": "https://player.vimeo.com/video/1100414206?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      },
+      {
+        "id": "sf9",
+        "title": "Doomsday Machine ",
+        "image": "/assets/images/movies/sci-fi/scifi9.jpg",
+        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi9_inner.jpg",
+        "slug": "doomsday-machine",
+        "year": "1972",
+        "duration": "2h 5m",
+        "rating": "8.5",
+        "genre": "sci-fi",
+        "description": "Astronauts race to survive after Earth is destroyed by a secret nuclear weapon.",
+        "videoUrl": "https://player.vimeo.com/video/1100414221?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       }
   ],
 
@@ -1291,9 +1344,22 @@
         "year": "1943",
         "duration": "1h 50m",
         "rating": "5.4",
-        "genre": "action",
+        "genre": "western",
         "description": "A tale of Billy the Kidâ€™s friendship and conflict with Doc Holliday, with romantic entanglements.",
         "videoUrl": "https://player.vimeo.com/video/1093479427?h=411e2db833&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      },
+      {
+        "id": "we3",
+        "title": "Apache Blood",
+        "image": "/assets/images/movies/western/western3.webp",
+        "innerImage": "/assets/images/movies/western/landscape/western3_inner.png",
+        "slug": "apache-blood",
+        "year": "1975",
+        "duration": "1h 50m",
+        "rating": "7.5",
+        "genre": "western",
+        "description": "A native American warrior seeks revenge against the U.S. soldiers who massacred his tribe.",
+        "videoUrl": "https://player.vimeo.com/video/1100414187?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       }
   ],
 
@@ -1400,4 +1466,6 @@
     }
     
   ]
+
+  
 } 

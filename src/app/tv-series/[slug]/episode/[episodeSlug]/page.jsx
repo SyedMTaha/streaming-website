@@ -133,8 +133,8 @@ export default function EpisodePage() {
 
         {/* Episode Description */}
         <div className="bg-[#012256] rounded-lg p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4">Episode Description</h2>
-          <p className="text-gray-300">{episode.description}</p>
+          {/* <h2 className="text-xl font-semibold mb-4">Episode Description</h2>
+          <p className="text-gray-300">{episode.description}</p> */}
           <div className="mt-4 text-sm text-gray-400">
             <p>Duration: {episode.duration}</p>
           </div>
