@@ -129,6 +129,19 @@
         "genre": "action",
         "description": "A surgeon is hunted after operating on a dictator and uncovering a deadly conspiracy.",
         "videoUrl": "https://player.vimeo.com/video/1092933232?h=d997dfd2ca&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      },
+      {
+        "id": "a12",
+        "title": "The Batman",
+        "image": "/assets/images/movies/action/action12.jpg",
+        "innerImage": "/assets/images/movies/action/landscape/action13_inner.jpeg",
+        "slug": "the-batman",
+        "year": "2022",
+        "duration": "1h 50m",
+        "rating": "9.0",
+        "genre": "action",
+        "description": "A relentless vigilante uncovers deep-rooted corruption in Gotham City while pursuing a sadistic serial killer known as the Riddler.",
+        "videoUrl": "https://player.vimeo.com/video/1101567932?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       }
   ],
   "adventure": [
@@ -188,43 +201,42 @@
   "animation": [
     {
       "id": "an1",
-      "title": "Dream World",
-      "image": "/assets/images/movies/animation1.jpg",
-      "slug": "dream-world",
-      "year": "2024",
-      "duration": "1h 45m",
-      "rating": "9.0",
-      "genre": "animation"
+      "title": "Frozen II",
+      "image": "/assets/images/movies/animation/animation1.jpg",
+      "innerImage": "/assets/images/movies/animation/landscape/animation1_inner.jpeg",
+      "slug": "frozen-II",
+      "year": "2019",
+      "duration": "1h 50m",
+      "rating": "8.5",
+      "genre": "action",
+      "description": "A fearless queen ventures into an enchanted forest to uncover the truth behind her powers and save her kingdom.",
+      "videoUrl": "https://player.vimeo.com/video/1101567147?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "an2",
-      "title": "Pixel Heroes",
-      "image": "/assets/images/movies/animation2.jpg",
-      "slug": "pixel-heroes",
-      "year": "2023",
+      "title": "Kung Fu Panda 2",
+      "image": "/assets/images/movies/animation/animation2.webp",
+      "innerImage": "/assets/images/movies/animation/landscape/animation2_inner.jpg",
+      "slug": "kung-fu-panda-2",
+      "year": "2011",
       "duration": "1h 50m",
-      "rating": "8.7",
-      "genre": "animation"
+      "rating": "8.0",
+      "genre": "action",
+      "description": "A fearless panda warrior confronts his mysterious past while battling a villainous peacock bent on conquering China with a deadly new weapon.",
+      "videoUrl": "https://player.vimeo.com/video/1101566934?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "an3",
-      "title": "Magic Forest",
-      "image": "/assets/images/movies/animation3.jpg",
-      "slug": "magic-forest",
-      "year": "2024",
-      "duration": "1h 40m",
-      "rating": "8.9",
-      "genre": "animation"
-    },
-    {
-      "id": "an4",
-      "title": "Robot Friends",
-      "image": "/assets/images/movies/animation4.jpg",
-      "slug": "robot-friends",
-      "year": "2023",
-      "duration": "1h 55m",
-      "rating": "8.5",
-      "genre": "animation"
+      "title": "Spies In Disguise",
+      "image": "/assets/images/movies/animation/animation3.jpg",
+      "innerImage": "/assets/images/movies/animation/landscape/animation3_inner.jpg",
+      "slug": "spies-in-disguise",
+      "year": "2019",
+      "duration": "1h 50m",
+      "rating": "7.5",
+      "genre": "action",
+      "description": "A suave super spy is accidentally turned into a pigeon and must team up with a nerdy scientist to save the world in an unexpected way.",
+      "videoUrl": "https://player.vimeo.com/video/1101567349?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "biographical": [
@@ -1191,6 +1203,19 @@
         "genre": "sci-fi",
         "description": "Astronauts race to survive after Earth is destroyed by a secret nuclear weapon.",
         "videoUrl": "https://player.vimeo.com/video/1100414221?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      },
+      {
+        "id": "sf10",
+        "title": "Glass",
+        "image": "/assets/images/movies/sci-fi/scifi10.avif",
+        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi10_inner.jpeg",
+        "slug": "glass",
+        "year": "2019",
+        "duration": "2h 5m",
+        "rating": "8.0",
+        "genre": "sci-fi",
+        "description": "A disturbed man with multiple personalities becomes the key to a showdown between a vigilante with super strength and a mastermind who believes in the power of the extraordinary.",
+        "videoUrl": "https://player.vimeo.com/video/1101567538?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
       }
   ],
 
