@@ -10,6 +10,7 @@ import news1 from './../public/assets/images/home/news1.jpg';
 import news2 from './../public/assets/images/home/news2.jpg';
 import news3 from './../public/assets/images/home/news3.jpg';
 import homePage from './../public/assets/images/home/homePage02.jpg';
+import homeGif from './../public/assets/images/home/homegif3.gif';
 import home45 from './../public/assets/images/home/home45.jpg';
 import home48 from './../public/assets/images/home/home48.png';
 import home49 from './../public/assets/images/home/home49.jpeg';
@@ -67,7 +68,7 @@ export default function DashboardPage() {
         <div className="absolute inset-0 pointer-events-none">
           {/* Gradient Overlay */}
           <Image
-            src={homePage}
+            src={homeGif}
             alt="The White House movie"
             fill
             className="object-cover"
