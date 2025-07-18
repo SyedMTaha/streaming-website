@@ -68,7 +68,7 @@ export default function DashboardPage() {
         <div className="absolute inset-0 pointer-events-none">
           {/* Gradient Overlay */}
           <Image
-            src={homeGif}
+            src={homePage}
             alt="The White House movie"
             fill
             className="object-cover"
