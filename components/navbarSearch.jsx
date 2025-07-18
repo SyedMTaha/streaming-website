@@ -169,6 +169,8 @@ export default function Navbar() {
           <NavItem href="/live" label="Live TV" />
           <NavItem href="/blog" label="Blog" />
           <NavItem href="/about" label="About Us" />
+          <NavItem href="https://inbvnews.com/" label="News" />
+          <NavItem href="https://inbvstv.com/" label="Shop" />
         </div>
         </div>
 
@@ -308,6 +310,8 @@ export default function Navbar() {
               <MobileNavItem href="/live" label="Live TV" onClick={closeMobileMenu} />
               <MobileNavItem href="/blog" label="Blog" onClick={closeMobileMenu} />
               <MobileNavItem href="/about" label="About Us" onClick={closeMobileMenu} />
+              <MobileNavItem href="https://inbvnews.com/" label="News" onClick={closeMobileMenu} />
+              <MobileNavItem href="https://inbvstv.com/" label="Shop" onClick={closeMobileMenu} />
 
               <div className="pt-2 border-t border-navy-700">
               <button className="text-white flex items-center hover:bg-white/10 p-2 rounded transition-colors">

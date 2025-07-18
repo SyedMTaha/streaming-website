@@ -112,7 +112,7 @@ export default function DashboardPage() {
           
           {/* Instagram */}
           <a 
-            href="https://www.instagram.com/inbvtv?igsh=dGN4Y2ZhMDExZWx5" 
+            href="https://www.instagram.com/inbv_tv?igsh=MWg2bDgxbzNzaWVkcg==" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-icon-container group"
