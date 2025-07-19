@@ -332,21 +332,28 @@ export default function Navbar() {
 
 
 function NavItem({ href, label }) {
+  const isExternal = href.startsWith('http');
   return (
-    <Link href={href} className="text-white hover:text-blue-400 transition-colors duration-200 py-2">
+    <Link
+      href={href}
+      className="text-white hover:text-blue-400 transition-colors duration-200 py-2"
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
       {label}
     </Link>
-  )
+  );
 }
 
 function MobileNavItem({ href, label, onClick }) {
+  const isExternal = href.startsWith('http');
   return (
     <Link
       href={href}
       className="block px-3 py-2 text-white hover:text-blue-400 hover:bg-blue-600/10 rounded transition-colors duration-200"
       onClick={onClick}
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {label}
     </Link>
-  )
+  );
 }

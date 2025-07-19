@@ -37,6 +37,14 @@ export default function LoginForm({ locomotiveScroll }) {
     setIsLoading(true);
     
     try {
+      // Admin hardcoded check
+      if (email === "admin@gmail.com" && password === "admin@123") {
+        // Optionally, set an admin flag in localStorage/session
+        localStorage.setItem("isAdmin", "true");
+        router.push("/admin/dashboard");
+        return;
+      }
+
       // Attempt to sign in with Firebase
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
