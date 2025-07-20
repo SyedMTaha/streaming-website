@@ -65,17 +65,17 @@ export default function DashboardPage() {
       {/* Top-to-bottom Gradient Overlay */}
      
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center">
+      <section className="relative h-[55vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] flex items-center">
         {/* Background Video */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 w-full h-full pointer-events-none">
           <video
             src="/assets/images/home/homeVideo.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="object-cover w-full h-full"
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            poster="/assets/images/home/homePage02.jpg"
+            className="w-full h-full object-cover"
           />
           {/* Optionally, you can add a gradient overlay here if you want */}
         </div>
