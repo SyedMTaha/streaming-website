@@ -12,6 +12,7 @@ import news3 from './../public/assets/images/home/news3.jpg';
 import homePage from './../public/assets/images/home/homePage02.jpg';
 import homeGif3 from './../public/assets/images/home/homegif3.gif';
 import homeGif4 from './../public/assets/images/home/homegif4.gif';
+//1import homeVideo from './../public/assets/images/home/homeVideo.mp4';
 import home45 from './../public/assets/images/home/home45.jpg';
 import home48 from './../public/assets/images/home/home48.png';
 import home49 from './../public/assets/images/home/home49.jpeg';
@@ -65,16 +66,18 @@ export default function DashboardPage() {
      
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center">
-        {/* Background Image */}
+        {/* Background Video */}
         <div className="absolute inset-0 pointer-events-none">
-          {/* Gradient Overlay */}
-          <Image
-            src={homeGif4}
-            alt="The White House movie"
-            fill
-            className="object-cover"
-            priority
+          <video
+            src="/assets/images/home/homeVideo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full"
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           />
+          {/* Optionally, you can add a gradient overlay here if you want */}
         </div>
 
         {/* Social Media Icons */}
