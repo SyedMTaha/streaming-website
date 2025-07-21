@@ -1,7 +1,7 @@
 {
   "action": [
     {
-      "id": "a11",
+      "id": "a10",
       "title": "Atomic Submarine",
       "image": "/assets/images/movies/action/action11.jpg",
       "innerImage": "/assets/images/movies/action/landscape/action4_inner.jpg",
@@ -66,83 +66,109 @@
       "videoUrl": "https://player.vimeo.com/video/1093481981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-        "id": "a5",
-        "title": "Detour",
-        "image": "/assets/images/movies/action/action5.jpg",
-        "innerImage": "/assets/images/movies/action/landscape/action6_inner.jpg",
-        "slug": "detour",
-        "year": "1945",
-        "duration": "1h 50m",
-        "rating": "7.3",
-        "genre": "action",
-        "description": "A man hitchhikes to Hollywood, becomes entangled in death and deception in this noir tale.",
-        "videoUrl": "https://player.vimeo.com/video/1093479498?h=6726407aa3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      }, 
-      {
-        "id": "a7",
-        "title": "Pursued",
-        "image": "/assets/images/movies/action/action7.jpg",
-        "innerImage": "/assets/images/movies/action/landscape/action12_inner.jpg",
-        "slug": "pursued",
-        "year": "1947",
-        "duration": "1h 50m",
-        "rating": "7.2",
-        "genre": "action",
-        "description": "An orphan raised in a foster family is haunted by violent memories and must uncover the truth.",
-        "videoUrl": "https://player.vimeo.com/video/1092935963?h=5742e343fb&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "a8",
-        "title": "Stage Coach",
-        "image": "/assets/images/movies/action/action8.jpeg",
-        "innerImage": "/assets/images/movies/action/landscape/action9_inner.jpg",
-        "slug": "stage-coach",
-        "year": "1939",
-        "duration": "1h 50m",
-        "rating": "7.9",
-        "genre": "action",
-        "description": "A group of strangers journey through dangerous territory in a stagecoach.",
-        "videoUrl": "https://player.vimeo.com/video/1092562326?h=b32d27474f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "a9",
-        "title": "Train",
-        "image": "/assets/images/movies/action/action9.jpeg",
-        "innerImage": "/assets/images/movies/action/landscape/action11_inner.jpg",
-        "slug": "train",
-        "year": "1964",
-        "duration": "1h 50m",
-        "rating": "7.8",
-        "genre": "action",
-        "description": "A French resistance fighter tries to prevent a train carrying stolen art from reaching Germany.",
-        "videoUrl": "https://player.vimeo.com/video/1093478686?h=607746602b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "a10",
-        "title": "State Secret",
-        "image": "/assets/images/movies/action/action10.jpeg",
-        "innerImage": "/assets/images/movies/action/landscape/action10_inner.jpg",
-        "slug": "state-secret",
-        "year": "1950",
-        "duration": "1h 50m",
-        "rating": "6.8",
-        "genre": "action",
-        "description": "A surgeon is hunted after operating on a dictator and uncovering a deadly conspiracy.",
-        "videoUrl": "https://player.vimeo.com/video/1092933232?h=d997dfd2ca&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "a12",
-        "title": "The Batman",
-        "image": "/assets/images/movies/action/action12.jpg",
-        "innerImage": "/assets/images/movies/action/landscape/action13_inner.jpeg",
-        "slug": "the-batman",
-        "year": "2022",
-        "duration": "1h 50m",
-        "rating": "9.0",
-        "genre": "action",
-        "description": "A relentless vigilante uncovers deep-rooted corruption in Gotham City while pursuing a sadistic serial killer known as the Riddler.",
-        "videoUrl": "https://player.vimeo.com/video/1101567932?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      }
+      "id": "a5",
+      "title": "Detour",
+      "image": "/assets/images/movies/action/action5.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action6_inner.jpg",
+      "slug": "detour",
+      "year": "1945",
+      "duration": "1h 50m",
+      "rating": "7.3",
+      "genre": "action",
+      "description": "A man hitchhikes to Hollywood, becomes entangled in death and deception in this noir tale.",
+      "videoUrl": "https://player.vimeo.com/video/1093479498?h=6726407aa3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a6",
+      "title": "Pursued",
+      "image": "/assets/images/movies/action/action7.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action12_inner.jpg",
+      "slug": "pursued",
+      "year": "1947",
+      "duration": "1h 50m",
+      "rating": "7.2",
+      "genre": "action",
+      "description": "An orphan raised in a foster family is haunted by violent memories and must uncover the truth.",
+      "videoUrl": "https://player.vimeo.com/video/1092935963?h=5742e343fb&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a7",
+      "title": "Stage Coach",
+      "image": "/assets/images/movies/action/action8.jpeg",
+      "innerImage": "/assets/images/movies/action/landscape/action9_inner.jpg",
+      "slug": "stage-coach",
+      "year": "1939",
+      "duration": "1h 50m",
+      "rating": "7.9",
+      "genre": "action",
+      "description": "A group of strangers journey through dangerous territory in a stagecoach.",
+      "videoUrl": "https://player.vimeo.com/video/1092562326?h=b32d27474f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a8",
+      "title": "Train",
+      "image": "/assets/images/movies/action/action9.jpeg",
+      "innerImage": "/assets/images/movies/action/landscape/action11_inner.jpg",
+      "slug": "train",
+      "year": "1964",
+      "duration": "1h 50m",
+      "rating": "7.8",
+      "genre": "action",
+      "description": "A French resistance fighter tries to prevent a train carrying stolen art from reaching Germany.",
+      "videoUrl": "https://player.vimeo.com/video/1093478686?h=607746602b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a9",
+      "title": "State Secret",
+      "image": "/assets/images/movies/action/action10.jpeg",
+      "innerImage": "/assets/images/movies/action/landscape/action10_inner.jpg",
+      "slug": "state-secret",
+      "year": "1950",
+      "duration": "1h 50m",
+      "rating": "6.8",
+      "genre": "action",
+      "description": "A surgeon is hunted after operating on a dictator and uncovering a deadly conspiracy.",
+      "videoUrl": "https://player.vimeo.com/video/1092933232?h=d997dfd2ca&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a11",
+      "title": "The Batman",
+      "image": "/assets/images/movies/action/action12.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action13_inner.jpeg",
+      "slug": "the-batman",
+      "year": "2022",
+      "duration": "1h 50m",
+      "rating": "9.0",
+      "genre": "action",
+      "description": "A relentless vigilante uncovers deep-rooted corruption in Gotham City while pursuing a sadistic serial killer known as the Riddler.",
+      "videoUrl": "https://player.vimeo.com/video/1101567932?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a12",
+      "title": "Movie 12",
+      "image": "/assets/images/movies/action/ChatGPT Image Jul 10, 2025, 04_55_06 PM.png",
+      "innerImage": "/assets/images/movies/action/landscape/Flux_Dev_create_a_logo_for_a_website_basically_a_food_delivery_0.jpg",
+      "slug": "movie-12",
+      "year": "2025",
+      "duration": "2h 69min",
+      "rating": "6.9",
+      "genre": "Action",
+      "description": "lorem ipsum",
+      "videoUrl": "https://player.vimeo.com/video/1093479397?h=6539bc8d1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a13",
+      "title": "Action Movie",
+      "image": "/assets/images/movies/action/Frame 1 (1).png",
+      "innerImage": "/assets/images/movies/action/landscape/Banner.png",
+      "slug": "action-movie",
+      "year": "2015",
+      "duration": "2 h 10 min",
+      "rating": "6.9",
+      "genre": "Action",
+      "description": "lorem ipsum",
+      "videoUrl": "https://player.vimeo.com/video/1093479397?h=6539bc8d1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    }
   ],
   "adventure": [
     {
@@ -304,7 +330,7 @@
       "duration": "1h 40m",
       "rating": "7.5",
       "genre": "cartoon",
-      "description":"Set in a post-apocalyptic 27th century, young Quentin MacLeod—mentored by Ramirez—battles Immortals to learn ancient knowledge and seek justice. Based on the Highlander mythos."
+      "description": "Set in a post-apocalyptic 27th century, young Quentin MacLeod—mentored by Ramirez—battles Immortals to learn ancient knowledge and seek justice. Based on the Highlander mythos."
     },
     {
       "id": "c5",
@@ -316,7 +342,7 @@
       "duration": "1h 40m",
       "rating": "6.9",
       "genre": "cartoon",
-      "description":"Mild-mannered janitor Penry “Hong Kong Phooey” Pooch becomes a bumbling kung-fu crimefighter—typically saved by his cat sidekick, Spot. Silly, charming superhero spoof."
+      "description": "Mild-mannered janitor Penry “Hong Kong Phooey” Pooch becomes a bumbling kung-fu crimefighter—typically saved by his cat sidekick, Spot. Silly, charming superhero spoof."
     },
     {
       "id": "c16",
@@ -328,7 +354,7 @@
       "duration": "1h 40m",
       "rating": "6.9",
       "genre": "cartoon",
-      "description":"Teen Samson and his dog Goliath transform into superheroes to fight monsters and evil scientists—sometimes battling island monsters or aliens."
+      "description": "Teen Samson and his dog Goliath transform into superheroes to fight monsters and evil scientists—sometimes battling island monsters or aliens."
     },
     {
       "id": "c17",
@@ -340,7 +366,7 @@
       "duration": "1h 40m",
       "rating": "N/A",
       "genre": "cartoon",
-      "description":"A sleepy, peace-loving bear navigates minor mishaps—hibernation frustrations, meddling plants, visiting cousins—in a series of MGM animated shorts."
+      "description": "A sleepy, peace-loving bear navigates minor mishaps—hibernation frustrations, meddling plants, visiting cousins—in a series of MGM animated shorts."
     },
     {
       "id": "c12",
@@ -362,7 +388,7 @@
       "duration": "1h 25m",
       "rating": "6.5",
       "genre": "cartoon",
-      "description":"Filmation’s revival of the classic cat-and-mouse duo includes new slapstick antics and Droopy segments, though animation is notably limited."
+      "description": "Filmation’s revival of the classic cat-and-mouse duo includes new slapstick antics and Droopy segments, though animation is notably limited."
     },
     {
       "id": "c3",
@@ -374,7 +400,7 @@
       "duration": "1h 35m",
       "rating": "7.7",
       "genre": "cartoon",
-      "description":"Top Cat (T.C.) leads his alley cat gang in New York, pulling off get‑rich‑quick schemes while eluding the hapless Officer Dibble. Clever, comedic, and a cult favorite in Latin America."
+      "description": "Top Cat (T.C.) leads his alley cat gang in New York, pulling off get‑rich‑quick schemes while eluding the hapless Officer Dibble. Clever, comedic, and a cult favorite in Latin America."
     },
     {
       "id": "c15",
@@ -386,7 +412,7 @@
       "duration": "1h 40m",
       "rating": "6.6",
       "genre": "cartoon",
-      "description":"Yogi, the “smarter than the average bear” from Jellystone Park, constantly schemes to steal picnic baskets—ending up in mischief with Ranger Smith."
+      "description": "Yogi, the “smarter than the average bear” from Jellystone Park, constantly schemes to steal picnic baskets—ending up in mischief with Ranger Smith."
     },
     {
       "id": "c8",
@@ -599,7 +625,6 @@
       "genre": "documentary"
     }
   ],
-
   "drama": [
     {
       "id": "dr1",
@@ -654,20 +679,19 @@
       "videoUrl": "https://player.vimeo.com/video/1093479367?h=0ad70bae61&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-        "id": "dr5",
-        "title": "The Stranger",
-        "image": "/assets/images/movies/drama/drama5.jpg",
-        "innerImage": "/assets/images/movies/drama/landscape/drama5_inner.jpg",
-        "slug": "the-stranger",
-        "year": "1946",
-        "duration": "2h 10m",
-        "rating": "7.3",
-        "genre": "drama",
-        "description": "A war crimes investigator tracks a Nazi hiding in small-town America.",
-        "videoUrl": "https://player.vimeo.com/video/1093479489?h=59042a3a41&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      }
+      "id": "dr5",
+      "title": "The Stranger",
+      "image": "/assets/images/movies/drama/drama5.jpg",
+      "innerImage": "/assets/images/movies/drama/landscape/drama5_inner.jpg",
+      "slug": "the-stranger",
+      "year": "1946",
+      "duration": "2h 10m",
+      "rating": "7.3",
+      "genre": "drama",
+      "description": "A war crimes investigator tracks a Nazi hiding in small-town America.",
+      "videoUrl": "https://player.vimeo.com/video/1093479489?h=59042a3a41&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    }
   ],
-  
   "family": [
     {
       "id": "f1",
@@ -848,7 +872,7 @@
       "rating": "7.0",
       "genre": "Martial Arts",
       "description": "Sonny Chiba’s tough-as-nails assassin takes on a deadly crime syndicate.",
-      "videoUrl": "https://player.vimeo.com/video/1100672803?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1100672803?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma2",
@@ -861,7 +885,7 @@
       "rating": "7.5",
       "genre": "Martial Arts",
       "description": "A young fighter uncovers his mysterious past while battling deadly ninjas and ruthless enemies.",
-      "videoUrl": "https://player.vimeo.com/video/1100652216?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1100652216?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma3",
@@ -874,7 +898,7 @@
       "rating": "7.8",
       "genre": "Martial Arts",
       "description": "The hero’s journey as he faces deadlier ninjas and uncovers darker secrets about his origins.",
-      "videoUrl": "https://player.vimeo.com/video/1100656988?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1100656988?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma4",
@@ -887,7 +911,7 @@
       "rating": "7.3",
       "genre": "Martial Arts",
       "description": "Angela Mao plays a fierce woman seeking vengeance against the man who wronged her sister.",
-      "videoUrl": "https://player.vimeo.com/video/1100672793?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1100672793?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma5",
@@ -900,7 +924,7 @@
       "rating": "7.8",
       "genre": "Martial Arts",
       "description": "A martial arts expert battles mobsters to save a karate school from being taken over.",
-      "videoUrl": "https://player.vimeo.com/video/1100672825?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1100672825?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma6",
@@ -913,11 +937,9 @@
       "rating": "7.7",
       "genre": "Martial Arts",
       "description": "A fearless woman fights her way through a criminal underworld to rescue her kidnapped brother.",
-      "videoUrl": "https://player.vimeo.com/video/1100672837?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1100672837?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
-    
   ],
-
   "musical": [
     {
       "id": "m1",
@@ -972,7 +994,7 @@
       "rating": "5.0",
       "genre": "mystery",
       "description": "A rancher and lawman join forces to uncover a rustling gang.",
-      "videoUrl": "https://player.vimeo.com/video/1093479452?h=bc0361fc9e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  
+      "videoUrl": "https://player.vimeo.com/video/1093479452?h=bc0361fc9e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "my2",
@@ -985,7 +1007,7 @@
       "rating": "7.0",
       "genre": "mystery",
       "description": "A cinema owner is involved in a terrorist plot and his wife suspects him.",
-      "videoUrl": "https://player.vimeo.com/video/1093479446?h=261f067fae&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1093479446?h=261f067fae&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "my3",
@@ -998,7 +1020,7 @@
       "rating": "6.9",
       "genre": "mystery",
       "description": "Detective Philo Vance solves a locked-room mystery involving a dead dog breeder.",
-      "videoUrl": "https://player.vimeo.com/video/1093479418?h=632e31d8da&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1093479418?h=632e31d8da&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "news": [
@@ -1085,7 +1107,6 @@
       "genre": "romance"
     }
   ],
-
   "sci-fi": [
     {
       "id": "sf1",
@@ -1140,85 +1161,84 @@
       "videoUrl": "https://player.vimeo.com/video/1093479405?h=d385bbfea0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-        "id": "sf5",
-        "title": "The Day the Earth Stood Still",
-        "image": "/assets/images/movies/sci-fi/scifi5.jpeg",
-        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi5_inner.jpeg",
-        "slug": "the-day-the-earth-stood-still",
-        "year": "1951",
-        "duration": "2h 5m",
-        "rating": "7.7",
-        "genre": "sci-fi",
-        "description": "An alien arrives on Earth with a warning about mankind's violent ways.",
-        "videoUrl": "https://player.vimeo.com/video/1093479341?h=041f053444&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "sf6",
-        "title": "The Incredible Petrified World",
-        "image": "/assets/images/movies/sci-fi/scifi6.jpg",
-        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi6_inner.jpg",
-        "slug": "the-incredible-petrified-world",
-        "year": "1959",
-        "duration": "2h 5m",
-        "rating": "3.3",
-        "genre": "sci-fi",
-        "description": "A team of explorers find a hidden world beneath the ocean.",
-        "videoUrl": "https://player.vimeo.com/video/1093479376?h=c397333dab&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "sf7",
-        "title": "The Lost World",
-        "image": "/assets/images/movies/sci-fi/scifi7.jpeg",
-        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi7_inner.jpeg",
-        "slug": "the-lost-world",
-        "year": "1925",
-        "duration": "2h 5m",
-        "rating": "7.0",
-        "genre": "sci-fi",
-        "description": "An expedition to a South American plateau finds living dinosaurs.",
-        "videoUrl": "https://player.vimeo.com/video/1093479411?h=54f010a737&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "sf8",
-        "title": "Star Odyssey",
-        "image": "/assets/images/movies/sci-fi/scifi8.jpg",
-        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi8_inner.jpg",
-        "slug": "star-odyssey",
-        "year": "1979",
-        "duration": "2h 5m",
-        "rating": "8.0",
-        "genre": "sci-fi",
-        "description": "Earth’s heroes battle a powerful alien robot army threatening to enslave humanity.",
-        "videoUrl": "https://player.vimeo.com/video/1100414206?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "sf9",
-        "title": "Doomsday Machine ",
-        "image": "/assets/images/movies/sci-fi/scifi9.jpg",
-        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi9_inner.jpg",
-        "slug": "doomsday-machine",
-        "year": "1972",
-        "duration": "2h 5m",
-        "rating": "8.5",
-        "genre": "sci-fi",
-        "description": "Astronauts race to survive after Earth is destroyed by a secret nuclear weapon.",
-        "videoUrl": "https://player.vimeo.com/video/1100414221?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "sf10",
-        "title": "Glass",
-        "image": "/assets/images/movies/sci-fi/scifi10.jpeg",
-        "innerImage": "/assets/images/movies/sci-fi/landscape/scifi10_inner.jpeg",
-        "slug": "glass",
-        "year": "2019",
-        "duration": "2h 5m",
-        "rating": "8.0",
-        "genre": "sci-fi",
-        "description": "A disturbed man with multiple personalities becomes the key to a showdown between a vigilante with super strength and a mastermind who believes in the power of the extraordinary.",
-        "videoUrl": "https://player.vimeo.com/video/1101567538?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      }
+      "id": "sf5",
+      "title": "The Day the Earth Stood Still",
+      "image": "/assets/images/movies/sci-fi/scifi5.jpeg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi5_inner.jpeg",
+      "slug": "the-day-the-earth-stood-still",
+      "year": "1951",
+      "duration": "2h 5m",
+      "rating": "7.7",
+      "genre": "sci-fi",
+      "description": "An alien arrives on Earth with a warning about mankind's violent ways.",
+      "videoUrl": "https://player.vimeo.com/video/1093479341?h=041f053444&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf6",
+      "title": "The Incredible Petrified World",
+      "image": "/assets/images/movies/sci-fi/scifi6.jpg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi6_inner.jpg",
+      "slug": "the-incredible-petrified-world",
+      "year": "1959",
+      "duration": "2h 5m",
+      "rating": "3.3",
+      "genre": "sci-fi",
+      "description": "A team of explorers find a hidden world beneath the ocean.",
+      "videoUrl": "https://player.vimeo.com/video/1093479376?h=c397333dab&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf7",
+      "title": "The Lost World",
+      "image": "/assets/images/movies/sci-fi/scifi7.jpeg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi7_inner.jpeg",
+      "slug": "the-lost-world",
+      "year": "1925",
+      "duration": "2h 5m",
+      "rating": "7.0",
+      "genre": "sci-fi",
+      "description": "An expedition to a South American plateau finds living dinosaurs.",
+      "videoUrl": "https://player.vimeo.com/video/1093479411?h=54f010a737&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf8",
+      "title": "Star Odyssey",
+      "image": "/assets/images/movies/sci-fi/scifi8.jpg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi8_inner.jpg",
+      "slug": "star-odyssey",
+      "year": "1979",
+      "duration": "2h 5m",
+      "rating": "8.0",
+      "genre": "sci-fi",
+      "description": "Earth’s heroes battle a powerful alien robot army threatening to enslave humanity.",
+      "videoUrl": "https://player.vimeo.com/video/1100414206?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf9",
+      "title": "Doomsday Machine ",
+      "image": "/assets/images/movies/sci-fi/scifi9.jpg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi9_inner.jpg",
+      "slug": "doomsday-machine",
+      "year": "1972",
+      "duration": "2h 5m",
+      "rating": "8.5",
+      "genre": "sci-fi",
+      "description": "Astronauts race to survive after Earth is destroyed by a secret nuclear weapon.",
+      "videoUrl": "https://player.vimeo.com/video/1100414221?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf10",
+      "title": "Glass",
+      "image": "/assets/images/movies/sci-fi/scifi10.jpeg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi10_inner.jpeg",
+      "slug": "glass",
+      "year": "2019",
+      "duration": "2h 5m",
+      "rating": "8.0",
+      "genre": "sci-fi",
+      "description": "A disturbed man with multiple personalities becomes the key to a showdown between a vigilante with super strength and a mastermind who believes in the power of the extraordinary.",
+      "videoUrl": "https://player.vimeo.com/video/1101567538?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    }
   ],
-
   "sport": [
     {
       "id": "s1",
@@ -1261,7 +1281,6 @@
       "genre": "sport"
     }
   ],
-
   "thriller": [
     {
       "id": "t1",
@@ -1274,7 +1293,7 @@
       "rating": "6.8",
       "genre": "thriller",
       "description": "Two friends are kidnapped by a psychotic hitchhiker while on a fishing trip.",
-      "videoUrl": "https://player.vimeo.com/video/1093479358?h=9bd4698cc0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"        
+      "videoUrl": "https://player.vimeo.com/video/1093479358?h=9bd4698cc0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "t2",
@@ -1287,7 +1306,7 @@
       "rating": "6.2",
       "genre": "thriller",
       "description": "A man steals from his company, gets entangled with a woman, and tries to escape abroad.",
-      "videoUrl": "https://player.vimeo.com/video/1093479435?h=427d9b7865&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1093479435?h=427d9b7865&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "t3",
@@ -1300,7 +1319,7 @@
       "rating": "7.8",
       "genre": "thriller",
       "description": "A meek man is duped by a femme fatale and her lover, leading to tragedy.",
-      "videoUrl": "https://player.vimeo.com/video/1093479465?h=f233e35dfe&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1093479465?h=f233e35dfe&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "war": [
@@ -1345,7 +1364,6 @@
       "genre": "war"
     }
   ],
-
   "western": [
     {
       "id": "we1",
@@ -1358,70 +1376,67 @@
       "rating": "7.1",
       "genre": "western",
       "description": "A betrayed outlaw seeks revenge on his former partner, now a sheriff.",
-      "videoUrl": "https://player.vimeo.com/video/1093479458?h=cf8ec93268&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      "videoUrl": "https://player.vimeo.com/video/1093479458?h=cf8ec93268&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-        "id": "we2",
-        "title": "Outlaw",
-        "image": "/assets/images/movies/western/western2.jpeg",
-        "innerImage": "/assets/images/movies/western/landscape/western2_inner.jpeg",
-        "slug": "the-outlaw",
-        "year": "1943",
-        "duration": "1h 50m",
-        "rating": "5.4",
-        "genre": "western",
-        "description": "A tale of Billy the Kidâ€™s friendship and conflict with Doc Holliday, with romantic entanglements.",
-        "videoUrl": "https://player.vimeo.com/video/1093479427?h=411e2db833&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      },
-      {
-        "id": "we3",
-        "title": "Apache Blood",
-        "image": "/assets/images/movies/western/western3.webp",
-        "innerImage": "/assets/images/movies/western/landscape/western3_inner.png",
-        "slug": "apache-blood",
-        "year": "1975",
-        "duration": "1h 50m",
-        "rating": "7.5",
-        "genre": "western",
-        "description": "A native American warrior seeks revenge against the U.S. soldiers who massacred his tribe.",
-        "videoUrl": "https://player.vimeo.com/video/1100414187?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      }
-  ],
-
-"upcomingMovies" :
- [
-    { 
-      "slug": "dont-hang-up",
-      "title": "Don't Hang Up", 
-      "image": "/assets/images/background/coming-soon.jpg" 
+      "id": "we2",
+      "title": "Outlaw",
+      "image": "/assets/images/movies/western/western2.jpeg",
+      "innerImage": "/assets/images/movies/western/landscape/western2_inner.jpeg",
+      "slug": "the-outlaw",
+      "year": "1943",
+      "duration": "1h 50m",
+      "rating": "5.4",
+      "genre": "western",
+      "description": "A tale of Billy the Kidâ€™s friendship and conflict with Doc Holliday, with romantic entanglements.",
+      "videoUrl": "https://player.vimeo.com/video/1093479427?h=411e2db833&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
-    { 
-      "slug": "film-lovers", 
-      "title": "Film Lovers", 
+    {
+      "id": "we3",
+      "title": "Apache Blood",
+      "image": "/assets/images/movies/western/western3.webp",
+      "innerImage": "/assets/images/movies/western/landscape/western3_inner.png",
+      "slug": "apache-blood",
+      "year": "1975",
+      "duration": "1h 50m",
+      "rating": "7.5",
+      "genre": "western",
+      "description": "A native American warrior seeks revenge against the U.S. soldiers who massacred his tribe.",
+      "videoUrl": "https://player.vimeo.com/video/1100414187?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    }
+  ],
+  "upcomingMovies": [
+    {
+      "slug": "dont-hang-up",
+      "title": "Don't Hang Up",
       "image": "/assets/images/background/coming-soon.jpg"
     },
     {
-       "slug": "absolute-dominion",
-       "title": "Absolute Dominion", 
-       "image": "/assets/images/background/coming-soon.jpg"
+      "slug": "film-lovers",
+      "title": "Film Lovers",
+      "image": "/assets/images/background/coming-soon.jpg"
     },
-    { 
+    {
+      "slug": "absolute-dominion",
+      "title": "Absolute Dominion",
+      "image": "/assets/images/background/coming-soon.jpg"
+    },
+    {
       "slug": "hot-biskits",
       "title": "Hot Biskits",
       "image": "/assets/images/background/coming-soon.jpg"
     },
-    { 
+    {
       "slug": "notice-to-quit",
-      "title": "Notice to Quit", 
+      "title": "Notice to Quit",
       "image": "/assets/images/background/coming-soon.jpg"
     },
-    { 
-      "slug": "a-river-of-skulls", 
-      "title": "A River of Skulls", 
+    {
+      "slug": "a-river-of-skulls",
+      "title": "A River of Skulls",
       "image": "/assets/images/background/coming-soon.jpg"
     }
   ],
-
   "tv-series": [
     {
       "id": "tv1",
@@ -1489,8 +1504,5 @@
       "genre": "animation",
       "description": "Sheriff Andy Taylor peacefully runs Mayberry alongside his bumbling deputy Barney Fife, Aunt Bee, and son Opie. A warm, idealized slice-of-life sitcom."
     }
-    
   ]
-
-  
-} 
+}
