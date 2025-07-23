@@ -470,6 +470,30 @@
       "genre": "cartoon"
     },
     {
+      "id": "c18",
+      "title": "Steamboat Willie",
+      "image": "/assets/images/cartoons/cartoon18.jpeg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon14_inner.jpeg",
+      "slug": "steamboat-willie",
+      "year": "1928",
+      "duration": "1h 40m",
+      "rating": "7.6",
+      "genre": "cartoon",
+      "description": "Mickey Mouse’s debut, where he captains a steamboat and causes mischief with music and animals."
+    },
+    {
+      "id": "c19",
+      "title": "Johnny Quest",
+      "image": "/assets/images/cartoons/cartoon19.jpeg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon15_inner.jpg",
+      "slug": "johnny-quest",
+      "year": "1964",
+      "duration": "1h 40m",
+      "rating": "7.8",
+      "genre": "cartoon",
+      "description": "A boy joins his scientist father on global adventures, facing spies, robots, and creatures."
+    },
+    {
       "id": "c6",
       "title": "Jeannie",
       "image": "/assets/images/cartoons/cartoon6.jpg",
@@ -539,90 +563,88 @@
       "genre": "comedy",
       "description": "A reporter is drawn back into journalism by her ex-husband with a scoop too good to ignore.",
       "videoUrl": "https://player.vimeo.com/video/1093479479?h=9ba908d931&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "com4",
+      "title": "All The Way Boys",
+      "image": "/assets/images/movies/comedy/comedy5.jpg",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy5_inner.jpeg",
+      "slug": "all-the-way-boys",
+      "year": "1972",
+      "duration": "1h 30m",
+      "rating": "6.0",
+      "genre": "Comedy",
+      "description": "Two adventurers fly cargo planes in South America and get into comical situations involving gangsters and smugglers.",
+      "videoUrl": "https://player.vimeo.com/video/1103860167?h=0c028aa057&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "com5",
+      "title": "Bringing Up Baby",
+      "image": "/assets/images/movies/comedy/comedy6.jpg",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy6_inner.jpg",
+      "slug": "bringing-up-baby",
+      "year": "1938",
+      "duration": "1h 42m",
+      "rating": "7.8",
+      "genre": "Comedy",
+      "description": "A paleontologist gets caught up in zany adventures with a quirky heiress and her pet leopard named Baby.",
+      "videoUrl": "https://player.vimeo.com/video/1103860056?h=a82c6add04&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "com6",
+      "title": "Beat The Devil",
+      "image": "/assets/images/movies/comedy/comedy7.jpg",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy7_inner.jpeg",
+      "slug": "beat-the-devil",
+      "year": "1953",
+      "duration": "1h 29m",
+      "rating": "5.7",
+      "genre": "Comedy",
+      "description": "A group of shady characters plan a uranium deal in Africa, but nothing goes according to plan.",
+      "videoUrl": "https://player.vimeo.com/video/1103860140?h=68f435a37b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "crime": [
     {
       "id": "cr1",
-      "title": "City Shadows",
-      "image": "/assets/images/movies/crime1.jpg",
-      "slug": "city-shadows",
-      "year": "2024",
-      "duration": "2h 15m",
-      "rating": "8.7",
-      "genre": "crime"
+      "title": "The Asphalt Jungle",
+      "image": "/assets/images/movies/crime/crime1.jpg",
+      "innerImage": "/assets/images/movies/crime/landscape/crime1_inner.jpg",
+      "slug": "the-asphalt-jungle",
+      "year": "1950",
+      "duration": "2h 40m",
+      "rating": "7.8",
+      "genre": "Crime",
+      "description": "A jewel heist goes wrong due to betrayal and greed in this gritty film noir.",
+      "videoUrl": ""
     },
     {
       "id": "cr2",
-      "title": "Undercover",
-      "image": "/assets/images/movies/crime2.jpg",
-      "slug": "undercover",
-      "year": "2023",
-      "duration": "2h 5m",
-      "rating": "8.5",
-      "genre": "crime"
-    },
-    {
-      "id": "cr3",
-      "title": "The Heist",
-      "image": "/assets/images/movies/crime3.jpg",
-      "slug": "the-heist",
-      "year": "2024",
-      "duration": "2h 10m",
-      "rating": "8.6",
-      "genre": "crime"
-    },
-    {
-      "id": "cr4",
-      "title": "Street Justice",
-      "image": "/assets/images/movies/crime4.jpg",
-      "slug": "street-justice",
-      "year": "2023",
-      "duration": "2h 20m",
-      "rating": "8.4",
-      "genre": "crime"
+      "title": "Four Robbers",
+      "image": "/assets/images/movies/crime/crime2.webp",
+      "innerImage": "/assets/images/movies/crime/landscape/crime2_inner.jpg",
+      "slug": "four-robbers",
+      "year": "1987",
+      "duration": "1h 26m",
+      "rating": "6.0",
+      "genre": "Crime",
+      "description": "A group of martial artists plan and execute a robbery, but internal conflict threatens their success. (Less known, assumed data)",
+      "videoUrl": "https://player.vimeo.com/video/1103856080?h=a4aa183315&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "documentary": [
     {
       "id": "d1",
-      "title": "Ocean Secrets",
-      "image": "/assets/images/movies/doc1.jpg",
-      "slug": "ocean-secrets",
-      "year": "2024",
-      "duration": "1h 50m",
-      "rating": "9.0",
-      "genre": "documentary"
-    },
-    {
-      "id": "d2",
-      "title": "Wild Africa",
-      "image": "/assets/images/movies/doc2.jpg",
-      "slug": "wild-africa",
-      "year": "2023",
-      "duration": "1h 45m",
-      "rating": "8.8",
-      "genre": "documentary"
-    },
-    {
-      "id": "d3",
-      "title": "Space Journey",
-      "image": "/assets/images/movies/doc3.jpg",
-      "slug": "space-journey",
-      "year": "2024",
-      "duration": "2h 0m",
-      "rating": "8.9",
-      "genre": "documentary"
-    },
-    {
-      "id": "d4",
-      "title": "Ancient Civilizations",
-      "image": "/assets/images/movies/doc4.jpg",
-      "slug": "ancient-civilizations",
-      "year": "2023",
-      "duration": "1h 55m",
-      "rating": "8.7",
-      "genre": "documentary"
+      "title": "The Black Godfather",
+      "image": "/assets/images/movies/documentary/documentary1.jpg",
+      "innerImage": "/assets/images/movies/documentary/landscape/documentary1_inner.jpg",
+      "slug": "the-black-godfather",
+      "year": "2019",
+      "duration": "1h 34m",
+      "rating": "7.6",
+      "genre": "Documentary",
+      "description": "Chronicles the life and influence of music executive Clarence Avant, who shaped Black culture and business.",
+      "videoUrl": "https://player.vimeo.com/video/1103856012?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "drama": [
@@ -690,6 +712,32 @@
       "genre": "drama",
       "description": "A war crimes investigator tracks a Nazi hiding in small-town America.",
       "videoUrl": "https://player.vimeo.com/video/1093479489?h=59042a3a41&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "dr6",
+      "title": "The Emperor Jones",
+      "image": "/assets/images/movies/drama/drama14.jpeg",
+      "innerImage": "/assets/images/movies/drama/landscape/drama6_inner.jpg",
+      "slug": "the-emperor-jones",
+      "year": "1933",
+      "duration": "",
+      "rating": "6.4",
+      "genre": "Drama",
+      "description": "A Pullman porter escapes prison and rises to power as emperor of a Caribbean island, but is haunted by guilt.",
+      "videoUrl": ""
+    },
+    {
+      "id": "dr7",
+      "title": "The Woman In Brown",
+      "image": "/assets/images/movies/drama/",
+      "innerImage": "/assets/images/movies/drama/landscape/drama7_inner.jpg",
+      "slug": "the-woman-in-brown",
+      "year": "1941",
+      "duration": "1h 1m",
+      "rating": "6.0",
+      "genre": "Drama",
+      "description": "A lawyer uncovers a Nazi conspiracy involving forged documents and murder.",
+      "videoUrl": "https://player.vimeo.com/video/1103856126?h=99c47fe50e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "family": [
@@ -938,6 +986,58 @@
       "genre": "Martial Arts",
       "description": "A fearless woman fights her way through a criminal underworld to rescue her kidnapped brother.",
       "videoUrl": "https://player.vimeo.com/video/1100672837?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "ma7",
+      "title": "The Big Fight",
+      "image": "/assets/images/movies/martial/",
+      "innerImage": "/assets/images/movies/martial/landscape/",
+      "slug": "the-big-fight",
+      "year": "1972",
+      "duration": "",
+      "rating": "5.5",
+      "genre": "Martial Arts",
+      "description": "A martial artist fights to protect his family from gang violence and corruption in the ring. (Note: Data may vary, assumed martial arts theme)",
+      "videoUrl": ""
+    },
+    {
+      "id": "ma8",
+      "title": "The Big Boss",
+      "image": "/assets/images/movies/martial/martial8.webp",
+      "innerImage": "/assets/images/movies/martial/landscape/martial8_inner.jpeg",
+      "slug": "the-big-boss",
+      "year": "1971",
+      "duration": "1h 40m",
+      "rating": "6.9",
+      "genre": "Martial Arts",
+      "description": "A man moves to Thailand for work and must fight corruption and violence after discovering a drug trafficking ring.",
+      "videoUrl": ""
+    },
+    {
+      "id": "ma9",
+      "title": "Fist of Fury",
+      "image": "/assets/images/movies/martial/martial9.jpg",
+      "innerImage": "/assets/images/movies/martial/landscape/martial9_inner.jpg",
+      "slug": "fist-of-fury",
+      "year": "1972",
+      "duration": "1h 46m",
+      "rating": "7.2",
+      "genre": "Martial Arts",
+      "description": "A martial arts student seeks revenge for his master's murder, challenging the Japanese occupiers in Shanghai.",
+      "videoUrl": "https://player.vimeo.com/video/1103608419?h=c6f32a677d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "ma10",
+      "title": "The Way Of The Dragon",
+      "image": "/assets/images/movies/martial/martial10.jpg",
+      "innerImage": "/assets/images/movies/martial/landscape/martial10_inner.png",
+      "slug": "the-way-of-the-dragon",
+      "year": "1972",
+      "duration": "1h 39m",
+      "rating": "7.2",
+      "genre": "Martial Arts",
+      "description": "A martial artist from Hong Kong helps relatives fight against gangsters in Rome and duels a master in the Colosseum.",
+      "videoUrl": "https://player.vimeo.com/video/1103608744?h=f360d39c5c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "musical": [
@@ -1021,6 +1121,32 @@
       "genre": "mystery",
       "description": "Detective Philo Vance solves a locked-room mystery involving a dead dog breeder.",
       "videoUrl": "https://player.vimeo.com/video/1093479418?h=632e31d8da&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "my4",
+      "title": "Rear Window",
+      "image": "/assets/images/movies/mystery/mystery4.jpg",
+      "innerImage": "/assets/images/movies/mystery/landscape/mystery4_inner.webp",
+      "slug": "rear-window",
+      "year": "1954",
+      "duration": "2h 10m",
+      "rating": "8.5",
+      "genre": "Mystery",
+      "description": "A wheelchair-bound photographer believes he has witnessed a murder in a neighboring apartment.",
+      "videoUrl": ""
+    },
+    {
+      "id": "my5",
+      "title": "The Lady Vanishes",
+      "image": "/assets/images/movies/mystery/mystery5.jpg",
+      "innerImage": "/assets/images/movies/mystery/landscape/mystery5_inner.jpg",
+      "slug": "the-lady-vanishes",
+      "year": "1938",
+      "duration": "1h 35m",
+      "rating": "7.8",
+      "genre": "Mystery",
+      "description": "A woman disappears on a train, and her fellow passenger is the only one who believes it — a classic Hitchcock mystery.",
+      "videoUrl": "https://player.vimeo.com/video/1103608278?h=7e97b773de&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "news": [
@@ -1068,43 +1194,29 @@
   "romance": [
     {
       "id": "r1",
-      "title": "Love Story",
-      "image": "/assets/images/movies/romance1.jpg",
-      "slug": "love-story",
-      "year": "2024",
-      "duration": "2h 0m",
-      "rating": "8.7",
-      "genre": "romance"
+      "title": "Casablanca",
+      "image": "/assets/images/movies/romance/romance1.jpg",
+      "innerImage": "/assets/images/movies/romance/landscape/romance1_inner.jpg",
+      "slug": "casablanca",
+      "year": "1942",
+      "duration": "1h 42m",
+      "rating": "8.5",
+      "genre": "Romance",
+      "description": "A nightclub owner in Casablanca must choose between love and helping a resistance leader escape the Nazis.",
+      "videoUrl": "https://player.vimeo.com/video/1103607854?h=ac5dc9618f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "r2",
-      "title": "Heart Strings",
-      "image": "/assets/images/movies/romance2.jpg",
-      "slug": "heart-strings",
-      "year": "2023",
-      "duration": "1h 55m",
-      "rating": "8.5",
-      "genre": "romance"
-    },
-    {
-      "id": "r3",
-      "title": "Forever Yours",
-      "image": "/assets/images/movies/romance3.jpg",
-      "slug": "forever-yours",
-      "year": "2024",
-      "duration": "2h 5m",
-      "rating": "8.6",
-      "genre": "romance"
-    },
-    {
-      "id": "r4",
-      "title": "Love Letters",
-      "image": "/assets/images/movies/romance4.jpg",
-      "slug": "love-letters",
-      "year": "2023",
-      "duration": "2h 10m",
-      "rating": "8.4",
-      "genre": "romance"
+      "title": "Charade",
+      "image": "/assets/images/movies/romance/romance2.jpg",
+      "innerImage": "/assets/images/movies/romance/landscape/romance2_inner.jpeg",
+      "slug": "charade",
+      "year": "1963",
+      "duration": "1h 53m",
+      "rating": "7.9",
+      "genre": "Romance",
+      "description": "A widow is pursued in Paris by several men trying to recover a fortune her late husband may have stolen.",
+      "videoUrl": "https://player.vimeo.com/video/1103608037?h=826af8b200&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "sci-fi": [
@@ -1237,6 +1349,32 @@
       "genre": "sci-fi",
       "description": "A disturbed man with multiple personalities becomes the key to a showdown between a vigilante with super strength and a mastermind who believes in the power of the extraordinary.",
       "videoUrl": "https://player.vimeo.com/video/1101567538?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf11",
+      "title": "Ultraman",
+      "image": "/assets/images/movies/sci-fi/scifi11.jpg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi11_inner.jpg",
+      "slug": "ultraman",
+      "year": "1966",
+      "duration": "",
+      "rating": "7.5",
+      "genre": "Sci-Fi",
+      "description": "A giant alien superhero defends Earth from monsters and aliens. Each episode features a new battle and moral lesson.",
+      "videoUrl": ""
+    },
+    {
+      "id": "sf12",
+      "title": "Brother from Another Planet",
+      "image": "/assets/images/movies/sci-fi/scifi12.jpeg",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi12_inner.jpg",
+      "slug": "brother-from-another-planet",
+      "year": "1984",
+      "duration": "1h 49m",
+      "rating": "6.8",
+      "genre": "Sci-Fi",
+      "description": "A mute alien with human appearance crashes in Harlem and faces both wonder and pursuit by men in black.",
+      "videoUrl": "https://player.vimeo.com/video/1103856061?h=5810c7fc21&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "sport": [
@@ -1286,7 +1424,7 @@
       "id": "t1",
       "title": "Hitch Hiker",
       "image": "/assets/images/movies/thriller/thriller1.jpeg",
-      "innerImage": "/assets/images/movies/thriller/landscape/action1_inner.jpg",
+      "innerImage": "/assets/images/movies/thriller/landscape/thriller1_inner.jpg",
       "slug": "hitch-hiker",
       "year": "1953",
       "duration": "2h 10m",
@@ -1299,7 +1437,7 @@
       "id": "t2",
       "title": "Million Dollar Weekend",
       "image": "/assets/images/movies/thriller/thriller2.jpeg",
-      "innerImage": "/assets/images/movies/thriller/landscape/action2_inner.jpg",
+      "innerImage": "/assets/images/movies/thriller/landscape/thriller2_inner.jpg",
       "slug": "million-dollar-weekend",
       "year": "1948",
       "duration": "2h 5m",
@@ -1312,7 +1450,7 @@
       "id": "t3",
       "title": "Scarlet Street",
       "image": "/assets/images/movies/thriller/thriller3.jpg",
-      "innerImage": "/assets/images/movies/thriller/landscape/action3_inner.jpg",
+      "innerImage": "/assets/images/movies/thriller/landscape/thriller3_inner.jpg",
       "slug": "scarlet-street",
       "year": "1945",
       "duration": "2h 15m",
@@ -1320,6 +1458,19 @@
       "genre": "thriller",
       "description": "A meek man is duped by a femme fatale and her lover, leading to tragedy.",
       "videoUrl": "https://player.vimeo.com/video/1093479465?h=f233e35dfe&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "t4",
+      "title": "Vertigo",
+      "image": "/assets/images/movies/thriller/thriller4.avif",
+      "innerImage": "/assets/images/movies/thriller/landscape/thriller4_inner.jpg",
+      "slug": "vertigo",
+      "year": "1958",
+      "duration": "1h 59m",
+      "rating": "8.3",
+      "genre": "Thriller",
+      "description": "A retired detective is hired to follow a woman behaving strangely, only to become obsessed with her.",
+      "videoUrl": "https://player.vimeo.com/video/1103606943?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "war": [
@@ -1403,6 +1554,32 @@
       "genre": "western",
       "description": "A native American warrior seeks revenge against the U.S. soldiers who massacred his tribe.",
       "videoUrl": "https://player.vimeo.com/video/1100414187?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "we4",
+      "title": "McClintock",
+      "image": "/assets/images/movies/western/western4.jpg",
+      "innerImage": "/assets/images/movies/western/landscape/western4_inner.jpeg",
+      "slug": "mcclintock",
+      "year": "1963",
+      "duration": "2h 7m",
+      "rating": "7.0",
+      "genre": "Western",
+      "description": "A wealthy rancher tries to maintain peace in his turbulent family and town amid social and generational conflict.",
+      "videoUrl": "https://player.vimeo.com/video/1103602095?h=62d3e116f5&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "we5",
+      "title": "Vengeance Valley",
+      "image": "/assets/images/movies/western/western5.jpg",
+      "innerImage": "/assets/images/movies/western/landscape/western5_inner.jpg",
+      "slug": "vengeance-valley",
+      "year": "1951",
+      "duration": "1h 21min",
+      "rating": "6.2",
+      "genre": "Western",
+      "description": "A man raised by a rancher clashes with his foster brother when betrayal and jealousy erupt.",
+      "videoUrl": "https://player.vimeo.com/video/1103606341?h=e24726d6d3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "upcomingMovies": [

@@ -2322,6 +2322,59 @@
         "nextEpisode": null
       }
     ]
+  },
+
+  "steamboat-willie": {
+    "episodes": [
+      {
+        "id": "steamboat-willie-ep1",
+        "title": "Episode 1",
+        "slug": "episode-1",
+        "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
+        "thumbnail": "/assets/images/cartoons/cartoon18.jpeg",
+        "videoUrl": "",
+        "duration": "22:30",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "steamboat-willie-ep2",
+        "title": "Episode 2",
+        "slug": "episode-2",
+        "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
+        "thumbnail": "/assets/images/cartoons/cartoon18.jpeg",
+        "videoUrl": "",
+        "duration": "21:45",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      }
+    ]
+  },
+
+  "johnny-quest": {
+    "episodes": [
+      {
+        "id": "johnny-quest-ep1",
+        "title": "Episode 1",
+        "slug": "episode-1",
+        "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
+        "thumbnail": "/assets/images/cartoons/cartoon19.jpeg",
+        "videoUrl": "",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "johnny-quest-ep2",
+        "title": "Episode 2",
+        "slug": "episode-2",
+        "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
+        "thumbnail": "/assets/images/cartoons/cartoon19.jpeg",
+        "videoUrl": "",
+        "duration": "21:45",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      }
+    ]
   }
 
 

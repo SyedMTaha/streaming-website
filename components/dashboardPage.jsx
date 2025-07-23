@@ -53,6 +53,14 @@ const dashboardPage = () => {
   const [cartoonEpisodeCount, setCartoonEpisodeCount] = useState(1);
   const [cartoonEpisodeLinks, setCartoonEpisodeLinks] = useState([""]);
 
+  // TV Series form fields state
+  const [seriesTitle, setSeriesTitle] = useState('');
+  const [seriesDescription, setSeriesDescription] = useState('');
+  const [seriesGenre, setSeriesGenre] = useState('TV Series');
+  const [seriesDuration, setSeriesDuration] = useState('');
+  const [seriesRating, setSeriesRating] = useState('');
+  const [seriesYear, setSeriesYear] = useState('');
+
   // Handle episode count change for TV Series
   const handleSeriesEpisodeCountChange = (e) => {
     const count = parseInt(e.target.value, 10);
@@ -105,10 +113,37 @@ const dashboardPage = () => {
       setMoviePortrait('');
       setMovieLandscape('');
       // Hide the notification after 3 seconds
-      setTimeout(() => setSuccessMessage(''), 3000);
+      setTimeout(() => setSuccessMessage(''), 7000);
     } else {
       setSuccessMessage('Failed to add movie');
-      setTimeout(() => setSuccessMessage(''), 3000);
+      setTimeout(() => setSuccessMessage(''), 7000);
+    }
+  };
+
+  const handleSeriesUpload = async (seriesData) => {
+    const res = await fetch('/api/add-series', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(seriesData),
+    });
+    if (res.ok) {
+      setSuccessMessage('TV Series added successfully!');
+      // Clear all TV series form fields
+      // setSeriesTitle(''); // These states are not in the current form
+      // setSeriesDescription('');
+      // setSeriesGenre('');
+      // setSeriesDuration('');
+      // setSeriesRating('');
+      // setSeriesYear('');
+      // setSeriesPortrait('');
+      // setSeriesLandscape('');
+      // setSeriesEpisodeCount(1); // Reset episode count
+      // setSeriesEpisodeLinks([""]); // Reset episode links
+      // Hide the notification after 3 seconds
+      setTimeout(() => setSuccessMessage(''), 7000);
+    } else {
+      setSuccessMessage('Failed to add TV Series');
+      setTimeout(() => setSuccessMessage(''), 7000);
     }
   };
 
@@ -240,15 +275,43 @@ const dashboardPage = () => {
         <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full" style={{ minWidth: 340, maxWidth: 380 }}>
           <h2 className="text-xl font-semibold text-white mb-4">Upload TV Series</h2>
           <form className="flex flex-col gap-3 w-full">
-            <input className="rounded px-3 py-2" placeholder="Title" />
-            <textarea className="rounded px-3 py-2" placeholder="Description" />
-            <select className="rounded px-3 py-2 bg-[#091F4E] text-white border border-[#1D50A3] focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" defaultValue="">
-              <option value="" disabled>Select Genre</option>
+            <input
+              className="rounded px-3 py-2"
+              placeholder="Title"
+              value={seriesTitle}
+              onChange={e => setSeriesTitle(e.target.value)}
+            />
+            <textarea
+              className="rounded px-3 py-2"
+              placeholder="Description"
+              value={seriesDescription}
+              onChange={e => setSeriesDescription(e.target.value)}
+            />
+            <select
+              className="rounded px-3 py-2 bg-[#091F4E] text-white border border-[#1D50A3] focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+              value={seriesGenre}
+              onChange={e => setSeriesGenre(e.target.value)}
+            >
               <option value="TV Series">TV Series</option>
             </select>
-            <input className="rounded px-3 py-2" placeholder="Duration (e.g. 45 mins)" />
-            <input className="rounded px-3 py-2" placeholder="Rating (e.g. 8.5)" />
-            <input className="rounded px-3 py-2" placeholder="Year Released" />
+            <input
+              className="rounded px-3 py-2"
+              placeholder="Duration (e.g. 45 mins)"
+              value={seriesDuration}
+              onChange={e => setSeriesDuration(e.target.value)}
+            />
+            <input
+              className="rounded px-3 py-2"
+              placeholder="Rating (e.g. 8.5)"
+              value={seriesRating}
+              onChange={e => setSeriesRating(e.target.value)}
+            />
+            <input
+              className="rounded px-3 py-2"
+              placeholder="Year Released"
+              value={seriesYear}
+              onChange={e => setSeriesYear(e.target.value)}
+            />
             {/* Episode Number Dropdown */}
             <div className="flex flex-col gap-2">
               <label className="text-white">Number of Episodes</label>
@@ -319,7 +382,23 @@ const dashboardPage = () => {
                 </span>
               </div>
             </div>
-            <button type="button" className="bg-[#1D50A3] text-white rounded px-4 py-2 mt-2 hover:bg-blue-900 transition">Upload TV Series</button>
+            <button
+              type="button"
+              className="bg-[#1D50A3] text-white rounded px-4 py-2 mt-2 hover:bg-blue-900 transition"
+              onClick={() => handleSeriesUpload({
+                title: seriesTitle,
+                description: seriesDescription,
+                genre: seriesGenre,
+                duration: seriesDuration,
+                rating: seriesRating,
+                year: seriesYear,
+                portrait: seriesPortrait,
+                landscape: seriesLandscape,
+                episodes: seriesEpisodeLinks,
+              })}
+            >
+              Upload TV Series
+            </button>
           </form>
         </div>
 

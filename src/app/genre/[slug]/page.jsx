@@ -11,7 +11,7 @@ import moviesData from '../../../../src/data/movies.json';
 import { auth } from '../../../../firebase';
 
 // Add disabled genres here
-const DISABLED_GENRES = ['adventure', 'biographical', 'crime', 'documentary','family', 'historical', 'independent', 'inspiration', 'musical', 'news', 'romance', 'sport', 'war']; 
+const DISABLED_GENRES = ['adventure', 'biographical','family', 'historical', 'independent', 'inspiration', 'musical', 'news', 'sport', 'war']; 
 
 export default function GenrePage() {
   const params = useParams();

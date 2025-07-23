@@ -1,5 +1,4 @@
 {
-
   "the-beverly-hill-billies": {
     "id": "the-beverly-hill-billies",
     "title": "The Beverly Hill Billies",
@@ -408,7 +407,6 @@
       }
     ]
   },
-
   "mister-ed": {
     "id": "mister-ed",
     "title": "Mister ED",
@@ -541,7 +539,6 @@
       }
     ]
   },
-
   "andy-griffiths": {
     "id": "andy-griffiths",
     "title": "The Andy Griffiths Show",
@@ -674,7 +671,6 @@
       }
     ]
   },
-
   "dragnet": {
     "id": "dragnet",
     "title": "Dragnet 1951",
@@ -879,7 +875,6 @@
       }
     ]
   },
-
   "hillstreet-blues": {
     "id": "hillstreet-blues",
     "title": "HillStreet Blues",
@@ -1156,7 +1151,6 @@
       }
     ]
   },
-
   "the-ironside": {
     "id": "the-ironside",
     "title": "The Ironside",
@@ -1456,6 +1450,22 @@
         "nextEpisode": null
       }
     ]
-  }
-
-} 
+  },
+  "tv-series": [
+    {
+      "id": "tv1",
+      "title": "Money Heist",
+      "image": "/assets/images/series/tv-series/Frame 1 (1).png",
+      "innerImage": "/assets/images/series/tv-series/landscape/Banner.png",
+      "slug": "money-heist",
+      "year": "2021",
+      "duration": "45 min",
+      "rating": "8.9",
+      "genre": "TV Series",
+      "description": "Spainish people rob bank",
+      "episodes": [
+        "https://player.vimeo.com/video/1093479397?h=6539bc8d1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      ]
+    }
+  ]
+}
