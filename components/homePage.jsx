@@ -65,7 +65,7 @@ export default function DashboardPage() {
       {/* Top-to-bottom Gradient Overlay */}
      
       {/* Hero Section */}
-      <section className="relative h-[55vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] flex items-center">
+      <section className="relative h-[55vh] sm:h-[40vh] md:h-[50vh] lg:h-[80vh] flex items-center">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <video
@@ -399,20 +399,18 @@ function MovieRow({ children }) {
 function MovieCard({ image, title, href }) {
   // Convert title to URL-friendly slug
   const slug = title.toLowerCase().replace(/\s+/g, '-');
-  
   return (
-    <Link href={href || `/movie/${slug}`} className="flex-shrink-0 w-70 group cursor-pointer">
-      <div className="relative overflow-hidden rounded-lg mb-2">
+    <Link href={href || `/movie/${slug}`} className="flex-shrink-0 w-40 sm:w-44 md:w-44 lg:w-48 group cursor-pointer mx-auto mr-4">
+      <div className="relative aspect-[9/14] rounded-lg overflow-hidden mb-2">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
-          width={400}
-          height={300}
-          className="w-full h-84 object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
       </div>
-      <h3 className="text-sm font-medium text-center group-hover:text-blue-400 transition-colors">{title}</h3>
+      <h3 className="text-xs sm:text-sm font-medium text-center group-hover:text-blue-400 transition-colors line-clamp-2">{title}</h3>
     </Link>
   )
 }
@@ -443,14 +441,14 @@ function LargeCard({ image, title, description }) {
   const slug = title.toLowerCase().replace(/\s+/g, '-');
   return (
     <Link href={`/tv-series/${slug}`}> 
-    <div className="group cursor-pointer flex-shrink-0 w-70">
+    <div className="group cursor-pointer flex-shrink-0 w-60">
       <div className="relative overflow-hidden rounded-lg mb-2">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
           width={400}
           height={300}
-          className="w-full h-84 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
       </div>

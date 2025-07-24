@@ -28,19 +28,6 @@
     },
     {
       "id": "a2",
-      "title": "Asphalt Jungle",
-      "image": "/assets/images/movies/action/action2.jpg",
-      "innerImage": "/assets/images/movies/action/landscape/action2_inner.jpg",
-      "slug": "asphalt-jungle",
-      "year": "1950",
-      "duration": "1h 55m",
-      "rating": "7.8",
-      "genre": "action",
-      "description": "A jewel heist goes wrong due to betrayal and greed in this gritty film noir.",
-      "videoUrl": ""
-    },
-    {
-      "id": "a3",
       "title": "Bad and the Beautiful",
       "image": "/assets/images/movies/action/action3.jpg",
       "innerImage": "/assets/images/movies/action/landscape/action3_inner.jpg",
@@ -53,20 +40,20 @@
       "videoUrl": "https://player.vimeo.com/video/1092936264?h=6e7d41ff20&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      "id": "a4",
+      "id": "a3",
       "title": "Deadline",
       "image": "/assets/images/movies/action/action4.jpeg",
       "innerImage": "/assets/images/movies/action/landscape/action5_inner.jpg",
       "slug": "deadline",
       "year": "1952",
-      "duration": "1h 50m",
+      "duration": "1h 26m",
       "rating": "7.2",
       "genre": "action",
       "description": "Editor Hutcheson fights to expose a mob boss before his paper shuts down.",
-      "videoUrl": "https://player.vimeo.com/video/1093481981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      "videoUrl": "https://player.vimeo.com/video/1093481981?h=ee7436cc16&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      "id": "a5",
+      "id": "a4",
       "title": "Detour",
       "image": "/assets/images/movies/action/action5.jpg",
       "innerImage": "/assets/images/movies/action/landscape/action6_inner.jpg",
@@ -79,7 +66,7 @@
       "videoUrl": "https://player.vimeo.com/video/1093479498?h=6726407aa3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      "id": "a6",
+      "id": "a5",
       "title": "Pursued",
       "image": "/assets/images/movies/action/action7.jpg",
       "innerImage": "/assets/images/movies/action/landscape/action12_inner.jpg",
@@ -92,7 +79,7 @@
       "videoUrl": "https://player.vimeo.com/video/1092935963?h=5742e343fb&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      "id": "a7",
+      "id": "a666",
       "title": "Stage Coach",
       "image": "/assets/images/movies/action/action8.jpeg",
       "innerImage": "/assets/images/movies/action/landscape/action9_inner.jpg",
@@ -105,7 +92,7 @@
       "videoUrl": "https://player.vimeo.com/video/1092562326?h=b32d27474f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      "id": "a8",
+      "id": "a7",
       "title": "Train",
       "image": "/assets/images/movies/action/action9.jpeg",
       "innerImage": "/assets/images/movies/action/landscape/action11_inner.jpg",
@@ -118,7 +105,7 @@
       "videoUrl": "https://player.vimeo.com/video/1093478686?h=607746602b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      "id": "a9",
+      "id": "a8",
       "title": "State Secret",
       "image": "/assets/images/movies/action/action10.jpeg",
       "innerImage": "/assets/images/movies/action/landscape/action10_inner.jpg",
@@ -131,7 +118,7 @@
       "videoUrl": "https://player.vimeo.com/video/1092933232?h=d997dfd2ca&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      "id": "a11",
+      "id": "a9",
       "title": "The Batman",
       "image": "/assets/images/movies/action/action12.jpg",
       "innerImage": "/assets/images/movies/action/landscape/action13_inner.jpeg",
@@ -142,32 +129,6 @@
       "genre": "action",
       "description": "A relentless vigilante uncovers deep-rooted corruption in Gotham City while pursuing a sadistic serial killer known as the Riddler.",
       "videoUrl": "https://player.vimeo.com/video/1101567932?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
-      "id": "a12",
-      "title": "Movie 12",
-      "image": "/assets/images/movies/action/ChatGPT Image Jul 10, 2025, 04_55_06 PM.png",
-      "innerImage": "/assets/images/movies/action/landscape/Flux_Dev_create_a_logo_for_a_website_basically_a_food_delivery_0.jpg",
-      "slug": "movie-12",
-      "year": "2025",
-      "duration": "2h 69min",
-      "rating": "6.9",
-      "genre": "Action",
-      "description": "lorem ipsum",
-      "videoUrl": "https://player.vimeo.com/video/1093479397?h=6539bc8d1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
-      "id": "a13",
-      "title": "Action Movie",
-      "image": "/assets/images/movies/action/Frame 1 (1).png",
-      "innerImage": "/assets/images/movies/action/landscape/Banner.png",
-      "slug": "action-movie",
-      "year": "2015",
-      "duration": "2 h 10 min",
-      "rating": "6.9",
-      "genre": "Action",
-      "description": "lorem ipsum",
-      "videoUrl": "https://player.vimeo.com/video/1093479397?h=6539bc8d1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "adventure": [
@@ -484,7 +445,7 @@
     {
       "id": "c19",
       "title": "Johnny Quest",
-      "image": "/assets/images/cartoons/cartoon19.jpeg",
+      "image": "/assets/images/cartoons/cartoon20.jpeg",
       "innerImage": "/assets/images/cartoons/landscape/cartoon15_inner.jpg",
       "slug": "johnny-quest",
       "year": "1964",
@@ -536,7 +497,7 @@
       "rating": "7.8",
       "genre": "comedy",
       "description": "Shemp must marry fast to inherit a fortune, causing Stooge chaos.",
-      "videoUrl": "https://player.vimeo.com/video/1093482525?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      "videoUrl": "https://player.vimeo.com/video/1093482525?h=36834997fa&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "com3",
@@ -616,7 +577,7 @@
       "rating": "7.8",
       "genre": "Crime",
       "description": "A jewel heist goes wrong due to betrayal and greed in this gritty film noir.",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1103862264?h=b94f6c709d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "cr2",
@@ -729,7 +690,7 @@
     {
       "id": "dr7",
       "title": "The Woman In Brown",
-      "image": "/assets/images/movies/drama/",
+      "image": "/assets/images/movies/drama/drama15.jpeg",
       "innerImage": "/assets/images/movies/drama/landscape/drama7_inner.jpg",
       "slug": "the-woman-in-brown",
       "year": "1941",
@@ -920,7 +881,7 @@
       "rating": "7.0",
       "genre": "Martial Arts",
       "description": "Sonny Chiba’s tough-as-nails assassin takes on a deadly crime syndicate.",
-      "videoUrl": "https://player.vimeo.com/video/1100672803?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      "videoUrl": "https://player.vimeo.com/video/1100672803?h=797566f055&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma2",
@@ -929,11 +890,11 @@
       "innerImage": "/assets/images/movies/martial/landscape/martial2_inner.png",
       "slug": "ninja-death-1",
       "year": "1987",
-      "duration": "2h 10m",
+      "duration": "1h 23m",
       "rating": "7.5",
       "genre": "Martial Arts",
       "description": "A young fighter uncovers his mysterious past while battling deadly ninjas and ruthless enemies.",
-      "videoUrl": "https://player.vimeo.com/video/1100652216?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      "videoUrl": "https://player.vimeo.com/video/1100652216?h=560a6d2af5&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma3",
@@ -946,7 +907,7 @@
       "rating": "7.8",
       "genre": "Martial Arts",
       "description": "The hero’s journey as he faces deadlier ninjas and uncovers darker secrets about his origins.",
-      "videoUrl": "https://player.vimeo.com/video/1100656988?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      "videoUrl": "https://player.vimeo.com/video/1100656988?h=6647cea3a4&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma4",
@@ -959,7 +920,7 @@
       "rating": "7.3",
       "genre": "Martial Arts",
       "description": "Angela Mao plays a fierce woman seeking vengeance against the man who wronged her sister.",
-      "videoUrl": "https://player.vimeo.com/video/1100672793?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      "videoUrl": "https://player.vimeo.com/video/1100672793?h=6376eba170&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma5",
@@ -972,7 +933,7 @@
       "rating": "7.8",
       "genre": "Martial Arts",
       "description": "A martial arts expert battles mobsters to save a karate school from being taken over.",
-      "videoUrl": "https://player.vimeo.com/video/1100672825?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      "videoUrl": "https://player.vimeo.com/video/1100672825?h=013e580eee&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma6",
@@ -985,7 +946,7 @@
       "rating": "7.7",
       "genre": "Martial Arts",
       "description": "A fearless woman fights her way through a criminal underworld to rescue her kidnapped brother.",
-      "videoUrl": "https://player.vimeo.com/video/1100672837?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      "videoUrl": "https://player.vimeo.com/video/1100672837?h=5082310273&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma7",
@@ -1011,7 +972,7 @@
       "rating": "6.9",
       "genre": "Martial Arts",
       "description": "A man moves to Thailand for work and must fight corruption and violence after discovering a drug trafficking ring.",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1103608567?h=4f036ec703&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "ma9",
@@ -1133,7 +1094,8 @@
       "rating": "8.5",
       "genre": "Mystery",
       "description": "A wheelchair-bound photographer believes he has witnessed a murder in a neighboring apartment.",
-      "videoUrl": ""
+      "videoUrl": "https://player.vimeo.com/video/1104191915?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      
     },
     {
       "id": "my5",
