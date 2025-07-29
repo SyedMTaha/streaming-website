@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const genres = [
   "Action",
@@ -44,6 +44,11 @@ const dashboardPage = () => {
   const [movieLink, setMovieLink] = useState('');
   // Success message state
   const [successMessage, setSuccessMessage] = useState('');
+  
+  // Custom alert state
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
+  const [alertAction, setAlertAction] = useState(null);
 
   // TV Series episode state
   const [seriesEpisodeCount, setSeriesEpisodeCount] = useState(1);
@@ -93,8 +98,119 @@ const dashboardPage = () => {
     });
   };
   
+  const [movieList, setMovieList] = useState([]);
+  const [movieSearch, setMovieSearch] = useState('');
+  const [editingMovieId, setEditingMovieId] = useState(null);
+
+  // TV Series state for list/search/edit
+  const [seriesList, setSeriesList] = useState([]);
+  const [seriesSearch, setSeriesSearch] = useState('');
+  const [editingSeriesId, setEditingSeriesId] = useState(null);
+
+  // Cartoons state for list/search/edit
+  const [cartoonList, setCartoonList] = useState([]);
+  const [cartoonSearch, setCartoonSearch] = useState('');
+  const [editingCartoonId, setEditingCartoonId] = useState(null);
+
+  // Cartoon form fields state
+  const [cartoonTitle, setCartoonTitle] = useState('');
+  const [cartoonDescription, setCartoonDescription] = useState('');
+  const [cartoonGenre, setCartoonGenre] = useState('Cartoon');
+  const [cartoonDuration, setCartoonDuration] = useState('');
+  const [cartoonRating, setCartoonRating] = useState('');
+  const [cartoonYear, setCartoonYear] = useState('');
+
+  // Fetch all movies on mount and after changes
+  useEffect(() => {
+    fetch('/api/add-movie')
+      .then(res => res.json())
+      .then(data => setMovieList(data || []));
+  }, []);
+
+  // Fetch all TV series and cartoons on mount
+  useEffect(() => {
+    fetch('/api/add-series')
+      .then(res => res.json())
+      .then(data => setSeriesList(data || []));
+    fetch('/api/add-cartoon')
+      .then(res => res.json())
+      .then(data => setCartoonList(data || []));
+  }, []);
+
+  const handleMovieSearch = (e) => setMovieSearch(e.target.value);
+  const handleSeriesSearch = (e) => setSeriesSearch(e.target.value);
+  const handleCartoonSearch = (e) => setCartoonSearch(e.target.value);
+
+  const filteredMovies = movieList.filter(m =>
+    m.title.toLowerCase().includes(movieSearch.toLowerCase())
+  );
+  const filteredSeries = seriesList.filter(s =>
+    s.title?.toLowerCase().includes(seriesSearch.toLowerCase())
+  );
+  const filteredCartoons = cartoonList.filter(c =>
+    c.cartoonTitle?.toLowerCase().includes(cartoonSearch.toLowerCase())
+  );
+
+  const handleEditMovie = (movie) => {
+    setMovieTitle(movie.title);
+    setMovieDescription(movie.description);
+    setMovieGenre(movie.genre);
+    setMovieDuration(movie.duration);
+    setMovieRating(movie.rating);
+    setMovieYear(movie.year);
+    setMovieLink(movie.videoUrl);
+    setMoviePortrait(movie.image?.split('/').pop() || '');
+    setMovieLandscape(movie.innerImage?.split('/').pop() || '');
+    setEditingMovieId(movie.id);
+  };
+
+  const handleDeleteMovie = (id) => {
+    setAlertMessage('Are you sure you want to delete this movie?');
+    setAlertAction(() => async () => {
+      await fetch('/api/add-movie', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id }),
+      });
+      setMovieList(list => list.filter(m => m.id !== id));
+      setSuccessMessage('Movie deleted successfully!');
+      setTimeout(() => setSuccessMessage(''), 7000);
+      setShowAlert(false);
+    });
+    setShowAlert(true);
+  };
 
   const handleMovieUpload = async (movieData) => {
+    if (editingMovieId) {
+      // Update
+      const res = await fetch('/api/add-movie', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...movieData, id: editingMovieId }),
+      });
+      if (res.ok) {
+        setSuccessMessage('Movie updated successfully!');
+        setEditingMovieId(null);
+        // Refresh list
+        fetch('/api/add-movie').then(res => res.json()).then(data => setMovieList(data || []));
+        // Clear form fields after 5 seconds
+        setTimeout(() => {
+          setMovieTitle('');
+          setMovieDescription('');
+          setMovieGenre('');
+          setMovieDuration('');
+          setMovieRating('');
+          setMovieYear('');
+          setMovieLink('');
+          setMoviePortrait('');
+          setMovieLandscape('');
+        }, 5000);
+      } else {
+        setSuccessMessage('Failed to update movie');
+      }
+      setTimeout(() => setSuccessMessage(''), 7000);
+      return;
+    }
     const res = await fetch('/api/add-movie', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -102,17 +218,19 @@ const dashboardPage = () => {
     });
     if (res.ok) {
       setSuccessMessage('Movie added successfully!');
-      // Clear all movie form fields
-      setMovieTitle('');
-      setMovieDescription('');
-      setMovieGenre('');
-      setMovieDuration('');
-      setMovieRating('');
-      setMovieYear('');
-      setMovieLink('');
-      setMoviePortrait('');
-      setMovieLandscape('');
-      // Hide the notification after 3 seconds
+      // Clear all movie form fields after 5 seconds
+      setTimeout(() => {
+        setMovieTitle('');
+        setMovieDescription('');
+        setMovieGenre('');
+        setMovieDuration('');
+        setMovieRating('');
+        setMovieYear('');
+        setMovieLink('');
+        setMoviePortrait('');
+        setMovieLandscape('');
+      }, 5000);
+      // Hide the notification after 7 seconds
       setTimeout(() => setSuccessMessage(''), 7000);
     } else {
       setSuccessMessage('Failed to add movie');
@@ -120,7 +238,51 @@ const dashboardPage = () => {
     }
   };
 
+  const handleEditSeries = (series) => {
+    setSeriesTitle(series.title);
+    setSeriesDescription(series.description);
+    setSeriesGenre(series.genre);
+    setSeriesDuration(series.duration);
+    setSeriesRating(series.rating);
+    setSeriesYear(series.year);
+    setSeriesPortrait(series.image?.split('/').pop() || '');
+    setSeriesLandscape(series.innerImage?.split('/').pop() || '');
+    setSeriesEpisodeLinks(series.episodes || []);
+    setSeriesEpisodeCount((series.episodes || []).length);
+    setEditingSeriesId(series.id);
+  };
+  const handleDeleteSeries = (id) => {
+    setAlertMessage('Are you sure you want to delete this TV Series?');
+    setAlertAction(() => async () => {
+      await fetch('/api/add-series', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id }),
+      });
+      setSeriesList(list => list.filter(s => s.id !== id));
+      setSuccessMessage('TV Series deleted successfully!');
+      setTimeout(() => setSuccessMessage(''), 7000);
+      setShowAlert(false);
+    });
+    setShowAlert(true);
+  };
   const handleSeriesUpload = async (seriesData) => {
+    if (editingSeriesId) {
+      const res = await fetch('/api/add-series', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...seriesData, id: editingSeriesId }),
+      });
+      if (res.ok) {
+        setSuccessMessage('TV Series updated successfully!');
+        setEditingSeriesId(null);
+        fetch('/api/add-series').then(res => res.json()).then(data => setSeriesList(data || []));
+      } else {
+        setSuccessMessage('Failed to update TV Series');
+      }
+      setTimeout(() => setSuccessMessage(''), 7000);
+      return;
+    }
     const res = await fetch('/api/add-series', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -147,8 +309,110 @@ const dashboardPage = () => {
     }
   };
 
+  const handleEditCartoon = (cartoon) => {
+    setCartoonTitle(cartoon.cartoonTitle || '');
+    setCartoonDescription(cartoon.description || '');
+    setCartoonGenre(cartoon.genre || 'Cartoon');
+    setCartoonDuration(cartoon.duration || '');
+    setCartoonRating(cartoon.rating || '');
+    setCartoonYear(cartoon.year || '');
+    setCartoonPortrait(cartoon.thumbnail?.split('/').pop() || '');
+    setCartoonLandscape(''); // Not available in data
+    setCartoonEpisodeLinks(cartoon.episodes || [cartoon.videoUrl] || ['']);
+    setCartoonEpisodeCount((cartoon.episodes || [cartoon.videoUrl] || ['']).length);
+    setEditingCartoonId(cartoon.id);
+  };
+  const handleDeleteCartoon = (id) => {
+    setAlertMessage('Are you sure you want to delete this cartoon episode?');
+    setAlertAction(() => async () => {
+      await fetch('/api/add-cartoon', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id }),
+      });
+      setCartoonList(list => list.filter(c => c.id !== id));
+      setSuccessMessage('Cartoon episode deleted successfully!');
+      setTimeout(() => setSuccessMessage(''), 7000);
+      setShowAlert(false);
+    });
+    setShowAlert(true);
+  };
+  const handleCartoonUpload = async (cartoonData) => {
+    if (editingCartoonId) {
+      const res = await fetch('/api/add-cartoon', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...cartoonData, id: editingCartoonId }),
+      });
+      if (res.ok) {
+        setSuccessMessage('Cartoon episode updated successfully!');
+        setEditingCartoonId(null);
+        fetch('/api/add-cartoon').then(res => res.json()).then(data => setCartoonList(data || []));
+      } else {
+        setSuccessMessage('Failed to update cartoon episode');
+      }
+      setTimeout(() => setSuccessMessage(''), 7000);
+      return;
+    }
+    const res = await fetch('/api/add-cartoon', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(cartoonData),
+    });
+    if (res.ok) {
+      setSuccessMessage('Cartoon episode added successfully!');
+      // Clear all cartoon form fields
+      setCartoonTitle('');
+      setCartoonDescription('');
+      setCartoonGenre('Cartoon');
+      setCartoonDuration('');
+      setCartoonRating('');
+      setCartoonYear('');
+      setCartoonPortrait('');
+      setCartoonLandscape('');
+      setCartoonEpisodeCount(1);
+      setCartoonEpisodeLinks(['']);
+      // Hide the notification after 3 seconds
+      setTimeout(() => setSuccessMessage(''), 7000);
+    } else {
+      setSuccessMessage('Failed to add cartoon episode');
+      setTimeout(() => setSuccessMessage(''), 7000);
+    }
+  };
+
   return (
     <div className="min-h-screen w-full flex flex-col items-center px-4 py-12 bg-gradient-to-t from-[#020E21] via-[#091F4E] to-[#020D23]">
+      {/* Custom Alert Modal */}
+      {showAlert && (
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50">
+          <div className="bg-white rounded-lg p-6 max-w-sm w-full mx-4 shadow-2xl animate-fadeIn">
+            <div className="flex items-center mb-4">
+              <div className="bg-red-100 rounded-full p-2 mr-3">
+                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.963-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">Confirm Delete</h3>
+            </div>
+            <p className="text-gray-600 mb-6">{alertMessage}</p>
+            <div className="flex justify-end space-x-3">
+              <button
+                onClick={() => setShowAlert(false)}
+                className="px-4 py-2 text-gray-600 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors duration-200"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={alertAction}
+                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      
       {/* Success Notification */}
       {successMessage && (
         <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg text-lg font-semibold animate-fade-in-out">
@@ -161,15 +425,37 @@ const dashboardPage = () => {
         {/* Movie Upload */}
         <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full" style={{ minWidth: 340, maxWidth: 380 }}>
           <h2 className="text-xl font-semibold text-white mb-4">Upload Movie</h2>
+          <div className="w-full mb-4">
+            <input
+              className="rounded px-3 py-2 w-full mb-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+              placeholder="Search Movies..."
+              value={movieSearch}
+              onChange={handleMovieSearch}
+            />
+            {movieSearch && (
+              <div style={{ maxHeight: 180, overflowY: 'auto' }} className="bg-[#10162A] rounded p-2 border border-[#223366] mb-2">
+                {filteredMovies.map(movie => (
+                  <div key={movie.id} className="flex items-center justify-between gap-2 py-1 border-b border-[#223366] last:border-b-0">
+                    <span className="text-white text-sm truncate" style={{ maxWidth: 120 }}>{movie.title} ({movie.year})</span>
+                    <div className="flex gap-1">
+                      <button className="text-blue-400 hover:underline text-xs" onClick={() => handleEditMovie(movie)}>Edit</button>
+                      <button className="text-red-400 hover:underline text-xs" onClick={() => handleDeleteMovie(movie.id)}>Delete</button>
+                    </div>
+                  </div>
+                ))}
+                {filteredMovies.length === 0 && <span className="text-gray-400 text-xs">No movies found.</span>}
+              </div>
+            )}
+          </div>
           <form className="flex flex-col gap-3 w-full">
             <input
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Title"
               value={movieTitle}
               onChange={e => setMovieTitle(e.target.value)}
             />
             <textarea
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Description"
               value={movieDescription}
               onChange={e => setMovieDescription(e.target.value)}
@@ -185,25 +471,25 @@ const dashboardPage = () => {
               ))}
             </select>
             <input
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Duration (e.g. 2 hrs 20 mins)"
               value={movieDuration}
               onChange={e => setMovieDuration(e.target.value)}
             />
             <input
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Rating (e.g. 8.5)"
               value={movieRating}
               onChange={e => setMovieRating(e.target.value)}
             />
             <input
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Year Released"
               value={movieYear}
               onChange={e => setMovieYear(e.target.value)}
             />
             <input
-              className="rounded px-3 py-2 mb-40"
+              className="rounded px-3 py-2 mb-40 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Movie Link"
               value={movieLink}
               onChange={e => setMovieLink(e.target.value)}
@@ -266,7 +552,7 @@ const dashboardPage = () => {
                 landscape: movieLandscape,
               })}
             >
-              Upload Movie
+              {editingMovieId ? 'Update Movie' : 'Upload Movie'}
             </button>
           </form>
         </div>
@@ -274,15 +560,37 @@ const dashboardPage = () => {
         {/* TV Series Upload */}
         <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full" style={{ minWidth: 340, maxWidth: 380 }}>
           <h2 className="text-xl font-semibold text-white mb-4">Upload TV Series</h2>
+          <div className="w-full mb-4">
+            <input
+              className="rounded px-3 py-2 w-full mb-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+              placeholder="Search TV Series..."
+              value={seriesSearch}
+              onChange={handleSeriesSearch}
+            />
+            {seriesSearch && (
+              <div style={{ maxHeight: 180, overflowY: 'auto' }} className="bg-[#10162A] rounded p-2 border border-[#223366] mb-2">
+                {filteredSeries.map(series => (
+                  <div key={series.id} className="flex items-center justify-between gap-2 py-1 border-b border-[#223366] last:border-b-0">
+                    <span className="text-white text-sm truncate" style={{ maxWidth: 120 }}>{series.title} ({series.year})</span>
+                    <div className="flex gap-1">
+                      <button className="text-blue-400 hover:underline text-xs" onClick={() => handleEditSeries(series)}>Edit</button>
+                      <button className="text-red-400 hover:underline text-xs" onClick={() => handleDeleteSeries(series.id)}>Delete</button>
+                    </div>
+                  </div>
+                ))}
+                {filteredSeries.length === 0 && <span className="text-gray-400 text-xs">No TV Series found.</span>}
+              </div>
+            )}
+          </div>
           <form className="flex flex-col gap-3 w-full">
             <input
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Title"
               value={seriesTitle}
               onChange={e => setSeriesTitle(e.target.value)}
             />
             <textarea
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Description"
               value={seriesDescription}
               onChange={e => setSeriesDescription(e.target.value)}
@@ -295,19 +603,19 @@ const dashboardPage = () => {
               <option value="TV Series">TV Series</option>
             </select>
             <input
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Duration (e.g. 45 mins)"
               value={seriesDuration}
               onChange={e => setSeriesDuration(e.target.value)}
             />
             <input
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Rating (e.g. 8.5)"
               value={seriesRating}
               onChange={e => setSeriesRating(e.target.value)}
             />
             <input
-              className="rounded px-3 py-2"
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Year Released"
               value={seriesYear}
               onChange={e => setSeriesYear(e.target.value)}
@@ -397,7 +705,7 @@ const dashboardPage = () => {
                 episodes: seriesEpisodeLinks,
               })}
             >
-              Upload TV Series
+              {editingSeriesId ? 'Update TV Series' : 'Upload TV Series'}
             </button>
           </form>
         </div>
@@ -405,16 +713,67 @@ const dashboardPage = () => {
         {/* Cartoon Upload */}
         <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full" style={{ minWidth: 340, maxWidth: 380 }}>
           <h2 className="text-xl font-semibold text-white mb-4">Upload Cartoon</h2>
+          <div className="w-full mb-4">
+            <input
+              className="rounded px-3 py-2 w-full mb-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+              placeholder="Search Cartoons..."
+              value={cartoonSearch}
+              onChange={handleCartoonSearch}
+            />
+            {cartoonSearch && (
+              <div style={{ maxHeight: 180, overflowY: 'auto' }} className="bg-[#10162A] rounded p-2 border border-[#223366] mb-2">
+                {filteredCartoons.map(cartoon => (
+                  <div key={cartoon.id} className="flex items-center justify-between gap-2 py-1 border-b border-[#223366] last:border-b-0">
+                    <span className="text-white text-sm truncate" style={{ maxWidth: 120 }}>{cartoon.cartoonTitle}</span>
+                    <div className="flex gap-1">
+                      <button className="text-blue-400 hover:underline text-xs" onClick={() => handleEditCartoon(cartoon)}>Edit</button>
+                      <button className="text-red-400 hover:underline text-xs" onClick={() => handleDeleteCartoon(cartoon.id)}>Delete</button>
+                    </div>
+                  </div>
+                ))}
+                {filteredCartoons.length === 0 && <span className="text-gray-400 text-xs">No cartoons found.</span>}
+              </div>
+            )}
+          </div>
           <form className="flex flex-col gap-3 w-full">
-            <input className="rounded px-3 py-2" placeholder="Title" />
-            <textarea className="rounded px-3 py-2" placeholder="Description" />
-            <select className="rounded px-3 py-2 bg-[#091F4E] text-white border border-[#1D50A3] focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" defaultValue="">
+            <input
+                className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+                placeholder="Title"
+                value={cartoonTitle}
+                onChange={e => setCartoonTitle(e.target.value)}
+              />
+              <textarea
+                className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+                placeholder="Description"
+                value={cartoonDescription}
+                onChange={e => setCartoonDescription(e.target.value)}
+              />
+            <select
+              className="rounded px-3 py-2 bg-[#091F4E] text-white border border-[#1D50A3] focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+              value={cartoonGenre}
+              onChange={e => setCartoonGenre(e.target.value)}
+            >
               <option value="" disabled>Select Genre</option>
               <option value="Cartoon">Cartoon</option>
             </select>
-            <input className="rounded px-3 py-2" placeholder="Duration (e.g. 25 mins)" />
-            <input className="rounded px-3 py-2" placeholder="Rating (e.g. 8.5)" />
-            <input className="rounded px-3 py-2" placeholder="Year Released" />
+            <input
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+              placeholder="Duration (e.g. 25 mins)"
+              value={cartoonDuration}
+              onChange={e => setCartoonDuration(e.target.value)}
+            />
+            <input
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+              placeholder="Rating (e.g. 8.5)"
+              value={cartoonRating}
+              onChange={e => setCartoonRating(e.target.value)}
+            />
+            <input
+              className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+              placeholder="Year Released"
+              value={cartoonYear}
+              onChange={e => setCartoonYear(e.target.value)}
+            />
             {/* Episode Number Dropdown */}
             <div className="flex flex-col gap-2">
               <label className="text-white">Number of Episodes</label>
@@ -485,7 +844,20 @@ const dashboardPage = () => {
                 </span>
               </div>
             </div>
-            <button type="button" className="bg-[#1D50A3] text-white rounded px-4 py-2 mt-2 hover:bg-blue-900 transition">Upload Cartoon</button>
+            <button type="button" className="bg-[#1D50A3] text-white rounded px-4 py-2 mt-2 hover:bg-blue-900 transition" onClick={() => handleCartoonUpload({
+              cartoonTitle: cartoonTitle,
+              description: cartoonDescription,
+              genre: cartoonGenre,
+              duration: cartoonDuration,
+              rating: cartoonRating,
+              year: cartoonYear,
+              thumbnail: cartoonPortrait,
+              landscape: cartoonLandscape,
+              videoUrl: cartoonEpisodeLinks[0],
+              episodes: cartoonEpisodeLinks,
+            })}>
+              {editingCartoonId ? 'Update Cartoon Episode' : 'Upload Cartoon Episode'}
+            </button>
           </form>
         </div>
         
