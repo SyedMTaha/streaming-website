@@ -1453,7 +1453,7 @@
   },
   "ultraman": {
     "id": "ultraman",
-    "title": "ultraman",
+    "title": "Ultraman",
     "slug": "ultraman",
     "description": "A groundbreaking Japanese sci-fi TV series where a giant alien superhero defends Earth from monstrous threats.",
     "thumbnail": "/assets/images/series/series7.jpg",
@@ -1759,6 +1759,54 @@
         "duration": "30:00",
         "rating": "TV-PG",
         "previousEpisode": "episode-24",
+        "nextEpisode": null
+      }
+    ]
+  },
+  "world-war-II":{
+    "id": "world-war-II",
+    "title": "World War II",
+    "slug": "world-war-II",
+    "description": "A historical documentary series presenting vivid, colorized World War II footage with expert narration.",
+    "thumbnail": "/assets/images/series/series8.png",
+    "videoUrl": "",
+    "duration": "30 min",
+    "rating": "TV-PG",
+    "episodes":[
+      {
+        "id": "world-war-II-1",
+        "title": "Episode 01",
+        "slug": "episode-1",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series8.png",
+        "videoUrl": "https://player.vimeo.com/video/1105528176?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "world-war-II-2",
+        "title": "Episode 02",
+        "slug": "episode-2",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series8.png",
+        "videoUrl": "https://player.vimeo.com/video/1105528150?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "world-war-II-3",
+        "title": "Episode 03",
+        "slug": "episode-3",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series8.png",
+        "videoUrl": "https://player.vimeo.com/video/1105528138?h=eb6d8171e5&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-2",
         "nextEpisode": null
       }
     ]
