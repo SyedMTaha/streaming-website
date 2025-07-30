@@ -4,15 +4,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { Play, Plus, Calendar } from "lucide-react"
 import home03 from './../public/assets/images/background/homePage03.png';
-import comingsoon from './../public/assets/images/background/coming-soon.jpg';
 import logo5 from './../public/assets/images/logo/logo.png';
 import news1 from './../public/assets/images/home/news1.jpg';
 import news2 from './../public/assets/images/home/news2.jpg';
 import news3 from './../public/assets/images/home/news3.jpg';
-import homePage from './../public/assets/images/home/homePage02.jpg';
-import homeGif3 from './../public/assets/images/home/homegif3.gif';
-import homeGif4 from './../public/assets/images/home/homegif4.gif';
-//1import homeVideo from './../public/assets/images/home/homeVideo.mp4';
 import home45 from './../public/assets/images/home/home45.jpg';
 import home48 from './../public/assets/images/home/home48.png';
 import home49 from './../public/assets/images/home/home49.jpeg';

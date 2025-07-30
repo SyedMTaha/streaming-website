@@ -1451,21 +1451,316 @@
       }
     ]
   },
-  "tv-series": [
-    {
-      "id": "tv1",
-      "title": "Money Heist",
-      "image": "/assets/images/series/tv-series/Frame 1 (1).png",
-      "innerImage": "/assets/images/series/tv-series/landscape/Banner.png",
-      "slug": "money-heist",
-      "year": "2021",
-      "duration": "45 min",
-      "rating": "8.9",
-      "genre": "TV Series",
-      "description": "Spainish people rob bank",
-      "episodes": [
-        "https://player.vimeo.com/video/1093479397?h=6539bc8d1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-      ]
-    }
-  ]
+  "ultraman": {
+    "id": "ultraman",
+    "title": "ultraman",
+    "slug": "ultraman",
+    "description": "A groundbreaking Japanese sci-fi TV series where a giant alien superhero defends Earth from monstrous threats.",
+    "thumbnail": "/assets/images/series/series7.jpg",
+    "videoUrl": "",
+    "duration": "30 min",
+    "rating": "TV-PG",
+    "episodes": [
+      {
+        "id": "ultraman-1",
+        "title": "Episode 01",
+        "slug": "episode-1",
+        "description": "Friday and Smith investigate a case where a man threatens to detonate a bomb unless his demands are met.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105873904?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": null,
+        "nextEpisode": "episode-2"
+      },
+      {
+        "id": "ultraman-2",
+        "title": "Episode 02",
+        "slug": "episode-2",
+        "description": "A series of phone booth robberies leads Friday and Smith to a dangerous criminal ring.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105873885?h=46c4f93905&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-1",
+        "nextEpisode": "episode-3"
+      },
+      {
+        "id": "ultraman-3",
+        "title": "Episode 03",
+        "slug": "episode-3",
+        "description": "Friday and Smith investigate a case involving stolen fishing equipment and a mysterious boat.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874199?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-2",
+        "nextEpisode": "episode-4"
+      },
+      {
+        "id": "ultraman-4",
+        "title": "Episode 04",
+        "slug": "episode-4",
+        "description": "A stolen religious statue leads to a deeper investigation of a local crime ring.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105873991?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-3",
+        "nextEpisode": "episode-5"
+      },
+      {
+        "id": "ultraman-5",
+        "title": "Episode 05",
+        "slug": "episode-5",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874006?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-4",
+        "nextEpisode": null
+      },
+      {
+        "id": "ultraman-6",
+        "title": "Episode 06",
+        "slug": "episode-6",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874042?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-5",
+        "nextEpisode": "episode-7"
+      },
+      {
+        "id": "ultraman-7",
+        "title": "Episode 07",
+        "slug": "episode-7",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874143?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-6",
+        "nextEpisode": "episode-8"
+      },
+      {
+        "id": "ultraman-8",
+        "title": "Episode 08",
+        "slug": "episode-8",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874171?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-7",
+        "nextEpisode": "episode-9"
+      },
+      {
+        "id": "ultraman-9",
+        "title": "Episode 09",
+        "slug": "episode-9",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874187?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-8",
+        "nextEpisode": "episode-10"
+      },
+      {
+        "id": "ultraman-10",
+        "title": "Episode 10",
+        "slug": "episode-10",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874032?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-9",
+        "nextEpisode": "episode-11"
+      },
+      {
+        "id": "ultraman-11",
+        "title": "Episode 11",
+        "slug": "episode-11",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874237?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-10",
+        "nextEpisode": "episode-12"
+      },
+      {
+        "id": "ultraman-12",
+        "title": "Episode 12",
+        "slug": "episode-12",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874219?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-11",
+        "nextEpisode": "episode-13"
+      },
+      {
+        "id": "ultraman-13",
+        "title": "Episode 13",
+        "slug": "episode-13",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874255?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-12",
+        "nextEpisode": "episode-14"
+      },
+      {
+        "id": "ultraman-14",
+        "title": "Episode 14",
+        "slug": "episode-14",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874081?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-13",
+        "nextEpisode": "episode-15"
+      },
+      {
+        "id": "ultraman-15",
+        "title": "Episode 15",
+        "slug": "episode-15",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874100?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-14",
+        "nextEpisode": "episode-16"
+      },
+      {
+        "id": "ultraman-16",
+        "title": "Episode 16",
+        "slug": "episode-16",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874156?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-15",
+        "nextEpisode": "episode-17"
+      },
+      {
+        "id": "ultraman-17",
+        "title": "Episode 17",
+        "slug": "episode-17",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874272?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-16",
+        "nextEpisode": "episode-18"
+      },
+      {
+        "id": "ultraman-18",
+        "title": "Episode 18",
+        "slug": "episode-18",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874130?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-17",
+        "nextEpisode": "episode-19"
+      },
+      {
+        "id": "ultraman-19",
+        "title": "Episode 19",
+        "slug": "episode-19",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105873943?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-18",
+        "nextEpisode": "episode-20"
+      },
+      {
+        "id": "ultraman-20",
+        "title": "Episode 20",
+        "slug": "episode-20",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105873919?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-19",
+        "nextEpisode": "episode-21"
+      },
+      {
+        "id": "ultraman-21",
+        "title": "Episode 21",
+        "slug": "episode-21",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105873962?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-21",
+        "nextEpisode": "episode-22"
+      },
+      {
+        "id": "ultraman-22",
+        "title": "Episode 22",
+        "slug": "episode-22",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874012?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-21",
+        "nextEpisode": null
+      },
+      {
+        "id": "ultraman-23",
+        "title": "Episode 23",
+        "slug": "episode-23",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105873976?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-22",
+        "nextEpisode": "episode-24"
+      },
+      {
+        "id": "ultraman-24",
+        "title": "Episode 24",
+        "slug": "episode-24",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874114?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-23",
+        "nextEpisode": "episode-25"
+      },
+      {
+        "id": "ultraman-25",
+        "title": "Episode 25",
+        "slug": "episode-25",
+        "description": "Friday and Smith investigate a series of prison breaks and the mastermind behind them.",
+        "thumbnail": "/assets/images/series/series7.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1105874059?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "duration": "30:00",
+        "rating": "TV-PG",
+        "previousEpisode": "episode-24",
+        "nextEpisode": null
+      }
+    ]
+  }
 }

@@ -471,20 +471,22 @@
       "description": "Mickey Mouse’s debut, where he captains a steamboat and causes mischief with music and animals."
     },
     {
+      "id": "c13",
+      "title": "The Great Grape Ape Show",
+      "image": "/assets/images/cartoons/cartoon13.jpg",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon16_inner.webp",
+      "slug": "the-great-grape-ape-show",
+      "year": "2023", 
+      "duration": "1h 40m",
+      "rating": "8.5",
+      "genre": "cartoon",
+      "description": " A cartoon adventure featuring a lovable, oversized ape and his comedic encounters (may refer to The Great Grape Ape Show, 1975)."
+    },
+    {
       "id": "c6",
       "title": "Jeannie",
       "image": "/assets/images/cartoons/cartoon6.jpg",
       "slug": "jeannie",
-      "year": "2023",
-      "duration": "1h 40m",
-      "rating": "8.5",
-      "genre": "cartoon"
-    },
-    {
-      "id": "c13",
-      "title": "The Great Grape Ape Show",
-      "image": "/assets/images/cartoons/cartoon13.jpg",
-      "slug": "the-great-grape-ape-show",
       "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",
@@ -592,7 +594,7 @@
       "duration": "2h 40m",
       "rating": "7.8",
       "genre": "Crime",
-      "description": "A jewel heist goes wrong due to betrayal and greed in this gritty film noir.",
+      "description": "A film noir classic showcasing a tense jewel heist gone wrong, with a deep dive into the criminal underworld.",
       "videoUrl": "https://player.vimeo.com/video/1103862264?h=b94f6c709d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
@@ -607,6 +609,32 @@
       "genre": "Crime",
       "description": "A group of martial artists plan and execute a robbery, but internal conflict threatens their success. (Less known, assumed data)",
       "videoUrl": "https://player.vimeo.com/video/1103856080?h=a4aa183315&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "cr3",
+      "title": "Kansas City Confidential",
+      "image": "/assets/images/movies/crime/crime3.png",
+      "innerImage": "/assets/images/movies/crime/landscape/crime3_inner.png",
+      "slug": "kansas-city-confidential",
+      "year": "1952",
+      "duration": "1h 40m",
+      "rating": "6.0",
+      "genre": "Crime",
+      "description": "A gripping crime noir about a man wrongly accused of robbery who sets out to uncover the real culprits.",
+      "videoUrl": "https://player.vimeo.com/video/1105529448?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "cr4",
+      "title": "And Then There Were None",
+      "image": "/assets/images/movies/crime/crime4.png",
+      "innerImage": "/assets/images/movies/crime/landscape/crime4_inner.webp",
+      "slug": "and-then-there-were-none",
+      "year": "1945",
+      "duration": "1h 36m",
+      "rating": "6.0",
+      "genre": "Crime",
+      "description": "A classic crime mystery film based on Agatha Christie’s best-selling novel. Ten strangers are invited to a remote island, only to be mysteriously killed one by one, as dark secrets from their pasts resurface.",
+      "videoUrl": "https://player.vimeo.com/video/1105530545?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "documentary": [
@@ -1002,6 +1030,19 @@
       "genre": "Martial Arts",
       "description": "A martial artist from Hong Kong helps relatives fight against gangsters in Rome and duels a master in the Colosseum.",
       "videoUrl": "https://player.vimeo.com/video/1103608744?h=f360d39c5c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "ma11",
+      "title": "The Guy With The Secret Kung Fu",
+      "image": "/assets/images/movies/martial/martial11.png",
+      "innerImage": "/assets/images/movies/martial/landscape/martial11_inner.png",
+      "slug": "the-guy-with-the-secret-kung-fu",
+      "year": "1981",
+      "duration": "1h 25m",
+      "rating": "7.2",
+      "genre": "Martial Arts",
+      "description": "A martial arts film filled with action, brotherhood, and classic kung fu storytelling.",
+      "videoUrl": "https://player.vimeo.com/video/1105528448?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "musical": [
@@ -1316,19 +1357,6 @@
     },
     {
       "id": "sf11",
-      "title": "Ultraman",
-      "image": "/assets/images/movies/sci-fi/scifi11.jpg",
-      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi11_inner.jpg",
-      "slug": "ultraman",
-      "year": "1966",
-      "duration": "",
-      "rating": "7.5",
-      "genre": "Sci-Fi",
-      "description": "A giant alien superhero defends Earth from monsters and aliens. Each episode features a new battle and moral lesson.",
-      "videoUrl": ""
-    },
-    {
-      "id": "sf12",
       "title": "Brother from Another Planet",
       "image": "/assets/images/movies/sci-fi/scifi12.jpeg",
       "innerImage": "/assets/images/movies/sci-fi/landscape/scifi12_inner.jpg",
@@ -1587,7 +1615,7 @@
       "year": "1951-1959",
       "duration": "30 min",
       "rating": "7.5",
-      "genre": "crime",
+      "genre": "tv-series",
       "description": "Sergeant Joe Friday and his partners deliver methodical, case-by-case crime-solving based on real LAPD procedures. The show is famed for its deadpan realism."
     },
     {
@@ -1598,7 +1626,7 @@
       "year": "1981-1987",
       "duration": "22 min",
       "rating": "7.7",
-      "genre": "animation",
+      "genre": "tv-series",
       "description": "Gritty, serialized police drama following officers at a chaotic city precinct. It's known for its ensemble cast, overlapping storylines, and emotional realism."
     },
     {
@@ -1609,7 +1637,7 @@
       "year": "1962-1971",
       "duration": "22 min",
       "rating": "7.3",
-      "genre": "animation",
+      "genre": "tv-series",
       "description": "The Clampett family strikes oil in the Ozarks, moves to upscale Beverly Hills, and brings their rural humor to polite society. A classic sitcom about culture clash and simple wisdom."
     },
     {
@@ -1620,7 +1648,7 @@
       "year": "1967",
       "duration": "22 min",
       "rating": "6.9",
-      "genre": "animation",
+      "genre": "tv-series",
       "description": "After being paralyzed by a sniper, former chief Robert Ironside becomes a tough, wheelchair-bound consultant solving San Francisco cases with his team."
     },
     {
@@ -1631,7 +1659,7 @@
       "year": "1961-1966",
       "duration": "22 min",
       "rating": "7.8",
-      "genre": "animation",
+      "genre": "tv-series",
       "description": "Talking horse Mister Ed shares wisecracks only with his owner Wilbur Post. Their daily barnyard interactions spark domestic humor and neighborhood gossip."
     },
     {
@@ -1642,8 +1670,30 @@
       "year": "1960-1968",
       "duration": "22 min",
       "rating": "8.4",
-      "genre": "animation",
+      "genre": "tv-series",
       "description": "Sheriff Andy Taylor peacefully runs Mayberry alongside his bumbling deputy Barney Fife, Aunt Bee, and son Opie. A warm, idealized slice-of-life sitcom."
+    },
+    {
+      "id": "tv7",
+      "title": "Ultraman",
+      "image": "/assets/images/series/landscape/series7.jpg",
+      "slug": "ultraman",
+      "year": "1966",
+      "duration": "22 min",
+      "rating": "8.4",
+      "genre": "tv-series",
+      "description": "A groundbreaking Japanese sci-fi TV series where a giant alien superhero defends Earth from monstrous threats."
+    },
+    {
+      "id": "tv8",
+      "title": "World War II",
+      "image": "/assets/images/series/landscape/series8.png",
+      "slug": "world-war-II",
+      "year": "2009",
+      "duration": "22 min",
+      "rating": "8.4",
+      "genre": "tv-series",
+      "description": "A historical documentary series presenting vivid, colorized World War II footage with expert narration."
     }
   ]
 }
