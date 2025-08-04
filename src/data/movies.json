@@ -1,19 +1,6 @@
 {
   "action": [
     {
-      "id": "a10",
-      "title": "Atomic Submarine",
-      "image": "/assets/images/movies/action/action11.jpg",
-      "innerImage": "/assets/images/movies/action/landscape/action4_inner.jpg",
-      "slug": "atomic-submarine",
-      "year": "1959",
-      "duration": "1h 50m",
-      "rating": "5.1",
-      "genre": "action",
-      "description": "A submarine investigates disappearances in the Arctic and encounters a hostile alien craft.",
-      "videoUrl": "https://player.vimeo.com/video/1092936389?h=1e0be4f157&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
       "id": "a1",
       "title": "Angel and the Badman",
       "image": "/assets/images/movies/action/action1.jpg",
@@ -51,19 +38,6 @@
       "genre": "action",
       "description": "Editor Hutcheson fights to expose a mob boss before his paper shuts down.",
       "videoUrl": "https://player.vimeo.com/video/1093481981?h=ee7436cc16&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
-      "id": "a4",
-      "title": "Detour",
-      "image": "/assets/images/movies/action/action5.jpg",
-      "innerImage": "/assets/images/movies/action/landscape/action6_inner.jpg",
-      "slug": "detour",
-      "year": "1945",
-      "duration": "1h 50m",
-      "rating": "7.3",
-      "genre": "action",
-      "description": "A man hitchhikes to Hollywood, becomes entangled in death and deception in this noir tale.",
-      "videoUrl": "https://player.vimeo.com/video/1093479498?h=6726407aa3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "a5",
@@ -129,22 +103,6 @@
       "genre": "action",
       "description": "A relentless vigilante uncovers deep-rooted corruption in Gotham City while pursuing a sadistic serial killer known as the Riddler.",
       "videoUrl": "https://player.vimeo.com/video/1101567932?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
-      "id": "a11",
-      "title": "Action Movie 619",
-      "image": "/assets/images/movies/action/",
-      "innerImage": "/assets/images/movies/action/landscape/",
-      "slug": "action-movie",
-      "year": "2000",
-      "duration": "4h 4m",
-      "rating": "2.9",
-      "genre": "Action",
-      "description": "lorem ipsumd eafdahaf adsada",
-      "videoUrl": "https",
-      "link": "https",
-      "portrait": "",
-      "landscape": ""
     }
   ],
   "adventure": [
@@ -160,45 +118,6 @@
       "genre": "adventure",
       "description": "An adventurous journey to find a hidden treasure.",
       "videoUrl": ""
-    },
-    {
-      "id": "adv2",
-      "title": "Mystic Journey",
-      "image": "/assets/images/movies/adventure2.jpg",
-      "innerImage": "/assets/images/movies/adventure2_inner.jpg",
-      "slug": "mystic-journey",
-      "year": "2023",
-      "duration": "2h 10m",
-      "rating": "8.4",
-      "genre": "adventure",
-      "description": "A mystical adventure through ancient lands.",
-      "videoUrl": ""
-    },
-    {
-      "id": "adv3",
-      "title": "Ancient Quest",
-      "image": "/assets/images/movies/adventure3.jpg",
-      "innerImage": "/assets/images/movies/adventure3_inner.jpg",
-      "slug": "ancient-quest",
-      "year": "2024",
-      "duration": "2h 15m",
-      "rating": "8.6",
-      "genre": "adventure",
-      "description": "A quest to uncover ancient secrets.",
-      "videoUrl": ""
-    },
-    {
-      "id": "adv4",
-      "title": "Hidden Valley",
-      "image": "/assets/images/movies/adventure4.jpg",
-      "innerImage": "/assets/images/movies/adventure4_inner.jpg",
-      "slug": "hidden-valley",
-      "year": "2023",
-      "duration": "1h 55m",
-      "rating": "8.3",
-      "genre": "adventure",
-      "description": "An adventure to discover a hidden valley.",
-      "videoUrl": ""
     }
   ],
   "animation": [
@@ -211,7 +130,7 @@
       "year": "2019",
       "duration": "1h 50m",
       "rating": "8.5",
-      "genre": "action",
+      "genre": "animation",
       "description": "A fearless queen ventures into an enchanted forest to uncover the truth behind her powers and save her kingdom.",
       "videoUrl": "https://player.vimeo.com/video/1101567147?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
@@ -224,7 +143,7 @@
       "year": "2011",
       "duration": "1h 50m",
       "rating": "8.0",
-      "genre": "action",
+      "genre": "animation",
       "description": "A fearless panda warrior confronts his mysterious past while battling a villainous peacock bent on conquering China with a deadly new weapon.",
       "videoUrl": "https://player.vimeo.com/video/1101566934?h=2b6ba2025e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
@@ -237,7 +156,7 @@
       "year": "2019",
       "duration": "1h 50m",
       "rating": "7.5",
-      "genre": "action",
+      "genre": "animation",
       "description": "A suave super spy is accidentally turned into a pigeon and must team up with a nerdy scientist to save the world in an unexpected way.",
       "videoUrl": "https://player.vimeo.com/video/1101567349?h=cb28257e91&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
@@ -476,7 +395,7 @@
       "image": "/assets/images/cartoons/cartoon13.jpg",
       "innerImage": "/assets/images/cartoons/landscape/cartoon16_inner.webp",
       "slug": "the-great-grape-ape-show",
-      "year": "2023", 
+      "year": "2023",
       "duration": "1h 40m",
       "rating": "8.5",
       "genre": "cartoon",

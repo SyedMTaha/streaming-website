@@ -1763,7 +1763,7 @@
       }
     ]
   },
-  "world-war-II":{
+  "world-war-II": {
     "id": "world-war-II",
     "title": "World War II",
     "slug": "world-war-II",
@@ -1772,7 +1772,7 @@
     "videoUrl": "",
     "duration": "30 min",
     "rating": "TV-PG",
-    "episodes":[
+    "episodes": [
       {
         "id": "world-war-II-1",
         "title": "Episode 01",

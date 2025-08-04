@@ -129,9 +129,14 @@ const dashboardPage = () => {
 
   // Fetch all TV series and cartoons on mount
   useEffect(() => {
-    fetch('/api/add-series')
+    // Fetch TV series from movies.json instead of episodes
+    fetch('/api/add-movie')
       .then(res => res.json())
-      .then(data => setSeriesList(data || []));
+      .then(data => {
+        // Filter TV series from all movies data
+        const tvSeries = (data || []).filter(item => item.genre === 'tv-series');
+        setSeriesList(tvSeries);
+      });
     fetch('/api/add-cartoon')
       .then(res => res.json())
       .then(data => setCartoonList(data || []));
@@ -267,16 +272,39 @@ const dashboardPage = () => {
     setShowAlert(true);
   };
   const handleSeriesUpload = async (seriesData) => {
+    // Generate slug from title
+    const seriesSlug = seriesData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    const dataWithSlug = { ...seriesData, slug: seriesSlug };
+    
     if (editingSeriesId) {
       const res = await fetch('/api/add-series', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...seriesData, id: editingSeriesId }),
+        body: JSON.stringify({ ...dataWithSlug, id: editingSeriesId }),
       });
       if (res.ok) {
         setSuccessMessage('TV Series updated successfully!');
         setEditingSeriesId(null);
-        fetch('/api/add-series').then(res => res.json()).then(data => setSeriesList(data || []));
+        // Refresh TV series list
+        fetch('/api/add-movie')
+          .then(res => res.json())
+          .then(data => {
+            const tvSeries = (data || []).filter(item => item.genre === 'tv-series');
+            setSeriesList(tvSeries);
+          });
+        // Clear form fields after 5 seconds
+        setTimeout(() => {
+          setSeriesTitle('');
+          setSeriesDescription('');
+          setSeriesGenre('TV Series');
+          setSeriesDuration('');
+          setSeriesRating('');
+          setSeriesYear('');
+          setSeriesPortrait('');
+          setSeriesLandscape('');
+          setSeriesEpisodeCount(1);
+          setSeriesEpisodeLinks(['']);
+        }, 5000);
       } else {
         setSuccessMessage('Failed to update TV Series');
       }
@@ -286,22 +314,31 @@ const dashboardPage = () => {
     const res = await fetch('/api/add-series', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(seriesData),
+      body: JSON.stringify(dataWithSlug),
     });
     if (res.ok) {
       setSuccessMessage('TV Series added successfully!');
-      // Clear all TV series form fields
-      // setSeriesTitle(''); // These states are not in the current form
-      // setSeriesDescription('');
-      // setSeriesGenre('');
-      // setSeriesDuration('');
-      // setSeriesRating('');
-      // setSeriesYear('');
-      // setSeriesPortrait('');
-      // setSeriesLandscape('');
-      // setSeriesEpisodeCount(1); // Reset episode count
-      // setSeriesEpisodeLinks([""]); // Reset episode links
-      // Hide the notification after 3 seconds
+      // Refresh TV series list
+      fetch('/api/add-movie')
+        .then(res => res.json())
+        .then(data => {
+          const tvSeries = (data || []).filter(item => item.genre === 'tv-series');
+          setSeriesList(tvSeries);
+        });
+      // Clear all TV series form fields after 5 seconds
+      setTimeout(() => {
+        setSeriesTitle('');
+        setSeriesDescription('');
+        setSeriesGenre('TV Series');
+        setSeriesDuration('');
+        setSeriesRating('');
+        setSeriesYear('');
+        setSeriesPortrait('');
+        setSeriesLandscape('');
+        setSeriesEpisodeCount(1);
+        setSeriesEpisodeLinks(['']);
+      }, 5000);
+      // Hide the notification after 7 seconds
       setTimeout(() => setSuccessMessage(''), 7000);
     } else {
       setSuccessMessage('Failed to add TV Series');

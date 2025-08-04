@@ -9,6 +9,38 @@ function generateSlug(title) {
     .replace(/^-+|-+$/g, '');    // Remove leading/trailing hyphens
 }
 
+function getGenreIdPrefix(genre) {
+  const genreMapping = {
+    'action': 'a',
+    'adventure': 'adv',
+    'animation': 'an',
+    'biographical': 'b',
+    'cartoon': 'c',
+    'comedy': 'com',
+    'crime': 'cr',
+    'documentary': 'd',
+    'drama': 'dr',
+    'family': 'f',
+    'historical': 'h',
+    'horror': 'hor',
+    'inspiration': 'i',
+    'martial-arts': 'ma',
+    'musical': 'm',
+    'mystery': 'my',
+    'news': 'n',
+    'romance': 'r',
+    'sci-fi': 'sf',
+    'sport': 's',
+    'thriller': 't',
+    'war': 'w',
+    'western': 'we',
+    'tv-series': 'tv'
+  };
+  
+  const genreKey = genre.toLowerCase().replace(/\s+/g, '-');
+  return genreMapping[genreKey] || 'mov'; // Default to 'mov' if genre not found
+}
+
 export async function POST(request) {
   try {
     const incomingMovie = await request.json();
@@ -31,8 +63,9 @@ export async function POST(request) {
     const imagePath = `/assets/images/movies/${genreKey}/${incomingMovie.portrait}`;
     const innerImagePath = `/assets/images/movies/${genreKey}/landscape/${incomingMovie.landscape}`;
 
+    const genrePrefix = getGenreIdPrefix(incomingMovie.genre);
     const structuredMovie = {
-      id: `a${moviesByGenre[genreKey].length + 1}`,
+      id: `${genrePrefix}${moviesByGenre[genreKey].length + 1}`,
       title: incomingMovie.title,
       image: imagePath,
       innerImage: innerImagePath,

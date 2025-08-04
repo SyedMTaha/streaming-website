@@ -6,9 +6,9 @@
         "title": "Episode 1",
         "slug": "episode-1",
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
-        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",        
+        "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066572?h=0e1494be48&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "06:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -19,7 +19,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066618?h=ac6c451564&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "06:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -30,7 +30,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066684?h=b200867349&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:40",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -41,7 +41,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066740?h=41530e2370&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -52,7 +52,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066769?h=0951fb941e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -63,7 +63,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066831?h=47ec1677b4&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -74,7 +74,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066973?h=66b14dd734&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8`"
       },
@@ -85,7 +85,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066901?h=f1c4a6598e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -96,7 +96,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067020?h=0528c7c3ef&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -107,7 +107,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066218?h=1cc845a6e2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -118,7 +118,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067057?h=9262cdd1ab&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -129,7 +129,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067107?h=b604a5f234&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -140,7 +140,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067162?h=0dbc27594c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -151,7 +151,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067205?h=58de6fe99b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -162,7 +162,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067256?h=f49397cb80&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-14",
         "nextEpisode": "episode-16"
       },
@@ -173,7 +173,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067312?h=273f543f8c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-15",
         "nextEpisode": "episode-17"
       },
@@ -184,7 +184,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067409?h=9a4a65657b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-16",
         "nextEpisode": "episode-18"
       },
@@ -195,7 +195,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093067481?h=9bcde39f81&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-17",
         "nextEpisode": "episode-19"
       },
@@ -206,7 +206,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://www.youtube.com/embed/example3",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-18",
         "nextEpisode": "episode-20"
       },
@@ -217,7 +217,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066097?h=3045ca406f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-19",
         "nextEpisode": "episode-21"
       },
@@ -228,7 +228,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066148?h=f9f900b6a0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-20",
         "nextEpisode": "episode-22"
       },
@@ -239,7 +239,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066218?h=1cc845a6e2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-21",
         "nextEpisode": "episode-23"
       },
@@ -250,7 +250,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066298?h=acfc4f7a3d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-22",
         "nextEpisode": "episode-24"
       },
@@ -261,7 +261,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066357?h=7fd79ee49a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-23",
         "nextEpisode": "episode-25"
       },
@@ -272,7 +272,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066434?h=dc3ba6d2ff&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-24",
         "nextEpisode": "episode-26"
       },
@@ -283,13 +283,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon1.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093066492?h=a5b50df6da&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-25",
         "nextEpisode": null
       }
     ]
   },
-
   "high-lander": {
     "episodes": [
       {
@@ -332,7 +331,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon4.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1093841432?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:10",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -343,7 +342,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon4.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1093841760?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:10",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -354,7 +353,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon4.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1093838813?h=c6de8c4001&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:10",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -365,7 +364,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon4.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1093839399?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:10",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -376,7 +375,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon4.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1093839732?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:10",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -387,13 +386,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon4.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1093840065?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:10",
         "previousEpisode": "episode-8",
         "nextEpisode": null
       }
     ]
   },
-
   "hong-kong-phoey": {
     "episodes": [
       {
@@ -425,7 +423,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830848?h=017320de86&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -436,7 +434,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830988?h=6714f67831&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -447,7 +445,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830997?h=46e920010b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -458,7 +456,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830961?h=c6532151ea&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -469,7 +467,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830861?h=7b2a69a761&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -480,7 +478,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830920?h=fc6b832e6e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -491,7 +489,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830975?h=0cc3fe15c2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -502,7 +500,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830955?h=757c725fb0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -513,7 +511,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830904?h=4e45b6984d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -524,7 +522,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830774?h=93d36203e7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -535,7 +533,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830836?h=e203de0e37&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -546,7 +544,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830942?h=96c99e83ae&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -557,13 +555,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon5.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093830882?h=df46547393&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "21:10",
         "previousEpisode": "episode-14",
         "nextEpisode": null
       }
     ]
   },
-
   "young-samsons-goliath": {
     "episodes": [
       {
@@ -573,7 +570,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093831981?h=1aa95b4868&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "09:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -584,7 +581,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093831963?h=1c365c3b8f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "09:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -595,7 +592,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832094?h=0037693df6&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=584791",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -606,7 +603,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832105?h=d337a61684&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -617,7 +614,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832189?h=1a0359b37c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -628,7 +625,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832182?h=0d32ab35d6&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -639,7 +636,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832010?h=73804debf4&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -650,7 +647,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832148?h=e249837ed1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -661,7 +658,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832054?h=631d0254b2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -672,7 +669,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832067?h=ba99bacd3d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -683,7 +680,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832026?h=59a3a70327&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -694,7 +691,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832160?h=0012496d6b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -705,7 +702,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832080?h=b76e76cc44&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -716,7 +713,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832122?h=40a0ae58d1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -727,7 +724,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832035?h=14ba9ad4ab&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-14",
         "nextEpisode": "episode-16"
       },
@@ -738,7 +735,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832134?h=608badc5c6&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-15",
         "nextEpisode": "episode-17"
       },
@@ -749,7 +746,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832203?h=c1cd45c908&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-16",
         "nextEpisode": "episode-18"
       },
@@ -760,7 +757,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832177?h=505de01dcd&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-17",
         "nextEpisode": "episode-19"
       },
@@ -771,13 +768,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon16.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093832001?h=29e0acd0f6&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:11",
         "previousEpisode": "episode-18",
         "nextEpisode": null
       }
     ]
   },
-
   "superman": {
     "episodes": [
       {
@@ -787,7 +783,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon12.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093055273?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "08:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -798,13 +794,12 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon12.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093054997?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "08:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       }
     ]
   },
-
   "barney-bear": {
     "episodes": [
       {
@@ -814,7 +809,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828312?h=478f096202&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "08:50",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -825,7 +820,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828361?h=e2b64888ce&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "07:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -836,7 +831,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828167?h=12ab8f31ce&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -847,7 +842,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828433?h=7c9b42da7c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -858,7 +853,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828139?h=3258d76335&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -869,7 +864,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828395?h=17a0bf7bd5&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -880,7 +875,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828072?h=441c9f3a2e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -891,7 +886,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828225?h=c32f56b33f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -902,7 +897,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828293?h=a4fa7d9c6d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -913,7 +908,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828251?h=6a9654c693&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -924,7 +919,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828198?h=339efaf392&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -935,7 +930,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828090?h=3fdac66c1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -946,7 +941,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828412?h=15c84f5da8&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "08:11",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -957,13 +952,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon17.jpg",
         "videoUrl": "https://player.vimeo.com/video/1093828330?h=ac60e374d5&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:30",
         "previousEpisode": "episode-13",
         "nextEpisode": null
       }
     ]
   },
-
   "tom-and-jerry-comedy-show": {
     "episodes": [
       {
@@ -973,7 +967,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon2.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094447202?h=fc3cc63acb&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "21:05",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -984,7 +978,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon2.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094447240?h=b3f8cd8201&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "21:05",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -995,7 +989,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon2.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094447322?h=2b383dc678&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "21:05",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -1006,7 +1000,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon2.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094447287?h=daa219099b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "21:05",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -1017,13 +1011,12 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon2.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094447173?h=7cfec2a463&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "21:05",
         "previousEpisode": "episode-4",
         "nextEpisode": null
       }
     ]
   },
-
   "top-cat": {
     "episodes": [
       {
@@ -1033,7 +1026,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094452115?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "25:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -1044,7 +1037,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094452272?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "25:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -1055,7 +1048,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094452468?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -1066,7 +1059,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094452621?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=5847",
-        "duration": "23:15",
+        "duration": "22:35",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -1077,7 +1070,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094449993?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -1088,7 +1081,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094450243?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -1099,7 +1092,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094450390?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:35",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -1110,7 +1103,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094450743?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -1121,7 +1114,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094450921?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -1132,7 +1125,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094451501?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -1143,7 +1136,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094451516?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -1154,7 +1147,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094451527?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -1165,7 +1158,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094451541?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:35",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -1176,13 +1169,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon3.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094451939?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:35",
         "previousEpisode": "episode-13",
         "nextEpisode": null
       }
     ]
   },
-
   "yogi-bear": {
     "episodes": [
       {
@@ -1192,7 +1184,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446515?h=354a762900&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "07:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -1203,7 +1195,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094447133?h=21c7dde327&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "07:15",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -1214,7 +1206,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446732?h=f62d8ad26e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -1225,7 +1217,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446756?h=d8977a4f70&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -1236,7 +1228,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446931?h=e94046081f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -1247,7 +1239,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446819?h=5e3e5d7c73&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -1258,7 +1250,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446783?h=ca8c780cdd&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -1269,7 +1261,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446900?h=94465008d7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -1280,7 +1272,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446873?h=69947ded81&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -1291,7 +1283,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446699?h=96ebf76069&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -1302,7 +1294,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446848?h=2445d8cf9c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -1313,7 +1305,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446960?h=a414038def&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -1324,7 +1316,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094447106?h=d2566ccf44&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -1335,7 +1327,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446993?h=e23d3bb850&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -1346,7 +1338,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446550?h=20f83e88e3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-14",
         "nextEpisode": "episode-16"
       },
@@ -1357,7 +1349,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446665?h=25d14353ee&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-15",
         "nextEpisode": "episode-17"
       },
@@ -1368,13 +1360,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon15.jpg",
         "videoUrl": "https://player.vimeo.com/video/1094446584?h=24194be16e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:15",
         "previousEpisode": "episode-16",
         "nextEpisode": null
       }
     ]
   },
-
   "lippy-the-lion-hardy-har-har": {
     "episodes": [
       {
@@ -1384,7 +1375,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652796?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "05:06",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -1395,7 +1386,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652934?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "05:05",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -1406,7 +1397,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652593?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -1417,7 +1408,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652984?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -1428,7 +1419,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652695?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -1439,7 +1430,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653004?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -1450,7 +1441,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653043?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -1461,7 +1452,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652867?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -1472,7 +1463,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652643?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -1483,7 +1474,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652959?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -1494,7 +1485,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652842?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -1505,7 +1496,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652823?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -1516,7 +1507,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652568?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -1527,7 +1518,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652902?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -1538,7 +1529,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652552?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-14",
         "nextEpisode": "episode-16"
       },
@@ -1549,7 +1540,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652621?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-15",
         "nextEpisode": "episode-17"
       },
@@ -1560,7 +1551,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652514?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-16",
         "nextEpisode": "episode-18"
       },
@@ -1571,7 +1562,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096652489?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-17",
         "nextEpisode": "episode-19"
       },
@@ -1582,13 +1573,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon8.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653072?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "05:07",
         "previousEpisode": "episode-18",
         "nextEpisode": null
       }
     ]
   },
-
   "precious-pupp": {
     "episodes": [
       {
@@ -1598,7 +1588,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652212?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "06:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -1609,7 +1599,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652366?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "06:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -1620,7 +1610,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652236?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -1631,7 +1621,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652435?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -1642,7 +1632,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652391?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -1653,7 +1643,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652166?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -1664,7 +1654,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652344?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -1675,7 +1665,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652412?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -1686,7 +1676,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652290?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -1697,7 +1687,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652124?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -1708,7 +1698,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652464?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -1719,7 +1709,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652194?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -1730,7 +1720,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652097?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -1741,13 +1731,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon9.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1096652315?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "06:31",
         "previousEpisode": "episode-13",
         "nextEpisode": null
       }
     ]
   },
-
   "sealab": {
     "episodes": [
       {
@@ -1779,7 +1768,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651430?h=6b1b0c85c3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -1790,7 +1779,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651188?h=873f9e0da9&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -1801,7 +1790,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651140?h=503fc80953&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -1812,7 +1801,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651609?h=61d4a58cd8&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -1823,7 +1812,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651366?h=c766ada08d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -1834,7 +1823,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651104?h=27658d481a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -1845,7 +1834,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651636?h=cdb50cfeae&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -1856,7 +1845,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651671?h=57adde57ca&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -1867,7 +1856,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651558?h=ebfbf7a3e5&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -1878,7 +1867,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651395?h=26a5dc49e2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -1889,13 +1878,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon11.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096651700?h=96d9fb939f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "22:07",
         "previousEpisode": "episode-12",
         "nextEpisode": null
       }
     ]
   },
-
   "quick-draw": {
     "episodes": [
       {
@@ -1905,7 +1893,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653802?h=d10f624c2d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "07:04",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -1916,7 +1904,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653148?h=0e422d8568&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "07:05",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -1927,7 +1915,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653397?h=c86a15a450&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -1938,7 +1926,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653619?h=b7a9dc851d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -1949,7 +1937,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653494?h=c0061f3364&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -1960,7 +1948,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653742?h=f2a962eb9b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -1971,7 +1959,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653263?h=60f888e1e5&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -1982,7 +1970,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653104?h=6cc8cd0437&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -1993,7 +1981,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653706?h=87a7a14bc3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -2004,7 +1992,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653549?h=21f4d978ba&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -2015,7 +2003,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653520?h=5b35f0c22f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -2026,7 +2014,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653829?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -2037,7 +2025,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653596?h=c8bbd891c4&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -2048,7 +2036,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653301?h=26129ebfb0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -2059,7 +2047,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653230?h=e89bee9f21&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-14",
         "nextEpisode": "episode-16"
       },
@@ -2070,7 +2058,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653352?h=89832274c7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-15",
         "nextEpisode": "episode-17"
       },
@@ -2081,7 +2069,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653211?h=4be0aa900b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-16",
         "nextEpisode": "episode-18"
       },
@@ -2092,7 +2080,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653180?h=6042a2e035&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-17",
         "nextEpisode": "episode-19"
       },
@@ -2103,7 +2091,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653327?h=53697f1577&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-18",
         "nextEpisode": "episode-20"
       },
@@ -2114,13 +2102,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon10.jpg",
         "videoUrl": "https://player.vimeo.com/video/1096653769?h=1edc9d7788&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "07:04",
         "previousEpisode": "episode-19",
         "nextEpisode": null
       }
     ]
   },
-
   "jetsons": {
     "episodes": [
       {
@@ -2130,7 +2117,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003719?h=f98703dbc8&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "25:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -2141,7 +2128,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003660?h=fe6ac11699&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "25:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -2152,7 +2139,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003844?h=7ba7be0376&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -2163,7 +2150,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003705?h=4a4120a364&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -2174,7 +2161,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003820?h=6a6e0ac1a2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -2185,7 +2172,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003731?h=e998d952b1&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -2196,7 +2183,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003763?h=fa931843be&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -2207,7 +2194,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003672?h=d0a4903789&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -2218,7 +2205,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003611?h=68bad361f2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode10"
       },
@@ -2229,7 +2216,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003779?h=ad21ed393f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -2240,7 +2227,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003690?h=30682d08e0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -2251,7 +2238,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003863?h=d6b271cea9&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -2262,7 +2249,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003595?h=1687c8f306&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -2273,7 +2260,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003798?h=a1d9f7d326&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -2284,7 +2271,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003649?h=81dc8f4485&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-14",
         "nextEpisode": "episode-16"
       },
@@ -2295,7 +2282,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003754?h=a2fc79d5e0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-15",
         "nextEpisode": "episode-17"
       },
@@ -2306,7 +2293,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003631?h=206398b230&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-16",
         "nextEpisode": "episode-18"
       },
@@ -2317,13 +2304,12 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon7.jpg",
         "videoUrl": "https://player.vimeo.com/video/1097003835?h=3d71d36d30&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:56",
         "previousEpisode": "episode-17",
         "nextEpisode": null
       }
     ]
   },
-
   "steamboat-willie": {
     "episodes": [
       {
@@ -2333,13 +2319,12 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon18.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1105527720?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "07:37",
         "previousEpisode": null,
         "nextEpisode": null
       }
     ]
   },
-
   "johnny-quest": {
     "episodes": [
       {
@@ -2349,7 +2334,7 @@
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867767?h=cf32a26753&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "25:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -2360,7 +2345,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867752?h=56d4f3d5ce&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "25:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -2371,7 +2356,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867661?h=143a31cdf3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -2382,7 +2367,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867896?h=bb26b5aa28&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -2393,7 +2378,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867949?h=3c99723fdd&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -2404,7 +2389,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867726?h=d7a063ab07&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -2415,7 +2400,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867789?h=ff5050d75a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8"
       },
@@ -2426,7 +2411,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867959?h=6f94b0ad70&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -2437,7 +2422,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867970?h=3c8735947a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode10"
       },
@@ -2448,7 +2433,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867858?h=a4b2311256&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -2459,7 +2444,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867875?h=2e02f17c66&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -2470,7 +2455,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867841?h=1aa2391fef&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -2481,7 +2466,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867823?h=1066ca7886&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -2492,7 +2477,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867981?h=a2b9041253&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -2503,7 +2488,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867918?h=bafde5a485&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-14",
         "nextEpisode": "episode-16"
       },
@@ -2514,7 +2499,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867710?h=56e8c99265&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-15",
         "nextEpisode": "episode-17"
       },
@@ -2525,7 +2510,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867930?h=b369892c47&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-16",
         "nextEpisode": "episode-18"
       },
@@ -2536,7 +2521,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867688?h=dd98002d06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-17",
         "nextEpisode": "episode-19"
       },
@@ -2547,7 +2532,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon20.jpeg",
         "videoUrl": "https://player.vimeo.com/video/1103867806?h=3d9c2e0208&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "25:31",
         "previousEpisode": "episode-18",
         "nextEpisode": null
       }
@@ -2560,9 +2545,9 @@
         "title": "Episode 1",
         "slug": "episode-1",
         "": "Atom Ant's first adventure where he discovers his superpowers and helps the local community.",
-        "thumbnail": "/assets/images/cartoons/cartoon13.jpg",        
+        "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529826?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "22:30",
+        "duration": "10:30",
         "previousEpisode": null,
         "nextEpisode": "episode-2"
       },
@@ -2573,7 +2558,7 @@
         "": "Atom Ant must rescue a group of trapped miners from a collapsed tunnel.",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529739?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "21:45",
+        "duration": "10:45",
         "previousEpisode": "episode-1",
         "nextEpisode": "episode-3"
       },
@@ -2584,7 +2569,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529760?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-2",
         "nextEpisode": "episode-4"
       },
@@ -2595,7 +2580,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529661?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-3",
         "nextEpisode": "episode-5"
       },
@@ -2606,7 +2591,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529705?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-4",
         "nextEpisode": "episode-6"
       },
@@ -2617,7 +2602,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529807?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-5",
         "nextEpisode": "episode-7"
       },
@@ -2628,7 +2613,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529675?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-6",
         "nextEpisode": "episode-8`"
       },
@@ -2639,7 +2624,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529613?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-7",
         "nextEpisode": "episode-9"
       },
@@ -2650,7 +2635,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529577?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-8",
         "nextEpisode": "episode-10"
       },
@@ -2661,7 +2646,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529501?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-9",
         "nextEpisode": "episode-11"
       },
@@ -2672,7 +2657,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529402?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-10",
         "nextEpisode": "episode-12"
       },
@@ -2683,7 +2668,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529351?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-11",
         "nextEpisode": "episode-13"
       },
@@ -2694,7 +2679,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529311?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-12",
         "nextEpisode": "episode-14"
       },
@@ -2705,7 +2690,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529095?h=e1abbb2ff9&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-13",
         "nextEpisode": "episode-15"
       },
@@ -2716,7 +2701,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529114?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-14",
         "nextEpisode": "episode-16"
       },
@@ -2727,7 +2712,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529159?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-15",
         "nextEpisode": "episode-17"
       },
@@ -2738,7 +2723,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529196?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-16",
         "nextEpisode": "episode-18"
       },
@@ -2749,7 +2734,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529791?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-17",
         "nextEpisode": "episode-19"
       },
@@ -2760,7 +2745,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529643?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-18",
         "nextEpisode": "episode-20"
       },
@@ -2771,7 +2756,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529243?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-19",
         "nextEpisode": "episode-21"
       },
@@ -2782,7 +2767,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529444?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-20",
         "nextEpisode": "episode-22"
       },
@@ -2793,7 +2778,7 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529295?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-21",
         "nextEpisode": "episode-23"
       },
@@ -2804,12 +2789,10 @@
         "": " ",
         "thumbnail": "/assets/images/cartoons/cartoon13.jpg",
         "videoUrl": "https://player.vimeo.com/video/1105529277?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "duration": "23:15",
+        "duration": "10:40",
         "previousEpisode": "episode-22",
         "nextEpisode": null
       }
     ]
   }
-
-
-} 
+}
