@@ -7,43 +7,131 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight, Play, Bookmark, ThumbsUp, Share, Star, Lock } from "lucide-react";
 import Navbar from '../../../../components/navbarSearch';
 import home02 from '../../../../public/assets/images/background/homePage05.jpg';
+import { auth, db } from '../../../../firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import moviesData from '../../../../src/data/movies.json';
-import { auth } from '../../../../firebase';
 
 // Add disabled genres here
-const DISABLED_GENRES = ['adventure', 'biographical','family', 'historical', 'independent', 'inspiration', 'musical', 'news', 'sport', 'war']; 
+const DISABLED_GENRES = ['family', 'historical', 'independent', 'inspiration', 'news', 'sport']; 
 
 export default function GenrePage() {
   const params = useParams();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const scrollContainerRef = useRef(null);
-  const locomotiveScroll = useRef(null);
   const [sortBy, setSortBy] = useState('newest');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const genreSlug = params.slug;
-  const movies = moviesData[genreSlug] || [];
+  const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const scrollContainerRef = useRef(null);
+  const locomotiveScroll = useRef(null);
+
+  // Check if the current genre is disabled
+  const isGenreDisabled = DISABLED_GENRES.includes(genreSlug);
+
+  // Debug moviesData to see its structure
+  useEffect(() => {
+    console.log('moviesData structure:', typeof moviesData, Object.keys(moviesData || {}));
+    console.log('genreSlug:', genreSlug);
+    if (genreSlug && moviesData) {
+      console.log(`moviesData[${genreSlug}]:`, moviesData[genreSlug]);
+    }
+  }, [genreSlug]);
 
   useEffect(() => {
-    if (!isLoading && isAuthenticated && scrollContainerRef.current) {
-      import('locomotive-scroll').then((locomotiveScrollModule) => {
-        locomotiveScroll.current = new locomotiveScrollModule.default({
-          el: scrollContainerRef.current,
-          smooth: true,
-          lerp: 0.08,
-        });
-      });
-      import('locomotive-scroll/dist/locomotive-scroll.css');
-    }
+    let scroll;
+    const initializeScroll = async () => {
+      if (scrollContainerRef.current) {
+        try {
+          const LocomotiveScroll = await import('locomotive-scroll');
+          await import('locomotive-scroll/dist/locomotive-scroll.css');
+          
+          scroll = new LocomotiveScroll.default({
+            el: scrollContainerRef.current,
+            smooth: true,
+            lerp: 0.08,
+            multiplier: 1,
+            class: 'is-revealed',
+          });
+          
+          locomotiveScroll.current = scroll;
+        } catch (error) {
+          console.error('Failed to initialize locomotive scroll:', error);
+        }
+      }
+    };
+
+    // Add a small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      initializeScroll();
+    }, 100);
+
     return () => {
+      clearTimeout(timer);
+      if (scroll) {
+        scroll.destroy();
+      }
       if (locomotiveScroll.current) {
         locomotiveScroll.current.destroy();
         locomotiveScroll.current = null;
       }
     };
-  }, [isLoading, isAuthenticated]);
+  }, []);
+
+
+  // Fetch movies from Firebase
+  useEffect(() => {
+    const fetchMovies = async () => {
+      if (!genreSlug || isGenreDisabled) {
+        setLoading(false);
+        return;
+      }
+
+      setLoading(true);
+      try {
+        console.log('Fetching movies for genre:', genreSlug);
+        
+        // Query Firebase for movies of this genre
+        const moviesQuery = query(
+          collection(db, 'movies'),
+          where('genre', '==', genreSlug)
+        );
+        const moviesSnapshot = await getDocs(moviesQuery);
+        
+        if (!moviesSnapshot.empty) {
+          const fetchedMovies = moviesSnapshot.docs.map(doc => doc.data());
+          console.log(`Found ${fetchedMovies.length} movies in Firebase for genre ${genreSlug}`);
+          setMovies(fetchedMovies);
+        } else {
+          console.log(`No movies found in Firebase for genre ${genreSlug}, using JSON fallback`);
+          // Fallback to JSON data
+          const jsonMovies = Array.isArray(moviesData[genreSlug]) ? moviesData[genreSlug] : [];
+          setMovies(jsonMovies);
+        }
+      } catch (error) {
+        console.error('Error fetching movies from Firebase:', error);
+        // Fallback to JSON data on error
+        const jsonMovies = Array.isArray(moviesData[genreSlug]) ? moviesData[genreSlug] : [];
+        setMovies(jsonMovies);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (isAuthenticated && genreSlug) {
+      fetchMovies();
+    }
+  }, [genreSlug, isAuthenticated, isGenreDisabled]);
+
+  // Update locomotive scroll when movies load
+  useEffect(() => {
+    if (locomotiveScroll.current && movies.length > 0) {
+      setTimeout(() => {
+        locomotiveScroll.current.update();
+      }, 100);
+    }
+  }, [movies]);
 
   // Check authentication status
   useEffect(() => {
@@ -62,9 +150,6 @@ export default function GenrePage() {
     return () => unsubscribe();
   }, [genreSlug, router, searchParams]);
 
-  // Check if the current genre is disabled
-  const isGenreDisabled = DISABLED_GENRES.includes(genreSlug);
-
   // Convert slug to title case and replace hyphens with spaces
   const formatGenreName = (slug) => {
     return slug
@@ -75,23 +160,6 @@ export default function GenrePage() {
 
   const genreName = formatGenreName(params.slug);
 
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: -200,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: 200,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const handleMovieClick = (movie) => {
     if (isGenreDisabled) return; // Prevent navigation if genre is disabled

@@ -7,9 +7,10 @@ import Link from 'next/link';
 import { Play, ArrowLeft } from 'lucide-react';
 import Navbar from '../../../../../../components/navbarSearch';
 import Footer from '../../../../../../components/footer';
+import { auth, db } from '../../../../../../firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import moviesData from '../../../../../data/movies.json';
 import episodesData from '../../../../../data/cartoonEpisodes.json';
-import { auth } from '../../../../../../firebase';
 
 export default function EpisodePage() {
   const params = useParams();
@@ -41,14 +42,54 @@ export default function EpisodePage() {
   }, [slug, episodeSlug, router, searchParams]);
 
   useEffect(() => {
-    // Find the cartoon by slug
-    const foundCartoon = moviesData['cartoon']?.find(c => c.slug === slug);
-    setCartoon(foundCartoon);
+    const fetchData = async () => {
+      try {
+        // Find the cartoon by slug from Firebase
+        const cartoonsQuery = query(
+          collection(db, 'movies'),
+          where('genre', '==', 'cartoon'),
+          where('slug', '==', slug)
+        );
+        const cartoonsSnapshot = await getDocs(cartoonsQuery);
+        
+        if (!cartoonsSnapshot.empty) {
+          const foundCartoon = cartoonsSnapshot.docs[0].data();
+          setCartoon(foundCartoon);
 
-    // Get episode data from episodes.json
-    if (foundCartoon && episodesData[slug]) {
-      const foundEpisode = episodesData[slug].episodes.find(ep => ep.slug === episodeSlug);
-      setEpisode(foundEpisode);
+          // Get episode data from Firebase
+          const episodesQuery = query(
+            collection(db, 'episodes'),
+            where('seriesSlug', '==', slug),
+            where('slug', '==', episodeSlug)
+          );
+          const episodesSnapshot = await getDocs(episodesQuery);
+          
+          if (!episodesSnapshot.empty) {
+            const foundEpisode = episodesSnapshot.docs[0].data();
+            setEpisode(foundEpisode);
+          }
+        } else {
+          // Fallback to JSON data  
+          const foundCartoon = moviesData['cartoon']?.find(c => c.slug === slug);
+          if (foundCartoon) {
+            setCartoon(foundCartoon);
+            
+            // Get episode data from JSON
+            if (episodesData[slug]) {
+              const foundEpisode = episodesData[slug].episodes.find(ep => ep.slug === episodeSlug);
+              if (foundEpisode) {
+                setEpisode(foundEpisode);
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching episode data:', error);
+      }
+    };
+
+    if (slug && episodeSlug) {
+      fetchData();
     }
   }, [slug, episodeSlug]);
 

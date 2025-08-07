@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "dotenv": "^17.2.1",
     "firebase": "^11.9.1",
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.515.0",

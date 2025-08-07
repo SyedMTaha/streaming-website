@@ -103,21 +103,138 @@
       "genre": "action",
       "description": "A relentless vigilante uncovers deep-rooted corruption in Gotham City while pursuing a sadistic serial killer known as the Riddler.",
       "videoUrl": "https://player.vimeo.com/video/1101567932?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "a9",
+      "title": "DOA Movie",
+      "image": "/assets/images/movies/action/action13.png",
+      "innerImage": "/assets/images/movies/action/landscape/action14_inner.png",
+      "slug": "doa-movie",
+      "year": "1949",
+      "duration": "32m",
+      "rating": "7.2",
+      "genre": "Action",
+      "description": "In this classic film noir, tax accountant Frank Bigelow (Edmond O’Brien) discovers he's been poisoned with a slow-acting toxin and has only 24 hours to live. Determined to find his own killer, he embarks on a frantic search through San Francisco's underworld, uncovering a web of corruption and deceit.",
+      "videoUrl": "https://player.vimeo.com/video/1107888073?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "adventure": [
     {
       "id": "adv1",
-      "title": "Lost Treasure",
-      "image": "/assets/images/movies/adventure1.jpg",
-      "innerImage": "/assets/images/movies/adventure1_inner.jpg",
-      "slug": "lost-treasure",
-      "year": "2024",
-      "duration": "2h 20m",
-      "rating": "8.8",
-      "genre": "adventure",
-      "description": "An adventurous journey to find a hidden treasure.",
-      "videoUrl": ""
+      "title": "Captain Kidd",
+      "image": "/assets/images/movies/adventure/adv1.png",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv1_inner.png",
+      "slug": "captain-kidd",
+      "year": "1945",
+      "duration": "1h 28m",
+      "rating": "6.3",
+      "genre": "Adventure",
+      "description": "In this swashbuckling adventure, pirate William Kidd (Charles Laughton) deceives King William III into granting him a privateer commission to escort a treasure-laden ship.",
+      "videoUrl": "https://player.vimeo.com/video/1107887939?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "adv2",
+      "title": "The New Adventures of Tarzan",
+      "image": "/assets/images/movies/adventure/adv2.png",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv2_inner.png",
+      "slug": "the-new-adventures-of-tarzan",
+      "year": "1935",
+      "duration": "1h 10m",
+      "rating": "5.3",
+      "genre": "Adventure",
+      "description": "Tarzan (Herman Brix), portrayed as a cultured and educated gentleman, embarks on a journey to Guatemala to rescue his friend D'Arnot. Alongside Ula Vale (Ula Holt) and Major Martling, he seeks the Green Goddess idol, which holds a powerful explosive formula and a fortune in jewels.",
+      "videoUrl": "https://player.vimeo.com/video/1107887949?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "adv3",
+      "title": "Mr Robinson Crusoe",
+      "image": "/assets/images/movies/adventure/adv3.png",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv3_inner.png",
+      "slug": "mr-robinson-crusoe",
+      "year": "1932",
+      "duration": "1h 10m",
+      "rating": "5.6",
+      "genre": "Adventure",
+      "description": "In this comedic adventure, playboy yachtsman Steve Drexel (Douglas Fairbanks) accepts a bet to survive alone on a deserted island. Using only a toothbrush and his wits, he builds a lavish \"Park Avenue\" lifestyle, complete with a home on stilts and animal helpers. ",
+      "videoUrl": "https://player.vimeo.com/video/1107887960?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "adv4",
+      "title": "Santa Fe Trail",
+      "image": "/assets/images/movies/adventure/adv4.png",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv4_inner.png",
+      "slug": "santa-fe-trail",
+      "year": "1940",
+      "duration": "1h 49m",
+      "rating": "6.2",
+      "genre": "Adventure",
+      "description": "In this Western epic, Errol Flynn stars as J.E.B. Stuart, and Ronald Reagan portrays George Custer. The film dramatizes their military careers leading up to the Civil War, focusing on their opposition to the abolitionist John Brown (Raymond Massey).",
+      "videoUrl": "https://player.vimeo.com/video/1107887981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "adv5",
+      "title": "Jungle Book",
+      "image": "/assets/images/movies/adventure/adv5.png",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv5_inner.png",
+      "slug": "jungle-book",
+      "year": "1942",
+      "duration": "1h 45m",
+      "rating": "6.0",
+      "genre": "Adventure",
+      "description": "A live-action adaptation of Rudyard Kipling’s stories, this film follows a young boy raised by wolves in the Indian jungle. The movie captures his adventures and encounters with wild animals. It’s a classic family adventure with early jungle movie charm.",
+      "videoUrl": "https://player.vimeo.com/video/1107888059?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "adv6",
+      "title": "Sherlock Holmes Dressed to Kill",
+      "image": "/assets/images/movies/adventure/adv6.jpg",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv6_inner.png",
+      "slug": "sherlock-holmes-dressed-to-kill",
+      "year": "1946",
+      "duration": "1h 11m",
+      "rating": "7.2",
+      "genre": "Adventure",
+      "description": "Holmes and Watson investigate a series of mysterious murders linked to a stolen gem. Classic detective work and suspense unfold as they chase the cunning killer. A solid entry in the Sherlock Holmes series starring Basil Rathbone.",
+      "videoUrl": "https://player.vimeo.com/video/1107888084?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "adv7",
+      "title": "Hell Ship Mutiny",
+      "image": "/assets/images/movies/adventure/adv7.png",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv7_inner.png",
+      "slug": "hell-ship-mutiny",
+      "year": "1957",
+      "duration": "1h 05m",
+      "rating": "5.5",
+      "genre": "Adventure",
+      "description": "A gripping adventure where a ship’s crew stages a dangerous mutiny at sea, facing fierce battles and survival challenges. Action-packed and tense, it showcases loyalty and betrayal on the high seas.",
+      "videoUrl": "https://player.vimeo.com/video/1107887736?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "adv8",
+      "title": "The Iron Mask",
+      "image": "/assets/images/movies/adventure/adv8.png",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv8_inner.png",
+      "slug": "the-iron-mask",
+      "year": "1929",
+      "duration": "1h 12m",
+      "rating": "7.5",
+      "genre": "Adventure",
+      "description": "A silent swashbuckler where Douglas Fairbanks returns as dashing d’Artagnan to rescue the young King Louis XIV from political conspiracies. Packed with sword fights and adventure, it’s a classic Musketeer tale.",
+      "videoUrl": "https://player.vimeo.com/video/1107887612?h=29f7f711cb&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "adv9",
+      "title": "The Snows of Kilimanjaro",
+      "image": "/assets/images/movies/adventure/adv9.png",
+      "innerImage": "/assets/images/movies/adventure/landscape/adv9_inner.png",
+      "slug": "the-snows-of-kilimanjaro",
+      "year": "1952",
+      "duration": "1h 53m",
+      "rating": "6.5",
+      "genre": "Adventure",
+      "description": "A writer stranded in Africa reflects on his life, loves, and regrets as he faces a fatal infection. A dramatic exploration of lost dreams and redemption, based on Hemingway’s story.",
+      "videoUrl": "https://player.vimeo.com/video/1107887795?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "animation": [
@@ -164,43 +281,16 @@
   "biographical": [
     {
       "id": "b1",
-      "title": "The Inventor's Tale",
-      "image": "/assets/images/movies/bio1.jpg",
-      "slug": "the-inventors-tale",
-      "year": "2024",
-      "duration": "2h 10m",
-      "rating": "8.6",
-      "genre": "biographical"
-    },
-    {
-      "id": "b2",
-      "title": "Champion's Journey",
-      "image": "/assets/images/movies/bio2.jpg",
-      "slug": "champions-journey",
-      "year": "2023",
-      "duration": "2h 5m",
-      "rating": "8.4",
-      "genre": "biographical"
-    },
-    {
-      "id": "b3",
-      "title": "Artistic Soul",
-      "image": "/assets/images/movies/bio3.jpg",
-      "slug": "artistic-soul",
-      "year": "2024",
-      "duration": "2h 15m",
-      "rating": "8.7",
-      "genre": "biographical"
-    },
-    {
-      "id": "b4",
-      "title": "The Visionary",
-      "image": "/assets/images/movies/bio4.jpg",
-      "slug": "the-visionary",
-      "year": "2023",
-      "duration": "2h 20m",
-      "rating": "8.5",
-      "genre": "biographical"
+      "title": "Born to Win ",
+      "image": "/assets/images/movies/biographical/b1.png",
+      "innerImage": "/assets/images/movies/biographical/landscape/b1_inner.png",
+      "slug": "born-to-win",
+      "year": "1971",
+      "duration": "1h 23m",
+      "rating": "5.8",
+      "genre": "Biography",
+      "description": "A heroin‑addicted ex‑hairdresser in gritty 1970s Times Square resorts to petty crime and betrayal to feed his habit only to see his world unravel as addiction, guilt, and moral decay close in.",
+      "videoUrl": "https://player.vimeo.com/video/1107887783?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "cartoon": [
@@ -500,6 +590,45 @@
       "genre": "Comedy",
       "description": "A group of shady characters plan a uranium deal in Africa, but nothing goes according to plan.",
       "videoUrl": "https://player.vimeo.com/video/1103860140?h=68f435a37b&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "com7",
+      "title": "Jack and the Beanstalk",
+      "image": "/assets/images/movies/comedy/comedy8.jpg",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy8_inner.png",
+      "slug": "jack-and-the-beanstalk",
+      "year": "1952",
+      "duration": "1h 14m",
+      "rating": "5.8",
+      "genre": "Comedy",
+      "description": "In this family-friendly comedy, Abbott and Costello portray bumbling characters who are hired to babysit a mischievous boy named Donald. To lull him to sleep, they attempt to read the classic fairy tale of Jack and the Beanstalk, but fall asleep themselves.",
+      "videoUrl": "https://player.vimeo.com/video/1107887928?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "com8",
+      "title": "Meet John Doe",
+      "image": "/assets/images/movies/comedy/comedy9.png",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy9_inner.png",
+      "slug": "meet-john-doe",
+      "year": "1941",
+      "duration": "2h 02m",
+      "rating": "7.6",
+      "genre": "Comedy",
+      "description": "A reporter's fake story about a man planning suicide sparks a nationwide movement. A homeless man is hired to impersonate \"John Doe,\" becoming a symbol of protest. As the movement grows, so does its manipulation by powerful interests, leading to a poignant climax. ",
+      "videoUrl": "https://player.vimeo.com/video/1107888031?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "com9",
+      "title": "My Dear Secretary",
+      "image": "/assets/images/movies/comedy/comedy10.png",
+      "innerImage": "/assets/images/movies/comedy/landscape/comedy10_inner.png",
+      "slug": "my-dear-secretary",
+      "year": "1948",
+      "duration": "1h 34m",
+      "rating": "6.5",
+      "genre": "Comedy",
+      "description": "Aspiring writer Stephanie \"Steve\" Gaylord becomes the secretary to best-selling novelist Owen Waterbury, only to discover his chaotic lifestyle and playboy tendencies.",
+      "videoUrl": "https://player.vimeo.com/video/1107887761?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "crime": [
@@ -554,6 +683,71 @@
       "genre": "Crime",
       "description": "A classic crime mystery film based on Agatha Christie’s best-selling novel. Ten strangers are invited to a remote island, only to be mysteriously killed one by one, as dark secrets from their pasts resurface.",
       "videoUrl": "https://player.vimeo.com/video/1105530545?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "cr5",
+      "title": "Doomed to Die",
+      "image": "/assets/images/movies/crime/crime5.png ",
+      "innerImage": "/assets/images/movies/crime/landscape/crime5_inner.png",
+      "slug": "doomed-to-die",
+      "year": "1940",
+      "duration": "1h 07m",
+      "rating": "5.5",
+      "genre": "Crime",
+      "description": "A tenacious detective and a plucky reporter join forces to clear the fiancé of a murdered shipping tycoon, plunging into a web of smuggling and betrayal",
+      "videoUrl": "https://player.vimeo.com/video/1107887642?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "cr6",
+      "title": "Mr Wong in Chinatown",
+      "image": "/assets/images/movies/crime/crime6.png",
+      "innerImage": "/assets/images/movies/crime/landscape/crime6_inner.png",
+      "slug": "mr-wong-in-chinatown",
+      "year": "1939",
+      "duration": "1h 10m",
+      "rating": "5.8",
+      "genre": "Crime",
+      "description": "Detective James Lee Wong investigates the murder of Princess Lin Hwa, who is killed by a poisoned dart in his home. The case leads him into a complex web of espionage and forgery involving Chinese military secrets. ",
+      "videoUrl": "https://player.vimeo.com/video/1107887651?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "cr7",
+      "title": "Impact ",
+      "image": "/assets/images/movies/crime/crime7.png",
+      "innerImage": "/assets/images/movies/crime/landscape/crime7_inner.png",
+      "slug": "impact",
+      "year": "1949",
+      "duration": "1h 50m",
+      "rating": "7.0",
+      "genre": "Crime",
+      "description": "After surviving a botched murder attempt orchestrated by his wife and her lover, millionaire Walter Williams hides in a small town. When he returns to clear his name, he faces a new challenge: his wife accuses him of plotting the murder",
+      "videoUrl": "https://player.vimeo.com/video/1107888022?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "cr8",
+      "title": "Too Late for Tears",
+      "image": "/assets/images/movies/crime/crime8.png",
+      "innerImage": "/assets/images/movies/crime/landscape/crime8_inner.png",
+      "slug": "too-late-for-tears",
+      "year": "1949",
+      "duration": "1h 41m",
+      "rating": "7.3",
+      "genre": "Crime",
+      "description": "A ruthless woman finds a suitcase of $60,000 dropped into her car and will do anything even murder to keep it.",
+      "videoUrl": "https://player.vimeo.com/video/1107887889?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "cr9",
+      "title": "The Saint Louis Bank Robbery",
+      "image": "/assets/images/movies/crime/crime9.png",
+      "innerImage": "/assets/images/movies/crime/landscape/crime9_inner.png",
+      "slug": "the-saint-louis-bank-robbery",
+      "year": "1959",
+      "duration": "1h 28m",
+      "rating": "5.8",
+      "genre": "Crime",
+      "description": "A washed-up college dropout becomes the getaway driver in a St. Louis bank heist, but as his ex-girlfriend senses trouble, the job descends into paranoia, betrayal, and real‑time disaster",
+      "videoUrl": "https://player.vimeo.com/video/1107887823?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "documentary": [
@@ -662,6 +856,58 @@
       "genre": "Drama",
       "description": "A lawyer uncovers a Nazi conspiracy involving forged documents and murder.",
       "videoUrl": "https://player.vimeo.com/video/1103856126?h=99c47fe50e&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "dr8",
+      "title": "Danger Flight",
+      "image": "/assets/images/movies/drama/drama16.png",
+      "innerImage": "/assets/images/movies/drama/landscape/drama8_inner.png",
+      "slug": "danger-flight",
+      "year": "1939",
+      "duration": "1h 01m",
+      "rating": "5.6",
+      "genre": "Drama",
+      "description": "Tailspin Tommy Tompkins, a daring pilot, braves a severe storm to deliver a payroll. Along the way, he crosses paths with crooks plotting to steal the money.",
+      "videoUrl": "https://player.vimeo.com/video/1107887747?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "dr9",
+      "title": "Penny Serenade",
+      "image": "/assets/images/movies/drama/drama17.png",
+      "innerImage": "/assets/images/movies/drama/landscape/drama9_inner.png",
+      "slug": "penny-serenade",
+      "year": "1941",
+      "duration": "1h 59m",
+      "rating": "7.1",
+      "genre": "Drama",
+      "description": "A devoted couple—played by Cary Grant and Irene Dunne—face heartbreak after a miscarriage prevents them from having children. They adopt a daughter, only to suffer further tragedy, testing the strength of their love.",
+      "videoUrl": "https://player.vimeo.com/video/1107888012?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "dr10",
+      "title": "Within Our Gates",
+      "image": "/assets/images/movies/drama/drama18.png",
+      "innerImage": "/assets/images/movies/drama/landscape/drama10_inner.png",
+      "slug": "within-our-gates",
+      "year": "1920",
+      "duration": "1h 17m",
+      "rating": "6.4",
+      "genre": "Drama",
+      "description": "Sylvia Landry, a determined young Black woman, travels North to raise funds for a struggling school for impoverished Black children in the Deep South. Along the way, she faces personal betrayal, falls in love with a socially conscious doctor, and confronts the trauma of her past",
+      "videoUrl": "https://player.vimeo.com/video/1107888093?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "dr11",
+      "title": "Jailbait",
+      "image": "/assets/images/movies/drama/drama19.png",
+      "innerImage": "/assets/images/movies/drama/landscape/drama11_inner.png",
+      "slug": "jailbait",
+      "year": "1954",
+      "duration": "1h 11m",
+      "rating": "3.7",
+      "genre": "Drama",
+      "description": "A gangster coerces a plastic surgeon to give him a new face after a heist goes awry—leading to a deadly masquerade and moral unraveling.",
+      "videoUrl": "https://player.vimeo.com/video/1107887625?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "family": [
@@ -967,43 +1213,29 @@
   "musical": [
     {
       "id": "m1",
-      "title": "Rhythm of Life",
-      "image": "/assets/images/movies/musical1.jpg",
-      "slug": "rhythm-of-life",
-      "year": "2024",
-      "duration": "2h 0m",
-      "rating": "8.7",
-      "genre": "musical"
+      "title": "Stormy Weather",
+      "image": "/assets/images/movies/musical/musical1.jpg",
+      "innerImage": "/assets/images/movies/musical/landscape/musical1_inner.png",
+      "slug": "stormy-weather",
+      "year": "1943",
+      "duration": "1h 17m",
+      "rating": "7.3",
+      "genre": "Musical",
+      "description": "A World War I veteran turned dancer reflects on his rise in show business and his love for singer Selina Rogers. The film showcases performances by Lena Horne, Bill Robinson, and other African American artists of the era. Notably, it features the iconic \"Jumpin' Jive\" dance sequence by the Nicholas Brothers. ",
+      "videoUrl": "https://player.vimeo.com/video/1107887995?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       "id": "m2",
-      "title": "Dance Dreams",
-      "image": "/assets/images/movies/musical2.jpg",
-      "slug": "dance-dreams",
-      "year": "2023",
-      "duration": "1h 55m",
-      "rating": "8.5",
-      "genre": "musical"
-    },
-    {
-      "id": "m3",
-      "title": "Melody of Love",
-      "image": "/assets/images/movies/musical3.jpg",
-      "slug": "melody-of-love",
-      "year": "2024",
-      "duration": "2h 5m",
-      "rating": "8.6",
-      "genre": "musical"
-    },
-    {
-      "id": "m4",
-      "title": "Stage Lights",
-      "image": "/assets/images/movies/musical4.jpg",
-      "slug": "stage-lights",
-      "year": "2023",
-      "duration": "2h 10m",
-      "rating": "8.4",
-      "genre": "musical"
+      "title": "Royal Wedding ",
+      "image": "/assets/images/movies/musical/musical2.png",
+      "innerImage": "/assets/images/movies/musical/landscape/musical2_inner.png",
+      "slug": "royal-wedding",
+      "year": "1951",
+      "duration": "1h 31m",
+      "rating": "6.7",
+      "genre": "Musical",
+      "description": "In this charming MGM musical, sibling dance duo Tom and Ellen Bowen (Fred Astaire and Jane Powell) travel to London to perform during the 1947 royal wedding festivities. ",
+      "videoUrl": "https://player.vimeo.com/video/1107888045?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "mystery": [
@@ -1071,6 +1303,45 @@
       "genre": "Mystery",
       "description": "A woman disappears on a train, and her fellow passenger is the only one who believes it — a classic Hitchcock mystery.",
       "videoUrl": "https://player.vimeo.com/video/1103608278?h=7e97b773de&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "my6",
+      "title": "The Second Woman",
+      "image": "/assets/images/movies/mystery/mystery6.png",
+      "innerImage": "/assets/images/movies/mystery/landscape/mystery6_inner.png",
+      "slug": "the-second-woman",
+      "year": "1950",
+      "duration": "1h 30m ",
+      "rating": "6.3",
+      "genre": "Mystery",
+      "description": "A grieving architect living in a dramatic cliff top home is plagued by a string of sinister accidents, a perceptive neighbor suspects sabotage and steps in to help unravel the mystery.",
+      "videoUrl": "https://player.vimeo.com/video/1107887702?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "my7",
+      "title": "Mr Wong Detective",
+      "image": "/assets/images/movies/mystery/mystery7.png",
+      "innerImage": "/assets/images/movies/mystery/landscape/mystery7_inner.png",
+      "slug": "mr-wong-detective",
+      "year": "1938",
+      "duration": "1h 08m",
+      "rating": "6.0",
+      "genre": "Mystery",
+      "description": "When a chemical company owner fears for his life, private detective James Lee Wong discovers a locked-room murder by poison gas, leading him to unravel a web of corporate greed and foreign espionage.",
+      "videoUrl": "https://player.vimeo.com/video/1107887689?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "my8",
+      "title": "The Mystery of Mr Wong",
+      "image": "/assets/images/movies/mystery/mystery8.png",
+      "innerImage": "/assets/images/movies/mystery/landscape/mystery8_inner.png",
+      "slug": "the-mystery-of-mr-wong",
+      "year": "1939",
+      "duration": "1h 10m ",
+      "rating": "6.1",
+      "genre": "Mystery",
+      "description": "A star sapphire dubbed The Eye of the Daughter of the Moon is stolen from China and triggers a deadly murder at a social gathering. Detective James Lee Wong (Boris Karloff) must navigate a maze of red herrings to expose the killer and recover the cursed gem. ",
+      "videoUrl": "https://player.vimeo.com/video/1107887673?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "news": [
@@ -1141,6 +1412,19 @@
       "genre": "Romance",
       "description": "A widow is pursued in Paris by several men trying to recover a fortune her late husband may have stolen.",
       "videoUrl": "https://player.vimeo.com/video/1103608037?h=826af8b200&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "r3",
+      "title": "The Amazing Adventure",
+      "image": "/assets/images/movies/romance/romance3.png",
+      "innerImage": "/assets/images/movies/romance/landscape/romance3_inner.png",
+      "slug": "the-amazing-adventure",
+      "year": "1936",
+      "duration": "1h 01m",
+      "rating": "6.3",
+      "genre": "Romance",
+      "description": "In this British romantic comedy, Cary Grant stars as Ernest Bliss, a wealthy young man who bets his doctor that he can live for a year without touching his inheritance. Taking on various jobs and experiencing life as an ordinary person, he learns valuable lessons about love and humility.",
+      "videoUrl": "https://player.vimeo.com/video/1107887858?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "sci-fi": [
@@ -1286,6 +1570,32 @@
       "genre": "Sci-Fi",
       "description": "A mute alien with human appearance crashes in Harlem and faces both wonder and pursuit by men in black.",
       "videoUrl": "https://player.vimeo.com/video/1103856061?h=5810c7fc21&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf12",
+      "title": "Cosmos War of the Planets",
+      "image": "/assets/images/movies/sci-fi/scifi13.png",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi13_inner.png",
+      "slug": "cosmos-war-of-the-planets",
+      "year": "1977",
+      "duration": "1h 29m",
+      "rating": "2.9",
+      "genre": "Sci-Fi",
+      "description": "In this Italian sci-fi film, Captain Alex Hamilton investigates a mysterious signal and UFO sightings over Antarctica, leading to the discovery of a giant robot enslaving humanoids on an unknown planet. The crew's mission to confront this threat escalates into a battle for Earth's survival.",
+      "videoUrl": "https://player.vimeo.com/video/1107887805?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf13",
+      "title": "Teenagers from Outer Space",
+      "image": "/assets/images/movies/sci-fi/scifi14.png",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi14_inner.png",
+      "slug": "teenagers-from-outer-space",
+      "year": "1959",
+      "duration": "1h 25m",
+      "rating": "3.6",
+      "genre": "Sci-Fi",
+      "description": "A young alien named Derek rebels against his species' plan to use Earth as a breeding ground for giant lobsters called Gargons. He befriends a teenage Earth girl, Betty, and together they attempt to thwart the invasion, facing challenges from both alien and human adversaries.",
+      "videoUrl": "https://player.vimeo.com/video/1107887874?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "sport": [
@@ -1382,48 +1692,60 @@
       "genre": "Thriller",
       "description": "A retired detective is hired to follow a woman behaving strangely, only to become obsessed with her.",
       "videoUrl": "https://player.vimeo.com/video/1103606943?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "t5",
+      "title": "The Fatal Hour",
+      "image": "/assets/images/movies/thriller/thriller8.png",
+      "innerImage": "/assets/images/movies/thriller/landscape/thriller5_inner.webp",
+      "slug": "the-fatal-hour",
+      "year": "1940",
+      "duration": "1h 06m",
+      "rating": "5.4",
+      "genre": "Thriller",
+      "description": "When a police officer is found murdered in the San Francisco Bay, Captain Street enlists detective James Lee Wong and reporter Bobbie Logan to uncover a gem-smuggling ring and expose the killer.",
+      "videoUrl": "https://player.vimeo.com/video/1107887661?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "t6",
+      "title": "Quicksand",
+      "image": "/assets/images/movies/thriller/thriller9.png",
+      "innerImage": "/assets/images/movies/thriller/landscape/thriller6_inner.png",
+      "slug": "quicksand",
+      "year": "1950",
+      "duration": "1h 19m",
+      "rating": "6.6",
+      "genre": "Thriller",
+      "description": "An auto mechanic, desperate to impress a blonde cashier, embezzles $20 and finds himself sinking deeper into crime from petty theft to blackmail and murder in a fast‑spirited descent into noir.",
+      "videoUrl": "https://player.vimeo.com/video/1107887917?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "t7",
+      "title": "The Woman in Green",
+      "image": "/assets/images/movies/thriller/thriller7.png",
+      "innerImage": "/assets/images/movies/thriller/landscape/thriller7_inner.png",
+      "slug": "the-woman-in-green",
+      "year": "1945",
+      "duration": "1h 07m",
+      "rating": "6.6",
+      "genre": "Thriller",
+      "description": "Sherlock Holmes investigates a string of London murders where each victim’s forefinger is mysteriously removed, uncovering a hypnotic blackmail scheme tied to his arch-nemesis, Professor Moriarty.",
+      "videoUrl": "https://player.vimeo.com/video/1107887712?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "war": [
     {
       "id": "w1",
-      "title": "Battle Lines",
-      "image": "/assets/images/movies/war1.jpg",
-      "slug": "battle-lines",
-      "year": "2024",
-      "duration": "2h 30m",
-      "rating": "8.7",
-      "genre": "war"
-    },
-    {
-      "id": "w2",
-      "title": "The Front",
-      "image": "/assets/images/movies/war2.jpg",
-      "slug": "the-front",
-      "year": "2023",
-      "duration": "2h 25m",
-      "rating": "8.5",
-      "genre": "war"
-    },
-    {
-      "id": "w3",
-      "title": "War Heroes",
-      "image": "/assets/images/movies/war3.jpg",
-      "slug": "war-heroes",
-      "year": "2024",
-      "duration": "2h 20m",
-      "rating": "8.6",
-      "genre": "war"
-    },
-    {
-      "id": "w4",
-      "title": "The Battle",
-      "image": "/assets/images/movies/war4.jpg",
-      "slug": "the-battle",
-      "year": "2023",
-      "duration": "2h 35m",
-      "rating": "8.4",
-      "genre": "war"
+      "title": "A Farewell to Arms",
+      "image": "/assets/images/movies/war/war1.png",
+      "innerImage": "/assets/images/movies/war/landscape/war1_inner.png",
+      "slug": "a-farewell-to-arms",
+      "year": "1932",
+      "duration": "1h 28m",
+      "rating": "6.6",
+      "genre": "War",
+      "description": "Set during World War I, this adaptation of Ernest Hemingway’s novel follows American ambulance driver Lt. Frederic Henry (Gary Cooper) and British nurse Catherine Barkley (Helen Hayes) as they fall in love amidst the chaos of war. Their relationship faces numerous challenges, including wartime separation and personal loss.",
+      "videoUrl": "https://player.vimeo.com/video/1107887841?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "western": [

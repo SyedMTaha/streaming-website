@@ -114,15 +114,47 @@ export async function PUT(request) {
     const fileData = await fs.readFile(filePath, 'utf8');
     const moviesByGenre = JSON.parse(fileData);
     let found = false;
+    
     for (const genreKey of Object.keys(moviesByGenre)) {
       moviesByGenre[genreKey] = moviesByGenre[genreKey].map(movie => {
         if (movie.id === updatedMovie.id) {
           found = true;
-          return { ...movie, ...updatedMovie };
+          
+          // Create a copy of the existing movie
+          const updatedMovieData = { ...movie };
+          
+          // Handle field mappings for incoming data
+          Object.keys(updatedMovie).forEach(key => {
+            if (key === 'id') return; // Skip ID
+            
+            if (key === 'link') {
+              // Map 'link' to 'videoUrl'
+              updatedMovieData.videoUrl = updatedMovie[key];
+            } else if (key === 'portrait') {
+              // Map 'portrait' to 'image' with proper path
+              const currentGenre = movie.genre.toLowerCase().replace(/\s+/g, '-');
+              updatedMovieData.image = `/assets/images/movies/${currentGenre}/${updatedMovie[key]}`;
+            } else if (key === 'landscape') {
+              // Map 'landscape' to 'innerImage' with proper path
+              const currentGenre = movie.genre.toLowerCase().replace(/\s+/g, '-');
+              updatedMovieData.innerImage = `/assets/images/movies/${currentGenre}/landscape/${updatedMovie[key]}`;
+            } else {
+              // For all other fields, update normally
+              updatedMovieData[key] = updatedMovie[key];
+            }
+          });
+          
+          // Update slug if title was changed
+          if (updatedMovie.title && updatedMovie.title !== movie.title) {
+            updatedMovieData.slug = generateSlug(updatedMovie.title);
+          }
+          
+          return updatedMovieData;
         }
         return movie;
       });
     }
+    
     if (!found) {
       return NextResponse.json({ message: 'Movie not found.' }, { status: 404 });
     }

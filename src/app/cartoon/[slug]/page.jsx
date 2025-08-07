@@ -7,10 +7,10 @@ import Link from 'next/link';
 import { Bookmark, Share, Star, Check } from 'lucide-react';
 import Navbar from '../../../../components/navbarSearch';
 import Footer from '../../../../components/footer';
+import { auth, db } from '../../../../firebase';
+import { collection, getDocs, doc, setDoc, deleteDoc, getDoc, query, where, limit } from 'firebase/firestore';
 import moviesData from '../../../data/movies.json';
 import episodesData from '../../../data/cartoonEpisodes.json';
-import { auth } from '../../../../firebase';
-import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
 
 export default function CartoonDetailPage() {
   const params = useParams();
@@ -70,21 +70,77 @@ export default function CartoonDetailPage() {
   }, [cartoon, slug, router, searchParams]);
 
   useEffect(() => {
-    // Find the cartoon by slug from the cartoon genre
-    const foundCartoon = moviesData['cartoon']?.find(c => c.slug === slug);
-    setCartoon(foundCartoon);
+    const fetchCartoonData = async () => {
+      try {
+        console.log('Fetching cartoon with slug:', slug);
+        
+        // Find the cartoon by slug from Firebase
+        const cartoonsQuery = query(
+          collection(db, 'movies'),
+          where('genre', '==', 'cartoon'),
+          where('slug', '==', slug)
+        );
+        const cartoonsSnapshot = await getDocs(cartoonsQuery);
+        
+        console.log('Cartoon query results:', cartoonsSnapshot.size, 'documents found');
+        
+        if (!cartoonsSnapshot.empty) {
+          const foundCartoon = cartoonsSnapshot.docs[0].data();
+          console.log('Found cartoon:', foundCartoon);
+          setCartoon(foundCartoon);
 
-    // Get episodes for this cartoon
-    if (foundCartoon) {
-      const cartoonEpisodes = episodesData[slug]?.episodes || [];
-      setEpisodes(cartoonEpisodes);
+          // Get episodes for this cartoon from Firebase
+          const episodesQuery = query(
+            collection(db, 'episodes'),
+            where('seriesSlug', '==', slug)
+          );
+          const episodesSnapshot = await getDocs(episodesQuery);
+          const cartoonEpisodes = episodesSnapshot.docs.map(doc => doc.data());
+          console.log('Found episodes:', cartoonEpisodes.length);
+          setEpisodes(cartoonEpisodes);
 
-      // Get recommended cartoons from the cartoon genre, excluding the current cartoon
-      const cartoonMovies = moviesData['cartoon'] || [];
-      const filteredCartoons = cartoonMovies.filter(c => c.slug !== slug);
-      // Shuffle and take 5 cartoons
-      const shuffled = [...filteredCartoons].sort(() => 0.5 - Math.random()).slice(0, 5);
-      setRecommendedCartoons(shuffled);
+          // Get recommended cartoons from Firebase, excluding the current cartoon
+          const recommendedQuery = query(
+            collection(db, 'movies'),
+            where('genre', '==', 'cartoon'),
+            limit(10)
+          );
+          const recommendedSnapshot = await getDocs(recommendedQuery);
+          const allCartoons = recommendedSnapshot.docs.map(doc => doc.data());
+          const filteredCartoons = allCartoons.filter(c => c.slug !== slug);
+          // Shuffle and take 5 cartoons
+          const shuffled = [...filteredCartoons].sort(() => 0.5 - Math.random()).slice(0, 5);
+          setRecommendedCartoons(shuffled);
+        } else {
+          console.log('No cartoon found in Firebase, falling back to JSON data');
+          
+          // Fallback to JSON data
+          const foundCartoon = moviesData['cartoon']?.find(c => c.slug === slug);
+          if (foundCartoon) {
+            console.log('Found cartoon in JSON:', foundCartoon.title);
+            setCartoon(foundCartoon);
+
+            // Get episodes from JSON
+            const cartoonEpisodes = episodesData[slug]?.episodes || [];
+            console.log('Found episodes in JSON:', cartoonEpisodes.length);
+            setEpisodes(cartoonEpisodes);
+
+            // Get recommended cartoons from JSON
+            const cartoonMovies = moviesData['cartoon'] || [];
+            const filteredCartoons = cartoonMovies.filter(c => c.slug !== slug);
+            const shuffled = [...filteredCartoons].sort(() => 0.5 - Math.random()).slice(0, 5);
+            setRecommendedCartoons(shuffled);
+          } else {
+            console.log('Cartoon not found in JSON either');
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching cartoon data:', error);
+      }
+    };
+
+    if (slug) {
+      fetchCartoonData();
     }
   }, [slug]);
 
@@ -308,3 +364,4 @@ export default function CartoonDetailPage() {
     </div>
   );
 } 
+
