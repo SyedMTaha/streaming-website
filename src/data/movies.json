@@ -120,14 +120,14 @@
     {
       "id": "a10",
       "title": "Atomic Submarine",
-      "image": "/assets/images/movies/action/action13.png",
-      "innerImage": "/assets/images/movies/action/landscape/action14_inner.png",
+      "image": "/assets/images/movies/action/action11.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action4_inner.jpg",
       "slug": "atomic-submarine",
       "year": "1959",
       "duration": "1h 11m",
       "rating": "7.2",
       "genre": "Action",
-      "description": "In this classic film noir, tax accountant Frank Bigelow (Edmond O’Brien) discovers he's been poisoned with a slow-acting toxin and has only 24 hours to live. Determined to find his own killer, he embarks on a frantic search through San Francisco's underworld, uncovering a web of corruption and deceit.",
+      "description": "The Atomic Submarine is a 1959 independently made, American black-and-white science-fiction film directed by Spencer Gordon Bennet and starring Arthur Franz, Dick Foran, Brett Halsey, Joi Lansing and Jean Moorhead, with John Hilliard as the voice of the alien. The film was produced by Alex Gordon and distributed by Allied Artists Pictures Corporation.",
       "videoUrl": "https://player.vimeo.com/video/1092936389?h=1e0be4f157&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
