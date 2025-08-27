@@ -108,13 +108,13 @@ export default function Footer() {
               <Link href="https://www.facebook.com/share/1P7zFL7e2z/?mibextid=wwXIfr" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
                 <Facebook className="h-5 w-5 text-[#0a2151]" />
               </Link>
-              <Link href="https://twitter.com" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
+              <Link href="https://x.com/inbv_tv?s=21" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
                 <XIcon className="h-5 w-5 text-[#0a2151]" />
               </Link>
-              <Link href="https://www.instagram.com/inbvtv?igsh=dGN4Y2ZhMDExZWx5" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
+              <Link href="https://www.instagram.com/inbv_tv?igsh=MWg2bDgxbzNzaWVkcg==" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
                 <Instagram className="h-5 w-5 text-[#0a2151]" />
               </Link>
-              <Link href="https://www.youtube.com/@edwardredd-h1w" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
+              <Link href="https://m.youtube.com/@inbvtv" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
                 <Youtube className="h-5 w-5 text-[#0a2151]" />
               </Link>
               <Link href="https://www.tiktok.com/@inbvtv?_t=ZS-8xAgUZayDgm&_r=1" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">

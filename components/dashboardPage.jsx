@@ -4,7 +4,7 @@ const genres = [
   "Action",
   "Adventure",
   "Animation",
-  "Biography",
+  "Biographical",
   "Comedy",
   "Crime",
   "Documentary",

@@ -304,6 +304,45 @@
       "genre": "Biography",
       "description": "A heroin‑addicted ex‑hairdresser in gritty 1970s Times Square resorts to petty crime and betrayal to feed his habit only to see his world unravel as addiction, guilt, and moral decay close in.",
       "videoUrl": "https://player.vimeo.com/video/1107887783?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "b2",
+      "title": "The Joe Louis Story",
+      "image": "/assets/images/movies/biography/",
+      "innerImage": "/assets/images/movies/biography/landscape/",
+      "slug": "the-joe-louis-story",
+      "year": "1953",
+      "duration": "1h 27m",
+      "rating": "5.8",
+      "genre": "Biography",
+      "description": "A biographical film depicting the life and boxing career of legendary heavyweight champion Joe Louis.",
+      "videoUrl": "https://player.vimeo.com/video/1113225931?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "b3",
+      "title": "The Jackie Robinson Story",
+      "image": "/assets/images/movies/biographical/",
+      "innerImage": "/assets/images/movies/biographical/landscape/",
+      "slug": "the-jackie-robinson-story",
+      "year": "1950",
+      "duration": "1h 16m",
+      "rating": "6.4",
+      "genre": "Biographical",
+      "description": "A biographical film in which Jackie Robinson portrays himself, chronicling his historic journey as the first African American to break Major League Baseball’s color barrier.",
+      "videoUrl": "https://player.vimeo.com/video/1113235387?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "b4",
+      "title": "Regeneration",
+      "image": "/assets/images/movies/biographical/",
+      "innerImage": "/assets/images/movies/biographical/landscape/",
+      "slug": "regeneration",
+      "year": "1915",
+      "duration": "11m 31sec",
+      "rating": "7.4",
+      "genre": "Biographical",
+      "description": "A silent crime drama regarded as the first full-length gangster film, portraying a young man’s struggle to escape a life of poverty and crime.",
+      "videoUrl": "https://player.vimeo.com/video/1113225860?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "cartoon": [
@@ -372,10 +411,11 @@
       "title": "Superman",
       "image": "/assets/images/cartoons/cartoon12.jpg",
       "slug": "superman",
-      "year": "2023",
+      "year": "1978-1987",
       "duration": "1h 40m",
       "rating": "8.5",
-      "genre": "cartoon"
+      "genre": "cartoon",
+      "description": "A film series following Christopher Reeve as the iconic superhero, spanning his battles for justice from Superman: The Movie through Superman IV: The Quest for Peace."
     },
     {
       "id": "c2",
@@ -470,10 +510,10 @@
     },
     {
       "id": "c18",
-      "title": "Johnny Quest",
-      "image": "/assets/images/cartoons/cartoon20.jpeg",
+      "title": "Jonny Quest",
+      "image": "/assets/images/cartoons/cartoon19.jpeg",
       "innerImage": "/assets/images/cartoons/landscape/cartoon15_inner.jpg",
-      "slug": "johnny-quest",
+      "slug": "jonny-quest",
       "year": "1964",
       "duration": "1h 40m",
       "rating": "7.8",
@@ -761,6 +801,19 @@
       "genre": "Crime",
       "description": "A washed-up college dropout becomes the getaway driver in a St. Louis bank heist, but as his ex-girlfriend senses trouble, the job descends into paranoia, betrayal, and real‑time disaster",
       "videoUrl": "https://player.vimeo.com/video/1107887823?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "cr10",
+      "title": "The Swap",
+      "image": "/assets/images/movies/crime/",
+      "innerImage": "/assets/images/movies/crime/landscape/",
+      "slug": "the-swap",
+      "year": "1979",
+      "duration": "1h 21m",
+      "rating": "3.2",
+      "genre": "Crime",
+      "description": "A crime drama about a man investigating his brother’s mysterious murder, uncovering secrets and betrayal along the way.",
+      "videoUrl": "https://player.vimeo.com/video/1113225903?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "documentary": [
@@ -921,6 +974,19 @@
       "genre": "Drama",
       "description": "A gangster coerces a plastic surgeon to give him a new face after a heist goes awry—leading to a deadly masquerade and moral unraveling.",
       "videoUrl": "https://player.vimeo.com/video/1107887625?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "dr12",
+      "title": "A Fool There Was Silent ",
+      "image": "/assets/images/movies/drama/",
+      "innerImage": "/assets/images/movies/drama/landscape/",
+      "slug": "a-fool-there-was-silent",
+      "year": "1915",
+      "duration": "1h 06m",
+      "rating": "5.7",
+      "genre": "Drama",
+      "description": "A silent drama that introduced the iconic “vamp” character, telling the story of a man’s downfall after falling under a femme fatale’s spell.",
+      "videoUrl": "https://player.vimeo.com/video/1113233593?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "family": [
@@ -1826,6 +1892,19 @@
       "genre": "Western",
       "description": "A man raised by a rancher clashes with his foster brother when betrayal and jealousy erupt.",
       "videoUrl": "https://player.vimeo.com/video/1103606341?h=e24726d6d3&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "we6",
+      "title": "The Big Trees",
+      "image": "/assets/images/movies/western/",
+      "innerImage": "/assets/images/movies/western/landscape/",
+      "slug": "the-big-trees",
+      "year": "1952",
+      "duration": "1h 29m",
+      "rating": "5.7",
+      "genre": "Western",
+      "description": "An adventure drama starring Kirk Douglas as a greedy lumberman whose clash with Quaker settlers leads to a battle over California’s giant redwoods.",
+      "videoUrl": "https://player.vimeo.com/video/1113225918?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "upcomingMovies": [

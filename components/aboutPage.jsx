@@ -70,7 +70,7 @@ export default function AboutPage() {
                   <div className="bg-[#1D50A3] p-1.5 rounded-full mt-1">
                     <Check className="h-4 w-4 text-[#ffffff]  " />
                   </div>
-                  <span className="text-gray-200 text-sm">Stream the newest blockbusters the moment they drop.</span>
+                  <span className="text-gray-200">Stream the newest blockbusters the moment they drop.</span>
                 </div>
                 <div className="flex items-center space-x-4 ">
                   <div className="bg-[#1D50A3] p-1.5 rounded-full mt-1 ">
@@ -245,15 +245,15 @@ export default function AboutPage() {
             <div className="space-y-6 mt-24">
               <div>
                 <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-                <p className="text-gray-300 text-sm">Make modern television and stay at our fingertips.</p>
+                <p className="text-gray-300 text-sm">Only, the re-invention of modern Viewing and shopping.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
-                <p className="text-gray-300 text-sm">Make modern television and stay at our fingertips.</p>
+                <p className="text-gray-300 text-sm">To provide a platform for Local innovators, vendors and content creators.</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Corporate Culture</h3>
-                <p className="text-gray-300 text-sm mb-4">Make modern television and stay at our fingertips.</p>
+                <h3 className="text-xl font-semibold mb-2">Community</h3>
+                <p className="text-gray-300 text-sm mb-4">Make INBV TV available for all to enjoy.</p>
                 <button
                   href="/community"
                   className="bg-[#1D50A3] text-white px-6 py-3 mt-3 rounded-lg font-medium inline-block hover:bg-blue-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
