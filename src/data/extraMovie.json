@@ -1,0 +1,45 @@
+{
+    "romance":[
+      {
+        "id": "r1",
+        "title": "Casablanca",
+        "image": "/assets/images/movies/romance/romance1.jpg",
+        "innerImage": "/assets/images/movies/romance/landscape/romance1_inner.jpg",
+        "slug": "casablanca",
+        "year": "1942",
+        "duration": "1h 42m",
+        "rating": "8.5",
+        "genre": "Romance",
+        "description": "A nightclub owner in Casablanca must choose between love and helping a resistance leader escape the Nazis.",
+        "videoUrl": "https://player.vimeo.com/video/1103607854?h=ac5dc9618f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+     }
+    ],
+    "action":[
+    {
+      "id": "a2",
+      "title": "Bad and the Beautiful",
+      "image": "/assets/images/movies/action/action3.jpg",
+      "innerImage": "/assets/images/movies/action/landscape/action3_inner.jpg",
+      "slug": "bad-and-the-beautiful",
+      "year": "1952",
+      "duration": "2h 5m",
+      "rating": "7.7",
+      "genre": "action",
+      "description": "A ruthless Hollywood producer uses and discards talent in his rise to fame.",
+      "videoUrl": "https://player.vimeo.com/video/1092936264?h=6e7d41ff20&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },    
+    {
+      "id": "a3",
+      "title": "Deadline",
+      "image": "/assets/images/movies/action/action4.jpeg",
+      "innerImage": "/assets/images/movies/action/landscape/action5_inner.jpg",
+      "slug": "deadline",
+      "year": "1952",
+      "duration": "1h 26m",
+      "rating": "7.2",
+      "genre": "action",
+      "description": "Editor Hutcheson fights to expose a mob boss before his paper shuts down.",
+      "videoUrl": "https://player.vimeo.com/video/1093481981?h=ee7436cc16&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    }
+  ] 
+}

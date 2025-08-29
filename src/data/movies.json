@@ -14,32 +14,6 @@
       "videoUrl": "https://player.vimeo.com/video/1093479397?h=6539bc8d1a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      "id": "a2",
-      "title": "Bad and the Beautiful",
-      "image": "/assets/images/movies/action/action3.jpg",
-      "innerImage": "/assets/images/movies/action/landscape/action3_inner.jpg",
-      "slug": "bad-and-the-beautiful",
-      "year": "1952",
-      "duration": "2h 5m",
-      "rating": "7.7",
-      "genre": "action",
-      "description": "A ruthless Hollywood producer uses and discards talent in his rise to fame.",
-      "videoUrl": "https://player.vimeo.com/video/1092936264?h=6e7d41ff20&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
-      "id": "a3",
-      "title": "Deadline",
-      "image": "/assets/images/movies/action/action4.jpeg",
-      "innerImage": "/assets/images/movies/action/landscape/action5_inner.jpg",
-      "slug": "deadline",
-      "year": "1952",
-      "duration": "1h 26m",
-      "rating": "7.2",
-      "genre": "action",
-      "description": "Editor Hutcheson fights to expose a mob boss before his paper shuts down.",
-      "videoUrl": "https://player.vimeo.com/video/1093481981?h=ee7436cc16&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
       "id": "a4",
       "title": "Pursued",
       "image": "/assets/images/movies/action/action7.jpg",
@@ -334,8 +308,8 @@
     {
       "id": "b4",
       "title": "Regeneration",
-      "image": "/assets/images/movies/biographical/",
-      "innerImage": "/assets/images/movies/biographical/landscape/",
+      "image": "/assets/images/movies/biographical/b4.png",
+      "innerImage": "/assets/images/movies/biographical/landscape/b4_inner.png",
       "slug": "regeneration",
       "year": "1915",
       "duration": "11m 31sec",
@@ -409,8 +383,8 @@
     {
       "id": "c12",
       "title": "Superman",
-      "image": "/assets/images/cartoons/cartoon12.jpg",
-      "innerImage": "/assets/images/cartoons/landscape/cartoon17_inner.jpg",
+      "image": "/assets/images/cartoons/cartoon12.png",
+      "innerImage": "/assets/images/cartoons/landscape/cartoon17_inner.png",
       "slug": "superman",
       "year": "1978-1987",
       "duration": "1h 40m",
@@ -1468,19 +1442,6 @@
   ],
   "romance": [
     {
-      "id": "r1",
-      "title": "Casablanca",
-      "image": "/assets/images/movies/romance/romance1.jpg",
-      "innerImage": "/assets/images/movies/romance/landscape/romance1_inner.jpg",
-      "slug": "casablanca",
-      "year": "1942",
-      "duration": "1h 42m",
-      "rating": "8.5",
-      "genre": "Romance",
-      "description": "A nightclub owner in Casablanca must choose between love and helping a resistance leader escape the Nazis.",
-      "videoUrl": "https://player.vimeo.com/video/1103607854?h=ac5dc9618f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-    },
-    {
       "id": "r2",
       "title": "Charade",
       "image": "/assets/images/movies/romance/romance2.jpg",
@@ -1676,6 +1637,84 @@
       "genre": "Sci-Fi",
       "description": "A young alien named Derek rebels against his species' plan to use Earth as a breeding ground for giant lobsters called Gargons. He befriends a teenage Earth girl, Betty, and together they attempt to thwart the invasion, facing challenges from both alien and human adversaries.",
       "videoUrl": "https://player.vimeo.com/video/1107887874?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf14",
+      "title": "The Phantom Planet",
+      "image": "/assets/images/movies/sci-fi/scifi15.png",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/",
+      "slug": "the-phantom-planet",
+      "year": "1961",
+      "duration": "1h 22m",
+      "rating": "3.8",
+      "genre": "Sci-Fi",
+      "description": "A sci-fi film about an astronaut who crash-lands on a mysterious asteroid, where he shrinks in size and becomes involved in an interplanetary conflict between its tiny inhabitants and hostile alien invaders.",
+      "videoUrl": "https://player.vimeo.com/video/1114198340?h=ba7c8f4608&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf15",
+      "title": "Voyage to the Planet of Prehistoric Women",
+      "image": "/assets/images/movies/sci-fi/scifi16.png",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/",
+      "slug": "voyage-to-the-planet-of-prehistoric-women",
+      "year": "1968",
+      "duration": "1h 19m",
+      "rating": "3.8",
+      "genre": "Sci-Fi",
+      "description": "Male astronauts land on Venus, unaware they are being watched by telepathic, prehistoric women who view them as intruders.",
+      "videoUrl": "https://player.vimeo.com/video/1114198321?h=d52ce4d429&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf16",
+      "title": "Unknown World",
+      "image": "/assets/images/movies/sci-fi/scifi17.png",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi15_inner.png",
+      "slug": "unknown-world",
+      "year": "1951",
+      "duration": "1h 13m",
+      "rating": "4.1",
+      "genre": "Sci-Fi",
+      "description": "Scientists venture deep underground in search of a safe haven for humanity, only to discover perilous dangers beneath the Earth’s surface.",
+      "videoUrl": "https://player.vimeo.com/video/1114198329?h=ef00720d95&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf17",
+      "title": "The Amazing Transparent Man",
+      "image": "/assets/images/movies/sci-fi/scifi18.png",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi16_inner.png",
+      "slug": "the-amazing-transparent-man",
+      "year": "1960",
+      "duration": "57m",
+      "rating": "4.2",
+      "genre": "Sci-Fi",
+      "description": "A criminal becomes part of an experiment that renders him invisible, leading to a dangerous plot involving espionage and crime.",
+      "videoUrl": "https://player.vimeo.com/video/1114198312?h=3981b3af18&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf18",
+      "title": "Rocket ship XM ",
+      "image": "/assets/images/movies/sci-fi/scifi19.png",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi17_inner.png",
+      "slug": "rocket-ship-xm",
+      "year": "1950",
+      "duration": "1h 19m",
+      "rating": "4.9",
+      "genre": "Sci-Fi",
+      "description": "A mission to the Moon goes off course, sending astronauts to Mars, where they discover the tragic remnants of a destroyed civilization.",
+      "videoUrl": "https://player.vimeo.com/video/1114198251?h=f98297db5d&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+    },
+    {
+      "id": "sf19",
+      "title": "Cat Women of the Moon",
+      "image": "/assets/images/movies/sci-fi/scifi20.png",
+      "innerImage": "/assets/images/movies/sci-fi/landscape/scifi18_inner.png",
+      "slug": "cat-women-of-the-moon",
+      "year": "1953",
+      "duration": "1h 03m",
+      "rating": "3.9",
+      "genre": "Sci-Fi",
+      "description": "A crew of astronauts encounters a hidden society of telepathic women on the Moon, who plan to use them to escape their dying world.",
+      "videoUrl": "https://player.vimeo.com/video/1114198248?h=31f0761104&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     }
   ],
   "sport": [
