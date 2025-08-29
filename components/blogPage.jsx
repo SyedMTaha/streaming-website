@@ -181,7 +181,7 @@ export default function BlogPage() {
                 <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10">
                   <div className="relative overflow-hidden">
                     <Image
-                      src="/assets/images/blog/drama.jfif"
+                      src="/assets/images/blog/drama.png"
                       alt="Article image"
                       width={400}
                       height={250}
@@ -217,7 +217,7 @@ export default function BlogPage() {
                 <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10">
                   <div className="relative overflow-hidden">
                     <Image
-                      src="/assets/images/blog/comedy.jfif"
+                      src="/assets/images/blog/comedy.png"
                       alt="Article image"
                       width={400}
                       height={250}
@@ -309,7 +309,7 @@ export default function BlogPage() {
                 <div className="space-y-4">
                   <article className="flex space-x-3 group cursor-pointer">
                     <Image
-                      src="/assets/images/blog/scifi.jfif"
+                      src="/assets/images/blog/scifi.png"
                       alt="Popular article"
                       width={60}
                       height={60}
