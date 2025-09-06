@@ -13,7 +13,8 @@
     "migrate:full": "node scripts/migrate-movies-with-imagekit.cjs",
     "migrate:tv": "node scripts/migrate-tv-series.cjs",
     "update:tv": "node scripts/update-tv-series-data.cjs",
-    "update:cartoons": "node scripts/update-cartoon-series.cjs"
+    "update:cartoons": "node scripts/update-cartoon-series.cjs",
+    "remove:cartoon-descriptions": "node scripts/remove-cartoon-descriptions.cjs"
   },
   "dependencies": {
     "@imagekit/next": "^2.1.3",

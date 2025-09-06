@@ -199,17 +199,25 @@ export default function LoginForm({ locomotiveScroll }) {
                 </div>
               </div>
 
-              <div className="flex items-center mt-2">
-                <input
-                  type="checkbox"
-                  id="remember"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  className="rounded border-gray-400"
-                />
-                <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-300">
-                  Remember me
-                </label>
+              <div className="flex items-center justify-between mt-2">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="remember"
+                    checked={rememberMe}
+                    onChange={(e) => setRememberMe(e.target.checked)}
+                    className="rounded border-gray-400"
+                  />
+                  <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-300">
+                    Remember me
+                  </label>
+                </div>
+                <Link 
+                  href="/auth/forgot-password" 
+                  className="text-sm text-[#1D50A3] hover:text-blue-400 transition-colors duration-200"
+                >
+                  Forgot password?
+                </Link>
               </div>
 
               <button
@@ -242,7 +250,7 @@ export default function LoginForm({ locomotiveScroll }) {
 
               <div className="mt-2 text-center text-gray-300 text-sm">
                 Not a member?{" "}
-                <Link href="/auth/signup" className="text-[#1D50A3] hover:underline transition-colors duration-200">
+                <Link href="/auth/signup" className="text-[#1D50A3] hover:text-blue-400 transition-colors duration-200"> 
                   Create an account
                 </Link>
               </div>
