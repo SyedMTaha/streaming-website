@@ -163,13 +163,13 @@ export default function DashboardPage() {
         <div className="relative z-10">
           <ContentSection title="Streaming Now" onScroll={handleScroll}>
             <MovieRow>
-              <MovieCard image={home45}  title="Atomic Submarine"  />
+              <MovieCard image="/assets/images/movies/sci-fi/scifi17.png"  title="Unknown World"  />
               <MovieCard image={Pursued} title="Pursued" />
               <MovieCard image={home48} title="Stage Coach" />
               <MovieCard image={home49} title="State Secret" />
               <MovieCard image={Bad} title="Bad and the Beautiful" />
               <MovieCard image={comedy2} title="His Girl Friday" />
-              <MovieCard image={drama1} title="Broken Strings" />
+              <MovieCard image="/assets/images/movies/sci-fi/scifi18.png" title="The Amazing Transparent Man" />
               <MovieCard image={drama2} title="Key Largo" />
               <MovieCard image={mystery1} title="Texas Terror" />
             </MovieRow>

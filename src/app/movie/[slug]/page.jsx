@@ -56,6 +56,7 @@ export default function MovieDetailPage() {
   
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [dataLoading, setDataLoading] = useState(true);
 
   // This determines if the simplified "free" layout should be shown.
   // It's true only if the movie is free AND the user is not logged in.
@@ -111,6 +112,7 @@ export default function MovieDetailPage() {
   useEffect(() => {
     // Fetch movie from Firebase
     const fetchMovie = async () => {
+      setDataLoading(true);
       try {
         console.log('Fetching movie with slug:', slug);
         
@@ -148,6 +150,8 @@ export default function MovieDetailPage() {
       } catch (error) {
         console.error('Error fetching movie from Firebase:', error);
         setMovie(null);
+      } finally {
+        setDataLoading(false);
       }
     };
     
@@ -233,10 +237,13 @@ export default function MovieDetailPage() {
   };
 
   // Don't render the page if it's still loading or if auth status is not determined yet.
-  if (isLoading) {
+  if (isLoading || dataLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
-        <div className="text-white text-xl">Loading...</div>
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-400">Loading...</p>
+        </div>
       </div>
     );
   }

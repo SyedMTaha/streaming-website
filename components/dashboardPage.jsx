@@ -338,60 +338,114 @@ const dashboardPage = () => {
     setShowAlert(true);
   };
   const handleSeriesUpload = async (seriesData) => {
-    // Generate slug from title
-    const seriesSlug = seriesData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-    const dataWithSlug = { ...seriesData, slug: seriesSlug };
-    
-    if (editingSeriesId) {
-      const res = await fetch('/api/add-series', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...dataWithSlug, id: editingSeriesId }),
-      });
-      if (res.ok) {
-        setSuccessMessage('TV Series updated successfully!');
-        setEditingSeriesId(null);
-        // Refresh TV series list
-        fetch('/api/movies')
-          .then(res => res.json())
-          .then(data => {
+    try {
+      setSuccessMessage('Uploading images and saving TV series...');
+      
+      // Upload images to ImageKit first
+      const imageFormData = new FormData();
+      
+      // Add portrait image if provided
+      if (seriesData.portraitFile) {
+        imageFormData.append('portrait', seriesData.portraitFile);
+      }
+      
+      // Add landscape image if provided
+      if (seriesData.landscapeFile) {
+        imageFormData.append('landscape', seriesData.landscapeFile);
+      }
+      
+      // For TV series, we use a special genre indicator
+      imageFormData.append('genre', 'tv-series-special');
+      imageFormData.append('title', seriesData.title);
+
+      let imageUrls = {};
+      
+      // Only upload images if files are provided
+      if (seriesData.portraitFile || seriesData.landscapeFile) {
+        const imageResponse = await fetch('/api/upload-series-images', {
+          method: 'POST',
+          body: imageFormData,
+        });
+        
+        const imageResult = await imageResponse.json();
+        
+        if (!imageResult.success) {
+          setSuccessMessage('Failed to upload images: ' + imageResult.error);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        imageUrls = imageResult.images;
+      }
+
+      // Prepare series data for database
+      const seriesDataForDb = {
+        title: seriesData.title,
+        description: seriesData.description,
+        genre: 'tv-series',
+        year: seriesData.year,
+        duration: seriesData.duration,
+        rating: seriesData.rating,
+        link: '', // TV series don't have a single video URL
+        // Use ImageKit URLs
+        imageUrl: imageUrls.portrait?.url || seriesData.imageUrl || '',
+        innerImageUrl: imageUrls.landscape?.url || seriesData.innerImageUrl || '',
+        imageFileId: imageUrls.portrait?.fileId || '',
+        innerImageFileId: imageUrls.landscape?.fileId || '',
+        // Episodes data
+        episodes: seriesData.episodes.map((url, idx) => ({
+          id: `ep-${idx + 1}`,
+          title: `Episode ${idx + 1}`,
+          videoUrl: url,
+          slug: `episode-${idx + 1}`
+        })),
+        episodeCount: seriesData.episodes.length
+      };
+
+      if (editingSeriesId) {
+        // Update existing series
+        const res = await fetch('/api/movies', {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: editingSeriesId, ...seriesDataForDb }),
+        });
+        
+        const result = await res.json();
+        
+        if (result.success) {
+          setSuccessMessage('TV Series updated successfully!');
+          setEditingSeriesId(null);
+          // Refresh list
+          fetch('/api/movies').then(res => res.json()).then(data => {
             const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
             setSeriesList(tvSeries);
           });
-        // Clear form fields after 5 seconds
-        setTimeout(() => {
-          setSeriesTitle('');
-          setSeriesDescription('');
-          setSeriesGenre('TV Series');
-          setSeriesDuration('');
-          setSeriesRating('');
-          setSeriesYear('');
-          setSeriesPortrait('');
-          setSeriesLandscape('');
-          setSeriesEpisodeCount(1);
-          setSeriesEpisodeLinks(['']);
-        }, 5000);
+        } else {
+          setSuccessMessage('Failed to update TV Series: ' + result.message);
+        }
       } else {
-        setSuccessMessage('Failed to update TV Series');
-      }
-      setTimeout(() => setSuccessMessage(''), 7000);
-      return;
-    }
-    const res = await fetch('/api/add-series', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(dataWithSlug),
-    });
-    if (res.ok) {
-      setSuccessMessage('TV Series added successfully!');
-      // Refresh TV series list
-      fetch('/api/movies')
-        .then(res => res.json())
-        .then(data => {
-          const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
-          setSeriesList(tvSeries);
+        // Add new series
+        const res = await fetch('/api/movies', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(seriesDataForDb),
         });
-      // Clear all TV series form fields after 5 seconds
+        
+        const result = await res.json();
+        
+        if (result.success) {
+          setSuccessMessage('TV Series added successfully!');
+          // Refresh list
+          fetch('/api/movies').then(res => res.json()).then(data => {
+            const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
+            setSeriesList(tvSeries);
+          });
+        } else {
+          setSuccessMessage('Failed to add TV Series: ' + result.message);
+        }
+      }
+
+      // Clear form fields after 5 seconds
       setTimeout(() => {
         setSeriesTitle('');
         setSeriesDescription('');
@@ -404,10 +458,13 @@ const dashboardPage = () => {
         setSeriesEpisodeCount(1);
         setSeriesEpisodeLinks(['']);
       }, 5000);
+      
       // Hide the notification after 7 seconds
       setTimeout(() => setSuccessMessage(''), 7000);
-    } else {
-      setSuccessMessage('Failed to add TV Series');
+      
+    } catch (error) {
+      console.error('Error uploading TV series:', error);
+      setSuccessMessage('Error uploading TV series: ' + error.message);
       setTimeout(() => setSuccessMessage(''), 7000);
     }
   };

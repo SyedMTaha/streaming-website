@@ -56,17 +56,14 @@ export default function EpisodePage() {
           const foundCartoon = cartoonsSnapshot.docs[0].data();
           setCartoon(foundCartoon);
 
-          // Get episode data from Firebase
-          const episodesQuery = query(
-            collection(db, 'episodes'),
-            where('seriesSlug', '==', slug),
-            where('slug', '==', episodeSlug)
-          );
-          const episodesSnapshot = await getDocs(episodesQuery);
-          
-          if (!episodesSnapshot.empty) {
-            const foundEpisode = episodesSnapshot.docs[0].data();
-            setEpisode(foundEpisode);
+          // Get episode data from cartoon document
+          if (foundCartoon.episodes && Array.isArray(foundCartoon.episodes)) {
+            const foundEpisode = foundCartoon.episodes.find(ep => ep.slug === episodeSlug);
+            if (foundEpisode) {
+              setEpisode(foundEpisode);
+            } else {
+              console.log('Episode not found in cartoon document');
+            }
           }
         } else {
           // Fallback to JSON data  

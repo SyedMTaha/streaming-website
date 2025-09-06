@@ -10,7 +10,10 @@
     "migrate:movies": "node scripts/migrate-movies-to-db.cjs",
     "update:images": "node scripts/update-movie-images-to-imagekit.cjs",
     "fix:urls": "node scripts/fix-imagekit-urls.cjs",
-    "migrate:full": "node scripts/migrate-movies-with-imagekit.cjs"
+    "migrate:full": "node scripts/migrate-movies-with-imagekit.cjs",
+    "migrate:tv": "node scripts/migrate-tv-series.cjs",
+    "update:tv": "node scripts/update-tv-series-data.cjs",
+    "update:cartoons": "node scripts/update-cartoon-series.cjs"
   },
   "dependencies": {
     "@imagekit/next": "^2.1.3",

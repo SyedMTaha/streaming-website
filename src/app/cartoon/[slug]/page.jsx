@@ -8,7 +8,7 @@ import { Bookmark, Share, Star, Check } from 'lucide-react';
 import Navbar from '../../../../components/navbarSearch';
 import Footer from '../../../../components/footer';
 import { auth, db } from '../../../../firebase';
-import { collection, getDocs, doc, setDoc, deleteDoc, getDoc, query, where, limit } from 'firebase/firestore';
+import { collection, getDocs, doc, setDoc, deleteDoc, getDoc, query, where, limit, getFirestore } from 'firebase/firestore';
 import moviesData from '../../../data/movies.json';
 import episodesData from '../../../data/cartoonEpisodes.json';
 
@@ -26,6 +26,7 @@ export default function CartoonDetailPage() {
   const [shareLoading, setShareLoading] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [dataLoading, setDataLoading] = useState(true);
 
   const scrollRef = React.useRef(null);
   const locomotiveScroll = useRef(null);
@@ -71,6 +72,7 @@ export default function CartoonDetailPage() {
 
   useEffect(() => {
     const fetchCartoonData = async () => {
+      setDataLoading(true);
       try {
         console.log('Fetching cartoon with slug:', slug);
         
@@ -89,15 +91,14 @@ export default function CartoonDetailPage() {
           console.log('Found cartoon:', foundCartoon);
           setCartoon(foundCartoon);
 
-          // Get episodes for this cartoon from Firebase
-          const episodesQuery = query(
-            collection(db, 'episodes'),
-            where('seriesSlug', '==', slug)
-          );
-          const episodesSnapshot = await getDocs(episodesQuery);
-          const cartoonEpisodes = episodesSnapshot.docs.map(doc => doc.data());
-          console.log('Found episodes:', cartoonEpisodes.length);
-          setEpisodes(cartoonEpisodes);
+          // Get episodes directly from the cartoon document
+          if (foundCartoon.episodes && Array.isArray(foundCartoon.episodes)) {
+            console.log('Found episodes in cartoon document:', foundCartoon.episodes.length);
+            setEpisodes(foundCartoon.episodes);
+          } else {
+            console.log('No episodes found in cartoon document');
+            setEpisodes([]);
+          }
 
           // Get recommended cartoons from Firebase, excluding the current cartoon
           const recommendedQuery = query(
@@ -136,6 +137,8 @@ export default function CartoonDetailPage() {
         }
       } catch (error) {
         console.error('Error fetching cartoon data:', error);
+      } finally {
+        setDataLoading(false);
       }
     };
 
@@ -204,11 +207,14 @@ export default function CartoonDetailPage() {
     }
   };
 
-  // Show loading state while checking authentication
-  if (isLoading) {
+  // Show loading state while checking authentication or fetching data
+  if (isLoading || dataLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-t from-[#020d1f] to-[#012256] flex items-center justify-center">
-        <div className="text-white text-xl">Loading...</div>
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-400">Loading...</p>
+        </div>
       </div>
     );
   }
