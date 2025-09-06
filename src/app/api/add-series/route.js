@@ -1,6 +1,6 @@
-import { promises as fs } from 'fs';
-import path from 'path';
 import { NextResponse } from 'next/server';
+import { db } from '../../../../firebase';
+import { collection, getDocs, doc, setDoc, updateDoc, deleteDoc, query, orderBy, where } from 'firebase/firestore';
 
 function generateSlug(title) {
   return title
@@ -9,209 +9,264 @@ function generateSlug(title) {
     .replace(/^-+|-+$/g, '');
 }
 
-// Function to generate a new ID
-function generateNewId(existingIds) {
-  if (existingIds.length === 0) {
-    return 'tv1';
-  }
-  const maxId = Math.max(...existingIds.map(id => parseInt(id.slice(2))));
-  return 'tv' + (maxId + 1);
-}
-
+// POST - Add new TV series with episodes
 export async function POST(request) {
   try {
-    const incomingSeries = await request.json();
+    const seriesData = await request.json();
 
-    if (!incomingSeries || !incomingSeries.title || !incomingSeries.genre) {
-      return NextResponse.json({ message: 'Invalid series data provided. Title and genre are required.' }, { status: 400 });
+    if (!seriesData || !seriesData.title) {
+      return NextResponse.json(
+        { success: false, message: 'Series title is required' },
+        { status: 400 }
+      );
     }
 
-    const episodesFilePath = path.join(process.cwd(), 'src/data/tvEpisodes.json');
-    const episodesFileData = await fs.readFile(episodesFilePath, 'utf8');
-    const seriesBySlug = JSON.parse(episodesFileData);
-
-    const moviesFilePath = path.join(process.cwd(), 'src/data/movies.json');
-    const moviesFileData = await fs.readFile(moviesFilePath, 'utf8');
-    const movies = JSON.parse(moviesFileData);
-
-    const genreKey = incomingSeries.genre.toLowerCase().replace(/\s+/g, '-');
-
-    // Initialize or get existing series data
-    if (!seriesBySlug[incomingSeries.slug]) {
-      seriesBySlug[incomingSeries.slug] = {
-        id: incomingSeries.slug,
-        title: incomingSeries.title,
-        slug: incomingSeries.slug,
-        description: incomingSeries.description || 'No description available.',
-        thumbnail: `/assets/images/series/${genreKey}/${incomingSeries.portrait}`,
-        videoUrl: "",
-        duration: incomingSeries.duration || '30 min',
-        rating: incomingSeries.rating || 'TV-PG',
-        episodes: []
-      };
-    }
-
-    // Process each episode
-    const addedEpisodes = [];
-    const episodes = incomingSeries.episodes || [];
-    episodes.forEach((episodeUrl, index) => {
-      if (!episodeUrl) return;
-
-      const episodeNumber = seriesBySlug[incomingSeries.slug].episodes.length + index + 1;
-      const episodeTitle = `Episode ${episodeNumber}`;
-      const episodeSlug = generateSlug(episodeTitle);
-
-      const previousEpisodeSlug = (seriesBySlug[incomingSeries.slug].episodes.length + index) > 0 ?
-        (seriesBySlug[incomingSeries.slug].episodes[seriesBySlug[incomingSeries.slug].episodes.length - 1]?.slug || `episode-${seriesBySlug[incomingSeries.slug].episodes.length + index}`) : null;
-      const nextEpisodeSlug = null; // Will be updated when next episode is added
-
-      if (seriesBySlug[incomingSeries.slug].episodes.length + index > 0) {
-        const prevIndex = seriesBySlug[incomingSeries.slug].episodes.length + index - 1;
-        if (seriesBySlug[incomingSeries.slug].episodes[prevIndex]) {
-          seriesBySlug[incomingSeries.slug].episodes[prevIndex].nextEpisode = episodeSlug;
-        } else if (addedEpisodes[prevIndex - seriesBySlug[incomingSeries.slug].episodes.length]) {
-          addedEpisodes[prevIndex - seriesBySlug[incomingSeries.slug].episodes.length].nextEpisode = episodeSlug;
+    // Get existing TV series to determine the next ID number
+    const moviesRef = collection(db, 'movies');
+    const q = query(moviesRef, where('genre', '==', 'tv-series'));
+    const querySnapshot = await getDocs(q);
+    
+    // Find the highest ID number for TV series
+    let maxNumber = 0;
+    
+    console.log(`Checking ${querySnapshot.size} existing TV series...`);
+    
+    querySnapshot.forEach((doc) => {
+      const docId = doc.id;
+      const docData = doc.data();
+      
+      // Check both the stored id field and the document ID
+      const idsToCheck = [docData.id, docId].filter(Boolean);
+      
+      for (const id of idsToCheck) {
+        if (id.startsWith('tv')) {
+          const numberPart = id.substring(2);
+          const num = parseInt(numberPart, 10);
+          if (!isNaN(num) && num > maxNumber) {
+            maxNumber = num;
+          }
         }
       }
+    });
+    
+    console.log(`Max TV series number found: ${maxNumber}, Next ID: tv${maxNumber + 1}`);
+    
+    // Generate the next sequential ID
+    const seriesId = `tv${maxNumber + 1}`;
+    const slug = generateSlug(seriesData.title);
 
-      const structuredEpisode = {
-        id: `${incomingSeries.slug}-${episodeNumber}`,
+    // Process episodes
+    const episodes = [];
+    const episodeUrls = seriesData.episodes || [];
+    
+    episodeUrls.forEach((episodeUrl, index) => {
+      if (!episodeUrl) return;
+      
+      const episodeNumber = index + 1;
+      const episodeTitle = `Episode ${episodeNumber}`;
+      const episodeSlug = `episode-${episodeNumber}`;
+      
+      const episode = {
+        id: `${slug}-ep${episodeNumber}`,
         title: episodeTitle,
         slug: episodeSlug,
-        description: `Episode ${episodeNumber} of ${incomingSeries.title}`,
-        thumbnail: `/assets/images/series/${genreKey}/${incomingSeries.portrait}`,
+        description: seriesData.description || `${seriesData.title} - ${episodeTitle}`,
         videoUrl: episodeUrl,
-        duration: incomingSeries.episodeDuration || '30:00',
-        rating: incomingSeries.rating || 'TV-PG',
-        previousEpisode: previousEpisodeSlug,
-        nextEpisode: nextEpisodeSlug
+        duration: seriesData.episodeDuration || seriesData.duration || '30:00',
+        thumbnail: seriesData.imageUrl || '', // Use the main series image as episode thumbnail
+        previousEpisode: episodeNumber > 1 ? `episode-${episodeNumber - 1}` : null,
+        nextEpisode: episodeNumber < episodeUrls.length ? `episode-${episodeNumber + 1}` : null
       };
-      addedEpisodes.push(structuredEpisode);
+      
+      episodes.push(episode);
     });
 
-    // Add all new episodes to the series
-    seriesBySlug[incomingSeries.slug].episodes.push(...addedEpisodes);
+    // Prepare series document
+    const seriesDoc = {
+      id: seriesId,
+      title: seriesData.title,
+      description: seriesData.description || 'No description available.',
+      genre: 'tv-series',
+      year: seriesData.year || 'Unknown',
+      duration: seriesData.duration || '00:00',
+      rating: seriesData.rating || 'N/A',
+      slug: slug,
+      // ImageKit URLs
+      image: seriesData.imageUrl || '', // Portrait image URL from ImageKit
+      innerImage: seriesData.innerImageUrl || '', // Landscape image URL from ImageKit
+      // ImageKit file IDs for management
+      imageFileId: seriesData.imageFileId || '',
+      innerImageFileId: seriesData.innerImageFileId || '',
+      // Episodes
+      episodes: episodes,
+      episodeCount: episodes.length,
+      // Metadata
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
 
-    // Update series detail in movies.json (only if it doesn't exist)
-    const seriesSection = movies['tv-series'];
-    const existingSeries = seriesSection.find(series => series.slug === incomingSeries.slug);
-
-    let seriesId;
-    if (!existingSeries) {
-      const existingIds = seriesSection.map(series => series.id);
-      seriesId = generateNewId(existingIds);
-      const newSeries = {
-        id: seriesId,
-        title: incomingSeries.title,
-        image: `/assets/images/series/landscape/${incomingSeries.portrait}`,
-        slug: incomingSeries.slug,
-        year: incomingSeries.year || 'Unknown',
-        duration: incomingSeries.duration || '00:00',
-        rating: incomingSeries.rating || 'N/A',
-        genre: 'tv-series',
-        description: incomingSeries.description || 'No description available.'
-      };
-      seriesSection.push(newSeries);
-      await fs.writeFile(moviesFilePath, JSON.stringify(movies, null, 2));
-    } else {
-      seriesId = existingSeries.id;
-    }
-
-    // Update episodes with correct thumbnail paths using series ID
-    addedEpisodes.forEach(episode => {
-      episode.thumbnail = `/assets/images/series/series${seriesId.slice(2)}.jpg`;
-    });
-
-    // Save series details to tvEpisodes.json
-    await fs.writeFile(episodesFilePath, JSON.stringify(seriesBySlug, null, 2));
+    // Add to Firestore with the seriesId as the document ID
+    const docRef = doc(db, 'movies', seriesId);
+    await setDoc(docRef, seriesDoc);
 
     return NextResponse.json({
-      message: `${addedEpisodes.length} episode(s) added successfully!`,
-      episodes: addedEpisodes
-    }, { status: 201 });
+      success: true,
+      message: `TV Series added successfully with ${episodes.length} episode(s)!`,
+      id: seriesId,
+      seriesId: seriesId,
+      episodes: episodes
+    });
 
   } catch (error) {
-    console.error('API Error:', error);
-    return NextResponse.json({ message: 'Failed to add TV series.' }, { status: 500 });
+    console.error('Error adding TV series:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to add TV series', error: error.message },
+      { status: 500 }
+    );
   }
 }
 
+// GET - Fetch all TV series
 export async function GET() {
   try {
-    const episodesFilePath = path.join(process.cwd(), 'src/data/tvEpisodes.json');
-    const fileData = await fs.readFile(episodesFilePath, 'utf8');
-    const seriesBySlug = JSON.parse(fileData);
-    const allEpisodes = [];
-    for (const slug of Object.keys(seriesBySlug)) {
-      const series = seriesBySlug[slug];
-      if (series.episodes && Array.isArray(series.episodes)) {
-        series.episodes.forEach(ep => {
-          allEpisodes.push({ ...ep, seriesSlug: slug, seriesTitle: series.title || slug });
-        });
-      }
-    }
-    return NextResponse.json(allEpisodes, { status: 200 });
+    const moviesRef = collection(db, 'movies');
+    const q = query(moviesRef, where('genre', '==', 'tv-series'), orderBy('createdAt', 'desc'));
+    const querySnapshot = await getDocs(q);
+    
+    const series = [];
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      // Format for compatibility with existing UI
+      series.push({
+        id: doc.id,
+        seriesTitle: data.title,
+        seriesSlug: data.slug,
+        description: data.description,
+        thumbnail: data.image,
+        episodes: data.episodes || [],
+        ...data
+      });
+    });
+
+    return NextResponse.json(series);
+
   } catch (error) {
-    return NextResponse.json({ message: 'Failed to read TV series episodes.' }, { status: 500 });
+    console.error('Error fetching TV series:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to fetch TV series', error: error.message },
+      { status: 500 }
+    );
   }
 }
 
+// PUT - Update TV series
 export async function PUT(request) {
   try {
-    const updatedEpisode = await request.json();
-    if (!updatedEpisode || !updatedEpisode.id) {
-      return NextResponse.json({ message: 'Invalid episode data.' }, { status: 400 });
+    const updateData = await request.json();
+    const { id, ...otherData } = updateData;
+
+    if (!id) {
+      return NextResponse.json(
+        { success: false, message: 'Series ID is required' },
+        { status: 400 }
+      );
     }
-    const episodesFilePath = path.join(process.cwd(), 'src/data/tvEpisodes.json');
-    const fileData = await fs.readFile(episodesFilePath, 'utf8');
-    const seriesBySlug = JSON.parse(fileData);
-    let found = false;
-    for (const slug of Object.keys(seriesBySlug)) {
-      const series = seriesBySlug[slug];
-      if (series.episodes && Array.isArray(series.episodes)) {
-        series.episodes = series.episodes.map(ep => {
-          if (ep.id === updatedEpisode.id) {
-            found = true;
-            return { ...ep, ...updatedEpisode };
-          }
-          return ep;
-        });
-      }
+
+    // Build update object with only provided fields
+    const updates = {};
+    
+    // Update slug if title changed
+    if (updateData.title) {
+      updates.title = updateData.title;
+      updates.slug = generateSlug(updateData.title);
     }
-    if (!found) {
-      return NextResponse.json({ message: 'Episode not found.' }, { status: 404 });
+    
+    // Only update fields that are provided
+    if (updateData.description !== undefined) updates.description = updateData.description;
+    if (updateData.year !== undefined) updates.year = updateData.year;
+    if (updateData.duration !== undefined) updates.duration = updateData.duration;
+    if (updateData.rating !== undefined) updates.rating = updateData.rating;
+    
+    // Handle image URLs - only update if new ones are provided
+    if (updateData.imageUrl) updates.image = updateData.imageUrl;
+    if (updateData.innerImageUrl) updates.innerImage = updateData.innerImageUrl;
+    if (updateData.imageFileId) updates.imageFileId = updateData.imageFileId;
+    if (updateData.innerImageFileId) updates.innerImageFileId = updateData.innerImageFileId;
+
+    // Process episodes if provided
+    if (updateData.episodes && Array.isArray(updateData.episodes)) {
+      const episodes = [];
+      const seriesSlug = updates.slug || generateSlug(updateData.title || 'series');
+      
+      updateData.episodes.forEach((episodeUrl, index) => {
+        if (!episodeUrl) return;
+        
+        const episodeNumber = index + 1;
+        const episodeTitle = `Episode ${episodeNumber}`;
+        const episodeSlug = `episode-${episodeNumber}`;
+        
+        const episode = {
+          id: `${seriesSlug}-ep${episodeNumber}`,
+          title: episodeTitle,
+          slug: episodeSlug,
+          description: updates.description || updateData.description || `${updateData.title || 'Series'} - ${episodeTitle}`,
+          videoUrl: episodeUrl,
+          duration: updateData.episodeDuration || updates.duration || updateData.duration || '30:00',
+          thumbnail: updates.image || updateData.imageUrl || '',
+          previousEpisode: episodeNumber > 1 ? `episode-${episodeNumber - 1}` : null,
+          nextEpisode: episodeNumber < updateData.episodes.length ? `episode-${episodeNumber + 1}` : null
+        };
+        
+        episodes.push(episode);
+      });
+      updates.episodes = episodes;
+      updates.episodeCount = episodes.length;
     }
-    await fs.writeFile(episodesFilePath, JSON.stringify(seriesBySlug, null, 2));
-    return NextResponse.json({ message: 'Episode updated successfully!' }, { status: 200 });
+
+    updates.updatedAt = new Date();
+
+    const movieRef = doc(db, 'movies', id);
+    await updateDoc(movieRef, updates);
+
+    return NextResponse.json({
+      success: true,
+      message: 'TV Series updated successfully!'
+    });
+
   } catch (error) {
-    return NextResponse.json({ message: 'Failed to update episode.' }, { status: 500 });
+    console.error('Error updating TV series:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to update TV series', error: error.message },
+      { status: 500 }
+    );
   }
 }
 
+// DELETE - Delete TV series
 export async function DELETE(request) {
   try {
     const { id } = await request.json();
+
     if (!id) {
-      return NextResponse.json({ message: 'Episode ID required.' }, { status: 400 });
+      return NextResponse.json(
+        { success: false, message: 'Series ID is required' },
+        { status: 400 }
+      );
     }
-    const episodesFilePath = path.join(process.cwd(), 'src/data/tvEpisodes.json');
-    const fileData = await fs.readFile(episodesFilePath, 'utf8');
-    const seriesBySlug = JSON.parse(fileData);
-    let found = false;
-    for (const slug of Object.keys(seriesBySlug)) {
-      const series = seriesBySlug[slug];
-      if (series.episodes && Array.isArray(series.episodes)) {
-        const before = series.episodes.length;
-        series.episodes = series.episodes.filter(ep => ep.id !== id);
-        if (series.episodes.length < before) found = true;
-      }
-    }
-    if (!found) {
-      return NextResponse.json({ message: 'Episode not found.' }, { status: 404 });
-    }
-    await fs.writeFile(episodesFilePath, JSON.stringify(seriesBySlug, null, 2));
-    return NextResponse.json({ message: 'Episode deleted successfully!' }, { status: 200 });
+
+    const movieRef = doc(db, 'movies', id);
+    await deleteDoc(movieRef);
+
+    return NextResponse.json({
+      success: true,
+      message: 'TV Series deleted successfully!'
+    });
+
   } catch (error) {
-    return NextResponse.json({ message: 'Failed to delete episode.' }, { status: 500 });
+    console.error('Error deleting TV series:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to delete TV series', error: error.message },
+      { status: 500 }
+    );
   }
 }

@@ -7,9 +7,8 @@ import Link from 'next/link';
 import { Play, ArrowLeft } from 'lucide-react';
 import Navbar from '../../../../../../components/navbarSearch';
 import Footer from '../../../../../../components/footer';
-import moviesData from '../../../../../data/movies.json';
-import episodesData from '../../../../../data/tvEpisodes.json';
-import { auth } from '../../../../../../firebase';
+import { auth, db } from '../../../../../../firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 export default function EpisodePage() {
   const params = useParams();
@@ -40,14 +39,39 @@ export default function EpisodePage() {
   }, [slug, episodeSlug, router, searchParams]);
 
   useEffect(() => {
-    // Find the series by slug
-    const foundSeries = moviesData['tv-series']?.find(s => s.slug === slug);
-    setSeries(foundSeries);
+    const fetchData = async () => {
+      try {
+        // Find the series by slug from Firebase
+        const seriesQuery = query(
+          collection(db, 'movies'),
+          where('genre', '==', 'tv-series'),
+          where('slug', '==', slug)
+        );
+        const seriesSnapshot = await getDocs(seriesQuery);
+        
+        if (!seriesSnapshot.empty) {
+          const foundSeries = seriesSnapshot.docs[0].data();
+          setSeries(foundSeries);
 
-    // Get episode data from episodes.json
-    if (foundSeries && episodesData[slug]) {
-      const foundEpisode = episodesData[slug].episodes.find(ep => ep.slug === episodeSlug);
-      setEpisode(foundEpisode);
+          // Get episode data from series document
+          if (foundSeries.episodes && Array.isArray(foundSeries.episodes)) {
+            const foundEpisode = foundSeries.episodes.find(ep => ep.slug === episodeSlug);
+            if (foundEpisode) {
+              setEpisode(foundEpisode);
+            } else {
+              console.log('Episode not found in series document');
+            }
+          }
+        } else {
+          console.log('Series not found in Firebase');
+        }
+      } catch (error) {
+        console.error('Error fetching episode data:', error);
+      }
+    };
+
+    if (slug && episodeSlug) {
+      fetchData();
     }
   }, [slug, episodeSlug]);
 

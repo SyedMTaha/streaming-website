@@ -1,230 +1,272 @@
-import { promises as fs } from 'fs';
-import path from 'path';
 import { NextResponse } from 'next/server';
-
-// Function to generate a new ID
-function generateNewId(existingIds) {
-  if (existingIds.length === 0) {
-    return 'c1';
-  }
-  const maxId = Math.max(...existingIds.map(id => parseInt(id.slice(1))));
-  return 'c' + (maxId + 1);
-}
+import { db } from '../../../../firebase';
+import { collection, getDocs, doc, setDoc, updateDoc, deleteDoc, query, orderBy, where } from 'firebase/firestore';
 
 function generateSlug(title) {
   return title
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphen
-    .replace(/^-+|-+$/g, '');    // Remove leading/trailing hyphens
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
+// POST - Add new cartoon with episodes
 export async function POST(request) {
   try {
-    const incomingData = await request.json();
+    const cartoonData = await request.json();
 
-    // Handle both single episode and multiple episodes
-    if (!incomingData || !incomingData.cartoonTitle) {
-      return NextResponse.json({ message: 'Invalid data provided. cartoonTitle is required.' }, { status: 400 });
+    if (!cartoonData || !cartoonData.cartoonTitle) {
+      return NextResponse.json(
+        { success: false, message: 'Cartoon title is required' },
+        { status: 400 }
+      );
     }
 
-    const filePath = path.join(process.cwd(), 'src/data/cartoonEpisodes.json');
-    const fileData = await fs.readFile(filePath, 'utf8');
-    const cartoonsBySlug = JSON.parse(fileData);
-
-    // Generate cartoon slug from title
-    const cartoonSlug = generateSlug(incomingData.cartoonTitle);
-    const episodes = incomingData.episodes || [incomingData.videoUrl];
-
-    // Initialize cartoon if it doesn't exist
-    if (!cartoonsBySlug[cartoonSlug]) {
-      cartoonsBySlug[cartoonSlug] = {
-        episodes: []
-      };
-    }
-
-    // Ensure episodes array exists
-    if (!cartoonsBySlug[cartoonSlug].episodes) {
-      cartoonsBySlug[cartoonSlug].episodes = [];
-    }
-
-    const existingEpisodes = cartoonsBySlug[cartoonSlug].episodes;
-    const addedEpisodes = [];
-
-    // Add each episode
-    episodes.forEach((episodeUrl, index) => {
-      if (!episodeUrl) return; // Skip empty episodes
+    // Get existing cartoons to determine the next ID number
+    const moviesRef = collection(db, 'movies');
+    const q = query(moviesRef, where('genre', '==', 'cartoon'));
+    const querySnapshot = await getDocs(q);
+    
+    // Find the highest ID number for cartoons
+    let maxNumber = 0;
+    
+    console.log(`Checking ${querySnapshot.size} existing cartoons...`);
+    
+    querySnapshot.forEach((doc) => {
+      const docId = doc.id;
+      const docData = doc.data();
       
-      const episodeNumber = existingEpisodes.length + index + 1;
-      const episodeTitle = `Episode ${episodeNumber}`;
-      const episodeSlug = generateSlug(episodeTitle);
+      // Check both the stored id field and the document ID
+      const idsToCheck = [docData.id, docId].filter(Boolean);
       
-      // Find the previous and next episode slugs for navigation
-      const previousEpisodeSlug = (existingEpisodes.length + index) > 0 ? 
-        (existingEpisodes[existingEpisodes.length - 1]?.slug || `episode-${existingEpisodes.length + index}`) : null;
-      const nextEpisodeSlug = null; // Will be updated when next episode is added
-      
-      // Update the previous episode's nextEpisode reference
-      if (existingEpisodes.length + index > 0) {
-        const prevIndex = existingEpisodes.length + index - 1;
-        if (existingEpisodes[prevIndex]) {
-          existingEpisodes[prevIndex].nextEpisode = episodeSlug;
-        } else if (addedEpisodes[prevIndex - existingEpisodes.length]) {
-          addedEpisodes[prevIndex - existingEpisodes.length].nextEpisode = episodeSlug;
+      for (const id of idsToCheck) {
+        if (id.startsWith('c')) {
+          const numberPart = id.substring(1);
+          const num = parseInt(numberPart, 10);
+          if (!isNaN(num) && num > maxNumber) {
+            maxNumber = num;
+          }
         }
       }
+    });
+    
+    console.log(`Max cartoon number found: ${maxNumber}, Next ID: c${maxNumber + 1}`);
+    
+    // Generate the next sequential ID
+    const cartoonId = `c${maxNumber + 1}`;
+    const slug = generateSlug(cartoonData.cartoonTitle);
 
-      // --- Data Structuring ---
-      const structuredEpisode = {
-        id: `${cartoonSlug}-ep${episodeNumber}`,
+    // Process episodes
+    const episodes = [];
+    const episodeUrls = cartoonData.episodes || [cartoonData.videoUrl];
+    
+    episodeUrls.forEach((episodeUrl, index) => {
+      if (!episodeUrl) return;
+      
+      const episodeNumber = index + 1;
+      const episodeTitle = `Episode ${episodeNumber}`;
+      const episodeSlug = `episode-${episodeNumber}`;
+      
+      const episode = {
+        id: `${slug}-ep${episodeNumber}`,
         title: episodeTitle,
         slug: episodeSlug,
-        thumbnail: incomingData.portraitImage || `/assets/images/cartoons/${cartoonSlug}.jpg`,
+        description: cartoonData.description || `${cartoonData.cartoonTitle} - ${episodeTitle}`,
         videoUrl: episodeUrl,
-        duration: incomingData.duration || '00:00',
-        previousEpisode: previousEpisodeSlug,
-        nextEpisode: nextEpisodeSlug
+        duration: cartoonData.duration || '00:00',
+        thumbnail: cartoonData.imageUrl || '', // Use the main cartoon image as episode thumbnail
+        previousEpisode: episodeNumber > 1 ? `episode-${episodeNumber - 1}` : null,
+        nextEpisode: episodeNumber < episodeUrls.length ? `episode-${episodeNumber + 1}` : null
       };
-      // -------------------------
-
-      addedEpisodes.push(structuredEpisode);
+      
+      episodes.push(episode);
     });
 
-    // Add all new episodes to the cartoon
-    existingEpisodes.push(...addedEpisodes);
+    // Prepare cartoon document
+    const cartoonDoc = {
+      id: cartoonId,
+      title: cartoonData.cartoonTitle,
+      description: cartoonData.description || 'No description available.',
+      genre: 'cartoon',
+      year: cartoonData.year || 'Unknown',
+      duration: cartoonData.duration || '00:00',
+      rating: cartoonData.rating || 'N/A',
+      slug: slug,
+      // ImageKit URLs
+      image: cartoonData.imageUrl || '', // Portrait image URL from ImageKit
+      innerImage: cartoonData.innerImageUrl || '', // Landscape image URL from ImageKit
+      // ImageKit file IDs for management
+      imageFileId: cartoonData.imageFileId || '',
+      innerImageFileId: cartoonData.innerImageFileId || '',
+      // Episodes
+      episodes: episodes,
+      episodeCount: episodes.length,
+      // Metadata
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
 
-    // Get the cartoon ID for image paths
-    const moviesFilePath = path.join(process.cwd(), 'src/data/movies.json');
-    const moviesFileData = await fs.readFile(moviesFilePath, 'utf8');
-    const movies = JSON.parse(moviesFileData);
+    // Add to Firestore with the cartoonId as the document ID
+    const docRef = doc(db, 'movies', cartoonId);
+    await setDoc(docRef, cartoonDoc);
 
-    const cartoonSection = movies['cartoon'];
-    const existingCartoon = cartoonSection.find(movie => movie.slug === cartoonSlug);
-    
-    let cartoonId;
-    if (!existingCartoon) {
-      const existingIds = cartoonSection.map(movie => movie.id);
-      cartoonId = generateNewId(existingIds);
-    } else {
-      cartoonId = existingCartoon.id;
-    }
-
-    // Update episodes with correct thumbnail paths using cartoon ID
-    addedEpisodes.forEach(episode => {
-      if (!incomingData.portraitImage) {
-        episode.thumbnail = `/assets/images/cartoons/cartoon${cartoonId.slice(1)}.jpg`;
-      }
+    return NextResponse.json({
+      success: true,
+      message: `Cartoon added successfully with ${episodes.length} episode(s)!`,
+      id: cartoonId,
+      cartoonId: cartoonId,
+      episodes: episodes
     });
-
-// Save cartoon details to cartoonEpisodes.json
-    await fs.writeFile(filePath, JSON.stringify(cartoonsBySlug, null, 2));
-
-    // Add cartoon to movies.json (only if it doesn't exist)
-    if (!existingCartoon) {
-      const newId = cartoonId;
-      const newMovie = {
-        id: newId,
-        title: incomingData.cartoonTitle,
-        image: incomingData.portraitImage || `/assets/images/cartoons/cartoon${newId.slice(1)}.jpg`,
-        innerImage: incomingData.landscapeImage || `/assets/images/cartoons/landscape/cartoon${newId.slice(1)}.jpg`,
-        slug: cartoonSlug,
-        year: incomingData.year || 'Unknown',
-        duration: incomingData.duration || '00:00',
-        rating: incomingData.rating || 'N/A',
-        genre: 'cartoon',
-        description: incomingData.description || 'No description available.'
-      };
-      cartoonSection.push(newMovie);
-      await fs.writeFile(moviesFilePath, JSON.stringify(movies, null, 2));
-    }
-
-    return NextResponse.json({ 
-      message: `${addedEpisodes.length} episode(s) added successfully!`, 
-      episodes: addedEpisodes 
-    }, { status: 201 });
 
   } catch (error) {
-    console.error('API Error:', error);
-    return NextResponse.json({ message: 'Failed to add cartoon episode.' }, { status: 500 });
+    console.error('Error adding cartoon:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to add cartoon', error: error.message },
+      { status: 500 }
+    );
   }
 }
 
+// GET - Fetch all cartoons
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), 'src/data/cartoonEpisodes.json');
-    const fileData = await fs.readFile(filePath, 'utf8');
-    const cartoonsBySlug = JSON.parse(fileData);
-    // Flatten all episodes into a single array, with cartoon info
-    const allEpisodes = [];
-    for (const slug of Object.keys(cartoonsBySlug)) {
-      const cartoon = cartoonsBySlug[slug];
-      if (cartoon.episodes && Array.isArray(cartoon.episodes)) {
-        cartoon.episodes.forEach(ep => {
-          allEpisodes.push({ ...ep, cartoonSlug: slug, cartoonTitle: cartoon.title || slug });
-        });
-      }
-    }
-    return NextResponse.json(allEpisodes, { status: 200 });
+    const moviesRef = collection(db, 'movies');
+    const q = query(moviesRef, where('genre', '==', 'cartoon'), orderBy('createdAt', 'desc'));
+    const querySnapshot = await getDocs(q);
+    
+    const cartoons = [];
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      // Format for compatibility with existing UI
+      cartoons.push({
+        id: doc.id,
+        cartoonTitle: data.title,
+        cartoonSlug: data.slug,
+        description: data.description,
+        thumbnail: data.image,
+        episodes: data.episodes || [],
+        ...data
+      });
+    });
+
+    return NextResponse.json(cartoons);
+
   } catch (error) {
-    return NextResponse.json({ message: 'Failed to read cartoons.' }, { status: 500 });
+    console.error('Error fetching cartoons:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to fetch cartoons', error: error.message },
+      { status: 500 }
+    );
   }
 }
 
+// PUT - Update cartoon
 export async function PUT(request) {
   try {
-    const updatedEpisode = await request.json();
-    if (!updatedEpisode || !updatedEpisode.id) {
-      return NextResponse.json({ message: 'Invalid episode data.' }, { status: 400 });
+    const updateData = await request.json();
+    const { id, cartoonTitle, ...otherData } = updateData;
+
+    if (!id) {
+      return NextResponse.json(
+        { success: false, message: 'Cartoon ID is required' },
+        { status: 400 }
+      );
     }
-    const filePath = path.join(process.cwd(), 'src/data/cartoonEpisodes.json');
-    const fileData = await fs.readFile(filePath, 'utf8');
-    const cartoonsBySlug = JSON.parse(fileData);
-    let found = false;
-    for (const slug of Object.keys(cartoonsBySlug)) {
-      const cartoon = cartoonsBySlug[slug];
-      if (cartoon.episodes && Array.isArray(cartoon.episodes)) {
-        cartoon.episodes = cartoon.episodes.map(ep => {
-          if (ep.id === updatedEpisode.id) {
-            found = true;
-            return { ...ep, ...updatedEpisode };
-          }
-          return ep;
-        });
-      }
+
+    // Build update object with only provided fields
+    const updates = {};
+    
+    // Map cartoonTitle to title for consistency
+    if (cartoonTitle) {
+      updates.title = cartoonTitle;
+      updates.slug = generateSlug(cartoonTitle);
     }
-    if (!found) {
-      return NextResponse.json({ message: 'Episode not found.' }, { status: 404 });
+    
+    // Only update fields that are provided
+    if (updateData.description !== undefined) updates.description = updateData.description;
+    if (updateData.year !== undefined) updates.year = updateData.year;
+    if (updateData.duration !== undefined) updates.duration = updateData.duration;
+    if (updateData.rating !== undefined) updates.rating = updateData.rating;
+    
+    // Handle image URLs - only update if new ones are provided
+    if (updateData.imageUrl) updates.image = updateData.imageUrl;
+    if (updateData.innerImageUrl) updates.innerImage = updateData.innerImageUrl;
+    if (updateData.imageFileId) updates.imageFileId = updateData.imageFileId;
+    if (updateData.innerImageFileId) updates.innerImageFileId = updateData.innerImageFileId;
+
+    // Process episodes if provided
+    if (updateData.episodes && Array.isArray(updateData.episodes)) {
+      const episodes = [];
+      const cartoonSlug = updates.slug || generateSlug(cartoonTitle || 'cartoon');
+      
+      updateData.episodes.forEach((episodeUrl, index) => {
+        if (!episodeUrl) return;
+        
+        const episodeNumber = index + 1;
+        const episodeTitle = `Episode ${episodeNumber}`;
+        const episodeSlug = `episode-${episodeNumber}`;
+        
+        const episode = {
+          id: `${cartoonSlug}-ep${episodeNumber}`,
+          title: episodeTitle,
+          slug: episodeSlug,
+          description: updates.description || updateData.description || `${cartoonTitle || 'Cartoon'} - ${episodeTitle}`,
+          videoUrl: episodeUrl,
+          duration: updates.duration || updateData.duration || '00:00',
+          thumbnail: updates.image || updateData.imageUrl || '',
+          previousEpisode: episodeNumber > 1 ? `episode-${episodeNumber - 1}` : null,
+          nextEpisode: episodeNumber < updateData.episodes.length ? `episode-${episodeNumber + 1}` : null
+        };
+        
+        episodes.push(episode);
+      });
+      updates.episodes = episodes;
+      updates.episodeCount = episodes.length;
     }
-    await fs.writeFile(filePath, JSON.stringify(cartoonsBySlug, null, 2));
-    return NextResponse.json({ message: 'Episode updated successfully!' }, { status: 200 });
+
+    updates.updatedAt = new Date();
+
+    const movieRef = doc(db, 'movies', id);
+    await updateDoc(movieRef, updates);
+
+    return NextResponse.json({
+      success: true,
+      message: 'Cartoon updated successfully!'
+    });
+
   } catch (error) {
-    return NextResponse.json({ message: 'Failed to update episode.' }, { status: 500 });
+    console.error('Error updating cartoon:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to update cartoon', error: error.message },
+      { status: 500 }
+    );
   }
 }
 
+// DELETE - Delete cartoon
 export async function DELETE(request) {
   try {
     const { id } = await request.json();
+
     if (!id) {
-      return NextResponse.json({ message: 'Episode ID required.' }, { status: 400 });
+      return NextResponse.json(
+        { success: false, message: 'Cartoon ID is required' },
+        { status: 400 }
+      );
     }
-    const filePath = path.join(process.cwd(), 'src/data/cartoonEpisodes.json');
-    const fileData = await fs.readFile(filePath, 'utf8');
-    const cartoonsBySlug = JSON.parse(fileData);
-    let found = false;
-    for (const slug of Object.keys(cartoonsBySlug)) {
-      const cartoon = cartoonsBySlug[slug];
-      if (cartoon.episodes && Array.isArray(cartoon.episodes)) {
-        const before = cartoon.episodes.length;
-        cartoon.episodes = cartoon.episodes.filter(ep => ep.id !== id);
-        if (cartoon.episodes.length < before) found = true;
-      }
-    }
-    if (!found) {
-      return NextResponse.json({ message: 'Episode not found.' }, { status: 404 });
-    }
-    await fs.writeFile(filePath, JSON.stringify(cartoonsBySlug, null, 2));
-    return NextResponse.json({ message: 'Episode deleted successfully!' }, { status: 200 });
+
+    const movieRef = doc(db, 'movies', id);
+    await deleteDoc(movieRef);
+
+    return NextResponse.json({
+      success: true,
+      message: 'Cartoon deleted successfully!'
+    });
+
   } catch (error) {
-    return NextResponse.json({ message: 'Failed to delete episode.' }, { status: 500 });
+    console.error('Error deleting cartoon:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to delete cartoon', error: error.message },
+      { status: 500 }
+    );
   }
-} 
+}

@@ -7,10 +7,8 @@ import Link from 'next/link';
 import { Bookmark, Share, Star, Check } from 'lucide-react';
 import Navbar from '../../../../components/navbarSearch';
 import Footer from '../../../../components/footer';
-import moviesData from '../../../data/movies.json';
-import episodesData from '../../../data/tvEpisodes.json';
-import { auth } from '../../../../firebase';
-import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
+import { auth, db } from '../../../../firebase';
+import { getFirestore, doc, setDoc, deleteDoc, getDoc, collection, getDocs, query, where } from 'firebase/firestore';
 
 export default function TVSeriesDetailPage() {
   const params = useParams();
@@ -70,24 +68,65 @@ export default function TVSeriesDetailPage() {
   }, [series, slug, router, searchParams]);
 
   useEffect(() => {
-    setDataLoading(true);
-    // Find the series by slug from the tv-series genre
-    const foundSeries = moviesData['tv-series']?.find(s => s.slug === slug);
-    setSeries(foundSeries);
+    const fetchSeriesData = async () => {
+      setDataLoading(true);
+      try {
+        console.log('Fetching series with slug:', slug);
+        
+        // Find the series by slug from Firebase
+        const seriesQuery = query(
+          collection(db, 'movies'),
+          where('genre', '==', 'tv-series'),
+          where('slug', '==', slug)
+        );
+        const seriesSnapshot = await getDocs(seriesQuery);
+        
+        console.log('Series query results:', seriesSnapshot.size, 'documents found');
+        
+        if (!seriesSnapshot.empty) {
+          const foundSeries = seriesSnapshot.docs[0].data();
+          console.log('Found series:', foundSeries);
+          setSeries(foundSeries);
 
-    // Get episodes for this series
-    if (foundSeries) {
-      const seriesEpisodes = episodesData[slug]?.episodes || [];
-      setEpisodes(seriesEpisodes);
+          // Get episodes directly from the series document
+          if (foundSeries.episodes && Array.isArray(foundSeries.episodes)) {
+            console.log('Found episodes in series document:', foundSeries.episodes.length);
+            setEpisodes(foundSeries.episodes);
+          } else {
+            console.log('No episodes found in series document');
+            setEpisodes([]);
+          }
 
-      // Get recommended series from the tv-series genre, excluding the current series
-      const tvSeries = moviesData['tv-series'] || [];
-      const filteredSeries = tvSeries.filter(s => s.slug !== slug);
-      // Shuffle and take 5 series
-      const shuffled = [...filteredSeries].sort(() => 0.5 - Math.random()).slice(0, 5);
-      setRecommendedSeries(shuffled);
+          // Get recommended series from Firebase, excluding the current series
+          const recommendedQuery = query(
+            collection(db, 'movies'),
+            where('genre', '==', 'tv-series')
+          );
+          const recommendedSnapshot = await getDocs(recommendedQuery);
+          const allSeries = recommendedSnapshot.docs.map(doc => doc.data());
+          const filteredSeries = allSeries.filter(s => s.slug !== slug);
+          // Shuffle and take 5 series
+          const shuffled = [...filteredSeries].sort(() => 0.5 - Math.random()).slice(0, 5);
+          setRecommendedSeries(shuffled);
+        } else {
+          console.log('No series found in Firebase');
+          setSeries(null);
+          setEpisodes([]);
+          setRecommendedSeries([]);
+        }
+      } catch (error) {
+        console.error('Error fetching series data:', error);
+        setSeries(null);
+        setEpisodes([]);
+        setRecommendedSeries([]);
+      } finally {
+        setDataLoading(false);
+      }
+    };
+
+    if (slug) {
+      fetchSeriesData();
     }
-    setDataLoading(false);
   }, [slug]);
 
   const checkWishlistStatus = async () => {

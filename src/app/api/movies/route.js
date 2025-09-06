@@ -175,15 +175,39 @@ export async function PUT(request) {
       );
     }
 
+    // Build update object with only provided fields
+    const updates = {};
+    
     // Update slug if title changed
     if (updateData.title) {
-      updateData.slug = generateSlug(updateData.title);
+      updates.title = updateData.title;
+      updates.slug = generateSlug(updateData.title);
+    }
+    
+    // Only update fields that are provided
+    if (updateData.description !== undefined) updates.description = updateData.description;
+    if (updateData.genre !== undefined) updates.genre = updateData.genre;
+    if (updateData.year !== undefined) updates.year = updateData.year;
+    if (updateData.duration !== undefined) updates.duration = updateData.duration;
+    if (updateData.rating !== undefined) updates.rating = updateData.rating;
+    if (updateData.link !== undefined) updates.videoUrl = updateData.link;
+    
+    // Handle image URLs - only update if new ones are provided
+    if (updateData.imageUrl) updates.image = updateData.imageUrl;
+    if (updateData.innerImageUrl) updates.innerImage = updateData.innerImageUrl;
+    if (updateData.imageFileId) updates.imageFileId = updateData.imageFileId;
+    if (updateData.innerImageFileId) updates.innerImageFileId = updateData.innerImageFileId;
+    
+    // For TV Series episodes
+    if (updateData.episodes !== undefined) {
+      updates.episodes = updateData.episodes;
+      updates.episodeCount = updateData.episodeCount || updateData.episodes.length;
     }
 
-    updateData.updatedAt = new Date();
+    updates.updatedAt = new Date();
 
     const movieRef = doc(db, 'movies', id);
-    await updateDoc(movieRef, updateData);
+    await updateDoc(movieRef, updates);
 
     return NextResponse.json({
       success: true,

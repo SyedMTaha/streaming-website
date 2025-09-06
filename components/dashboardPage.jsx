@@ -144,10 +144,10 @@ const dashboardPage = () => {
         // Filter TV series from all movies data
         const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
         setSeriesList(tvSeries);
+        // Filter cartoons from all movies data
+        const cartoons = (data.movies || []).filter(item => item.genre === 'cartoon');
+        setCartoonList(cartoons);
       });
-    fetch('/api/add-cartoon')
-      .then(res => res.json())
-      .then(data => setCartoonList(data || []));
   }, []);
 
   const handleMovieSearch = (e) => setMovieSearch(e.target.value);
@@ -161,7 +161,7 @@ const dashboardPage = () => {
     s.title?.toLowerCase().includes(seriesSearch.toLowerCase())
   );
   const filteredCartoons = cartoonList.filter(c =>
-    c.cartoonTitle?.toLowerCase().includes(cartoonSearch.toLowerCase())
+    (c.cartoonTitle || c.title)?.toLowerCase().includes(cartoonSearch.toLowerCase())
   );
 
   const handleEditMovie = (movie) => {
@@ -312,14 +312,16 @@ const dashboardPage = () => {
   const handleEditSeries = (series) => {
     setSeriesTitle(series.title);
     setSeriesDescription(series.description);
-    setSeriesGenre(series.genre);
+    setSeriesGenre(series.genre || 'TV Series');
     setSeriesDuration(series.duration);
     setSeriesRating(series.rating);
     setSeriesYear(series.year);
     setSeriesPortrait(series.image?.split('/').pop() || '');
     setSeriesLandscape(series.innerImage?.split('/').pop() || '');
-    setSeriesEpisodeLinks(series.episodes || []);
-    setSeriesEpisodeCount((series.episodes || []).length);
+    // Extract episode URLs from episodes array
+    const episodeUrls = series.episodes?.map(ep => ep.videoUrl) || [];
+    setSeriesEpisodeLinks(episodeUrls);
+    setSeriesEpisodeCount(episodeUrls.length || 1);
     setEditingSeriesId(series.id);
   };
   const handleDeleteSeries = (id) => {
@@ -345,24 +347,23 @@ const dashboardPage = () => {
       const imageFormData = new FormData();
       
       // Add portrait image if provided
-      if (seriesData.portraitFile) {
-        imageFormData.append('portrait', seriesData.portraitFile);
+      if (seriesPortraitFile) {
+        imageFormData.append('portrait', seriesPortraitFile);
       }
       
       // Add landscape image if provided
-      if (seriesData.landscapeFile) {
-        imageFormData.append('landscape', seriesData.landscapeFile);
+      if (seriesLandscapeFile) {
+        imageFormData.append('landscape', seriesLandscapeFile);
       }
       
-      // For TV series, we use a special genre indicator
-      imageFormData.append('genre', 'tv-series-special');
+      imageFormData.append('genre', 'tv-series');
       imageFormData.append('title', seriesData.title);
 
       let imageUrls = {};
       
       // Only upload images if files are provided
-      if (seriesData.portraitFile || seriesData.landscapeFile) {
-        const imageResponse = await fetch('/api/upload-series-images', {
+      if (seriesPortraitFile || seriesLandscapeFile) {
+        const imageResponse = await fetch('/api/upload-movie-images', {
           method: 'POST',
           body: imageFormData,
         });
@@ -378,33 +379,24 @@ const dashboardPage = () => {
         imageUrls = imageResult.images;
       }
 
-      // Prepare series data for database
+      // Prepare series data for the new API
       const seriesDataForDb = {
         title: seriesData.title,
         description: seriesData.description,
-        genre: 'tv-series',
         year: seriesData.year,
         duration: seriesData.duration,
         rating: seriesData.rating,
-        link: '', // TV series don't have a single video URL
+        episodes: seriesData.episodes,
         // Use ImageKit URLs
         imageUrl: imageUrls.portrait?.url || seriesData.imageUrl || '',
         innerImageUrl: imageUrls.landscape?.url || seriesData.innerImageUrl || '',
         imageFileId: imageUrls.portrait?.fileId || '',
-        innerImageFileId: imageUrls.landscape?.fileId || '',
-        // Episodes data
-        episodes: seriesData.episodes.map((url, idx) => ({
-          id: `ep-${idx + 1}`,
-          title: `Episode ${idx + 1}`,
-          videoUrl: url,
-          slug: `episode-${idx + 1}`
-        })),
-        episodeCount: seriesData.episodes.length
+        innerImageFileId: imageUrls.landscape?.fileId || ''
       };
 
       if (editingSeriesId) {
         // Update existing series
-        const res = await fetch('/api/movies', {
+        const res = await fetch('/api/add-series', {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id: editingSeriesId, ...seriesDataForDb }),
@@ -425,7 +417,7 @@ const dashboardPage = () => {
         }
       } else {
         // Add new series
-        const res = await fetch('/api/movies', {
+        const res = await fetch('/api/add-series', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(seriesDataForDb),
@@ -455,6 +447,8 @@ const dashboardPage = () => {
         setSeriesYear('');
         setSeriesPortrait('');
         setSeriesLandscape('');
+        setSeriesPortraitFile(null);
+        setSeriesLandscapeFile(null);
         setSeriesEpisodeCount(1);
         setSeriesEpisodeLinks(['']);
       }, 5000);
@@ -470,16 +464,18 @@ const dashboardPage = () => {
   };
 
   const handleEditCartoon = (cartoon) => {
-    setCartoonTitle(cartoon.cartoonTitle || '');
+    setCartoonTitle(cartoon.title || cartoon.cartoonTitle || '');
     setCartoonDescription(cartoon.description || '');
-    setCartoonGenre(cartoon.genre || 'Cartoon');
+    setCartoonGenre('Cartoon');
     setCartoonDuration(cartoon.duration || '');
     setCartoonRating(cartoon.rating || '');
     setCartoonYear(cartoon.year || '');
-    setCartoonPortrait(cartoon.thumbnail?.split('/').pop() || '');
-    setCartoonLandscape(''); // Not available in data
-    setCartoonEpisodeLinks(cartoon.episodes || [cartoon.videoUrl] || ['']);
-    setCartoonEpisodeCount((cartoon.episodes || [cartoon.videoUrl] || ['']).length);
+    setCartoonPortrait(cartoon.image?.split('/').pop() || '');
+    setCartoonLandscape(cartoon.innerImage?.split('/').pop() || '');
+    // Extract episode URLs from episodes array
+    const episodeUrls = cartoon.episodes?.map(ep => ep.videoUrl) || [];
+    setCartoonEpisodeLinks(episodeUrls.length > 0 ? episodeUrls : ['']);
+    setCartoonEpisodeCount(episodeUrls.length || 1);
     setEditingCartoonId(cartoon.id);
   };
   const handleDeleteCartoon = (id) => {
@@ -498,44 +494,125 @@ const dashboardPage = () => {
     setShowAlert(true);
   };
   const handleCartoonUpload = async (cartoonData) => {
-    if (editingCartoonId) {
-      const res = await fetch('/api/add-cartoon', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...cartoonData, id: editingCartoonId }),
-      });
-      if (res.ok) {
-        setSuccessMessage('Cartoon episode updated successfully!');
-        setEditingCartoonId(null);
-        fetch('/api/add-cartoon').then(res => res.json()).then(data => setCartoonList(data || []));
-      } else {
-        setSuccessMessage('Failed to update cartoon episode');
+    try {
+      setSuccessMessage('Uploading images and saving cartoon...');
+      
+      // Upload images to ImageKit first
+      const imageFormData = new FormData();
+      
+      // Add portrait image if provided
+      if (cartoonPortraitFile) {
+        imageFormData.append('portrait', cartoonPortraitFile);
       }
+      
+      // Add landscape image if provided
+      if (cartoonLandscapeFile) {
+        imageFormData.append('landscape', cartoonLandscapeFile);
+      }
+      
+      imageFormData.append('genre', 'cartoon');
+      imageFormData.append('title', cartoonData.cartoonTitle);
+
+      let imageUrls = {};
+      
+      // Only upload images if files are provided
+      if (cartoonPortraitFile || cartoonLandscapeFile) {
+        const imageResponse = await fetch('/api/upload-movie-images', {
+          method: 'POST',
+          body: imageFormData,
+        });
+        
+        const imageResult = await imageResponse.json();
+        
+        if (!imageResult.success) {
+          setSuccessMessage('Failed to upload images: ' + imageResult.error);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        imageUrls = imageResult.images;
+      }
+
+      // Prepare cartoon data for the new API
+      const cartoonDataForDb = {
+        cartoonTitle: cartoonData.cartoonTitle,
+        description: cartoonData.description,
+        year: cartoonData.year,
+        duration: cartoonData.duration,
+        rating: cartoonData.rating,
+        episodes: cartoonData.episodes,
+        // Use ImageKit URLs - preserve existing ones if no new upload
+        imageUrl: imageUrls.portrait?.url || '',
+        innerImageUrl: imageUrls.landscape?.url || '',
+        imageFileId: imageUrls.portrait?.fileId || '',
+        innerImageFileId: imageUrls.landscape?.fileId || ''
+      };
+
+      if (editingCartoonId) {
+        // Update existing cartoon
+        const res = await fetch('/api/add-cartoon', {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: editingCartoonId, ...cartoonDataForDb }),
+        });
+        
+        const result = await res.json();
+        
+        if (result.success) {
+          setSuccessMessage('Cartoon updated successfully!');
+          setEditingCartoonId(null);
+          // Refresh list
+          fetch('/api/movies').then(res => res.json()).then(data => {
+            const cartoons = (data.movies || []).filter(item => item.genre === 'cartoon');
+            setCartoonList(cartoons);
+          });
+        } else {
+          setSuccessMessage('Failed to update cartoon: ' + result.message);
+        }
+      } else {
+        // Add new cartoon
+        const res = await fetch('/api/add-cartoon', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(cartoonDataForDb),
+        });
+        
+        const result = await res.json();
+        
+        if (result.success) {
+          setSuccessMessage('Cartoon added successfully!');
+          // Refresh list
+          fetch('/api/movies').then(res => res.json()).then(data => {
+            const cartoons = (data.movies || []).filter(item => item.genre === 'cartoon');
+            setCartoonList(cartoons);
+          });
+        } else {
+          setSuccessMessage('Failed to add cartoon: ' + result.message);
+        }
+      }
+
+      // Clear form fields after 5 seconds
+      setTimeout(() => {
+        setCartoonTitle('');
+        setCartoonDescription('');
+        setCartoonGenre('Cartoon');
+        setCartoonDuration('');
+        setCartoonRating('');
+        setCartoonYear('');
+        setCartoonPortrait('');
+        setCartoonLandscape('');
+        setCartoonPortraitFile(null);
+        setCartoonLandscapeFile(null);
+        setCartoonEpisodeCount(1);
+        setCartoonEpisodeLinks(['']);
+      }, 5000);
+      
+      // Hide the notification after 7 seconds
       setTimeout(() => setSuccessMessage(''), 7000);
-      return;
-    }
-    const res = await fetch('/api/add-cartoon', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(cartoonData),
-    });
-    if (res.ok) {
-      setSuccessMessage('Cartoon episode added successfully!');
-      // Clear all cartoon form fields
-      setCartoonTitle('');
-      setCartoonDescription('');
-      setCartoonGenre('Cartoon');
-      setCartoonDuration('');
-      setCartoonRating('');
-      setCartoonYear('');
-      setCartoonPortrait('');
-      setCartoonLandscape('');
-      setCartoonEpisodeCount(1);
-      setCartoonEpisodeLinks(['']);
-      // Hide the notification after 3 seconds
-      setTimeout(() => setSuccessMessage(''), 7000);
-    } else {
-      setSuccessMessage('Failed to add cartoon episode');
+      
+    } catch (error) {
+      console.error('Error uploading cartoon:', error);
+      setSuccessMessage('Error uploading cartoon: ' + error.message);
       setTimeout(() => setSuccessMessage(''), 7000);
     }
   };
@@ -826,7 +903,11 @@ const dashboardPage = () => {
                   type="file"
                   accept="image/*"
                   className="hidden"
-                  onChange={e => setSeriesPortrait(e.target.files[0]?.name || "")}
+                  onChange={e => {
+                    const file = e.target.files[0];
+                    setSeriesPortrait(file?.name || "");
+                    setSeriesPortraitFile(file);
+                  }}
                 />
                 <label
                   htmlFor="seriesPortrait"
@@ -847,7 +928,11 @@ const dashboardPage = () => {
                   type="file"
                   accept="image/*"
                   className="hidden"
-                  onChange={e => setSeriesLandscape(e.target.files[0]?.name || "")}
+                  onChange={e => {
+                    const file = e.target.files[0];
+                    setSeriesLandscape(file?.name || "");
+                    setSeriesLandscapeFile(file);
+                  }}
                 />
                 <label
                   htmlFor="seriesLandscape"
@@ -894,7 +979,7 @@ const dashboardPage = () => {
               <div style={{ maxHeight: 180, overflowY: 'auto' }} className="bg-[#10162A] rounded p-2 border border-[#223366] mb-2">
                 {filteredCartoons.map(cartoon => (
                   <div key={cartoon.id} className="flex items-center justify-between gap-2 py-1 border-b border-[#223366] last:border-b-0">
-                    <span className="text-white text-sm truncate" style={{ maxWidth: 120 }}>{cartoon.cartoonTitle}</span>
+                    <span className="text-white text-sm truncate" style={{ maxWidth: 120 }}>{cartoon.title || cartoon.cartoonTitle} ({cartoon.year})</span>
                     <div className="flex gap-1">
                       <button className="text-blue-400 hover:underline text-xs" onClick={() => handleEditCartoon(cartoon)}>Edit</button>
                       <button className="text-red-400 hover:underline text-xs" onClick={() => handleDeleteCartoon(cartoon.id)}>Delete</button>
@@ -980,7 +1065,11 @@ const dashboardPage = () => {
                   type="file"
                   accept="image/*"
                   className="hidden"
-                  onChange={e => setCartoonPortrait(e.target.files[0]?.name || "")}
+                  onChange={e => {
+                    const file = e.target.files[0];
+                    setCartoonPortrait(file?.name || "");
+                    setCartoonPortraitFile(file);
+                  }}
                 />
                 <label
                   htmlFor="cartoonPortrait"
@@ -1001,7 +1090,11 @@ const dashboardPage = () => {
                   type="file"
                   accept="image/*"
                   className="hidden"
-                  onChange={e => setCartoonLandscape(e.target.files[0]?.name || "")}
+                  onChange={e => {
+                    const file = e.target.files[0];
+                    setCartoonLandscape(file?.name || "");
+                    setCartoonLandscapeFile(file);
+                  }}
                 />
                 <label
                   htmlFor="cartoonLandscape"

@@ -167,7 +167,7 @@ export default function DashboardPage() {
               <MovieCard image={Pursued} title="Pursued" />
               <MovieCard image={home48} title="Stage Coach" />
               <MovieCard image={home49} title="State Secret" />
-              <MovieCard image={Bad} title="Bad and the Beautiful" />
+              <MovieCard image="/assets/images/movies/thriller/thriller8.png" title="The Fatal Hour" />
               <MovieCard image={comedy2} title="His Girl Friday" />
               <MovieCard image="/assets/images/movies/sci-fi/scifi18.png" title="The Amazing Transparent Man" />
               <MovieCard image={drama2} title="Key Largo" />

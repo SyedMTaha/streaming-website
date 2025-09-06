@@ -19,6 +19,16 @@ export async function POST(request) {
     }
 
     const results = {};
+    
+    // Determine the correct folder path
+    let folderBase;
+    if (genre.toLowerCase() === 'cartoon') {
+      folderBase = 'cartoons';
+    } else if (genre.toLowerCase() === 'tv-series') {
+      folderBase = 'series';
+    } else {
+      folderBase = `movies/${genre.toLowerCase().replace(/\s+/g, '-')}`;
+    }
 
     // Upload portrait image
     if (portraitFile) {
@@ -30,7 +40,7 @@ export async function POST(request) {
       const portraitResponse = await imagekit.upload({
         file: portraitBuffer,
         fileName: portraitFile.name,
-        folder: `movies/${genre.toLowerCase().replace(/\s+/g, '-')}`,
+        folder: folderBase,
         tags: ['movie', 'portrait', genre.toLowerCase()],
         useUniqueFileName: false,
       });
@@ -52,7 +62,7 @@ export async function POST(request) {
       const landscapeResponse = await imagekit.upload({
         file: landscapeBuffer,
         fileName: landscapeFile.name,
-        folder: `movies/${genre.toLowerCase().replace(/\s+/g, '-')}/landscape`,
+        folder: `${folderBase}/landscape`,
         tags: ['movie', 'landscape', genre.toLowerCase()],
         useUniqueFileName: false,
       });

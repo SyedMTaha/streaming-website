@@ -1,19 +1,48 @@
 "use client"
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, Play, Bookmark } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Navbar from '../../../components/navbarSearch';
 import Footer from '../../../components/footer';
-import moviesData from '../../data/movies.json';
+import { db } from '../../../firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 export default function TVSeriesPage() {
   const router = useRouter();
   const scrollContainerRef = useRef(null);
   const locomotiveScroll = useRef(null);
-  const series = moviesData['tv-series'] || [];
+  const [series, setSeries] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch TV series from Firebase
+  useEffect(() => {
+    const fetchTVSeries = async () => {
+      try {
+        const seriesQuery = query(
+          collection(db, 'movies'),
+          where('genre', '==', 'tv-series')
+        );
+        const seriesSnapshot = await getDocs(seriesQuery);
+        
+        if (!seriesSnapshot.empty) {
+          const fetchedSeries = seriesSnapshot.docs.map(doc => ({
+            ...doc.data(),
+            id: doc.id
+          }));
+          setSeries(fetchedSeries);
+        }
+      } catch (error) {
+        console.error('Error fetching TV series:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTVSeries();
+  }, []);
 
   useEffect(() => {
     if (scrollContainerRef.current) {
@@ -55,6 +84,17 @@ export default function TVSeriesPage() {
   const handleSeriesClick = (series) => {
     router.push(`/tv-series/${series.slug}`);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-[#02122C] to-[#020E21] flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-400">Loading TV series...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
