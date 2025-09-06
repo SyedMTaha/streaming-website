@@ -9,9 +9,8 @@ import Navbar from '../../../../components/navbarSearch';
 import Footer from '../../../../components/footer';
 import FooterLand from '../../../../components/footerLanding';
 import LandingNavbar from '../../../../components/navbarLanding';
-import moviesData from '../../../data/movies.json';
-import { auth } from '../../../../firebase';
-import { getFirestore, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
+import { auth, db } from '../../../../firebase';
+import { getFirestore, doc, setDoc, deleteDoc, getDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import logo from '../../../../public/assets/images/logo/logo.png';
 
 // Define the slugs of the 9 free-to-watch movies from the landing page
@@ -110,34 +109,68 @@ export default function MovieDetailPage() {
   }, [slug, isFreeMovie, router, searchParams]);
 
   useEffect(() => {
-    // Find the movie by slug
-    const foundMovie = Object.values(moviesData).flat().find(m => m.slug === slug);
-    setMovie(foundMovie);
-
-    if (foundMovie) {
-      // Get recommended movies from the same genre, excluding the current movie
-      const genreMovies = moviesData[foundMovie.genre] || [];
-      const filteredMovies = genreMovies.filter(m => m.slug !== slug);
-      // Shuffle and take 5 movies
-      const shuffled = [...filteredMovies].sort(() => 0.5 - Math.random()).slice(0, 5);
-      setRecommendedMovies(shuffled);
-    }
-
-    if (isAuthenticated) {
-      checkWishlistStatus();
-    }
-  }, [slug, isFreeMovie, movie, isAuthenticated]);
+    // Fetch movie from Firebase
+    const fetchMovie = async () => {
+      try {
+        console.log('Fetching movie with slug:', slug);
+        
+        // Query Firebase for the movie with this slug
+        const moviesQuery = query(
+          collection(db, 'movies'),
+          where('slug', '==', slug)
+        );
+        const moviesSnapshot = await getDocs(moviesQuery);
+        
+        console.log('Query results:', moviesSnapshot.size, 'movies found');
+        
+        if (!moviesSnapshot.empty) {
+          const foundMovie = moviesSnapshot.docs[0].data();
+          setMovie(foundMovie);
+          
+          // Get recommended movies from the same genre
+          if (foundMovie.genre) {
+            const genreQuery = query(
+              collection(db, 'movies'),
+              where('genre', '==', foundMovie.genre)
+            );
+            const genreSnapshot = await getDocs(genreQuery);
+            
+            const genreMovies = genreSnapshot.docs.map(doc => doc.data());
+            const filteredMovies = genreMovies.filter(m => m.slug !== slug);
+            // Shuffle and take 5 movies
+            const shuffled = [...filteredMovies].sort(() => 0.5 - Math.random()).slice(0, 5);
+            setRecommendedMovies(shuffled);
+          }
+        } else {
+          console.log('Movie not found in Firebase');
+          setMovie(null);
+        }
+      } catch (error) {
+        console.error('Error fetching movie from Firebase:', error);
+        setMovie(null);
+      }
+    };
+    
+    fetchMovie();
+  }, [slug, isAuthenticated]);
 
   useEffect(() => {
     // This effect runs whenever the 'movie' object changes.
     // It tells Locomotive Scroll to update its dimensions after the content has rendered.
-    if (movie && locomotiveScroll.current) {
-      // A small timeout ensures the DOM has fully updated before recalculating.
-      setTimeout(() => {
-        locomotiveScroll.current.update();
-      }, 500);
+    if (movie) {
+      if (locomotiveScroll.current) {
+        // A small timeout ensures the DOM has fully updated before recalculating.
+        setTimeout(() => {
+          locomotiveScroll.current.update();
+        }, 500);
+      }
+      
+      // Check wishlist status after movie is loaded
+      if (isAuthenticated) {
+        checkWishlistStatus();
+      }
     }
-  }, [movie]);
+  }, [movie, isAuthenticated]);
 
   const checkWishlistStatus = async () => {
     if (!movie || !auth.currentUser) return;

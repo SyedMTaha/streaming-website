@@ -177,12 +177,15 @@ export default function DashboardPage() {
 
           <ContentSection title="Recommended Movies" onScroll={handleScroll}>
             <MovieRow>
-              <MovieCard image={HisFriday}  title="His Girl Friday"  />
-              <MovieCard image={Suddenly} title="Suddenly" />
-              <MovieCard image={Stranger} title="The Stranger" />
-              <MovieCard image={Outlaw} title="The Outlaw" />
-              <MovieCard image={Lost} title="The Lost World" />
-              <MovieCard image={Last} title="Last Woman on Earth" />
+            <MovieCard image="/assets/images/movies/sci-fi/scifi10.jpeg"   title="Glass"  />
+              <MovieCard image="/assets/images/movies/sci-fi/scifi20.png" title="Cat Women of the Moon" />
+              <MovieCard image={Bad} title="Bad and the Beautiful" />
+              <MovieCard image={drama1} title="Broken Strings" />
+              <MovieCard image="/assets/images/movies/western/western6.jpg" title="The Big Trees" />
+              <MovieCard image="/assets/images/movies/thriller/thriller9.png" title="Quicksand" />
+              <MovieCard image="/assets/images/movies/adventure/adv8.png" title="The Iron Mask" />
+              <MovieCard image="/assets/images/movies/biographical/b4.png" title="Regeneration" />
+              <MovieCard image="/assets/images/movies/mystery/mystery4.jpg" title="Rear Window" />
             </MovieRow>
           </ContentSection>
         </div>
@@ -244,15 +247,15 @@ export default function DashboardPage() {
           {/* Deal of the Week */}
           <ContentSection title="Deal of the Week" onScroll={handleScroll}>
             <MovieRow>
-              <MovieCard image={HisFriday}  title="His Girl Friday"  />
-              <MovieCard image={Suddenly} title="Suddenly" />
-              <MovieCard image={Stranger} title="The Stranger 1946" />
-              <MovieCard image={Outlaw} title="The Outlaw 1943" />
-              <MovieCard image={Lost} title="The Lost World 1925" />
-              <MovieCard image={Last} title="Last Woman on Earth 1960" />
-              <MovieCard image={HisFriday}  title="His Girl Friday"  />
-              <MovieCard image={Suddenly} title="Suddenly" />
-              <MovieCard image={Stranger} title="The Stranger 1946" />
+              <MovieCard image="/assets/images/movies/action/action9.jpeg"  title="Train"  />
+              <MovieCard image="/assets/images/movies/adventure/adv6.jpg" title="Sherlock Holmes Dressed to Kill" />
+              <MovieCard image="/assets/images/movies/animation/animation2.webp" title="Kung Fu Panda 2" />
+              <MovieCard image="/assets/images/movies/biographical/b1.png" title="Born to Win" />
+              <MovieCard image="/assets/images/movies/comedy/comedy10.png" title="My Dear Secretary" />
+              <MovieCard image="/assets/images/movies/crime/crime10.jpg" title="The Swap" />
+              <MovieCard image="/assets/images/movies/crime/crime4.png"  title="And Then There Were None"  />
+              <MovieCard image="/assets/images/movies/documentary/documentary1.jpg" title="The Black Godfather" />
+              <MovieCard image="/assets/images/movies/drama/drama17.png" title="Penny Serenade" />
             </MovieRow>
           </ContentSection>
         </div>
