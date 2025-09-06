@@ -365,7 +365,7 @@ export default function BlogPage() {
       {/* Featured Content Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-[#020D1E] to-[#0A2043] relative">
         <div className="absolute inset-0 opacity-20">
-          <Image src="/assets/images/blog/blog10.jpg" alt="Background pattern" fill className="object-cover" />
+          <Image src="/assets/images/blog/blog05.jpg" alt="Background pattern" fill className="object-cover" />
         </div>
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">

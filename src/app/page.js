@@ -7,17 +7,18 @@ import Link from "next/link"
 import { Tv, Download, Dribbble, Smile, Plus, Menu, X } from "lucide-react"
 import Footer from "../../components/footerLanding";
 import LandingNavbar from "../../components/navbarLanding";
-import home01 from '../../public/assets/images/background/homePage05.jpg';
-import logo from './../../public/assets/images/logo/logo.png';
-import home45 from '../../public/assets/images/home/home45.jpg';
-import home46 from '../../public/assets/images/home/home46.png';
-import home47 from '../../public/assets/images/home/home47.jpg';
-import home49 from '../../public/assets/images/home/home49.jpeg';
-import home48 from '../../public/assets/images/movies/action/action8.jpeg';
-import home50 from '../../public/assets/images/movies/action/action4.jpeg';
-import home51 from '../../public/assets/images/movies/comedy/comedy2.jpeg';
-import home52 from '../../public/assets/images/movies/sci-fi/scifi7.jpeg';
-import home53 from '../../public/assets/images/movies/western/western2.jpeg';
+// Import images using public folder paths
+const home01 = '/assets/images/background/homePage05.jpg';
+const logo = '/assets/images/logo/logo.png';
+const home45 = '/assets/images/home/home45.jpg';
+const home46 = '/assets/images/home/home46.png';
+const home47 = '/assets/images/home/home47.jpg';
+const home49 = '/assets/images/home/home49.jpeg';
+const home48 = '/assets/images/movies/action/action8.jpeg';
+const home50 = '/assets/images/movies/action/action4.jpeg';
+const home51 = '/assets/images/movies/comedy/comedy2.jpeg';
+const home52 = '/assets/images/movies/sci-fi/scifi7.jpeg';
+const home53 = '/assets/images/movies/western/western2.jpeg';
 
 const faqData = [
   {

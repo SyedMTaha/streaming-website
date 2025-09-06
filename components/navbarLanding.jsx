@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { User } from "lucide-react";
-import logo from '../public/assets/images/logo/logo.png';
+const logo = '/assets/images/logo/logo.png';
 
 export default function LandingNavbar() {
     return (

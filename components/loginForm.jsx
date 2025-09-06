@@ -7,7 +7,7 @@ import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendEm
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Eye, EyeOff, Menu, X } from 'lucide-react';
 import Image from "next/image";
-import logo from "../public/assets/images/logo/logo.png";
+const logo = "/assets/images/logo/logo.png";
 
 export default function LoginForm({ locomotiveScroll }) {
   const [email, setEmail] = useState("");

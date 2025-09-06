@@ -9,7 +9,7 @@ import Navbar from '../../../../components/navbarSearch';
 import home02 from '../../../../public/assets/images/background/homePage05.jpg';
 import { auth, db } from '../../../../firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import moviesData from '../../../../src/data/movies.json';
+// Removed JSON import - using Firebase only
 
 // Add disabled genres here
 const DISABLED_GENRES = ['family', 'historical', 'independent', 'inspiration', 'news', 'sport']; 
@@ -30,13 +30,9 @@ export default function GenrePage() {
   // Check if the current genre is disabled
   const isGenreDisabled = DISABLED_GENRES.includes(genreSlug);
 
-  // Debug moviesData to see its structure
+  // Debug genre slug
   useEffect(() => {
-    console.log('moviesData structure:', typeof moviesData, Object.keys(moviesData || {}));
     console.log('genreSlug:', genreSlug);
-    if (genreSlug && moviesData) {
-      console.log(`moviesData[${genreSlug}]:`, moviesData[genreSlug]);
-    }
   }, [genreSlug]);
 
   useEffect(() => {
@@ -104,16 +100,12 @@ export default function GenrePage() {
           console.log(`Found ${fetchedMovies.length} movies in Firebase for genre ${genreSlug}`);
           setMovies(fetchedMovies);
         } else {
-          console.log(`No movies found in Firebase for genre ${genreSlug}, using JSON fallback`);
-          // Fallback to JSON data
-          const jsonMovies = Array.isArray(moviesData[genreSlug]) ? moviesData[genreSlug] : [];
-          setMovies(jsonMovies);
+          console.log(`No movies found in Firebase for genre ${genreSlug}`);
+          setMovies([]);
         }
       } catch (error) {
         console.error('Error fetching movies from Firebase:', error);
-        // Fallback to JSON data on error
-        const jsonMovies = Array.isArray(moviesData[genreSlug]) ? moviesData[genreSlug] : [];
-        setMovies(jsonMovies);
+        setMovies([]);
       } finally {
         setLoading(false);
       }

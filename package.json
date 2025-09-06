@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate:movies": "node scripts/migrate-movies-to-db.cjs",
+    "update:images": "node scripts/update-movie-images-to-imagekit.cjs",
+    "fix:urls": "node scripts/fix-imagekit-urls.cjs",
+    "migrate:full": "node scripts/migrate-movies-with-imagekit.cjs"
   },
   "dependencies": {
+    "@imagekit/next": "^2.1.3",
     "dotenv": "^17.2.1",
     "firebase": "^11.9.1",
+    "imagekit": "^6.0.0",
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.515.0",
     "next": "15.3.3",

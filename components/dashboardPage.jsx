@@ -33,6 +33,14 @@ const dashboardPage = () => {
   const [seriesLandscape, setSeriesLandscape] = useState("");
   const [cartoonPortrait, setCartoonPortrait] = useState("");
   const [cartoonLandscape, setCartoonLandscape] = useState("");
+  
+  // State for file objects
+  const [moviePortraitFile, setMoviePortraitFile] = useState(null);
+  const [movieLandscapeFile, setMovieLandscapeFile] = useState(null);
+  const [seriesPortraitFile, setSeriesPortraitFile] = useState(null);
+  const [seriesLandscapeFile, setSeriesLandscapeFile] = useState(null);
+  const [cartoonPortraitFile, setCartoonPortraitFile] = useState(null);
+  const [cartoonLandscapeFile, setCartoonLandscapeFile] = useState(null);
 
   //Movies state
   const [movieTitle, setMovieTitle] = useState('');
@@ -122,19 +130,19 @@ const dashboardPage = () => {
 
   // Fetch all movies on mount and after changes
   useEffect(() => {
-    fetch('/api/add-movie')
+    fetch('/api/movies')
       .then(res => res.json())
-      .then(data => setMovieList(data || []));
+      .then(data => setMovieList(data.movies || []));
   }, []);
 
   // Fetch all TV series and cartoons on mount
   useEffect(() => {
-    // Fetch TV series from movies.json instead of episodes
-    fetch('/api/add-movie')
+    // Fetch TV series from movies API
+    fetch('/api/movies')
       .then(res => res.json())
       .then(data => {
         // Filter TV series from all movies data
-        const tvSeries = (data || []).filter(item => item.genre === 'tv-series');
+        const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
         setSeriesList(tvSeries);
       });
     fetch('/api/add-cartoon')
@@ -172,7 +180,7 @@ const dashboardPage = () => {
   const handleDeleteMovie = (id) => {
     setAlertMessage('Are you sure you want to delete this movie?');
     setAlertAction(() => async () => {
-      await fetch('/api/add-movie', {
+      await fetch('/api/movies', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id }),
@@ -186,44 +194,99 @@ const dashboardPage = () => {
   };
 
   const handleMovieUpload = async (movieData) => {
-    if (editingMovieId) {
-      // Update
-      const res = await fetch('/api/add-movie', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...movieData, id: editingMovieId }),
-      });
-      if (res.ok) {
-        setSuccessMessage('Movie updated successfully!');
-        setEditingMovieId(null);
-        // Refresh list
-        fetch('/api/add-movie').then(res => res.json()).then(data => setMovieList(data || []));
-        // Clear form fields after 5 seconds
-        setTimeout(() => {
-          setMovieTitle('');
-          setMovieDescription('');
-          setMovieGenre('');
-          setMovieDuration('');
-          setMovieRating('');
-          setMovieYear('');
-          setMovieLink('');
-          setMoviePortrait('');
-          setMovieLandscape('');
-        }, 5000);
-      } else {
-        setSuccessMessage('Failed to update movie');
+    try {
+      setSuccessMessage('Uploading images and saving movie...');
+      
+      // Upload images to ImageKit first
+      const imageFormData = new FormData();
+      
+      // Add portrait image if provided
+      if (movieData.portraitFile) {
+        imageFormData.append('portrait', movieData.portraitFile);
       }
-      setTimeout(() => setSuccessMessage(''), 7000);
-      return;
-    }
-    const res = await fetch('/api/add-movie', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(movieData),
-    });
-    if (res.ok) {
-      setSuccessMessage('Movie added successfully!');
-      // Clear all movie form fields after 5 seconds
+      
+      // Add landscape image if provided
+      if (movieData.landscapeFile) {
+        imageFormData.append('landscape', movieData.landscapeFile);
+      }
+      
+      imageFormData.append('genre', movieData.genre);
+      imageFormData.append('title', movieData.title);
+
+      let imageUrls = {};
+      
+      // Only upload images if files are provided
+      if (movieData.portraitFile || movieData.landscapeFile) {
+        const imageResponse = await fetch('/api/upload-movie-images', {
+          method: 'POST',
+          body: imageFormData,
+        });
+        
+        const imageResult = await imageResponse.json();
+        
+        if (!imageResult.success) {
+          setSuccessMessage('Failed to upload images: ' + imageResult.error);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        imageUrls = imageResult.images;
+      }
+
+      // Prepare movie data for database
+      const movieDataForDb = {
+        title: movieData.title,
+        description: movieData.description,
+        genre: movieData.genre,
+        year: movieData.year,
+        duration: movieData.duration,
+        rating: movieData.rating,
+        link: movieData.link,
+        // Use ImageKit URLs
+        imageUrl: imageUrls.portrait?.url || movieData.imageUrl || '',
+        innerImageUrl: imageUrls.landscape?.url || movieData.innerImageUrl || '',
+        imageFileId: imageUrls.portrait?.fileId || '',
+        innerImageFileId: imageUrls.landscape?.fileId || '',
+      };
+
+      if (editingMovieId) {
+        // Update existing movie
+        const res = await fetch('/api/movies', {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: editingMovieId, ...movieDataForDb }),
+        });
+        
+        const result = await res.json();
+        
+        if (result.success) {
+          setSuccessMessage('Movie updated successfully!');
+          setEditingMovieId(null);
+          // Refresh list
+          fetch('/api/movies').then(res => res.json()).then(data => setMovieList(data.movies || []));
+        } else {
+          setSuccessMessage('Failed to update movie: ' + result.message);
+        }
+      } else {
+        // Add new movie
+        const res = await fetch('/api/movies', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(movieDataForDb),
+        });
+        
+        const result = await res.json();
+        
+        if (result.success) {
+          setSuccessMessage('Movie added successfully!');
+          // Refresh list
+          fetch('/api/movies').then(res => res.json()).then(data => setMovieList(data.movies || []));
+        } else {
+          setSuccessMessage('Failed to add movie: ' + result.message);
+        }
+      }
+
+      // Clear form fields after 5 seconds
       setTimeout(() => {
         setMovieTitle('');
         setMovieDescription('');
@@ -235,10 +298,13 @@ const dashboardPage = () => {
         setMoviePortrait('');
         setMovieLandscape('');
       }, 5000);
+      
       // Hide the notification after 7 seconds
       setTimeout(() => setSuccessMessage(''), 7000);
-    } else {
-      setSuccessMessage('Failed to add movie');
+      
+    } catch (error) {
+      console.error('Error uploading movie:', error);
+      setSuccessMessage('Error uploading movie: ' + error.message);
       setTimeout(() => setSuccessMessage(''), 7000);
     }
   };
@@ -286,10 +352,10 @@ const dashboardPage = () => {
         setSuccessMessage('TV Series updated successfully!');
         setEditingSeriesId(null);
         // Refresh TV series list
-        fetch('/api/add-movie')
+        fetch('/api/movies')
           .then(res => res.json())
           .then(data => {
-            const tvSeries = (data || []).filter(item => item.genre === 'tv-series');
+            const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
             setSeriesList(tvSeries);
           });
         // Clear form fields after 5 seconds
@@ -319,10 +385,10 @@ const dashboardPage = () => {
     if (res.ok) {
       setSuccessMessage('TV Series added successfully!');
       // Refresh TV series list
-      fetch('/api/add-movie')
+      fetch('/api/movies')
         .then(res => res.json())
         .then(data => {
-          const tvSeries = (data || []).filter(item => item.genre === 'tv-series');
+          const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
           setSeriesList(tvSeries);
         });
       // Clear all TV series form fields after 5 seconds
@@ -540,7 +606,11 @@ const dashboardPage = () => {
                   type="file"
                   accept="image/*"
                   className="hidden"
-                  onChange={e => setMoviePortrait(e.target.files[0]?.name || "")}
+                  onChange={e => {
+                    const file = e.target.files[0];
+                    setMoviePortrait(file?.name || "");
+                    setMoviePortraitFile(file);
+                  }}
                 />
                 <label
                   htmlFor="moviePortrait"
@@ -561,7 +631,11 @@ const dashboardPage = () => {
                   type="file"
                   accept="image/*"
                   className="hidden"
-                  onChange={e => setMovieLandscape(e.target.files[0]?.name || "")}
+                  onChange={e => {
+                    const file = e.target.files[0];
+                    setMovieLandscape(file?.name || "");
+                    setMovieLandscapeFile(file);
+                  }}
                 />
                 <label
                   htmlFor="movieLandscape"
@@ -587,6 +661,8 @@ const dashboardPage = () => {
                 link: movieLink,
                 portrait: moviePortrait,
                 landscape: movieLandscape,
+                portraitFile: moviePortraitFile,
+                landscapeFile: movieLandscapeFile,
               })}
             >
               {editingMovieId ? 'Update Movie' : 'Upload Movie'}

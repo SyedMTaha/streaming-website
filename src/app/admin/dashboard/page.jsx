@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import dashboardPage from "../../../../components/dashboardPage";
@@ -42,10 +42,14 @@ export default function AdminDashboard() {
       >
         Logout
       </button>
-      <div className="flex flex-col items-center w-full max-w-6xl mb-8">
+      <div className="flex flex-col items-center w-full max-w-7xl mb-8">
         <Image src="/assets/images/logo/logo.png" alt="Logo" width={120} height={60} className="mb-4" />
+        
+        {/* Dashboard Content */}
+        <div className="w-full">
+          {dashboardPage()}
+        </div>
       </div>
-      {dashboardPage()}
     </div>
   );
 }
