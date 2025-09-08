@@ -1,9 +1,9 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from 'next/image'
-import { ChevronDown, Globe, Menu, X, User, LogOut, Heart, UserCircle } from "lucide-react";
+import { ChevronDown, Globe, Menu, X, User, LogOut, Heart, UserCircle, Search, Loader2 } from "lucide-react";
 import logo from './../public/assets/images/logo/logo.png';
 import { auth } from '../firebase';
 import { signOut } from 'firebase/auth';
@@ -20,10 +20,21 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
   const [isUserMenuOpen, setIsUserMenuOpen] = React.useState(false)
   const [currentUser, setCurrentUser] = useState(null)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState([])
+  const [isSearching, setIsSearching] = useState(false)
+  const [showSearchResults, setShowSearchResults] = useState(false)
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
+  const [moviesCache, setMoviesCache] = useState(null)
+  const [cacheTimestamp, setCacheTimestamp] = useState(null)
   const dropdownRef = React.useRef(null)
   const userDropdownRef = React.useRef(null)
+  const searchRef = React.useRef(null)
+  const searchDebounceRef = React.useRef(null)
   const timeoutRef = React.useRef(null)
   const router = useRouter()
+  
+  const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache
 
   const genres = [
     { name: "Action", href: "/genre/action" },
@@ -61,6 +72,20 @@ export default function Navbar() {
     return () => unsubscribe();
   }, []);
 
+  // Preload movies cache on component mount
+  useEffect(() => {
+    const preloadMovies = async () => {
+      try {
+        const response = await fetch('/api/search?q=a');
+        const data = await response.json();
+        // This will trigger the server to cache movies
+      } catch (error) {
+        console.error('Error preloading movies:', error);
+      }
+    };
+    preloadMovies();
+  }, []);
+
   const handleLogout = async () => {
     try {
       await signOut(auth);
@@ -78,6 +103,9 @@ export default function Navbar() {
       }
       if (userDropdownRef.current && !userDropdownRef.current.contains(event.target)) {
         setIsUserMenuOpen(false)
+      }
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setShowSearchResults(false)
       }
     }
 
@@ -111,6 +139,94 @@ export default function Navbar() {
   function closeMobileMenu() {
     setIsMobileMenuOpen(false)
     setIsGenreOpen(false)
+    setMobileSearchOpen(false)
+  }
+
+  // Optimized search functionality with caching
+  const searchMovies = async (query) => {
+    if (!query || query.length < 2) {
+      setSearchResults([])
+      setShowSearchResults(false)
+      return
+    }
+
+    setShowSearchResults(true)
+
+    // Check if we have cached data and it's still valid
+    const now = Date.now();
+    if (moviesCache && cacheTimestamp && (now - cacheTimestamp) < CACHE_DURATION) {
+      // Search in cached data (instant results)
+      const filtered = moviesCache.filter(movie => 
+        movie.title?.toLowerCase().includes(query.toLowerCase()) ||
+        movie.description?.toLowerCase().includes(query.toLowerCase()) ||
+        movie.genre?.toLowerCase().includes(query.toLowerCase())
+      );
+      
+      // Sort by relevance
+      const sorted = filtered.sort((a, b) => {
+        const aTitle = a.title?.toLowerCase() || '';
+        const bTitle = b.title?.toLowerCase() || '';
+        const searchLower = query.toLowerCase();
+        
+        if (aTitle.startsWith(searchLower) && !bTitle.startsWith(searchLower)) return -1;
+        if (!aTitle.startsWith(searchLower) && bTitle.startsWith(searchLower)) return 1;
+        
+        return 0;
+      });
+      
+      setSearchResults(sorted.slice(0, 8));
+    } else {
+      // Fetch from optimized search API
+      setIsSearching(true);
+      try {
+        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+        const data = await response.json();
+        
+        if (data.success) {
+          setSearchResults(data.results || []);
+          
+          // If this is the first search, cache all movies for future searches
+          if (!moviesCache) {
+            const allMoviesResponse = await fetch('/api/movies');
+            const allMoviesData = await allMoviesResponse.json();
+            if (allMoviesData.success && allMoviesData.movies) {
+              setMoviesCache(allMoviesData.movies);
+              setCacheTimestamp(Date.now());
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error searching movies:', error);
+        setSearchResults([]);
+      } finally {
+        setIsSearching(false);
+      }
+    }
+  }
+
+  // Handle search input with debouncing
+  const handleSearchInput = (e) => {
+    const query = e.target.value
+    setSearchQuery(query)
+
+    // Clear previous timeout
+    if (searchDebounceRef.current) {
+      clearTimeout(searchDebounceRef.current)
+    }
+
+    // Set new timeout for debounced search (reduced to 50ms for ultra-fast response)
+    searchDebounceRef.current = setTimeout(() => {
+      searchMovies(query)
+    }, 50)
+  }
+
+  // Handle movie selection
+  const handleMovieSelect = (movie) => {
+    setSearchQuery('')
+    setSearchResults([])
+    setShowSearchResults(false)
+    setMobileSearchOpen(false)
+    router.push(`/movie/${movie.slug}`)
   }
 
   return (
@@ -177,38 +293,83 @@ export default function Navbar() {
 
         
           {/* Search Bar - Hidden on mobile, shown on desktop */}
-          <div className="hidden lg:flex flex-1 justify-end mx-6 xl:mx-8 " >
-            <div className="relative" >
+          <div className="hidden lg:flex flex-1 justify-end mx-6 xl:mx-8" >
+            <div className="relative" ref={searchRef}>
               <input
                 type="text"
+                value={searchQuery}
+                onChange={handleSearchInput}
+                onFocus={() => searchQuery && setShowSearchResults(true)}
                 placeholder="Search Movies & Shows ..."
-                className="bg-gradient-to-b from-[#00112C] to-[#012256] border border-white rounded-2xl pl-10 pr-4 py-1.5 text-sm placeholder-gray-400 focus:outline-none shadow-xl"
+                className="bg-gradient-to-b from-[#00112C] to-[#012256] border border-white rounded-2xl pl-10 pr-4 py-1.5 text-sm placeholder-gray-400 focus:outline-none shadow-xl transition-all duration-200 focus:border-blue-400"
                 style={{ width: "280px", color: "#A2ABC0" }}
               />
-              <button className="absolute left-3 top-1/2 transform -translate-y-1/2">
-                <svg className="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
+              <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+                {isSearching ? (
+                  <Loader2 className="w-4 h-4 text-gray-300 animate-spin" />
+                ) : (
+                  <Search className="w-4 h-4 text-gray-300" />
+                )}
+              </div>
+              
+              {/* Search Results Dropdown */}
+              {showSearchResults && searchResults.length > 0 && (
+                <div className="absolute top-full mt-2 w-[400px] bg-[#1a1a3a] border border-blue-900/30 rounded-lg shadow-xl z-50 max-h-[500px] overflow-y-auto">
+                  <div className="p-2">
+                    {searchResults.map((movie) => (
+                      <button
+                        key={movie.id}
+                        onClick={() => handleMovieSelect(movie)}
+                        className="w-full flex items-start space-x-3 p-2 hover:bg-blue-600/20 rounded transition-colors duration-150 text-left"
+                      >
+                        {movie.image && (
+                          <div className="flex-shrink-0 w-12 h-16 relative overflow-hidden rounded">
+                            <Image
+                              src={movie.image}
+                              alt={movie.title}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-sm font-medium text-white truncate">{movie.title}</h4>
+                          <p className="text-xs text-gray-400 mt-1">
+                            {movie.genre?.replace(/-/g, ' ').charAt(0).toUpperCase() + movie.genre?.replace(/-/g, ' ').slice(1)} • {movie.year}
+                          </p>
+                          {movie.rating && (
+                            <div className="flex items-center mt-1">
+                              <span className="text-xs text-yellow-500">★</span>
+                              <span className="text-xs text-gray-400 ml-1">{movie.rating}</span>
+                            </div>
+                          )}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* No Results Message */}
+              {showSearchResults && searchQuery && searchResults.length === 0 && !isSearching && (
+                <div className="absolute top-full mt-2 w-[400px] bg-[#1a1a3a] border border-blue-900/30 rounded-lg shadow-xl z-50 p-4">
+                  <p className="text-gray-400 text-sm text-center">No movies found for "{searchQuery}"</p>
+                </div>
+              )}
             </div>
           </div>
 
           <div className="flex items-center space-x-2 sm:space-x-4 " >
             {/* Mobile search button */}
-            <button className="lg:hidden text-white p-2">
-              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+            <button 
+              onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
+              className="lg:hidden text-white p-2 hover:text-blue-400 transition-colors"
+            >
+              {mobileSearchOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Search className="h-5 w-5" />
+              )}
             </button>
 
             
@@ -268,6 +429,67 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+
+         {/* Mobile Search Bar */}
+         {mobileSearchOpen && (
+          <div className="lg:hidden fixed inset-x-0 top-16 bg-[#1a1a3a]/95 border-t border-blue-900/30 z-50 p-4">
+            <div className="relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={handleSearchInput}
+                placeholder="Search Movies & Shows ..."
+                className="w-full bg-gradient-to-b from-[#00112C] to-[#012256] border border-white rounded-2xl pl-10 pr-4 py-2 text-sm placeholder-gray-400 focus:outline-none shadow-xl"
+                style={{ color: "#A2ABC0" }}
+                autoFocus
+              />
+              <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+                {isSearching ? (
+                  <Loader2 className="w-4 h-4 text-gray-300 animate-spin" />
+                ) : (
+                  <Search className="w-4 h-4 text-gray-300" />
+                )}
+              </div>
+            </div>
+            
+            {/* Mobile Search Results */}
+            {showSearchResults && searchResults.length > 0 && (
+              <div className="mt-4 max-h-[60vh] overflow-y-auto">
+                {searchResults.map((movie) => (
+                  <button
+                    key={movie.id}
+                    onClick={() => handleMovieSelect(movie)}
+                    className="w-full flex items-start space-x-3 p-2 hover:bg-blue-600/20 rounded transition-colors duration-150 text-left"
+                  >
+                    {movie.image && (
+                      <div className="flex-shrink-0 w-12 h-16 relative overflow-hidden rounded">
+                        <Image
+                          src={movie.image}
+                          alt={movie.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-white truncate">{movie.title}</h4>
+                      <p className="text-xs text-gray-400 mt-1">
+                        {movie.genre?.replace(/-/g, ' ').charAt(0).toUpperCase() + movie.genre?.replace(/-/g, ' ').slice(1)} • {movie.year}
+                      </p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+            
+            {/* No Results Message */}
+            {showSearchResults && searchQuery && searchResults.length === 0 && !isSearching && (
+              <div className="mt-4 p-4">
+                <p className="text-gray-400 text-sm text-center">No movies found for "{searchQuery}"</p>
+              </div>
+            )}
+          </div>
+         )}
 
          {/* Mobile Navigation */}
          {isMobileMenuOpen && (
