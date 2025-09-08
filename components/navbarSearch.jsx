@@ -220,13 +220,27 @@ export default function Navbar() {
     }, 50)
   }
 
-  // Handle movie selection
+  // Handle content selection based on type
   const handleMovieSelect = (movie) => {
     setSearchQuery('')
     setSearchResults([])
     setShowSearchResults(false)
     setMobileSearchOpen(false)
-    router.push(`/movie/${movie.slug}`)
+    
+    // Determine the correct route based on genre/type
+    let route = '/movie/'; // default route
+    
+    if (movie.genre) {
+      const genre = movie.genre.toLowerCase();
+      
+      if (genre === 'tv-series' || genre === 'tv series') {
+        route = '/tv-series/';
+      } else if (genre === 'cartoon' || genre === 'cartoons') {
+        route = '/cartoon/';
+      }
+    }
+    
+    router.push(`${route}${movie.slug}`)
   }
 
   return (
@@ -335,7 +349,18 @@ export default function Navbar() {
                         <div className="flex-1 min-w-0">
                           <h4 className="text-sm font-medium text-white truncate">{movie.title}</h4>
                           <p className="text-xs text-gray-400 mt-1">
-                            {movie.genre?.replace(/-/g, ' ').charAt(0).toUpperCase() + movie.genre?.replace(/-/g, ' ').slice(1)} • {movie.year}
+                            <span className="inline-flex items-center">
+                              {movie.genre === 'tv-series' && (
+                                <span className="text-blue-400 mr-1">📺</span>
+                              )}
+                              {movie.genre === 'cartoon' && (
+                                <span className="text-green-400 mr-1">🎨</span>
+                              )}
+                              {!['tv-series', 'cartoon'].includes(movie.genre) && (
+                                <span className="text-purple-400 mr-1">🎬</span>
+                              )}
+                              {movie.genre?.replace(/-/g, ' ').charAt(0).toUpperCase() + movie.genre?.replace(/-/g, ' ').slice(1)} • {movie.year}
+                            </span>
                           </p>
                           {movie.rating && (
                             <div className="flex items-center mt-1">
@@ -474,7 +499,18 @@ export default function Navbar() {
                     <div className="flex-1 min-w-0">
                       <h4 className="text-sm font-medium text-white truncate">{movie.title}</h4>
                       <p className="text-xs text-gray-400 mt-1">
-                        {movie.genre?.replace(/-/g, ' ').charAt(0).toUpperCase() + movie.genre?.replace(/-/g, ' ').slice(1)} • {movie.year}
+                        <span className="inline-flex items-center">
+                          {movie.genre === 'tv-series' && (
+                            <span className="text-blue-400 mr-1">📺</span>
+                          )}
+                          {movie.genre === 'cartoon' && (
+                            <span className="text-green-400 mr-1">🎨</span>
+                          )}
+                          {!['tv-series', 'cartoon'].includes(movie.genre) && (
+                            <span className="text-purple-400 mr-1">🎬</span>
+                          )}
+                          {movie.genre?.replace(/-/g, ' ').charAt(0).toUpperCase() + movie.genre?.replace(/-/g, ' ').slice(1)} • {movie.year}
+                        </span>
                       </p>
                     </div>
                   </button>

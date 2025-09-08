@@ -1949,33 +1949,39 @@
   ],
   "upcomingMovies": [
     {
-      "slug": "dont-hang-up",
+      "id":"upcomingMovies-don-t-hang-up-1757189023619",
       "title": "Don't Hang Up",
+      "slug": "dont-hang-up",
       "image": "/assets/images/background/coming-soon.jpg"
     },
     {
-      "slug": "film-lovers",
+      "id":"upcomingMovies-film-lovers-1757189024310",
       "title": "Film Lovers",
+      "slug": "film-lovers",
       "image": "/assets/images/background/coming-soon.jpg"
     },
     {
-      "slug": "absolute-dominion",
+      "id":"upcomingMovies-absolute-dominion-1757189025011",
       "title": "Absolute Dominion",
+      "slug": "absolute-dominion",
       "image": "/assets/images/background/coming-soon.jpg"
     },
     {
-      "slug": "hot-biskits",
+      "id":"upcomingMovies-hot-biskits-1757189025723",
       "title": "Hot Biskits",
+      "slug": "hot-biskits",
       "image": "/assets/images/background/coming-soon.jpg"
     },
     {
-      "slug": "notice-to-quit",
+      "id":"upcomingMovies-notice-to-quit-1757189026411",
       "title": "Notice to Quit",
+      "slug": "notice-to-quit",
       "image": "/assets/images/background/coming-soon.jpg"
     },
     {
-      "slug": "a-river-of-skulls",
+      "id":"upcomingMovies-a-river-of-skulls-1757189027119",
       "title": "A River of Skulls",
+      "slug": "a-river-of-skulls",
       "image": "/assets/images/background/coming-soon.jpg"
     }
   ],

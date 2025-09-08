@@ -40,7 +40,10 @@ export async function GET(request) {
           year: data.year,
           rating: data.rating,
           image: data.image,
-          description: data.description?.substring(0, 100) // Limit description length
+          description: data.description?.substring(0, 100), // Limit description length
+          // Add content type for better identification
+          contentType: data.genre === 'tv-series' ? 'series' : 
+                      data.genre === 'cartoon' ? 'cartoon' : 'movie'
         });
       });
       cacheTimestamp = now;
