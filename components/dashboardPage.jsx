@@ -1,5 +1,33 @@
 import React, { useState, useEffect } from 'react'
 
+// Helper function to safely fetch and parse JSON
+const safeFetch = async (url, options = {}) => {
+  try {
+    const response = await fetch(url, options);
+    
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`HTTP ${response.status}: ${errorText}`);
+    }
+    
+    // Try to parse as JSON
+    const contentType = response.headers.get('content-type');
+    if (contentType && contentType.includes('application/json')) {
+      return await response.json();
+    } else {
+      const text = await response.text();
+      try {
+        return JSON.parse(text);
+      } catch (e) {
+        throw new Error(`Non-JSON response: ${text.substring(0, 100)}...`);
+      }
+    }
+  } catch (error) {
+    console.error('Fetch error:', error);
+    throw error;
+  }
+};
+
 const genres = [
   "Action",
   "Adventure",
@@ -131,15 +159,29 @@ const dashboardPage = () => {
   // Fetch all movies on mount and after changes
   useEffect(() => {
     fetch('/api/movies')
-      .then(res => res.json())
-      .then(data => setMovieList(data.movies || []));
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+        return res.json();
+      })
+      .then(data => setMovieList(data.movies || []))
+      .catch(error => {
+        console.error('Failed to fetch movies:', error);
+        setMovieList([]);
+      });
   }, []);
 
   // Fetch all TV series and cartoons on mount
   useEffect(() => {
     // Fetch TV series from movies API
     fetch('/api/movies')
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        } 
+        return res.json();
+      })
       .then(data => {
         // Filter TV series from all movies data
         const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
@@ -147,6 +189,11 @@ const dashboardPage = () => {
         // Filter cartoons from all movies data
         const cartoons = (data.movies || []).filter(item => item.genre === 'cartoon');
         setCartoonList(cartoons);
+      })
+      .catch(error => {
+        console.error('Failed to fetch TV series and cartoons:', error);
+        setSeriesList([]);
+        setCartoonList([]);
       });
   }, []);
 
@@ -222,7 +269,23 @@ const dashboardPage = () => {
           body: imageFormData,
         });
         
-        const imageResult = await imageResponse.json();
+        // Check if response is ok and contains JSON
+        if (!imageResponse.ok) {
+          const errorText = await imageResponse.text();
+          setSuccessMessage(`Failed to upload images: HTTP ${imageResponse.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let imageResult;
+        try {
+          imageResult = await imageResponse.json();
+        } catch (jsonError) {
+          const responseText = await imageResponse.text();
+          setSuccessMessage(`Failed to parse image upload response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (!imageResult.success) {
           setSuccessMessage('Failed to upload images: ' + imageResult.error);
@@ -257,13 +320,31 @@ const dashboardPage = () => {
           body: JSON.stringify({ id: editingMovieId, ...movieDataForDb }),
         });
         
-        const result = await res.json();
+        // Check if response is ok and contains JSON
+        if (!res.ok) {
+          const errorText = await res.text();
+          setSuccessMessage(`Failed to update movie: HTTP ${res.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let result;
+        try {
+          result = await res.json();
+        } catch (jsonError) {
+          const responseText = await res.text();
+          setSuccessMessage(`Failed to parse update response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (result.success) {
           setSuccessMessage('Movie updated successfully!');
           setEditingMovieId(null);
           // Refresh list
-          fetch('/api/movies').then(res => res.json()).then(data => setMovieList(data.movies || []));
+          safeFetch('/api/movies').then(data => setMovieList(data.movies || [])).catch(error => {
+            console.error('Failed to refresh movie list:', error);
+          });
         } else {
           setSuccessMessage('Failed to update movie: ' + result.message);
         }
@@ -275,12 +356,30 @@ const dashboardPage = () => {
           body: JSON.stringify(movieDataForDb),
         });
         
-        const result = await res.json();
+        // Check if response is ok and contains JSON
+        if (!res.ok) {
+          const errorText = await res.text();
+          setSuccessMessage(`Failed to add movie: HTTP ${res.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let result;
+        try {
+          result = await res.json();
+        } catch (jsonError) {
+          const responseText = await res.text();
+          setSuccessMessage(`Failed to parse add movie response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (result.success) {
           setSuccessMessage('Movie added successfully!');
           // Refresh list
-          fetch('/api/movies').then(res => res.json()).then(data => setMovieList(data.movies || []));
+          safeFetch('/api/movies').then(data => setMovieList(data.movies || [])).catch(error => {
+            console.error('Failed to refresh movie list:', error);
+          });
         } else {
           setSuccessMessage('Failed to add movie: ' + result.message);
         }
@@ -368,7 +467,23 @@ const dashboardPage = () => {
           body: imageFormData,
         });
         
-        const imageResult = await imageResponse.json();
+        // Check if response is ok and contains JSON
+        if (!imageResponse.ok) {
+          const errorText = await imageResponse.text();
+          setSuccessMessage(`Failed to upload images: HTTP ${imageResponse.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let imageResult;
+        try {
+          imageResult = await imageResponse.json();
+        } catch (jsonError) {
+          const responseText = await imageResponse.text();
+          setSuccessMessage(`Failed to parse image upload response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (!imageResult.success) {
           setSuccessMessage('Failed to upload images: ' + imageResult.error);
@@ -402,15 +517,33 @@ const dashboardPage = () => {
           body: JSON.stringify({ id: editingSeriesId, ...seriesDataForDb }),
         });
         
-        const result = await res.json();
+        // Check if response is ok and contains JSON
+        if (!res.ok) {
+          const errorText = await res.text();
+          setSuccessMessage(`Failed to update TV Series: HTTP ${res.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let result;
+        try {
+          result = await res.json();
+        } catch (jsonError) {
+          const responseText = await res.text();
+          setSuccessMessage(`Failed to parse update response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (result.success) {
           setSuccessMessage('TV Series updated successfully!');
           setEditingSeriesId(null);
           // Refresh list
-          fetch('/api/movies').then(res => res.json()).then(data => {
+          safeFetch('/api/movies').then(data => {
             const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
             setSeriesList(tvSeries);
+          }).catch(error => {
+            console.error('Failed to refresh series list:', error);
           });
         } else {
           setSuccessMessage('Failed to update TV Series: ' + result.message);
@@ -423,14 +556,32 @@ const dashboardPage = () => {
           body: JSON.stringify(seriesDataForDb),
         });
         
-        const result = await res.json();
+        // Check if response is ok and contains JSON
+        if (!res.ok) {
+          const errorText = await res.text();
+          setSuccessMessage(`Failed to add TV Series: HTTP ${res.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let result;
+        try {
+          result = await res.json();
+        } catch (jsonError) {
+          const responseText = await res.text();
+          setSuccessMessage(`Failed to parse add TV Series response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (result.success) {
           setSuccessMessage('TV Series added successfully!');
           // Refresh list
-          fetch('/api/movies').then(res => res.json()).then(data => {
+          safeFetch('/api/movies').then(data => {
             const tvSeries = (data.movies || []).filter(item => item.genre === 'tv-series');
             setSeriesList(tvSeries);
+          }).catch(error => {
+            console.error('Failed to refresh series list:', error);
           });
         } else {
           setSuccessMessage('Failed to add TV Series: ' + result.message);
@@ -522,7 +673,23 @@ const dashboardPage = () => {
           body: imageFormData,
         });
         
-        const imageResult = await imageResponse.json();
+        // Check if response is ok and contains JSON
+        if (!imageResponse.ok) {
+          const errorText = await imageResponse.text();
+          setSuccessMessage(`Failed to upload images: HTTP ${imageResponse.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let imageResult;
+        try {
+          imageResult = await imageResponse.json();
+        } catch (jsonError) {
+          const responseText = await imageResponse.text();
+          setSuccessMessage(`Failed to parse image upload response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (!imageResult.success) {
           setSuccessMessage('Failed to upload images: ' + imageResult.error);
@@ -556,15 +723,33 @@ const dashboardPage = () => {
           body: JSON.stringify({ id: editingCartoonId, ...cartoonDataForDb }),
         });
         
-        const result = await res.json();
+        // Check if response is ok and contains JSON
+        if (!res.ok) {
+          const errorText = await res.text();
+          setSuccessMessage(`Failed to update cartoon: HTTP ${res.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let result;
+        try {
+          result = await res.json();
+        } catch (jsonError) {
+          const responseText = await res.text();
+          setSuccessMessage(`Failed to parse update response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (result.success) {
           setSuccessMessage('Cartoon updated successfully!');
           setEditingCartoonId(null);
           // Refresh list
-          fetch('/api/movies').then(res => res.json()).then(data => {
+          safeFetch('/api/movies').then(data => {
             const cartoons = (data.movies || []).filter(item => item.genre === 'cartoon');
             setCartoonList(cartoons);
+          }).catch(error => {
+            console.error('Failed to refresh cartoon list:', error);
           });
         } else {
           setSuccessMessage('Failed to update cartoon: ' + result.message);
@@ -577,14 +762,32 @@ const dashboardPage = () => {
           body: JSON.stringify(cartoonDataForDb),
         });
         
-        const result = await res.json();
+        // Check if response is ok and contains JSON
+        if (!res.ok) {
+          const errorText = await res.text();
+          setSuccessMessage(`Failed to add cartoon: HTTP ${res.status} - ${errorText}`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
+        
+        let result;
+        try {
+          result = await res.json();
+        } catch (jsonError) {
+          const responseText = await res.text();
+          setSuccessMessage(`Failed to parse add cartoon response: ${responseText.substring(0, 100)}...`);
+          setTimeout(() => setSuccessMessage(''), 7000);
+          return;
+        }
         
         if (result.success) {
           setSuccessMessage('Cartoon added successfully!');
           // Refresh list
-          fetch('/api/movies').then(res => res.json()).then(data => {
+          safeFetch('/api/movies').then(data => {
             const cartoons = (data.movies || []).filter(item => item.genre === 'cartoon');
             setCartoonList(cartoons);
+          }).catch(error => {
+            console.error('Failed to refresh cartoon list:', error);
           });
         } else {
           setSuccessMessage('Failed to add cartoon: ' + result.message);
