@@ -20,6 +20,7 @@ import {
 } from 'lucide-react'
 import NavbarTwo from "../../../../components/navbarSearch"
 import Footer from "../../../../components/footer"
+import logo from '../../../../public/assets/images/logo/logo2.png'
 
 export default function BlogPost() {
   const params = useParams()
@@ -35,8 +36,10 @@ export default function BlogPost() {
   
   const contentRef = useRef(null)
   const scrollRef = useRef(null)
+  const shareMenuRef = useRef(null)
 
-  // Remove Locomotive Scroll for now to fix scrolling issues
+  // Locomotive Scroll disabled for blog post pages to allow sticky sidebar
+  // The smooth scroll effect conflicts with position: sticky
   // useEffect(() => {
   //   let scroll
   //   import("locomotive-scroll").then((LocomotiveScroll) => {
@@ -50,7 +53,7 @@ export default function BlogPost() {
   //   return () => {
   //     if (scroll) scroll.destroy()
   //   }
-  // }, [])
+  // }, [post])
 
   // Fetch blog post data
   useEffect(() => {
@@ -106,6 +109,20 @@ export default function BlogPost() {
 
     window.addEventListener('scroll', updateReadingProgress)
     return () => window.removeEventListener('scroll', updateReadingProgress)
+  }, [])
+
+  // Click outside to close share menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (shareMenuRef.current && !shareMenuRef.current.contains(event.target)) {
+        setShowShareMenu(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, [])
 
   const handleLike = () => {
@@ -201,7 +218,7 @@ export default function BlogPost() {
 
   return (
     <div
-      className="min-h-screen"
+      className="min-h-screen scroll-smooth"
       style={{ background: "linear-gradient(to top, #020E21 0%, #091F4E 50%, #020D23 100%)" }}
     >
       <NavbarTwo />
@@ -257,7 +274,7 @@ export default function BlogPost() {
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400 mb-8">
             <div className="flex items-center space-x-2">
               <User className="h-4 w-4" />
-              <span>{post.author?.name || 'Unknown Author'}</span>
+              <span>INBV Media Group</span>
             </div>
             <div className="flex items-center space-x-2">
               <Calendar className="h-4 w-4" />
@@ -291,45 +308,71 @@ export default function BlogPost() {
               <span>{liked ? post.likes + 1 : post.likes}</span>
             </button>
             
-            <div className="relative">
+            <div className="relative" ref={shareMenuRef}>
               <button
                 onClick={() => setShowShareMenu(!showShareMenu)}
-                className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 transition-colors"
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                  showShareMenu 
+                    ? 'bg-[#1d50a3] text-white shadow-lg' 
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
               >
                 <Share2 className="h-4 w-4" />
                 <span>Share</span>
               </button>
               
               {showShareMenu && (
-                <div className="absolute top-full mt-2 left-0 bg-[#1a1a3a] border border-[#1d50a3]/30 rounded-lg shadow-xl py-2 z-50 min-w-[200px]">
-                  <button
-                    onClick={() => handleShare('facebook')}
-                    className="w-full flex items-center space-x-3 px-4 py-2 text-gray-300 hover:bg-[#1d50a3]/20 hover:text-white transition-colors"
-                  >
-                    <Facebook className="h-4 w-4" />
-                    <span>Facebook</span>
-                  </button>
-                  <button
-                    onClick={() => handleShare('twitter')}
-                    className="w-full flex items-center space-x-3 px-4 py-2 text-gray-300 hover:bg-[#1d50a3]/20 hover:text-white transition-colors"
-                  >
-                    <Twitter className="h-4 w-4" />
-                    <span>Twitter</span>
-                  </button>
-                  <button
-                    onClick={() => handleShare('linkedin')}
-                    className="w-full flex items-center space-x-3 px-4 py-2 text-gray-300 hover:bg-[#1d50a3]/20 hover:text-white transition-colors"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                    <span>LinkedIn</span>
-                  </button>
-                  <button
-                    onClick={() => handleShare('copy')}
-                    className="w-full flex items-center space-x-3 px-4 py-2 text-gray-300 hover:bg-[#1d50a3]/20 hover:text-white transition-colors"
-                  >
-                    <Share2 className="h-4 w-4" />
-                    <span>Copy Link</span>
-                  </button>
+                <div className="absolute bottom-full mb-3 left-0 bg-gradient-to-br from-[#2a2a5a] to-[#1a1a3a] border border-[#1d50a3]/30 rounded-xl shadow-2xl overflow-visible z-[9999] min-w-[180px] backdrop-blur-sm">
+                  {/* Share Header */}
+                  <div className="px-4 py-3 border-b border-white/10">
+                    <h4 className="text-white font-semibold text-sm">Share Article</h4>
+                  </div>
+                  
+                  {/* Share Options */}
+                  <div className="py-2">
+                    <button
+                      onClick={() => handleShare('facebook')}
+                      className="w-full flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-[#1d50a3]/20 hover:text-white transition-all duration-200 group"
+                    >
+                      <div className="w-8 h-8 bg-[#1877F2] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Facebook className="h-4 w-4 text-white" />
+                      </div>
+                      <span className="font-medium">Facebook</span>
+                    </button>
+                    
+                    <button
+                      onClick={() => handleShare('twitter')}
+                      className="w-full flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-[#1d50a3]/20 hover:text-white transition-all duration-200 group"
+                    >
+                      <div className="w-8 h-8 bg-[#1DA1F2] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Twitter className="h-4 w-4 text-white" />
+                      </div>
+                      <span className="font-medium">Twitter</span>
+                    </button>
+                    
+                    <button
+                      onClick={() => handleShare('linkedin')}
+                      className="w-full flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-[#1d50a3]/20 hover:text-white transition-all duration-200 group"
+                    >
+                      <div className="w-8 h-8 bg-[#0A66C2] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Linkedin className="h-4 w-4 text-white" />
+                      </div>
+                      <span className="font-medium">LinkedIn</span>
+                    </button>
+                    
+                    {/* Separator */}
+                    <div className="my-2 mx-4 border-t border-white/10"></div>
+                    
+                    <button
+                      onClick={() => handleShare('copy')}
+                      className="w-full flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-[#1d50a3]/20 hover:text-white transition-all duration-200 group"
+                    >
+                      <div className="w-8 h-8 bg-[#6B7280] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Share2 className="h-4 w-4 text-white" />
+                      </div>
+                      <span className="font-medium">Copy Link</span>
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
@@ -340,7 +383,7 @@ export default function BlogPost() {
       {/* Article Content */}
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-4xl">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Main Content */}
             <article className="lg:col-span-3" ref={contentRef}>
               <div className="prose prose-lg prose-invert max-w-none">
@@ -369,53 +412,54 @@ export default function BlogPost() {
               </div>
 
               {/* Author Bio */}
-              {/* Author Bio */}
-              {post.author && (
-                <div className="mt-12 p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-16 h-16 rounded-full bg-[#1d50a3] flex items-center justify-center text-white font-bold text-xl">
-                      {(post.author.name || 'A').charAt(0)}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-semibold text-white mb-2">{post.author.name || 'Unknown Author'}</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">{post.author.bio || 'No bio available.'}</p>
-                    </div>
+              <div className="mt-12 p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20">
+                <div className="flex items-start space-x-4">
+                
+                    <Image 
+                      src={logo}
+                      alt="INBV Logo"
+                      width={70}
+                      height={70}
+                      className="object-contain"
+                    />
+                  
+                  <div className="flex-1">
+                    <h4 className="text-xl font-semibold text-white mb-2">INBV Media Group</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">Your trusted source for streaming and entertainment news, reviews, and insights.</p>
                   </div>
                 </div>
-              )}
+              </div>
             </article>
 
-            {/* Sidebar */}
+            {/* Sidebar - Fixed Position */}
             <aside className="lg:col-span-1">
               <div className="sticky top-24 space-y-8">
-                {/* Table of Contents */}
+                {/* Quick Navigation - Sticky */}
                 <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20">
                   <h3 className="text-lg font-semibold text-white mb-4">Quick Navigation</h3>
-                  <nav className="space-y-2">
-                    <Link 
-                      href="#"
-                      className="block text-sm text-gray-300 hover:text-[#1d50a3] transition-colors"
+                  <nav className="space-y-3">
+                    <button 
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                      }}
+                      className="w-full text-left flex items-center space-x-2 text-sm text-gray-300 hover:text-[#1d50a3] transition-all duration-200 cursor-pointer group hover:bg-white/5 rounded-lg p-2 -m-2"
                     >
-                      Back to top
-                    </Link>
+                      <ChevronUp className="h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+                      <span>Back to Top</span>
+                    </button>
                     <Link 
                       href="/blog"
-                      className="block text-sm text-gray-300 hover:text-[#1d50a3] transition-colors"
+                      className="flex items-center space-x-2 text-sm text-gray-300 hover:text-[#1d50a3] transition-all duration-200 group hover:bg-white/5 rounded-lg p-2 -m-2"
                     >
-                      All Articles
-                    </Link>
-                    <Link 
-                      href={`/blog/category/${post.category.toLowerCase()}`}
-                      className="block text-sm text-gray-300 hover:text-[#1d50a3] transition-colors"
-                    >
-                      More in {post.category}
+                      <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                      <span>All Articles</span>
                     </Link>
                   </nav>
                 </div>
 
                 {/* Related Articles */}
                 {relatedPosts.length > 0 && (
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20">
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 overflow-hidden">
                     <h3 className="text-lg font-semibold text-white mb-4">Related Articles</h3>
                     <div className="space-y-4">
                       {relatedPosts.slice(0, 3).map((relatedPost) => (
@@ -424,8 +468,8 @@ export default function BlogPost() {
                           href={`/blog/${relatedPost.slug}`}
                           className="block group"
                         >
-                          <div className="flex space-x-3">
-                            <div className="w-16 h-16 relative rounded-lg overflow-hidden flex-shrink-0">
+                          <div className="flex gap-3">
+                            <div className="w-14 h-14 relative rounded-lg overflow-hidden flex-shrink-0">
                               <Image
                                 src={relatedPost.featuredImage}
                                 alt={relatedPost.title}
@@ -433,11 +477,11 @@ export default function BlogPost() {
                                 className="object-cover group-hover:scale-110 transition-transform duration-300"
                               />
                             </div>
-                            <div className="flex-1">
-                              <h4 className="text-sm font-semibold text-white group-hover:text-[#1d50a3] transition-colors mb-1 line-clamp-2">
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-sm font-semibold text-white group-hover:text-[#1d50a3] transition-colors mb-1 line-clamp-2 break-words">
                                 {relatedPost.title}
                               </h4>
-                              <p className="text-xs text-gray-400">
+                              <p className="text-xs text-gray-400 truncate">
                                 {relatedPost.readTime} • {relatedPost.category}
                               </p>
                             </div>

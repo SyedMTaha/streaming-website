@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Search, Calendar, User, ArrowRight, BookOpen, Film, Star, TrendingUp, Clock, Eye } from "lucide-react"
+import logo2 from '../public/assets/images/logo/logo2.png'
 
 export default function BlogPage() {
   return (
@@ -42,7 +43,7 @@ export default function BlogPage() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <User className="h-4 w-4" />
-                  <span>Sarah Chen</span>
+                  <span>INBV Media Group</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Clock className="h-4 w-4" />
@@ -102,7 +103,7 @@ export default function BlogPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 {/* Article Card 1 */}
-                <Link href="/blog/best-action-sequences-2024">
+                <Link href="/blog/best-action-movies-2025">
                   <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10 cursor-pointer">
                     <div className="relative overflow-hidden">
                       <Image
@@ -117,24 +118,33 @@ export default function BlogPage() {
                           REVIEW
                         </span>
                       </div>
+                      {/* INBV Logo Overlay */}
+                      <div className="absolute bottom-2 right-2 z-10">
+                        <Image
+                          src={logo2}
+                          alt="INBV Logo"
+                          width={32}
+                          height={32}
+                          className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                        />
+                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
-                        Breaking Down the Best Action Sequences of 2024
+                        The Ultimate Guide to 2025's Best Action Movies: Blockbusters That Redefined Cinema
                       </h3>
                       <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
-                        From heart-pounding car chases to gravity-defying stunts, we analyze what made this year's action
-                        scenes unforgettable.
+                        Discover the most explosive, thrilling, and critically acclaimed action movies of 2025 that are breaking box office records.
                       </p>
                       <div className="flex items-center justify-between text-xs text-gray-400">
                         <div className="flex items-center space-x-4">
-                          <span>Dec 12, 2024</span>
+                          <span>Dec 18, 2024</span>
                           <span>•</span>
-                          <span>5 min read</span>
+                          <span>12 min read</span>
                         </div>
                         <div className="flex items-center space-x-1">
                           <Eye className="h-3 w-3" />
-                          <span>2.1k</span>
+                          <span>147</span>
                         </div>
                       </div>
                     </div>
@@ -157,14 +167,23 @@ export default function BlogPage() {
                           INDUSTRY
                         </span>
                       </div>
+                      {/* INBV Logo Overlay */}
+                      <div className="absolute bottom-2 right-2 z-10">
+                        <Image
+                          src={logo2}
+                          alt="INBV Logo"
+                          width={32}
+                          height={32}
+                          className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                        />
+                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
                         The Rise of Psychological Thrillers in Streaming
                       </h3>
                       <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
-                        How streaming platforms are becoming the perfect home for mind-bending psychological narratives
-                        that keep viewers on edge.
+                        How streaming platforms are becoming the perfect home for mind-bending psychological narratives that keep...
                       </p>
                       <div className="flex items-center justify-between text-xs text-gray-400">
                         <div className="flex items-center space-x-4">
@@ -194,6 +213,16 @@ export default function BlogPage() {
                       />
                       <div className="absolute top-4 left-4">
                         <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">TECH</span>
+                      </div>
+                      {/* INBV Logo Overlay */}
+                      <div className="absolute bottom-2 right-2 z-10">
+                        <Image
+                          src={logo2}
+                          alt="INBV Logo"
+                          width={32}
+                          height={32}
+                          className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                        />
                       </div>
                     </div>
                     <div className="p-6">
@@ -235,6 +264,16 @@ export default function BlogPage() {
                           REVIEW
                         </span>
                       </div>
+                      {/* INBV Logo Overlay */}
+                      <div className="absolute bottom-2 right-2 z-10">
+                        <Image
+                          src={logo2}
+                          alt="INBV Logo"
+                          width={32}
+                          height={32}
+                          className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                        />
+                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
@@ -261,11 +300,11 @@ export default function BlogPage() {
               </div>
 
               {/* Load More Button */}
-              <div className="text-center">
+              {/* <div className="text-center">
                 <button className="bg-[#ffffff]/20 text-white px-8 py-3 rounded-xl font-semibold hover:bg-[#ffffff]/30 transition-all duration-300 border border-[#e2e8f0]/20 hover:border-[#1d50a3]/30">
                   Load More Articles
                 </button>
-              </div>
+              </div> */}
             </div>
 
             {/* Sidebar */}
@@ -282,28 +321,28 @@ export default function BlogPage() {
                     className="flex items-center justify-between text-gray-300 hover:text-[#1d50a3] transition-colors"
                   >
                     <span>Reviews</span>
-                                         <span className="text-xs bg-[#1d50a3]/20 text-[#1d50a3] px-2 py-1 rounded-full">24</span>
+                                         <span className="text-xs bg-[#1d50a3]/20 text-[#1d50a3] px-2 py-1 rounded-full">04</span>
                   </Link>
                   <Link
                     href="/category/industry"
                     className="flex items-center justify-between text-gray-300 hover:text-[#1d50a3] transition-colors"
                   >
                     <span>Industry News</span>
-                                         <span className="text-xs bg-[#1d50a3]/20 text-[#1d50a3] px-2 py-1 rounded-full">18</span>
+                                         <span className="text-xs bg-[#1d50a3]/20 text-[#1d50a3] px-2 py-1 rounded-full">03</span>
                   </Link>
                   <Link
                     href="/category/tech"
                     className="flex items-center justify-between text-gray-300 hover:text-[#1d50a3] transition-colors"
                   >
                     <span>Technology</span>
-                                         <span className="text-xs bg-[#1d50a3]/20 text-[#1d50a3] px-2 py-1 rounded-full">12</span>
+                                         <span className="text-xs bg-[#1d50a3]/20 text-[#1d50a3] px-2 py-1 rounded-full">06</span>
                   </Link>
                   <Link
                     href="/category/interviews"
                                          className="flex items-center justify-between text-gray-300 hover:text-[#1d50a3] transition-colors"
                   >
                     <span>Interviews</span>
-                                         <span className="text-xs bg-[#1d50a3]/20 text-[#1d50a3] px-2 py-1 rounded-full">8</span>
+                                         <span className="text-xs bg-[#1d50a3]/20 text-[#1d50a3] px-2 py-1 rounded-full">02</span>
                   </Link>
                 </div>
               </div>
