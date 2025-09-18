@@ -12,7 +12,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 // Removed JSON import - using Firebase only
 
 // Add disabled genres here
-const DISABLED_GENRES = ['family', 'historical', 'independent', 'inspiration', 'news', 'sport']; 
+const DISABLED_GENRES = ['historical', 'independent', 'inspiration', 'news', 'sport']; 
 
 export default function GenrePage() {
   const params = useParams();

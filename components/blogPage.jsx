@@ -102,154 +102,162 @@ export default function BlogPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 {/* Article Card 1 */}
-                <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10">
-                  <div className="relative overflow-hidden">
-                    <Image
-                      src="/assets/images/blog/action.jpg"
-                      alt="Article image"
-                      width={400}
-                      height={250}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        REVIEW
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
-                      Breaking Down the Best Action Sequences of 2024
-                    </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
-                      From heart-pounding car chases to gravity-defying stunts, we analyze what made this year's action
-                      scenes unforgettable.
-                    </p>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <div className="flex items-center space-x-4">
-                        <span>Dec 12, 2024</span>
-                        <span>•</span>
-                        <span>5 min read</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Eye className="h-3 w-3" />
-                        <span>2.1k</span>
+                <Link href="/blog/best-action-sequences-2024">
+                  <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10 cursor-pointer">
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src="/assets/images/blog/action.jpg"
+                        alt="Article image"
+                        width={400}
+                        height={250}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          REVIEW
+                        </span>
                       </div>
                     </div>
-                  </div>
-                </article>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
+                        Breaking Down the Best Action Sequences of 2024
+                      </h3>
+                      <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
+                        From heart-pounding car chases to gravity-defying stunts, we analyze what made this year's action
+                        scenes unforgettable.
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-400">
+                        <div className="flex items-center space-x-4">
+                          <span>Dec 12, 2024</span>
+                          <span>•</span>
+                          <span>5 min read</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Eye className="h-3 w-3" />
+                          <span>2.1k</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
 
                 {/* Article Card 2 */}
-                <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10">
-                  <div className="relative overflow-hidden">
-                    <Image
-                      src="/assets/images/blog/thriller.jpg"
-                      alt="Article image"
-                      width={400}
-                      height={250}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        INDUSTRY
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
-                      The Rise of Psychological Thrillers in Streaming
-                    </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
-                      How streaming platforms are becoming the perfect home for mind-bending psychological narratives
-                      that keep viewers on edge.
-                    </p>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <div className="flex items-center space-x-4">
-                        <span>Dec 10, 2024</span>
-                        <span>•</span>
-                        <span>7 min read</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Eye className="h-3 w-3" />
-                        <span>1.8k</span>
+                <Link href="/blog/psychological-thrillers-streaming">
+                  <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10 cursor-pointer">
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src="/assets/images/blog/thriller.jpg"
+                        alt="Article image"
+                        width={400}
+                        height={250}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          INDUSTRY
+                        </span>
                       </div>
                     </div>
-                  </div>
-                </article>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
+                        The Rise of Psychological Thrillers in Streaming
+                      </h3>
+                      <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
+                        How streaming platforms are becoming the perfect home for mind-bending psychological narratives
+                        that keep viewers on edge.
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-400">
+                        <div className="flex items-center space-x-4">
+                          <span>Dec 10, 2024</span>
+                          <span>•</span>
+                          <span>7 min read</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Eye className="h-3 w-3" />
+                          <span>1.8k</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
 
                 {/* Article Card 3 */}
-                <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10">
-                  <div className="relative overflow-hidden">
-                    <Image
-                      src="/assets/images/blog/drama.png"
-                      alt="Article image"
-                      width={400}
-                      height={250}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">TECH</span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
-                      AI-Powered Content Recommendations: The Future is Here
-                    </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
-                      Exploring how machine learning algorithms are revolutionizing how we discover and consume
-                      entertainment content.
-                    </p>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <div className="flex items-center space-x-4">
-                        <span>Dec 8, 2024</span>
-                        <span>•</span>
-                        <span>6 min read</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Eye className="h-3 w-3" />
-                        <span>3.2k</span>
+                <Link href="/blog/ai-powered-content-recommendations">
+                  <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10 cursor-pointer">
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src="/assets/images/blog/drama.png"
+                        alt="Article image"
+                        width={400}
+                        height={250}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">TECH</span>
                       </div>
                     </div>
-                  </div>
-                </article>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
+                        AI-Powered Content Recommendations: The Future is Here
+                      </h3>
+                      <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
+                        Exploring how machine learning algorithms are revolutionizing how we discover and consume
+                        entertainment content.
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-400">
+                        <div className="flex items-center space-x-4">
+                          <span>Dec 8, 2024</span>
+                          <span>•</span>
+                          <span>6 min read</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Eye className="h-3 w-3" />
+                          <span>3.2k</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
 
                 {/* Article Card 4 */}
-                <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10">
-                  <div className="relative overflow-hidden">
-                    <Image
-                      src="/assets/images/blog/comedy.png"
-                      alt="Article image"
-                      width={400}
-                      height={250}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        REVIEW
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
-                      Comedy Gold: The Best Laughs of the Year
-                    </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
-                      From witty dialogue to physical comedy, we round up the funniest moments that had us rolling on
-                      the floor.
-                    </p>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <div className="flex items-center space-x-4">
-                        <span>Dec 5, 2024</span>
-                        <span>•</span>
-                        <span>4 min read</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Eye className="h-3 w-3" />
-                        <span>1.5k</span>
+                <Link href="/blog/comedy-gold-best-laughs-2024">
+                  <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10 cursor-pointer">
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src="/assets/images/blog/comedy.png"
+                        alt="Article image"
+                        width={400}
+                        height={250}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          REVIEW
+                        </span>
                       </div>
                     </div>
-                  </div>
-                </article>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
+                        Comedy Gold: The Best Laughs of the Year
+                      </h3>
+                      <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
+                        From witty dialogue to physical comedy, we round up the funniest moments that had us rolling on
+                        the floor.
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-400">
+                        <div className="flex items-center space-x-4">
+                          <span>Dec 5, 2024</span>
+                          <span>•</span>
+                          <span>4 min read</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Eye className="h-3 w-3" />
+                          <span>1.5k</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
               </div>
 
               {/* Load More Button */}
