@@ -1,11 +1,56 @@
 "use client"
 
+import { useState } from 'react'
 import Image from "next/image"
 import Link from "next/link"
-import { Search, Calendar, User, ArrowRight, BookOpen, Film, Star, TrendingUp, Clock, Eye } from "lucide-react"
+import emailjs from '@emailjs/browser'
+import { Search, Calendar, User, ArrowRight, BookOpen, Film, Star, TrendingUp, Clock, Eye, Mail } from "lucide-react"
 import logo2 from '../public/assets/images/logo/logo2.png'
 
 export default function BlogPage() {
+  const [email, setEmail] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const [message, setMessage] = useState('')
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault()
+    
+    if (!email || !email.includes('@')) {
+      setMessage('Please enter a valid email address')
+      return
+    }
+
+    setIsLoading(true)
+    setMessage('')
+
+    try {
+      const templateParams = {
+        user_email: email,
+        user_name: email.split('@')[0],
+        reply_to: email
+      }
+      
+      console.log('Sending email with params:', templateParams)
+      console.log('Service ID:', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID)
+      console.log('Template ID:', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID)
+      
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'your_service_id',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'your_template_id',
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key'
+      )
+      
+      setMessage('Thank you! Check your email for confirmation.')
+      setEmail('')
+    } catch (error) {
+      setMessage('Something went wrong. Please try again.')
+      console.error('Email error:', error)
+    }
+    
+    setIsLoading(false)
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#020b1f] via-[#0a2151] to-[#020b1f] text-white">
      
@@ -62,7 +107,7 @@ export default function BlogPage() {
                              <div className="absolute -inset-4 bg-gradient-to-r from-[#1d50a3]/20 to-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               <div className="relative">
                 <Image
-                  src="/assets/images/blog/books.jpg"
+                  src="/assets/images/blog/film.png"
                   alt="Featured article image"
                   width={600}
                   height={400}
@@ -131,7 +176,7 @@ export default function BlogPage() {
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
-                        The Ultimate Guide to 2025's Best Action Movies: Blockbusters That Redefined Cinema
+                        The Ultimate Guide to 2025's Best Action Movies
                       </h3>
                       <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
                         Discover the most explosive, thrilling, and critically acclaimed action movies of 2025 that are breaking box office records.
@@ -152,7 +197,7 @@ export default function BlogPage() {
                 </Link>
 
                 {/* Article Card 2 */}
-                <Link href="/blog/psychological-thrillers-streaming">
+                <Link href="/blog/ai-innovators-latest-tools">
                   <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10 cursor-pointer">
                     <div className="relative overflow-hidden">
                       <Image
@@ -164,7 +209,7 @@ export default function BlogPage() {
                       />
                       <div className="absolute top-4 left-4">
                         <span className="bg-[#1d50a3] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                          INDUSTRY
+                          TECH
                         </span>
                       </div>
                       {/* INBV Logo Overlay */}
@@ -180,20 +225,20 @@ export default function BlogPage() {
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-3 group-hover:text-[#1d50a3] transition-colors text-balance">
-                        The Rise of Psychological Thrillers in Streaming
+                        How Innovators Are Using the Latest AI Tools to Transform Industries
                       </h3>
                       <p className="text-gray-300 mb-4 text-sm leading-relaxed text-pretty">
-                        How streaming platforms are becoming the perfect home for mind-bending psychological narratives that keep...
+                        Explore the cutting-edge AI technologies that forward-thinking entrepreneurs are leveraging to revolutionize business.
                       </p>
                       <div className="flex items-center justify-between text-xs text-gray-400">
                         <div className="flex items-center space-x-4">
-                          <span>Dec 10, 2024</span>
+                          <span>Dec 16, 2024</span>
                           <span>•</span>
-                          <span>7 min read</span>
+                          <span>15 min read</span>
                         </div>
                         <div className="flex items-center space-x-1">
                           <Eye className="h-3 w-3" />
-                          <span>1.8k</span>
+                          <span>129</span>
                         </div>
                       </div>
                     </div>
@@ -205,7 +250,7 @@ export default function BlogPage() {
                   <article className="bg-gradient-to-br from-[#ffffff]/10 to-[#ffffff]/5 rounded-xl overflow-hidden border border-[#e2e8f0]/20 backdrop-blur-sm hover:border-[#1d50a3]/30 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1d50a3]/10 cursor-pointer">
                     <div className="relative overflow-hidden">
                       <Image
-                        src="/assets/images/blog/drama.png"
+                        src="/assets/images/blog/AI.png"
                         alt="Article image"
                         width={400}
                         height={250}
@@ -241,7 +286,7 @@ export default function BlogPage() {
                         </div>
                         <div className="flex items-center space-x-1">
                           <Eye className="h-3 w-3" />
-                          <span>3.2k</span>
+                          <span>132</span>
                         </div>
                       </div>
                     </div>
@@ -291,7 +336,7 @@ export default function BlogPage() {
                         </div>
                         <div className="flex items-center space-x-1">
                           <Eye className="h-3 w-3" />
-                          <span>1.5k</span>
+                          <span>158</span>
                         </div>
                       </div>
                     </div>
@@ -354,55 +399,77 @@ export default function BlogPage() {
                   <span>Popular This Week</span>
                 </h3>
                 <div className="space-y-4">
-                  <article className="flex space-x-3 group cursor-pointer">
-                    <Image
-                      src="/assets/images/blog/scifi.png"
-                      alt="Popular article"
-                      width={60}
-                      height={60}
-                      className="w-15 h-15 object-cover rounded-lg group-hover:scale-105 transition-transform"
-                    />
-                    <div className="flex-1">
-                      <h4 className="text-sm font-semibold group-hover:text-[#1d50a3] transition-colors text-balance">
-                        Sci-Fi Renaissance: Why Space Operas Are Back
-                      </h4>
-                      <p className="text-xs text-gray-400 mt-1">Dec 3, 2024</p>
-                    </div>
-                  </article>
-                  <article className="flex space-x-3 group cursor-pointer">
-                    <Image
-                      src="/assets/images/blog/horror.jpg"
-                      alt="Popular article"
-                      width={60}
-                      height={60}
-                      className="w-15 h-15 object-cover rounded-lg group-hover:scale-105 transition-transform"
-                    />
-                    <div className="flex-1">
-                      <h4 className="text-sm font-semibold group-hover:text-[#1d50a3] transition-colors text-balance">
-                        Horror's New Wave: Psychological vs. Supernatural
-                      </h4>
-                      <p className="text-xs text-gray-400 mt-1">Nov 28, 2024</p>
-                    </div>
-                  </article>
+                  <Link href="/blog/netflix-original-series-2025">
+                    <article className="flex space-x-3 group cursor-pointer">
+                      <Image
+                        src="/assets/images/blog/scifi.png"
+                        alt="Popular article"
+                        width={60}
+                        height={60}
+                        className="w-15 h-15 object-cover rounded-lg group-hover:scale-105 transition-transform"
+                      />
+                      <div className="flex-1">
+                        <h4 className="text-sm font-semibold group-hover:text-[#1d50a3] transition-colors text-balance">
+                          Netflix's Most Anticipated Original Series Coming in 2025
+                        </h4>
+                        <p className="text-xs text-gray-400 mt-1">Dec 14, 2024</p>
+                      </div>
+                    </article>
+                  </Link>
+                  <Link href="/blog/streaming-wars-2025-predictions">
+                    <article className="flex space-x-3 group cursor-pointer">
+                      <Image
+                        src="/assets/images/blog/horror.jpg"
+                        alt="Popular article"
+                        width={60}
+                        height={60}
+                        className="w-15 h-15 object-cover rounded-lg group-hover:scale-105 transition-transform"
+                      />
+                      <div className="flex-1">
+                        <h4 className="text-sm font-semibold group-hover:text-[#1d50a3] transition-colors text-balance">
+                          Streaming Wars 2025: Bold Predictions for the Battle Ahead
+                        </h4>
+                        <p className="text-xs text-gray-400 mt-1">Dec 13, 2024</p>
+                      </div>
+                    </article>
+                  </Link>
+                  
                 </div>
               </div>
 
               {/* Newsletter Subscription */}
               <div className="bg-gradient-to-br from-[#1d50a3]/10 to-blue-600/10 rounded-xl p-6 border border-[#1d50a3]/20 backdrop-blur-sm">
-                <h3 className="text-xl font-bold mb-3">Stay Updated</h3>
+                <div className="flex items-center space-x-2 mb-3">
+                  <Mail className="h-5 w-5 text-[#1d50a3]" />
+                  <h3 className="text-xl font-bold">Stay Updated</h3>
+                </div>
                 <p className="text-gray-300 text-sm mb-4">
                   Get the latest articles and industry insights delivered to your inbox.
                 </p>
-                <div className="space-y-3">
+                <form onSubmit={handleNewsletterSubmit} className="space-y-3">
                   <input
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     className="w-full bg-[#ffffff]/20 border border-[#e2e8f0]/20 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1d50a3]/50 focus:border-[#1d50a3]/50"
+                    disabled={isLoading}
                   />
-                  <button className="w-full bg-[#1d50a3] text-white py-2 rounded-lg font-semibold text-sm hover:bg-[#1d50a3]/90 transition-colors">
-                    Subscribe
+                  <button 
+                    type="submit" 
+                    disabled={isLoading || !email}
+                    className="w-full bg-[#1d50a3] text-white py-2 rounded-lg font-semibold text-sm hover:bg-[#1d50a3]/90 transition-colors disabled:opacity-50"
+                  >
+                    {isLoading ? 'Subscribing...' : 'Subscribe'}
                   </button>
-                </div>
+                  {message && (
+                    <p className={`text-xs text-center ${
+                      message.includes('Thank you') ? 'text-green-400' : 'text-red-400'
+                    }`}>
+                      {message}
+                    </p>
+                  )}
+                </form>
               </div>
             </div>
           </div>
@@ -435,10 +502,10 @@ export default function BlogPage() {
                 A 5-part series exploring how independent filmmakers are disrupting traditional Hollywood models.
               </p>
               <Link
-                href="/series/indie-revolution"
+                href="/blog/indie-revolution-disrupting-hollywood"
                 className="inline-flex items-center space-x-2 text-[#1d50a3] hover:text-[#1d50a3]/80 transition-colors font-semibold text-sm"
               >
-                <span>Read Series</span>
+                <span>Read Blog</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -453,10 +520,10 @@ export default function BlogPage() {
                 An in-depth analysis of how major platforms are competing for viewer attention and market share.
               </p>
               <Link
-                href="/series/streaming-wars"
+                href="/blog/streaming-wars-platform-battle-2024"
                 className="inline-flex items-center space-x-2 text-[#1d50a3] hover:text-[#1d50a3]/80 transition-colors font-semibold text-sm"
               >
-                <span>Read Series</span>
+                <span>Read Blog</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -471,10 +538,10 @@ export default function BlogPage() {
                 Exploring emerging technologies like VR, AR, and AI that will shape the next decade of content.
               </p>
               <Link
-                href="/series/future-entertainment"
+                href="/blog/future-entertainment-vr-ar-ai-revolution"
                 className="inline-flex items-center space-x-2 text-[#1d50a3] hover:text-[#1d50a3]/80 transition-colors font-semibold text-sm"
               >
-                <span>Read Series</span>
+                <span>Read Blog</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

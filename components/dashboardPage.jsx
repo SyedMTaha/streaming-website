@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { compressImage, validateFileSize, formatFileSize } from '../utils/imageCompression'
 
 // Helper function to safely fetch and parse JSON
 const safeFetch = async (url, options = {}) => {
@@ -943,10 +944,31 @@ const dashboardPage = () => {
                   type="file"
                   accept="image/*"
                   className="hidden"
-                  onChange={e => {
+                  onChange={async (e) => {
                     const file = e.target.files[0];
-                    setMoviePortrait(file?.name || "");
-                    setMoviePortraitFile(file);
+                    if (file) {
+                      // Validate file size
+                      if (!validateFileSize(file, 10)) {
+                        setSuccessMessage(`Portrait image too large (${formatFileSize(file.size)}). Maximum 10MB allowed.`);
+                        setTimeout(() => setSuccessMessage(''), 5000);
+                        return;
+                      }
+                      
+                      setSuccessMessage(`Compressing portrait image (${formatFileSize(file.size)})...`);
+                      try {
+                        const compressedFile = await compressImage(file, 800, 1200, 0.85);
+                        setMoviePortrait(file.name);
+                        setMoviePortraitFile(compressedFile);
+                        setSuccessMessage(`Portrait compressed: ${formatFileSize(file.size)} → ${formatFileSize(compressedFile.size)}`);
+                        setTimeout(() => setSuccessMessage(''), 3000);
+                      } catch (error) {
+                        console.error('Compression failed:', error);
+                        setMoviePortrait(file.name);
+                        setMoviePortraitFile(file);
+                        setSuccessMessage('Compression failed, using original image');
+                        setTimeout(() => setSuccessMessage(''), 3000);
+                      }
+                    }
                   }}
                 />
                 <label
@@ -968,10 +990,31 @@ const dashboardPage = () => {
                   type="file"
                   accept="image/*"
                   className="hidden"
-                  onChange={e => {
+                  onChange={async (e) => {
                     const file = e.target.files[0];
-                    setMovieLandscape(file?.name || "");
-                    setMovieLandscapeFile(file);
+                    if (file) {
+                      // Validate file size
+                      if (!validateFileSize(file, 10)) {
+                        setSuccessMessage(`Landscape image too large (${formatFileSize(file.size)}). Maximum 10MB allowed.`);
+                        setTimeout(() => setSuccessMessage(''), 5000);
+                        return;
+                      }
+                      
+                      setSuccessMessage(`Compressing landscape image (${formatFileSize(file.size)})...`);
+                      try {
+                        const compressedFile = await compressImage(file, 1920, 1080, 0.85);
+                        setMovieLandscape(file.name);
+                        setMovieLandscapeFile(compressedFile);
+                        setSuccessMessage(`Landscape compressed: ${formatFileSize(file.size)} → ${formatFileSize(compressedFile.size)}`);
+                        setTimeout(() => setSuccessMessage(''), 3000);
+                      } catch (error) {
+                        console.error('Compression failed:', error);
+                        setMovieLandscape(file.name);
+                        setMovieLandscapeFile(file);
+                        setSuccessMessage('Compression failed, using original image');
+                        setTimeout(() => setSuccessMessage(''), 3000);
+                      }
+                    }
                   }}
                 />
                 <label

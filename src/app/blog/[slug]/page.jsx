@@ -462,7 +462,7 @@ export default function BlogPost() {
                   <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 overflow-hidden">
                     <h3 className="text-lg font-semibold text-white mb-4">Related Articles</h3>
                     <div className="space-y-4">
-                      {relatedPosts.slice(0, 3).map((relatedPost) => (
+                      {relatedPosts.slice(0, 2).map((relatedPost) => (
                         <Link
                           key={relatedPost.slug}
                           href={`/blog/${relatedPost.slug}`}

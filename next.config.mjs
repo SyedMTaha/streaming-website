@@ -14,6 +14,15 @@ const nextConfig = {
       },
     ],
   },
+  // Increase API body size limit
+  experimental: {
+    // This helps with larger payloads
+    isrMemoryCacheSize: 0,
+  },
+  // Add API route config
+  serverRuntimeConfig: {
+    maxApiBodySize: '10mb',
+  },
 };
 
 export default nextConfig;
