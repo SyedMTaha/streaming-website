@@ -6,6 +6,7 @@ import { Play, Plus, Calendar } from "lucide-react"
 // Import images using public folder paths
 const home03 = '/assets/images/background/homePage03.png';
 const logo5 = '/assets/images/logo/logo.png';
+const TM = '/assets/images/logo/TM.jpeg';
 const news1 = '/assets/images/home/news1.jpg';
 const news2 = '/assets/images/home/news2.jpg';
 const news3 = '/assets/images/home/news3.jpg';
@@ -299,7 +300,9 @@ export default function DashboardPage() {
                 <div className="absolute inset-0 flex items-center justify-between px-8">
                   <div className="flex items-center justify-center w-full">
                     {/* Show only logo on mobile, logo and text on md+ */}
-                    <Image src={logo5} alt="House of the Dragon" width={100} height={100} className="rounded-full" />
+                    <div className="relative p-2 bg-white rounded-full shadow-lg">
+                      <Image src={TM} alt="House of the Dragon" width={100} height={100} className="rounded-full" />
+                    </div>
                     <p className="font-bold text-lg ml-3 hidden md:block">Providing you Premium Quality Movies & TV Series</p>
                   </div>
                 </div>

@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Twitter, Github, Youtube, Instagram } from "lucide-react"
 import logo2 from './../public/assets/images/logo/logo2.png';
+import TM from './../public/assets/images/logo/TM.jpeg';
 import { auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
@@ -48,12 +49,29 @@ export default function Footer() {
   );
 
   return (
-    <footer className="relative z-10 bg-gradient-to-t from-[#07295B] to-[#020D1F] text-white">
-      <div className="w-full max-w-screen-2xl mx-auto px-8 py-12">
+    <footer className="relative z-10 bg-gradient-to-t from-[#07295B] to-[#020D1F] text-white flex flex-col min-h-fit">
+      <div className="w-full max-w-screen-2xl mx-auto px-8 py-12 flex-grow">
         <div className="w-full flex flex-col md:flex-row md:items-start justify-center">
           {/* Logo and Slogan */}
           <div className="flex flex-col items-center justify-center md:pr-10 w-full md:w-auto">
-            <Image src={logo2 || "/placeholder.svg"} alt="INBV TV" width={150} height={150} className="object-contain mb-4" />
+            {/* Logo container with trademark for 4K screens */}
+            <div className="flex items-center justify-center mb-4">
+              {/* Trademark logo - only visible on 4K screens (3840px and above) */}
+              <Image 
+                src={TM} 
+                alt="INBV Trademark" 
+                width={40} 
+                height={40} 
+                className="object-contain mr-3 hidden 4xl:block" 
+              />
+              <Image 
+                src={logo2 || "/placeholder.svg"} 
+                alt="INBV TV" 
+                width={150} 
+                height={150} 
+                className="object-contain" 
+              />
+            </div>
             <span className="text-base font-medium text-center md:text-left whitespace-nowrap">Premium Movies & Series</span>
           </div>
 
@@ -126,7 +144,7 @@ export default function Footer() {
       </div>
       
       {/* Copyright */}
-      <div className="bg-[#020D1E] py-4">
+      <div className="bg-[#020D1E] py-4 mt-auto">
         <div className="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row md:justify-between md:items-center items-center gap-2 md:gap-0">
           <p className="text-sm text-gray-400 text-center md:text-left">Copyright © 2025. All rights reserved.</p>
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 mt-2 md:mt-0 items-center">
