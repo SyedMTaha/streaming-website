@@ -41,6 +41,7 @@ export default function Navbar() {
     { name: "Adventure", href: "/genre/adventure" },
     { name: "Animation", href: "/genre/animation" },
     { name: "Biographical", href: "/genre/biographical" },
+    { name: "Blaxplotation", href: "/genre/blaxplotation" },
     { name: "Cartoon", href: "/genre/cartoon" },
     { name: "Comedy", href: "/genre/comedy" },
     { name: "Crime", href: "/genre/crime" },
@@ -279,8 +280,8 @@ export default function Navbar() {
 
                 {/* Dropdown Menu */}
                 {isGenreOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-106 bg-[#1a1a3a] border border-blue-900/30 rounded-lg shadow-xl py-2 z-50 w-[90vh]">
-                    <div className="grid grid-cols-4 gap-1 p-2">
+                  <div className="absolute top-full left-0 mt-1 w-106 bg-[#1a1a3a] border border-blue-900/30 rounded-lg shadow-xl py-2 z-50 w-[105vh]">
+                    <div className="grid grid-cols-5 gap-1 p-2">
                       {genres.map((genre) => (
                         <Link
                           key={genre.name}
