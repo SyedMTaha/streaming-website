@@ -441,7 +441,18 @@ const dashboardPage = () => {
   };
   const handleSeriesUpload = async (seriesData) => {
     try {
-      setSuccessMessage('Uploading images and saving TV series...');
+      // Check if we're in production and add more time for uploads
+      const isProduction = process.env.NODE_ENV === 'production';
+      const uploadTimeout = isProduction ? 30000 : 60000; // 30s prod, 60s dev
+      
+      setSuccessMessage('Starting TV series upload...');
+      
+      // Create abort controller for request timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => {
+        controller.abort();
+        setSuccessMessage('Upload timed out. Please try with fewer episodes or smaller images.');
+      }, uploadTimeout);
       
       // Upload images to ImageKit first
       const imageFormData = new FormData();
@@ -550,12 +561,15 @@ const dashboardPage = () => {
           setSuccessMessage('Failed to update TV Series: ' + result.message);
         }
       } else {
-        // Add new series
+        // Add new series with timeout control
         const res = await fetch('/api/add-series', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(seriesDataForDb),
+          signal: controller.signal
         });
+        
+        clearTimeout(timeoutId);
         
         // Check if response is ok and contains JSON
         if (!res.ok) {
@@ -609,9 +623,23 @@ const dashboardPage = () => {
       setTimeout(() => setSuccessMessage(''), 7000);
       
     } catch (error) {
+      clearTimeout(timeoutId);
       console.error('Error uploading TV series:', error);
-      setSuccessMessage('Error uploading TV series: ' + error.message);
-      setTimeout(() => setSuccessMessage(''), 7000);
+      
+      let errorMessage = 'Error uploading TV series: ';
+      
+      if (error.name === 'AbortError') {
+        errorMessage += 'Upload timed out. Please try with fewer episodes or smaller images.';
+      } else if (error.message.includes('Failed to fetch')) {
+        errorMessage += 'Network error. Please check your connection and try again.';
+      } else if (error.message.includes('413')) {
+        errorMessage += 'File too large. Please use smaller images.';
+      } else {
+        errorMessage += error.message;
+      }
+      
+      setSuccessMessage(errorMessage);
+      setTimeout(() => setSuccessMessage(''), 10000); // Show error longer
     }
   };
 

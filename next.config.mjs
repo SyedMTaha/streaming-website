@@ -19,10 +19,15 @@ const nextConfig = {
     // This helps with larger payloads
     isrMemoryCacheSize: 0,
   },
-  // Add API route config
-  serverRuntimeConfig: {
-    maxApiBodySize: '10mb',
+  // API configuration for larger uploads
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb',
+    },
+    responseLimit: '10mb',
   },
+  // Output configuration for Vercel
+  output: 'standalone',
 };
 
 export default nextConfig;

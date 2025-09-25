@@ -11,8 +11,15 @@ function generateSlug(title) {
 
 // POST - Add new TV series with episodes
 export async function POST(request) {
+  console.log('TV Series upload started at:', new Date().toISOString());
+  
   try {
+    // Add timeout wrapper
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 25000); // 25 second timeout
+    
     const seriesData = await request.json();
+    clearTimeout(timeoutId);
 
     if (!seriesData || !seriesData.title) {
       return NextResponse.json(
@@ -118,9 +125,26 @@ export async function POST(request) {
     });
 
   } catch (error) {
-    console.error('Error adding TV series:', error);
+    console.error('Error adding TV series:', {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      name: error.name
+    });
+    
+    // Return more specific error information
+    const isTimeoutError = error.name === 'AbortError' || error.message.includes('timeout');
+    const isNetworkError = error.message.includes('fetch') || error.message.includes('network');
+    
     return NextResponse.json(
-      { success: false, message: 'Failed to add TV series', error: error.message },
+      { 
+        success: false, 
+        message: isTimeoutError ? 'Upload timed out - please try with fewer episodes or smaller images' :
+                 isNetworkError ? 'Network error - please check your connection and try again' :
+                 'Failed to add TV series', 
+        error: error.message,
+        errorType: error.name
+      },
       { status: 500 }
     );
   }
