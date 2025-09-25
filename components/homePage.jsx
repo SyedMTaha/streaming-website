@@ -1,5 +1,6 @@
 "use client"
 
+import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Play, Plus, Calendar } from "lucide-react"
@@ -38,6 +39,27 @@ import moviesData from '../src/data/movies.json';
 const { upcomingMovies } = moviesData;
 
 export default function DashboardPage() {
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [isLoadingBlogs, setIsLoadingBlogs] = useState(true);
+
+  // Fetch blog posts for Top News section
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await fetch('/api/blog?limit=3');
+        const data = await response.json();
+        if (data.success) {
+          setBlogPosts(data.posts);
+        }
+      } catch (error) {
+        console.error('Error fetching blog posts:', error);
+      } finally {
+        setIsLoadingBlogs(false);
+      }
+    };
+
+    fetchBlogPosts();
+  }, []);
 
   const handleScroll = (direction, containerId) => {
     const container = document.getElementById(containerId);
@@ -301,9 +323,12 @@ export default function DashboardPage() {
                   <div className="flex items-center justify-center w-full">
                     {/* Show only logo on mobile, logo and text on md+ */}
                     <div className="relative p-2  ">
-                      <Image src={TM} alt="House of the Dragon" width={130} height={130} className="rounded-full" />
+                      <Image src={TM} alt="INBV Logo" width={130} height={130} className="rounded-full" />
                     </div>
-                    <p className="font-bold text-lg ml-3 hidden md:block">Providing you Premium Quality Movies & TV Series</p>
+                    <div className="ml-3 hidden md:block">
+                      <p className="font-bold text-lg">Providing you Premium Quality Movies & TV Series</p>
+                      <p className="font-semibold text-md text-blue-200 mt-1">Internet Best Videos</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -317,27 +342,54 @@ export default function DashboardPage() {
         <div className="container mx-auto">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Top News</h2>
+            <Link href="/blog" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              View All Blogs
+            </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <NewsCard
-              image={news1}
-              title="Movies That Will Make Your Holidays The Best"
-              date="April 26, 2023"
-              category="Entertainment"
-            />
-            <NewsCard
-              image={news2}
-              title="Best Movie To Cheer Your Mood Up In 2023"
-              date="April 26, 2023"
-              category="Entertainment"
-            />
-            <NewsCard
-              image={news3}
-              title="Must Watch Your Fav Web Series With Us"
-              date="April 26, 2023"
-              category="Entertainment"
-            />
-          </div>
+          {isLoadingBlogs ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {Array.from({ length: 3 }).map((_, idx) => (
+                <div key={idx} className="animate-pulse">
+                  <div className="bg-gray-700 h-48 rounded-lg mb-4"></div>
+                  <div className="h-4 bg-gray-700 rounded mb-2"></div>
+                  <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {blogPosts.length > 0 ? (
+                blogPosts.map((post) => (
+                  <BlogNewsCard
+                    key={post.id}
+                    post={post}
+                  />
+                ))
+              ) : (
+                // Fallback to static content if no blog posts
+                <>
+                  <NewsCard
+                    image={news1}
+                    title="Movies That Will Make Your Holidays The Best"
+                    date="April 26, 2023"
+                    category="Entertainment"
+                  />
+                  <NewsCard
+                    image={news2}
+                    title="Best Movie To Cheer Your Mood Up In 2023"
+                    date="April 26, 2023"
+                    category="Entertainment"
+                  />
+                  <NewsCard
+                    image={news3}
+                    title="Must Watch Your Fav Web Series With Us"
+                    date="April 26, 2023"
+                    category="Entertainment"
+                  />
+                </>
+              )}
+            </div>
+          )}
         </div>
       </section>
     </div>
@@ -481,6 +533,47 @@ function NewsCard({ image, title, date, category }) {
       </div>
       <h3 className="text-lg font-semibold group-hover:text-blue-400 transition-colors">{title}</h3>
     </div>
+  )
+}
+
+function BlogNewsCard({ post }) {
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  return (
+    <Link href={`/blog/${post.slug}`} className="group cursor-pointer">
+      <div className="relative overflow-hidden rounded-lg mb-4">
+        <Image
+          src={post.featuredImage || "/placeholder.svg"}
+          alt={post.title}
+          width={300}
+          height={200}
+          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+      <div className="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+        <Calendar className="h-3 w-3" />
+        <span>{formatDate(post.publishDate)}</span>
+        <span>•</span>
+        <span>{post.category}</span>
+        {post.readTime && (
+          <>
+            <span>•</span>
+            <span>{post.readTime}</span>
+          </>
+        )}
+      </div>
+      <h3 className="text-lg font-semibold group-hover:text-blue-400 transition-colors line-clamp-2">{post.title}</h3>
+      {post.excerpt && (
+        <p className="text-gray-400 text-sm mt-2 line-clamp-2">{post.excerpt}</p>
+      )}
+    </Link>
   )
 }
 

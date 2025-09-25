@@ -81,6 +81,11 @@ const dashboardPage = () => {
   const [movieLink, setMovieLink] = useState('');
   // Success message state
   const [successMessage, setSuccessMessage] = useState('');
+
+  // Upload loading states to prevent duplicate submissions
+  const [isMovieUploading, setIsMovieUploading] = useState(false);
+  const [isSeriesUploading, setIsSeriesUploading] = useState(false);
+  const [isCartoonUploading, setIsCartoonUploading] = useState(false);
   
   // Custom alert state
   const [showAlert, setShowAlert] = useState(false);
@@ -266,6 +271,8 @@ const dashboardPage = () => {
   };
 
   const handleMovieUpload = async (movieData) => {
+    if (isMovieUploading) return;
+    setIsMovieUploading(true);
     try {
       setSuccessMessage('Uploading images and saving movie...');
       
@@ -430,6 +437,8 @@ const dashboardPage = () => {
       console.error('Error uploading movie:', error);
       setSuccessMessage('Error uploading movie: ' + error.message);
       setTimeout(() => setSuccessMessage(''), 7000);
+    } finally {
+      setIsMovieUploading(false);
     }
   };
 
@@ -473,6 +482,9 @@ const dashboardPage = () => {
     setShowAlert(true);
   };
   const handleSeriesUpload = async (seriesData) => {
+    if (isSeriesUploading) return;
+    setIsSeriesUploading(true);
+    let timeoutId;
     try {
       // Check if we're in production and add more time for uploads
       const isProduction = process.env.NODE_ENV === 'production';
@@ -482,7 +494,7 @@ const dashboardPage = () => {
       
       // Create abort controller for request timeout
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => {
+      timeoutId = setTimeout(() => {
         controller.abort();
         setSuccessMessage('Upload timed out. Please try with fewer episodes or smaller images.');
       }, uploadTimeout);
@@ -656,7 +668,7 @@ const dashboardPage = () => {
       setTimeout(() => setSuccessMessage(''), 7000);
       
     } catch (error) {
-      clearTimeout(timeoutId);
+      if (timeoutId) clearTimeout(timeoutId);
       console.error('Error uploading TV series:', error);
       
       let errorMessage = 'Error uploading TV series: ';
@@ -673,6 +685,9 @@ const dashboardPage = () => {
       
       setSuccessMessage(errorMessage);
       setTimeout(() => setSuccessMessage(''), 10000); // Show error longer
+    } finally {
+      if (timeoutId) clearTimeout(timeoutId);
+      setIsSeriesUploading(false);
     }
   };
 
@@ -716,6 +731,8 @@ const dashboardPage = () => {
     setShowAlert(true);
   };
   const handleCartoonUpload = async (cartoonData) => {
+    if (isCartoonUploading) return;
+    setIsCartoonUploading(true);
     try {
       setSuccessMessage('Uploading images and saving cartoon...');
       
@@ -888,6 +905,8 @@ const dashboardPage = () => {
       console.error('Error uploading cartoon:', error);
       setSuccessMessage('Error uploading cartoon: ' + error.message);
       setTimeout(() => setSuccessMessage(''), 7000);
+    } finally {
+      setIsCartoonUploading(false);
     }
   };
 
@@ -931,10 +950,10 @@ const dashboardPage = () => {
         </div>
       )}
       <h1 className="text-3xl font-bold text-white mb-8">Admin Dashboard</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl items-start">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl items-stretch">
 
         {/* Movie Upload */}
-        <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full" style={{ minWidth: 340, maxWidth: 380 }}>
+        <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full h-full" style={{ minWidth: 340, maxWidth: 380 }}>
           <h2 className="text-xl font-semibold text-white mb-4">Upload Movie</h2>
           <div className="w-full mb-4">
             <input
@@ -958,7 +977,7 @@ const dashboardPage = () => {
               </div>
             )}
           </div>
-          <form className="flex flex-col gap-3 w-full">
+          <form className="flex flex-col gap-3 w-full flex-grow">
             <input
               className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Title"
@@ -1000,7 +1019,7 @@ const dashboardPage = () => {
               onChange={e => setMovieYear(e.target.value)}
             />
             <input
-              className="rounded px-3 py-2 mb-40 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
+              className="rounded px-3 py-2 mb-08 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Movie Link"
               value={movieLink}
               onChange={e => setMovieLink(e.target.value)}
@@ -1098,9 +1117,11 @@ const dashboardPage = () => {
                 </span>
               </div>
             </div>
+            <div className="flex-grow"></div>
             <button
               type="button"
-              className="bg-[#1D50A3] text-white rounded px-4 py-2 mt-2 hover:bg-blue-900 transition"
+              disabled={isMovieUploading}
+              className={`bg-[#1D50A3] text-white rounded px-4 py-2 mt-4 hover:bg-blue-900 transition disabled:opacity-50 disabled:cursor-not-allowed`}
               onClick={() => handleMovieUpload({
                 title: movieTitle,
                 description: movieDescription,
@@ -1115,13 +1136,13 @@ const dashboardPage = () => {
                 landscapeFile: movieLandscapeFile,
               })}
             >
-              {editingMovieId ? 'Update Movie' : 'Upload Movie'}
+              {isMovieUploading ? 'Uploading...' : (editingMovieId ? 'Update Movie' : 'Upload Movie')}
             </button>
           </form>
         </div>
 
         {/* TV Series Upload */}
-        <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full" style={{ minWidth: 340, maxWidth: 380 }}>
+        <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full h-full" style={{ minWidth: 340, maxWidth: 380 }}>
           <h2 className="text-xl font-semibold text-white mb-4">Upload TV Series</h2>
           <div className="w-full mb-4">
             <input
@@ -1145,7 +1166,7 @@ const dashboardPage = () => {
               </div>
             )}
           </div>
-          <form className="flex flex-col gap-3 w-full">
+          <form className="flex flex-col gap-3 w-full flex-grow">
             <input
               className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
               placeholder="Title"
@@ -1280,9 +1301,11 @@ const dashboardPage = () => {
                 </span>
               </div>
             </div>
+            <div className="flex-grow"></div>
             <button
               type="button"
-              className="bg-[#1D50A3] text-white rounded px-4 py-2 mt-2 hover:bg-blue-900 transition"
+              disabled={isSeriesUploading}
+              className={`bg-[#1D50A3] text-white rounded px-4 py-2 mt-4 hover:bg-blue-900 transition disabled:opacity-50 disabled:cursor-not-allowed`}
               onClick={() => handleSeriesUpload({
                 title: seriesTitle,
                 description: seriesDescription,
@@ -1295,13 +1318,13 @@ const dashboardPage = () => {
                 episodes: seriesEpisodeLinks,
               })}
             >
-              {editingSeriesId ? 'Update TV Series' : 'Upload TV Series'}
+              {isSeriesUploading ? 'Uploading...' : (editingSeriesId ? 'Update TV Series' : 'Upload TV Series')}
             </button>
           </form>
         </div>
 
         {/* Cartoon Upload */}
-        <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full" style={{ minWidth: 340, maxWidth: 380 }}>
+        <div className="bg-[#191C33] rounded-lg p-6 shadow-lg flex flex-col items-center w-full h-full" style={{ minWidth: 340, maxWidth: 380 }}>
           <h2 className="text-xl font-semibold text-white mb-4">Upload Cartoon</h2>
           <div className="w-full mb-4">
             <input
@@ -1325,7 +1348,7 @@ const dashboardPage = () => {
               </div>
             )}
           </div>
-          <form className="flex flex-col gap-3 w-full">
+          <form className="flex flex-col gap-3 w-full flex-grow">
             <input
                 className="rounded px-3 py-2 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
                 placeholder="Title"
@@ -1461,7 +1484,8 @@ const dashboardPage = () => {
                 </span>
               </div>
             </div>
-            <button type="button" className="bg-[#1D50A3] text-white rounded px-4 py-2 mt-2 hover:bg-blue-900 transition" onClick={() => handleCartoonUpload({
+            <div className="flex-grow"></div>
+            <button type="button" disabled={isCartoonUploading} className="bg-[#1D50A3] text-white rounded px-4 py-2 mt-4 hover:bg-blue-900 transition disabled:opacity-50 disabled:cursor-not-allowed" onClick={() => handleCartoonUpload({
               cartoonTitle: cartoonTitle,
               description: cartoonDescription,
               genre: cartoonGenre,
@@ -1473,7 +1497,7 @@ const dashboardPage = () => {
               videoUrl: cartoonEpisodeLinks[0],
               episodes: cartoonEpisodeLinks,
             })}>
-              {editingCartoonId ? 'Update Cartoon Episode' : 'Upload Cartoon Episode'}
+              {isCartoonUploading ? 'Uploading...' : (editingCartoonId ? 'Update Cartoon Episode' : 'Upload Cartoon Episode')}
             </button>
           </form>
         </div>
