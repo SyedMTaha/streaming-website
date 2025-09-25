@@ -327,7 +327,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="ml-3 hidden md:block">
                       <p className="font-bold text-lg">Providing you Premium Quality Movies & TV Series</p>
-                      <p className="font-semibold text-md text-blue-200 mt-1">Internet Best Videos</p>
+                      <p className="font-semibold text-md text-blue-200 mt-1 text-center">Internet Best Videos</p>
                     </div>
                   </div>
                 </div>

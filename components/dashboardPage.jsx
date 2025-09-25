@@ -1225,8 +1225,29 @@ const dashboardPage = () => {
             </div>
             {/* Episode Links Inputs */}
             <div
-              style={{ height: 120, overflowY: 'auto' }}
-              className="flex flex-col gap-2 border border-[#223366] bg-[#10162A] rounded p-2"
+              style={{ height: 120, overflowY: 'auto', overscrollBehavior: 'contain' }}
+              className="flex flex-col gap-2 border border-[#223366] bg-[#10162A] rounded p-2 overflow-y-auto overscroll-contain"
+              tabIndex={0}
+              onWheel={(e) => {
+                e.stopPropagation();
+                const container = e.currentTarget;
+                const { scrollTop, scrollHeight, clientHeight } = container;
+                const isScrollingDown = e.deltaY > 0;
+                const isAtTop = scrollTop === 0;
+                const isAtBottom = scrollTop + clientHeight >= scrollHeight;
+                
+                if ((isScrollingDown && isAtBottom) || (!isScrollingDown && isAtTop)) {
+                  e.preventDefault();
+                }
+              }}
+              onMouseEnter={(e) => {
+                // Disable locomotive scroll when hovering over episode container
+                document.body.style.overflow = 'hidden';
+              }}
+              onMouseLeave={(e) => {
+                // Re-enable locomotive scroll when leaving episode container
+                document.body.style.overflow = '';
+              }}
             >
               {seriesEpisodeLinks.map((link, idx) => {
                 const hasContent = link && link.trim() !== '';
@@ -1408,8 +1429,29 @@ const dashboardPage = () => {
             </div>
             {/* Episode Links Inputs */}
             <div
-              style={{ height: 120, overflowY: 'auto' }}
-              className="flex flex-col gap-2 border border-[#223366] bg-[#10162A] rounded p-2"
+              style={{ height: 120, overflowY: 'auto', overscrollBehavior: 'contain' }}
+              className="flex flex-col gap-2 border border-[#223366] bg-[#10162A] rounded p-2 overflow-y-auto overscroll-contain"
+              tabIndex={0}
+              onWheel={(e) => {
+                e.stopPropagation();
+                const container = e.currentTarget;
+                const { scrollTop, scrollHeight, clientHeight } = container;
+                const isScrollingDown = e.deltaY > 0;
+                const isAtTop = scrollTop === 0;
+                const isAtBottom = scrollTop + clientHeight >= scrollHeight;
+                
+                if ((isScrollingDown && isAtBottom) || (!isScrollingDown && isAtTop)) {
+                  e.preventDefault();
+                }
+              }}
+              onMouseEnter={(e) => {
+                // Disable locomotive scroll when hovering over episode container
+                document.body.style.overflow = 'hidden';
+              }}
+              onMouseLeave={(e) => {
+                // Re-enable locomotive scroll when leaving episode container
+                document.body.style.overflow = '';
+              }}
             >
               {cartoonEpisodeLinks.map((link, idx) => {
                 const hasContent = link && link.trim() !== '';
