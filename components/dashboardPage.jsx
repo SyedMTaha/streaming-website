@@ -103,11 +103,23 @@ const dashboardPage = () => {
   const [seriesRating, setSeriesRating] = useState('');
   const [seriesYear, setSeriesYear] = useState('');
 
-  // Handle episode count change for TV Series
+  // Handle episode count change for TV Series - preserve existing links
   const handleSeriesEpisodeCountChange = (e) => {
-    const count = parseInt(e.target.value, 10);
-    setSeriesEpisodeCount(count);
-    setSeriesEpisodeLinks(Array(count).fill(""));
+    const newCount = parseInt(e.target.value, 10);
+    const currentLinks = [...seriesEpisodeLinks];
+    
+    if (newCount > seriesEpisodeCount) {
+      // Adding more episodes - preserve existing and add empty slots
+      const additionalEpisodes = newCount - seriesEpisodeCount;
+      const newLinks = [...currentLinks, ...Array(additionalEpisodes).fill("")];
+      setSeriesEpisodeLinks(newLinks);
+    } else if (newCount < seriesEpisodeCount) {
+      // Reducing episodes - keep only the first 'newCount' episodes
+      const trimmedLinks = currentLinks.slice(0, newCount);
+      setSeriesEpisodeLinks(trimmedLinks);
+    }
+    
+    setSeriesEpisodeCount(newCount);
   };
 
   // Handle episode link change for TV Series
@@ -119,11 +131,23 @@ const dashboardPage = () => {
     });
   };
 
-  // Handle episode count change for Cartoon
+  // Handle episode count change for Cartoon - preserve existing links
   const handleCartoonEpisodeCountChange = (e) => {
-    const count = parseInt(e.target.value, 10);
-    setCartoonEpisodeCount(count);
-    setCartoonEpisodeLinks(Array(count).fill(""));
+    const newCount = parseInt(e.target.value, 10);
+    const currentLinks = [...cartoonEpisodeLinks];
+    
+    if (newCount > cartoonEpisodeCount) {
+      // Adding more episodes - preserve existing and add empty slots
+      const additionalEpisodes = newCount - cartoonEpisodeCount;
+      const newLinks = [...currentLinks, ...Array(additionalEpisodes).fill("")];
+      setCartoonEpisodeLinks(newLinks);
+    } else if (newCount < cartoonEpisodeCount) {
+      // Reducing episodes - keep only the first 'newCount' episodes
+      const trimmedLinks = currentLinks.slice(0, newCount);
+      setCartoonEpisodeLinks(trimmedLinks);
+    }
+    
+    setCartoonEpisodeCount(newCount);
   };
 
   // Handle episode link change for Cartoon
@@ -418,10 +442,19 @@ const dashboardPage = () => {
     setSeriesYear(series.year);
     setSeriesPortrait(series.image?.split('/').pop() || '');
     setSeriesLandscape(series.innerImage?.split('/').pop() || '');
-    // Extract episode URLs from episodes array
+    
+    // Extract episode URLs from episodes array with proper handling
     const episodeUrls = series.episodes?.map(ep => ep.videoUrl) || [];
-    setSeriesEpisodeLinks(episodeUrls);
-    setSeriesEpisodeCount(episodeUrls.length || 1);
+    const episodeCount = Math.max(episodeUrls.length, 1); // At least 1 episode
+    
+    // Ensure we have the right number of episode slots (pad with empty strings if needed)
+    const paddedEpisodeUrls = [...episodeUrls];
+    while (paddedEpisodeUrls.length < episodeCount) {
+      paddedEpisodeUrls.push('');
+    }
+    
+    setSeriesEpisodeLinks(paddedEpisodeUrls);
+    setSeriesEpisodeCount(episodeCount);
     setEditingSeriesId(series.id);
   };
   const handleDeleteSeries = (id) => {
@@ -652,10 +685,19 @@ const dashboardPage = () => {
     setCartoonYear(cartoon.year || '');
     setCartoonPortrait(cartoon.image?.split('/').pop() || '');
     setCartoonLandscape(cartoon.innerImage?.split('/').pop() || '');
-    // Extract episode URLs from episodes array
+    
+    // Extract episode URLs from episodes array with proper handling
     const episodeUrls = cartoon.episodes?.map(ep => ep.videoUrl) || [];
-    setCartoonEpisodeLinks(episodeUrls.length > 0 ? episodeUrls : ['']);
-    setCartoonEpisodeCount(episodeUrls.length || 1);
+    const episodeCount = Math.max(episodeUrls.length, 1); // At least 1 episode
+    
+    // Ensure we have the right number of episode slots (pad with empty strings if needed)
+    const paddedEpisodeUrls = [...episodeUrls];
+    while (paddedEpisodeUrls.length < episodeCount) {
+      paddedEpisodeUrls.push('');
+    }
+    
+    setCartoonEpisodeLinks(paddedEpisodeUrls);
+    setCartoonEpisodeCount(episodeCount);
     setEditingCartoonId(cartoon.id);
   };
   const handleDeleteCartoon = (id) => {
@@ -1153,21 +1195,40 @@ const dashboardPage = () => {
                   <option key={i + 1} value={i + 1}>{i + 1}</option>
                 ))}
               </select>
+              <p className="text-xs text-gray-400">
+                💡 Tip: Existing episode links are preserved when increasing count. Green fields show saved episodes.
+              </p>
+              <div className="text-xs text-blue-400">
+                Episodes with content: {seriesEpisodeLinks.filter(link => link && link.trim() !== '').length}/{seriesEpisodeCount}
+              </div>
             </div>
             {/* Episode Links Inputs */}
             <div
               style={{ height: 120, overflowY: 'auto' }}
               className="flex flex-col gap-2 border border-[#223366] bg-[#10162A] rounded p-2"
             >
-              {seriesEpisodeLinks.map((link, idx) => (
-                <input
-                  key={idx}
-                  className="rounded px-3 py-2 bg-[#191C33] text-white placeholder-gray-400"
-                  placeholder={`Episode Link #${idx + 1}`}
-                  value={link}
-                  onChange={e => handleSeriesEpisodeLinkChange(idx, e.target.value)}
-                />
-              ))}
+              {seriesEpisodeLinks.map((link, idx) => {
+                const hasContent = link && link.trim() !== '';
+                return (
+                  <div key={idx} className="relative">
+                    <input
+                      className={`rounded px-3 py-2 w-full text-white placeholder-gray-400 ${
+                        hasContent 
+                          ? 'bg-[#2A4D3A] border border-green-600' // Green background for filled episodes
+                          : 'bg-[#191C33] border border-transparent' // Default for empty episodes
+                      }`}
+                      placeholder={`Episode Link #${idx + 1}${hasContent ? ' (Saved)' : ' (New)'}`}
+                      value={link}
+                      onChange={e => handleSeriesEpisodeLinkChange(idx, e.target.value)}
+                    />
+                    {hasContent && (
+                      <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                        <span className="text-green-400 text-xs">✓</span>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-white">Portrait Thumbnail</label>
@@ -1315,21 +1376,40 @@ const dashboardPage = () => {
                   <option key={i + 1} value={i + 1}>{i + 1}</option>
                 ))}
               </select>
+              <p className="text-xs text-gray-400">
+                💡 Tip: Existing episode links are preserved when increasing count. Green fields show saved episodes.
+              </p>
+              <div className="text-xs text-blue-400">
+                Episodes with content: {cartoonEpisodeLinks.filter(link => link && link.trim() !== '').length}/{cartoonEpisodeCount}
+              </div>
             </div>
             {/* Episode Links Inputs */}
             <div
               style={{ height: 120, overflowY: 'auto' }}
               className="flex flex-col gap-2 border border-[#223366] bg-[#10162A] rounded p-2"
             >
-              {cartoonEpisodeLinks.map((link, idx) => (
-                <input
-                  key={idx}
-                  className="rounded px-3 py-2 bg-[#191C33] text-white placeholder-gray-400"
-                  placeholder={`Episode Link #${idx + 1}`}
-                  value={link}
-                  onChange={e => handleCartoonEpisodeLinkChange(idx, e.target.value)}
-                />
-              ))}
+              {cartoonEpisodeLinks.map((link, idx) => {
+                const hasContent = link && link.trim() !== '';
+                return (
+                  <div key={idx} className="relative">
+                    <input
+                      className={`rounded px-3 py-2 w-full text-white placeholder-gray-400 ${
+                        hasContent 
+                          ? 'bg-[#2A4D3A] border border-green-600' // Green background for filled episodes
+                          : 'bg-[#191C33] border border-transparent' // Default for empty episodes
+                      }`}
+                      placeholder={`Episode Link #${idx + 1}${hasContent ? ' (Saved)' : ' (New)'}`}
+                      value={link}
+                      onChange={e => handleCartoonEpisodeLinkChange(idx, e.target.value)}
+                    />
+                    {hasContent && (
+                      <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                        <span className="text-green-400 text-xs">✓</span>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-white">Portrait Thumbnail</label>
