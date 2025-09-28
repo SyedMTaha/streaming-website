@@ -34,6 +34,7 @@ const genres = [
   "Adventure",
   "Animation",
   "Biographical",
+  "Blaxplotation",
   "Comedy",
   "Crime",
   "Documentary",
